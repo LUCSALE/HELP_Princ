@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="HELP_Princ.Properties.Settings.helpdesk01" connectionString="Data Source=SQL1003.site4now.net;Initial Catalog=db_ab2460_helpdesk02;Persist Security Info=True;User ID=db_ab2460_helpdesk02_admin;Password=Mag160163@"
+            providerName="System.Data.SqlClient" />
+        <add name="HELP_Princ.Properties.Settings.db_ab2460_helpdesk02ConnectionString"
+            connectionString="Data Source=SQL1003.site4now.net;Initial Catalog=db_ab2460_helpdesk02;Persist Security Info=True;User ID=db_ab2460_helpdesk02_admin;Password=Mag160163@"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8.1" />
+    </startup>
+</configuration>
