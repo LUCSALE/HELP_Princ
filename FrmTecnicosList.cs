@@ -144,6 +144,11 @@ namespace HELP_Princ
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
+
+        private void dbgTecnicos_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+
+        }
     }
 }
 

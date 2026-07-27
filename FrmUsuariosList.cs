@@ -204,6 +204,11 @@ namespace HELP_Princ
             FrmUsuariosForm UsuariosForm = new FrmUsuariosForm();
             UsuariosForm.ShowDialog();
         }
+
+        private void dbgUsuarios_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+
+        }
     }
 }
 

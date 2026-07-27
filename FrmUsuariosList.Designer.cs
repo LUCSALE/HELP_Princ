@@ -56,9 +56,6 @@ namespace HELP_Princ
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
             this.dbgUsuarios = new System.Windows.Forms.DataGridView();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
-            this.uSUARIOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.USUARIOSTableAdapter();
             this.btnEdicao = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnExclusao = new System.Windows.Forms.DataGridViewImageColumn();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +68,9 @@ namespace HELP_Princ
             this.ATIVO2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATADESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OBS_GERAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
+            this.uSUARIOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.USUARIOSTableAdapter();
             this.pnlHeader.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -314,24 +314,7 @@ namespace HELP_Princ
             this.dbgUsuarios.TabIndex = 0;
             this.dbgUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgTecnicos_CellContentClick);
             this.dbgUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgUsuarios_CellDoubleClick);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.MOVITableAdapter = null;
-            this.tableAdapterManager.SERVICOSTableAdapter = null;
-            this.tableAdapterManager.TECNICOSTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USUARIOSTableAdapter = null;
-            // 
-            // uSUARIOSTableAdapter
-            // 
-            this.uSUARIOSTableAdapter.ClearBeforeFill = true;
+            this.dbgUsuarios.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dbgUsuarios_RowPrePaint);
             // 
             // btnEdicao
             // 
@@ -434,6 +417,26 @@ namespace HELP_Princ
             this.OBS_GERAL.Name = "OBS_GERAL";
             this.OBS_GERAL.ReadOnly = true;
             this.OBS_GERAL.Width = 300;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
+            this.tableAdapterManager.MOVI_RETIRADATableAdapter = null;
+            this.tableAdapterManager.MOVITableAdapter = null;
+            this.tableAdapterManager.SERVICOSTableAdapter = null;
+            this.tableAdapterManager.TECNICOSTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.USUARIOSTableAdapter = null;
+            // 
+            // uSUARIOSTableAdapter
+            // 
+            this.uSUARIOSTableAdapter.ClearBeforeFill = true;
             // 
             // FrmUsuariosList
             // 

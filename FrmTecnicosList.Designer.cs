@@ -34,8 +34,9 @@ namespace HELP_Princ
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTecnicosList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
@@ -70,7 +71,6 @@ namespace HELP_Princ
             this.ATIVO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATA_DES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ARQ_ASSINATURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ASSINATURA = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlHeader.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -286,17 +286,16 @@ namespace HELP_Princ
             this.EMAIL,
             this.ATIVO,
             this.DATA_DES,
-            this.ARQ_ASSINATURA,
-            this.ASSINATURA});
+            this.ARQ_ASSINATURA});
             this.dbgTecnicos.DataSource = this.tECNICOSBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dbgTecnicos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dbgTecnicos.DefaultCellStyle = dataGridViewCellStyle4;
             this.dbgTecnicos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbgTecnicos.Location = new System.Drawing.Point(0, 0);
             this.dbgTecnicos.Name = "dbgTecnicos";
@@ -304,6 +303,7 @@ namespace HELP_Princ
             this.dbgTecnicos.Size = new System.Drawing.Size(1156, 446);
             this.dbgTecnicos.TabIndex = 0;
             this.dbgTecnicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgTecnicos_CellContentClick);
+            this.dbgTecnicos.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dbgTecnicos_RowPrePaint);
             // 
             // tECNICOSTableAdapter
             // 
@@ -404,6 +404,9 @@ namespace HELP_Princ
             // ATIVO
             // 
             this.ATIVO.DataPropertyName = "ATIVO";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ATIVO.DefaultCellStyle = dataGridViewCellStyle3;
             this.ATIVO.HeaderText = "Ativo:";
             this.ATIVO.Name = "ATIVO";
             this.ATIVO.ReadOnly = true;
@@ -423,12 +426,6 @@ namespace HELP_Princ
             this.ARQ_ASSINATURA.HeaderText = "Arq. Assinatura: ";
             this.ARQ_ASSINATURA.Name = "ARQ_ASSINATURA";
             this.ARQ_ASSINATURA.ReadOnly = true;
-            // 
-            // ASSINATURA
-            // 
-            this.ASSINATURA.HeaderText = "Assinatura:";
-            this.ASSINATURA.Name = "ASSINATURA";
-            this.ASSINATURA.ReadOnly = true;
             // 
             // FrmTecnicosList
             // 
@@ -495,6 +492,5 @@ namespace HELP_Princ
         private DataGridViewTextBoxColumn ATIVO;
         private DataGridViewTextBoxColumn DATA_DES;
         private DataGridViewTextBoxColumn ARQ_ASSINATURA;
-        private DataGridViewImageColumn ASSINATURA;
     }
 }
