@@ -25,6 +25,9 @@ namespace HELP_Princ
         {
             // Atualiza Tecnicos & Equpamentos
             fncAtualizaTecnicos();
+
+
+
             fcnAtualizaEquipamentos();
 
             tmiEfeitos.Start();
@@ -570,7 +573,8 @@ namespace HELP_Princ
             cbxTecnicos.Items.Clear();
             for (int i = 0; i < this.helpdesk01DataSet.TECNICOS.Count; i++)
             {
-                string strNOME_ENTIDADE = this.helpdesk01DataSet.TECNICOS.Rows[i].Field<string>("NOME_COMPLETO").Trim();
+                //string strNOME_ENTIDADE = this.helpdesk01DataSet.TECNICOS.Rows[i].Field<string>("NOME_COMPLETO").Trim();
+                string strNOME_ENTIDADE = this.helpdesk01DataSet.TECNICOS.Rows[i].Field<int>("ID").ToString() + " - " + this.helpdesk01DataSet.TECNICOS.Rows[i].Field<string>("NOME_COMPLETO").Trim();
                 cbxTecnicos.Items.Add(strNOME_ENTIDADE);
             }
             cbxTecnicos.SelectedIndex = -1; // Limpa a seleção do ComboBox  

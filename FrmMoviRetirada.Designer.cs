@@ -1192,7 +1192,6 @@ namespace HELP_Princ
             this.cbxTecnicos.BackColor = System.Drawing.Color.Transparent;
             this.cbxTecnicos.BorderColor = System.Drawing.Color.Black;
             this.cbxTecnicos.BorderRadius = 10;
-            this.cbxTecnicos.DisplayMember = "NOME_COMPLETO";
             this.cbxTecnicos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbxTecnicos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTecnicos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -1206,7 +1205,7 @@ namespace HELP_Princ
             this.cbxTecnicos.Size = new System.Drawing.Size(410, 36);
             this.cbxTecnicos.TabIndex = 3;
             this.cbxTecnicos.TabStop = false;
-            this.cbxTecnicos.ValueMember = "NOME_COMPLETO";
+            this.cbxTecnicos.ValueMember = "ID";
             this.cbxTecnicos.SelectedIndexChanged += new System.EventHandler(this.cbxTecnicos_SelectedIndexChanged);
             this.cbxTecnicos.Validating += new System.ComponentModel.CancelEventHandler(this.cbxTecnicos_Validating);
             // 
