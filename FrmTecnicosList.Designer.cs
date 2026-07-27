@@ -70,6 +70,7 @@ namespace HELP_Princ
             this.ATIVO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATA_DES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ARQ_ASSINATURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ASSINATURA = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlHeader.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -285,7 +286,8 @@ namespace HELP_Princ
             this.EMAIL,
             this.ATIVO,
             this.DATA_DES,
-            this.ARQ_ASSINATURA});
+            this.ARQ_ASSINATURA,
+            this.ASSINATURA});
             this.dbgTecnicos.DataSource = this.tECNICOSBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
@@ -422,6 +424,12 @@ namespace HELP_Princ
             this.ARQ_ASSINATURA.Name = "ARQ_ASSINATURA";
             this.ARQ_ASSINATURA.ReadOnly = true;
             // 
+            // ASSINATURA
+            // 
+            this.ASSINATURA.HeaderText = "Assinatura:";
+            this.ASSINATURA.Name = "ASSINATURA";
+            this.ASSINATURA.ReadOnly = true;
+            // 
             // FrmTecnicosList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -487,5 +495,6 @@ namespace HELP_Princ
         private DataGridViewTextBoxColumn ATIVO;
         private DataGridViewTextBoxColumn DATA_DES;
         private DataGridViewTextBoxColumn ARQ_ASSINATURA;
+        private DataGridViewImageColumn ASSINATURA;
     }
 }

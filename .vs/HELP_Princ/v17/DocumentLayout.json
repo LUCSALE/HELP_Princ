@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\DESENVOL_WEB\\HELP_Princ\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\frmtecnicosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmtecnicosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\frmtecnicosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmtecnicosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,31 +38,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmTecnicosForm.cs",
-              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmTecnicosForm.cs",
-              "RelativeDocumentMoniker": "FrmTecnicosForm.cs",
-              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmTecnicosForm.cs",
-              "RelativeToolTip": "FrmTecnicosForm.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAkwDEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-24T13:40:08.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmTecnicosForm.cs [Design]",
-              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmTecnicosForm.cs",
-              "RelativeDocumentMoniker": "FrmTecnicosForm.cs",
-              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmTecnicosForm.cs [Design]",
-              "RelativeToolTip": "FrmTecnicosForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-24T11:15:04.893Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }
