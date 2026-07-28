@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HELP_Princ.exe" size="5869512">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HELP_Princ.exe" size="5871560">
       <assemblyIdentity name="HELP_Princ" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nQb5yJ5PDUSq3LMjdAib1V8GWWdc5eXiUoOH3s119zY=</dsig:DigestValue>
+        <dsig:DigestValue>N55aK0bTWeS7jVfS23Cip7QUsOphpOjiDfHsKSGq6DU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

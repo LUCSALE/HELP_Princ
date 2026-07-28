@@ -42,7 +42,12 @@
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.pnlForm = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.tECNICOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnArq_Assinatura = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.txtArq_Assinatura = new System.Windows.Forms.TextBox();
+            this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
+            this.pbxAssinatura = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gbxDados = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtAREA = new System.Windows.Forms.TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -63,28 +68,23 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnArq_Assinatura = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.pbxAssinatura = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
+            this.tECNICOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.helpdesk01DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tECNICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TECNICOSTableAdapter();
             this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
-            this.txtArq_Assinatura = new System.Windows.Forms.TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lblLogo)).BeginInit();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.pnlForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource1)).BeginInit();
-            this.gbxDados.SuspendLayout();
-            this.gbxAtivacao.SuspendLayout();
             this.btnArq_Assinatura.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxAssinatura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAssinatura)).BeginInit();
+            this.gbxDados.SuspendLayout();
+            this.gbxAtivacao.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -247,10 +247,80 @@
             this.pnlForm.Size = new System.Drawing.Size(1156, 399);
             this.pnlForm.TabIndex = 5;
             // 
-            // tECNICOSBindingSource1
+            // btnArq_Assinatura
             // 
-            this.tECNICOSBindingSource1.DataMember = "TECNICOS";
-            this.tECNICOSBindingSource1.DataSource = this.helpdesk01DataSetBindingSource;
+            this.btnArq_Assinatura.BackColor = System.Drawing.Color.Transparent;
+            this.btnArq_Assinatura.BorderColor = System.Drawing.Color.Transparent;
+            this.btnArq_Assinatura.BorderRadius = 10;
+            this.btnArq_Assinatura.Controls.Add(this.guna2Button1);
+            this.btnArq_Assinatura.Controls.Add(this.txtArq_Assinatura);
+            this.btnArq_Assinatura.Controls.Add(this.pbxAssinatura);
+            this.btnArq_Assinatura.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnArq_Assinatura.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArq_Assinatura.ForeColor = System.Drawing.Color.Black;
+            this.btnArq_Assinatura.Location = new System.Drawing.Point(522, 1);
+            this.btnArq_Assinatura.Name = "btnArq_Assinatura";
+            this.btnArq_Assinatura.Size = new System.Drawing.Size(622, 212);
+            this.btnArq_Assinatura.TabIndex = 40;
+            this.btnArq_Assinatura.Text = "Assinatura:";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AnimatedGIF = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.Location = new System.Drawing.Point(589, 173);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(30, 30);
+            this.guna2Button1.TabIndex = 41;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // txtArq_Assinatura
+            // 
+            this.txtArq_Assinatura.AcceptsReturn = true;
+            this.txtArq_Assinatura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtArq_Assinatura.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtArq_Assinatura.Location = new System.Drawing.Point(3, 177);
+            this.txtArq_Assinatura.Name = "txtArq_Assinatura";
+            this.txtArq_Assinatura.ReadOnly = true;
+            this.txtArq_Assinatura.Size = new System.Drawing.Size(580, 23);
+            this.txtArq_Assinatura.TabIndex = 40;
+            this.txtArq_Assinatura.TabStop = false;
+            // 
+            // tECNICOSBindingSource
+            // 
+            this.tECNICOSBindingSource.DataMember = "TECNICOS";
+            this.tECNICOSBindingSource.DataSource = this.helpdesk01DataSet;
+            // 
+            // helpdesk01DataSet
+            // 
+            this.helpdesk01DataSet.DataSetName = "helpdesk01DataSet";
+            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pbxAssinatura
+            // 
+            this.pbxAssinatura.BackColor = System.Drawing.Color.Transparent;
+            this.pbxAssinatura.BorderRadius = 10;
+            this.pbxAssinatura.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxAssinatura.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pbxAssinatura.ImageRotate = 0F;
+            this.pbxAssinatura.Location = new System.Drawing.Point(0, 40);
+            this.pbxAssinatura.Name = "pbxAssinatura";
+            this.pbxAssinatura.Size = new System.Drawing.Size(622, 131);
+            this.pbxAssinatura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbxAssinatura.TabIndex = 39;
+            this.pbxAssinatura.TabStop = false;
+            this.pbxAssinatura.UseTransparentBackground = true;
             // 
             // gbxDados
             // 
@@ -509,47 +579,10 @@
             this.guna2HtmlLabel5.TabStop = false;
             this.guna2HtmlLabel5.Text = "Data:";
             // 
-            // btnArq_Assinatura
+            // tECNICOSBindingSource1
             // 
-            this.btnArq_Assinatura.BackColor = System.Drawing.Color.Transparent;
-            this.btnArq_Assinatura.BorderColor = System.Drawing.Color.Transparent;
-            this.btnArq_Assinatura.BorderRadius = 10;
-            this.btnArq_Assinatura.Controls.Add(this.guna2Button1);
-            this.btnArq_Assinatura.Controls.Add(this.txtArq_Assinatura);
-            this.btnArq_Assinatura.Controls.Add(this.pbxAssinatura);
-            this.btnArq_Assinatura.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.btnArq_Assinatura.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArq_Assinatura.ForeColor = System.Drawing.Color.Black;
-            this.btnArq_Assinatura.Location = new System.Drawing.Point(522, 1);
-            this.btnArq_Assinatura.Name = "btnArq_Assinatura";
-            this.btnArq_Assinatura.Size = new System.Drawing.Size(622, 212);
-            this.btnArq_Assinatura.TabIndex = 40;
-            this.btnArq_Assinatura.Text = "Assinatura:";
-            // 
-            // pbxAssinatura
-            // 
-            this.pbxAssinatura.BackColor = System.Drawing.Color.Transparent;
-            this.pbxAssinatura.BorderRadius = 10;
-            this.pbxAssinatura.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxAssinatura.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbxAssinatura.ImageRotate = 0F;
-            this.pbxAssinatura.Location = new System.Drawing.Point(0, 40);
-            this.pbxAssinatura.Name = "pbxAssinatura";
-            this.pbxAssinatura.Size = new System.Drawing.Size(622, 131);
-            this.pbxAssinatura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbxAssinatura.TabIndex = 39;
-            this.pbxAssinatura.TabStop = false;
-            this.pbxAssinatura.UseTransparentBackground = true;
-            // 
-            // tECNICOSBindingSource
-            // 
-            this.tECNICOSBindingSource.DataMember = "TECNICOS";
-            this.tECNICOSBindingSource.DataSource = this.helpdesk01DataSet;
-            // 
-            // helpdesk01DataSet
-            // 
-            this.helpdesk01DataSet.DataSetName = "helpdesk01DataSet";
-            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tECNICOSBindingSource1.DataMember = "TECNICOS";
+            this.tECNICOSBindingSource1.DataSource = this.helpdesk01DataSetBindingSource;
             // 
             // helpdesk01DataSetBindingSource
             // 
@@ -570,40 +603,6 @@
             this.tableAdapterManager.TECNICOSTableAdapter = this.tECNICOSTableAdapter;
             this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.USUARIOSTableAdapter = null;
-            // 
-            // txtArq_Assinatura
-            // 
-            this.txtArq_Assinatura.AcceptsReturn = true;
-            this.txtArq_Assinatura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtArq_Assinatura.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtArq_Assinatura.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tECNICOSBindingSource, "ARQ_ASSINATURA", true));
-            this.txtArq_Assinatura.Location = new System.Drawing.Point(3, 177);
-            this.txtArq_Assinatura.Name = "txtArq_Assinatura";
-            this.txtArq_Assinatura.ReadOnly = true;
-            this.txtArq_Assinatura.Size = new System.Drawing.Size(580, 23);
-            this.txtArq_Assinatura.TabIndex = 40;
-            this.txtArq_Assinatura.TabStop = false;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AnimatedGIF = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.Location = new System.Drawing.Point(589, 173);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(30, 30);
-            this.guna2Button1.TabIndex = 41;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // FrmTecnicosForm
             // 
@@ -629,16 +628,16 @@
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             this.pnlForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource1)).EndInit();
+            this.btnArq_Assinatura.ResumeLayout(false);
+            this.btnArq_Assinatura.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAssinatura)).EndInit();
             this.gbxDados.ResumeLayout(false);
             this.gbxDados.PerformLayout();
             this.gbxAtivacao.ResumeLayout(false);
             this.gbxAtivacao.PerformLayout();
-            this.btnArq_Assinatura.ResumeLayout(false);
-            this.btnArq_Assinatura.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxAssinatura)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 

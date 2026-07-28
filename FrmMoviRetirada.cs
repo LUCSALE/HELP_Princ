@@ -773,7 +773,7 @@ namespace HELP_Princ
             if (string.IsNullOrWhiteSpace(txtDESCRICA_ATIVIDADE.Text))
             {
                 e.Cancel = true; // impede sair do campo
-                errorProvider1.SetError(txtDESCRICA_ATIVIDADE, "Descriçao da Atvidade Inválida ! (em Branco)");
+                errorProvider1.SetError(txtDESCRICA_ATIVIDADE, "Descriçao da Atividade Inválida ! (em Branco)");
             }
             else
             {

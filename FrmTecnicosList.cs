@@ -25,7 +25,7 @@ namespace HELP_Princ
             dbgTecnicos.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
             dbgTecnicos.GridColor = Color.White;      // Remove borda padrão     
             dbgTecnicos.CellBorderStyle = DataGridViewCellBorderStyle.Single;      // Espaçamento visual
-            dbgTecnicos.RowTemplate.Height = 35;      // Estilo das células     
+            dbgTecnicos.RowTemplate.Height = 127;      // Estilo das células     
             dbgTecnicos.DefaultCellStyle.BackColor = Color.LightBlue;
             dbgTecnicos.DefaultCellStyle.SelectionBackColor = Color.RoyalBlue;      // Margem interna do texto
             dbgTecnicos.DefaultCellStyle.Padding = new Padding(5);

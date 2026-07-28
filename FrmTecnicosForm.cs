@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -40,15 +41,21 @@ namespace HELP_Princ
                     MessageBox.Show("Erro ao Pesquisar: " + ex.Message);
                 }
 
-             
-                
-                string arqAssinatura = this.helpdesk01DataSet.TECNICOS.Rows[0].Field<string>("ARQ_ASSINATURA");
-                if (!string.IsNullOrEmpty(arqAssinatura))
+                // Atualiza Assinatura 
+                DataRowView row = (DataRowView)tECNICOSBindingSource.Current;
+                try
                 {
-                     pbxAssinatura.Image = Image.FromFile(arqAssinatura);
-                     pbxAssinatura.SizeMode = PictureBoxSizeMode.Zoom;
+                    object v = row["ASSINATURA"];
+                    using (MemoryStream ms = new MemoryStream((byte[])v)) 
+                    { pbxAssinatura.Image = Image.FromStream(ms); }
+                    pbxAssinatura.SizeMode = PictureBoxSizeMode.Zoom;
                 }
-                   
+                catch (Exception ex)
+                {
+                    pbxAssinatura.Image = null; 
+                }
+                                
+
             }
 
             if (InfoApp.opcao == "Incluir NOVO TÉCNICO")
@@ -84,6 +91,14 @@ namespace HELP_Princ
         private void salvarToolStripButton_Click(object sender, EventArgs e)
         {
             InfoWork.strWork = txtNOME_COMPLETO.Text.Trim();
+
+            // Atualiza TABELA: TECNICOS com a imagem da assinatura 
+            DataRowView row = (DataRowView)tECNICOSBindingSource.Current;
+            if (File.Exists(txtArq_Assinatura.Text.Trim()))
+            {
+                row["ASSINATURA"] = File.ReadAllBytes(txtArq_Assinatura.Text.Trim());
+            }
+
             try
             {
                 this.Validate();

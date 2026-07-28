@@ -478,6 +478,8 @@ namespace HELP_Princ {
             
             private global::System.Data.DataColumn columnARQ_ASSINATURA;
             
+            private global::System.Data.DataColumn columnASSINATURA;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TECNICOSDataTable() {
@@ -609,6 +611,14 @@ namespace HELP_Princ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ASSINATURAColumn {
+                get {
+                    return this.columnASSINATURA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -644,7 +654,7 @@ namespace HELP_Princ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TECNICOSRow AddTECNICOSRow(System.DateTime DATA, System.TimeSpan HORA, string NOME_COMPLETO, string DRT_ID, string EMAIL, string SENHA, string ATIVO, System.DateTime DATA_DES, System.TimeSpan HORA_DES, string AREA, string ARQ_ASSINATURA) {
+            public TECNICOSRow AddTECNICOSRow(System.DateTime DATA, System.TimeSpan HORA, string NOME_COMPLETO, string DRT_ID, string EMAIL, string SENHA, string ATIVO, System.DateTime DATA_DES, System.TimeSpan HORA_DES, string AREA, string ARQ_ASSINATURA, byte[] ASSINATURA) {
                 TECNICOSRow rowTECNICOSRow = ((TECNICOSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -658,7 +668,8 @@ namespace HELP_Princ {
                         DATA_DES,
                         HORA_DES,
                         AREA,
-                        ARQ_ASSINATURA};
+                        ARQ_ASSINATURA,
+                        ASSINATURA};
                 rowTECNICOSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTECNICOSRow);
                 return rowTECNICOSRow;
@@ -700,6 +711,7 @@ namespace HELP_Princ {
                 this.columnHORA_DES = base.Columns["HORA_DES"];
                 this.columnAREA = base.Columns["AREA"];
                 this.columnARQ_ASSINATURA = base.Columns["ARQ_ASSINATURA"];
+                this.columnASSINATURA = base.Columns["ASSINATURA"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -729,6 +741,8 @@ namespace HELP_Princ {
                 base.Columns.Add(this.columnAREA);
                 this.columnARQ_ASSINATURA = new global::System.Data.DataColumn("ARQ_ASSINATURA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnARQ_ASSINATURA);
+                this.columnASSINATURA = new global::System.Data.DataColumn("ASSINATURA", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnASSINATURA);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -3279,6 +3293,22 @@ namespace HELP_Princ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public byte[] ASSINATURA {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableTECNICOS.ASSINATURAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'ASSINATURA\' na tabela \'TECNICOS\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTECNICOS.ASSINATURAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsNOME_COMPLETONull() {
                 return this.IsNull(this.tableTECNICOS.NOME_COMPLETOColumn);
             }
@@ -3383,6 +3413,18 @@ namespace HELP_Princ {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetARQ_ASSINATURANull() {
                 this[this.tableTECNICOS.ARQ_ASSINATURAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsASSINATURANull() {
+                return this.IsNull(this.tableTECNICOS.ASSINATURAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetASSINATURANull() {
+                this[this.tableTECNICOS.ASSINATURAColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5339,6 +5381,7 @@ namespace HELP_Princ.helpdesk01DataSetTableAdapters {
             tableMapping.ColumnMappings.Add("HORA_DES", "HORA_DES");
             tableMapping.ColumnMappings.Add("AREA", "AREA");
             tableMapping.ColumnMappings.Add("ARQ_ASSINATURA", "ARQ_ASSINATURA");
+            tableMapping.ColumnMappings.Add("ASSINATURA", "ASSINATURA");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -5367,8 +5410,8 @@ namespace HELP_Princ.helpdesk01DataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ARQ_ASSINATURA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ARQ_ASSINATURA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TECNICOS] ([DATA], [HORA], [NOME_COMPLETO], [DRT_ID], [EMAIL], [SENHA], [ATIVO], [DATA_DES], [HORA_DES], [AREA], [ARQ_ASSINATURA]) VALUES (@DATA, @HORA, @NOME_COMPLETO, @DRT_ID, @EMAIL, @SENHA, @ATIVO, @DATA_DES, @HORA_DES, @AREA, @ARQ_ASSINATURA);
-SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HORA_DES, AREA, ARQ_ASSINATURA FROM TECNICOS WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TECNICOS] ([DATA], [HORA], [NOME_COMPLETO], [DRT_ID], [EMAIL], [SENHA], [ATIVO], [DATA_DES], [HORA_DES], [AREA], [ARQ_ASSINATURA], [ASSINATURA]) VALUES (@DATA, @HORA, @NOME_COMPLETO, @DRT_ID, @EMAIL, @SENHA, @ATIVO, @DATA_DES, @HORA_DES, @AREA, @ARQ_ASSINATURA, @ASSINATURA);
+SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HORA_DES, AREA, ARQ_ASSINATURA, ASSINATURA FROM TECNICOS WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5381,10 +5424,11 @@ SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HOR
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA_DES", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_DES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AREA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AREA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ARQ_ASSINATURA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ARQ_ASSINATURA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASSINATURA", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASSINATURA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [TECNICOS] SET [DATA] = @DATA, [HORA] = @HORA, [NOME_COMPLETO] = @NOME_COMPLETO, [DRT_ID] = @DRT_ID, [EMAIL] = @EMAIL, [SENHA] = @SENHA, [ATIVO] = @ATIVO, [DATA_DES] = @DATA_DES, [HORA_DES] = @HORA_DES, [AREA] = @AREA, [ARQ_ASSINATURA] = @ARQ_ASSINATURA WHERE (([ID] = @Original_ID) AND ([DATA] = @Original_DATA) AND ([HORA] = @Original_HORA) AND ((@IsNull_NOME_COMPLETO = 1 AND [NOME_COMPLETO] IS NULL) OR ([NOME_COMPLETO] = @Original_NOME_COMPLETO)) AND ((@IsNull_DRT_ID = 1 AND [DRT_ID] IS NULL) OR ([DRT_ID] = @Original_DRT_ID)) AND ((@IsNull_EMAIL = 1 AND [EMAIL] IS NULL) OR ([EMAIL] = @Original_EMAIL)) AND ((@IsNull_SENHA = 1 AND [SENHA] IS NULL) OR ([SENHA] = @Original_SENHA)) AND ((@IsNull_ATIVO = 1 AND [ATIVO] IS NULL) OR ([ATIVO] = @Original_ATIVO)) AND ((@IsNull_DATA_DES = 1 AND [DATA_DES] IS NULL) OR ([DATA_DES] = @Original_DATA_DES)) AND ((@IsNull_HORA_DES = 1 AND [HORA_DES] IS NULL) OR ([HORA_DES] = @Original_HORA_DES)) AND ((@IsNull_AREA = 1 AND [AREA] IS NULL) OR ([AREA] = @Original_AREA)) AND ((@IsNull_ARQ_ASSINATURA = 1 AND [ARQ_ASSINATURA] IS NULL) OR ([ARQ_ASSINATURA] = @Original_ARQ_ASSINATURA)));
-SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HORA_DES, AREA, ARQ_ASSINATURA FROM TECNICOS WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [TECNICOS] SET [DATA] = @DATA, [HORA] = @HORA, [NOME_COMPLETO] = @NOME_COMPLETO, [DRT_ID] = @DRT_ID, [EMAIL] = @EMAIL, [SENHA] = @SENHA, [ATIVO] = @ATIVO, [DATA_DES] = @DATA_DES, [HORA_DES] = @HORA_DES, [AREA] = @AREA, [ARQ_ASSINATURA] = @ARQ_ASSINATURA, [ASSINATURA] = @ASSINATURA WHERE (([ID] = @Original_ID) AND ([DATA] = @Original_DATA) AND ([HORA] = @Original_HORA) AND ((@IsNull_NOME_COMPLETO = 1 AND [NOME_COMPLETO] IS NULL) OR ([NOME_COMPLETO] = @Original_NOME_COMPLETO)) AND ((@IsNull_DRT_ID = 1 AND [DRT_ID] IS NULL) OR ([DRT_ID] = @Original_DRT_ID)) AND ((@IsNull_EMAIL = 1 AND [EMAIL] IS NULL) OR ([EMAIL] = @Original_EMAIL)) AND ((@IsNull_SENHA = 1 AND [SENHA] IS NULL) OR ([SENHA] = @Original_SENHA)) AND ((@IsNull_ATIVO = 1 AND [ATIVO] IS NULL) OR ([ATIVO] = @Original_ATIVO)) AND ((@IsNull_DATA_DES = 1 AND [DATA_DES] IS NULL) OR ([DATA_DES] = @Original_DATA_DES)) AND ((@IsNull_HORA_DES = 1 AND [HORA_DES] IS NULL) OR ([HORA_DES] = @Original_HORA_DES)) AND ((@IsNull_AREA = 1 AND [AREA] IS NULL) OR ([AREA] = @Original_AREA)) AND ((@IsNull_ARQ_ASSINATURA = 1 AND [ARQ_ASSINATURA] IS NULL) OR ([ARQ_ASSINATURA] = @Original_ARQ_ASSINATURA)));
+SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HORA_DES, AREA, ARQ_ASSINATURA, ASSINATURA FROM TECNICOS WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5397,6 +5441,7 @@ SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HOR
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA_DES", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_DES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AREA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AREA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ARQ_ASSINATURA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ARQ_ASSINATURA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASSINATURA", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASSINATURA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HORA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5435,23 +5480,23 @@ SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HOR
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HORA" +
-                "_DES, AREA, ARQ_ASSINATURA FROM TECNICOS";
+                "_DES, AREA, ARQ_ASSINATURA, ASSINATURA FROM TECNICOS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HORA" +
-                "_DES, AREA, ARQ_ASSINATURA FROM TECNICOS";
+                "_DES, AREA, ARQ_ASSINATURA, ASSINATURA FROM TECNICOS";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HORA" +
-                "_DES, AREA, ARQ_ASSINATURA FROM TECNICOS WHERE (TRIM(ATIVO) = \'SIM\') ORDER BY NO" +
-                "ME_COMPLETO";
+                "_DES, AREA, ARQ_ASSINATURA, ASSINATURA FROM TECNICOS WHERE (TRIM(ATIVO) = \'SIM\')" +
+                " ORDER BY NOME_COMPLETO";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HORA" +
-                "_DES, AREA, ARQ_ASSINATURA FROM TECNICOS WHERE (ID = @ID)";
+                "_DES, AREA, ARQ_ASSINATURA, ASSINATURA FROM TECNICOS WHERE (ID = @ID)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -5661,7 +5706,7 @@ SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HOR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime DATA, System.TimeSpan HORA, string NOME_COMPLETO, string DRT_ID, string EMAIL, string SENHA, string ATIVO, global::System.Nullable<global::System.DateTime> DATA_DES, global::System.Nullable<global::System.TimeSpan> HORA_DES, string AREA, string ARQ_ASSINATURA) {
+        public virtual int Insert(System.DateTime DATA, System.TimeSpan HORA, string NOME_COMPLETO, string DRT_ID, string EMAIL, string SENHA, string ATIVO, global::System.Nullable<global::System.DateTime> DATA_DES, global::System.Nullable<global::System.TimeSpan> HORA_DES, string AREA, string ARQ_ASSINATURA, byte[] ASSINATURA) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(DATA));
             this.Adapter.InsertCommand.Parameters[1].Value = ((System.TimeSpan)(HORA));
             if ((NOME_COMPLETO == null)) {
@@ -5718,6 +5763,12 @@ SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HOR
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = ((string)(ARQ_ASSINATURA));
             }
+            if ((ASSINATURA == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((byte[])(ASSINATURA));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5750,6 +5801,7 @@ SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HOR
                     global::System.Nullable<global::System.TimeSpan> HORA_DES, 
                     string AREA, 
                     string ARQ_ASSINATURA, 
+                    byte[] ASSINATURA, 
                     int Original_ID, 
                     System.DateTime Original_DATA, 
                     System.TimeSpan Original_HORA, 
@@ -5819,82 +5871,88 @@ SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HOR
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(ARQ_ASSINATURA));
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_DATA));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.TimeSpan)(Original_HORA));
-            if ((Original_NOME_COMPLETO == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            if ((ASSINATURA == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_NOME_COMPLETO));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((byte[])(ASSINATURA));
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_DATA));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.TimeSpan)(Original_HORA));
+            if ((Original_NOME_COMPLETO == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_NOME_COMPLETO));
             }
             if ((Original_DRT_ID == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_DRT_ID));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_DRT_ID));
             }
             if ((Original_EMAIL == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_EMAIL));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_EMAIL));
             }
             if ((Original_SENHA == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_SENHA));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_SENHA));
             }
             if ((Original_ATIVO == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_ATIVO));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_ATIVO));
             }
             if ((Original_DATA_DES.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((System.DateTime)(Original_DATA_DES.Value));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(Original_DATA_DES.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             if ((Original_HORA_DES.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((System.TimeSpan)(Original_HORA_DES.Value));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((System.TimeSpan)(Original_HORA_DES.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             if ((Original_AREA == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_AREA));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_AREA));
             }
             if ((Original_ARQ_ASSINATURA == null)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_ARQ_ASSINATURA));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_ARQ_ASSINATURA));
             }
-            this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(ID));
+            this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5927,6 +5985,7 @@ SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HOR
                     global::System.Nullable<global::System.TimeSpan> HORA_DES, 
                     string AREA, 
                     string ARQ_ASSINATURA, 
+                    byte[] ASSINATURA, 
                     int Original_ID, 
                     System.DateTime Original_DATA, 
                     System.TimeSpan Original_HORA, 
@@ -5939,7 +5998,7 @@ SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HOR
                     global::System.Nullable<global::System.TimeSpan> Original_HORA_DES, 
                     string Original_AREA, 
                     string Original_ARQ_ASSINATURA) {
-            return this.Update(DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HORA_DES, AREA, ARQ_ASSINATURA, Original_ID, Original_DATA, Original_HORA, Original_NOME_COMPLETO, Original_DRT_ID, Original_EMAIL, Original_SENHA, Original_ATIVO, Original_DATA_DES, Original_HORA_DES, Original_AREA, Original_ARQ_ASSINATURA, Original_ID);
+            return this.Update(DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HORA_DES, AREA, ARQ_ASSINATURA, ASSINATURA, Original_ID, Original_DATA, Original_HORA, Original_NOME_COMPLETO, Original_DRT_ID, Original_EMAIL, Original_SENHA, Original_ATIVO, Original_DATA_DES, Original_HORA_DES, Original_AREA, Original_ARQ_ASSINATURA, Original_ID);
         }
     }
     
