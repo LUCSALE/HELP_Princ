@@ -270,6 +270,13 @@ namespace HELP_Princ
                     row["MODALIDADE"] = InfoWork.MoviRetiradaModalidade;
                     row["PRIORIDADE"] = cbxPrioridade.Text.Trim();
 
+                    // Atualiza Campo: ID_TECNICO_SOLICITANTE
+                    string strWork = cbxTecnicos.Text;
+                    strWork = strWork.Trim();
+                    strWork = strWork.Substring(0, strWork.IndexOf("-")).Trim(); // Extrai o ID do técnico antes do hífen   
+                    //row["ID_TECNICO_SOLICITANTE"] = Convert.ToInt32(strWork); // Converte para inteiro e atribui ao campo ID_TECNICO_SOLICITANTE
+                    row["ID_TECNICO_SOLICITANTE"] = 13;
+
                     if (InfoWork.MoviRetiradaModalidade == "AGENDAMENTO")
                     {
                         row["SITUACAO"] = "PENDENTE";
@@ -361,11 +368,6 @@ namespace HELP_Princ
                     {
                         MessageBox.Show("Erro ao Salvar: MOVI_RETIRADA: " + ex.Message);
                     }
-
-                    string strWork = cbxTecnicos.Text;  
-                    strWork = strWork.Trim();
-                    strWork = strWork.Substring(0, strWork.IndexOf("-")).Trim(); // Extrai o ID do técnico antes do hífen   
-                    MessageBox.Show("ID do Técnico Solicitante: " + strWork, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     this.Close();
                 }

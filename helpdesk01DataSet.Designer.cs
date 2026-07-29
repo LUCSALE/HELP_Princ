@@ -2109,6 +2109,8 @@ namespace HELP_Princ {
             
             private global::System.Data.DataColumn columnNUMERO_OS;
             
+            private global::System.Data.DataColumn columnID_TECNICO_SOLICITANTE;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public MOVI_RETIRADADataTable() {
@@ -2376,6 +2378,14 @@ namespace HELP_Princ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_TECNICO_SOLICITANTEColumn {
+                get {
+                    return this.columnID_TECNICO_SOLICITANTE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2439,7 +2449,8 @@ namespace HELP_Princ {
                         string NOME_USUARIO, 
                         string PREDIO_SETOR, 
                         string AREA, 
-                        string NUMERO_OS) {
+                        string NUMERO_OS, 
+                        int ID_TECNICO_SOLICITANTE) {
                 MOVI_RETIRADARow rowMOVI_RETIRADARow = ((MOVI_RETIRADARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EQUIPAMENTO,
@@ -2470,7 +2481,8 @@ namespace HELP_Princ {
                         NOME_USUARIO,
                         PREDIO_SETOR,
                         AREA,
-                        NUMERO_OS};
+                        NUMERO_OS,
+                        ID_TECNICO_SOLICITANTE};
                 rowMOVI_RETIRADARow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMOVI_RETIRADARow);
                 return rowMOVI_RETIRADARow;
@@ -2529,6 +2541,7 @@ namespace HELP_Princ {
                 this.columnPREDIO_SETOR = base.Columns["PREDIO_SETOR"];
                 this.columnAREA = base.Columns["AREA"];
                 this.columnNUMERO_OS = base.Columns["NUMERO_OS"];
+                this.columnID_TECNICO_SOLICITANTE = base.Columns["ID_TECNICO_SOLICITANTE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2592,6 +2605,8 @@ namespace HELP_Princ {
                 base.Columns.Add(this.columnAREA);
                 this.columnNUMERO_OS = new global::System.Data.DataColumn("NUMERO_OS", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNUMERO_OS);
+                this.columnID_TECNICO_SOLICITANTE = new global::System.Data.DataColumn("ID_TECNICO_SOLICITANTE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_TECNICO_SOLICITANTE);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnEQUIPAMENTO.MaxLength = 50;
@@ -4569,6 +4584,22 @@ namespace HELP_Princ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_TECNICO_SOLICITANTE {
+                get {
+                    try {
+                        return ((int)(this[this.tableMOVI_RETIRADA.ID_TECNICO_SOLICITANTEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'ID_TECNICO_SOLICITANTE\' na tabela \'MOVI_RETIRADA\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMOVI_RETIRADA.ID_TECNICO_SOLICITANTEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsEQUIPAMENTONull() {
                 return this.IsNull(this.tableMOVI_RETIRADA.EQUIPAMENTOColumn);
             }
@@ -4877,6 +4908,18 @@ namespace HELP_Princ {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetNUMERO_OSNull() {
                 this[this.tableMOVI_RETIRADA.NUMERO_OSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsID_TECNICO_SOLICITANTENull() {
+                return this.IsNull(this.tableMOVI_RETIRADA.ID_TECNICO_SOLICITANTEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetID_TECNICO_SOLICITANTENull() {
+                this[this.tableMOVI_RETIRADA.ID_TECNICO_SOLICITANTEColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5563,18 +5606,6 @@ SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HOR
             }
             int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual helpdesk01DataSet.TECNICOSDataTable GetDataBy11(int ID) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID));
-            helpdesk01DataSet.TECNICOSDataTable dataTable = new helpdesk01DataSet.TECNICOSDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8117,6 +8148,7 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, AREA, NOME_USUARIO, PREDIO_SETOR, NUM
             tableMapping.ColumnMappings.Add("PREDIO_SETOR", "PREDIO_SETOR");
             tableMapping.ColumnMappings.Add("AREA", "AREA");
             tableMapping.ColumnMappings.Add("NUMERO_OS", "NUMERO_OS");
+            tableMapping.ColumnMappings.Add("ID_TECNICO_SOLICITANTE", "ID_TECNICO_SOLICITANTE");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -8150,7 +8182,9 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, AREA, NOME_USUARIO, PREDIO_SETOR, NUM
                 "ginal_NOME_USUARIO)) AND ((@IsNull_NUMERO_OS = 1 AND [NUMERO_OS] IS NULL) OR ([N" +
                 "UMERO_OS] = @Original_NUMERO_OS)) AND ((@IsNull_PREDIO_SETOR = 1 AND [PREDIO_SET" +
                 "OR] IS NULL) OR ([PREDIO_SETOR] = @Original_PREDIO_SETOR)) AND ((@IsNull_RAMAL_T" +
-                "EL = 1 AND [RAMAL_TEL] IS NULL) OR ([RAMAL_TEL] = @Original_RAMAL_TEL)))";
+                "EL = 1 AND [RAMAL_TEL] IS NULL) OR ([RAMAL_TEL] = @Original_RAMAL_TEL)) AND ((@I" +
+                "sNull_ID_TECNICO_SOLICITANTE = 1 AND [ID_TECNICO_SOLICITANTE] IS NULL) OR ([ID_T" +
+                "ECNICO_SOLICITANTE] = @Original_ID_TECNICO_SOLICITANTE)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EQUIPAMENTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EQUIPAMENTO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EQUIPAMENTO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EQUIPAMENTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -8203,10 +8237,12 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, AREA, NOME_USUARIO, PREDIO_SETOR, NUM
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PREDIO_SETOR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PREDIO_SETOR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RAMAL_TEL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RAMAL_TEL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RAMAL_TEL", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RAMAL_TEL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [MOVI_RETIRADA] ([EQUIPAMENTO], [SAI], [SSD], [OFFICE_365], [MAINFRAME], [CNS], [BOTAO_EMERGENCIA], [OFFICE_365_PLAN], [DESCRICA_ATIVIDADE], [OBS_IMPORTANTES], [PATRIMONIO], [TECNICO_SOLICITANTE], [TECNICO_ATUANTE], [DATA_RETIRADA], [HORA_RETIRADA], [SITUACAO], [MODALIDADE], [PRIORIDADE], [DATA_PREVISTA], [HORA_PREVISTA], [AREA], [DATA], [ESTAGIO], [HORA], [NOME_USUARIO], [NUMERO_OS], [PREDIO_SETOR], [RAMAL_TEL]) VALUES (@EQUIPAMENTO, @SAI, @SSD, @OFFICE_365, @MAINFRAME, @CNS, @BOTAO_EMERGENCIA, @OFFICE_365_PLAN, @DESCRICA_ATIVIDADE, @OBS_IMPORTANTES, @PATRIMONIO, @TECNICO_SOLICITANTE, @TECNICO_ATUANTE, @DATA_RETIRADA, @HORA_RETIRADA, @SITUACAO, @MODALIDADE, @PRIORIDADE, @DATA_PREVISTA, @HORA_PREVISTA, @AREA, @DATA, @ESTAGIO, @HORA, @NOME_USUARIO, @NUMERO_OS, @PREDIO_SETOR, @RAMAL_TEL);
-SELECT EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, AREA, DATA, ESTAGIO, HORA, ID, NOME_USUARIO, NUMERO_OS, PREDIO_SETOR, RAMAL_TEL FROM MOVI_RETIRADA WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [MOVI_RETIRADA] ([EQUIPAMENTO], [SAI], [SSD], [OFFICE_365], [MAINFRAME], [CNS], [BOTAO_EMERGENCIA], [OFFICE_365_PLAN], [DESCRICA_ATIVIDADE], [OBS_IMPORTANTES], [PATRIMONIO], [TECNICO_SOLICITANTE], [TECNICO_ATUANTE], [DATA_RETIRADA], [HORA_RETIRADA], [SITUACAO], [MODALIDADE], [PRIORIDADE], [DATA_PREVISTA], [HORA_PREVISTA], [AREA], [DATA], [ESTAGIO], [HORA], [NOME_USUARIO], [NUMERO_OS], [PREDIO_SETOR], [RAMAL_TEL], [ID_TECNICO_SOLICITANTE]) VALUES (@EQUIPAMENTO, @SAI, @SSD, @OFFICE_365, @MAINFRAME, @CNS, @BOTAO_EMERGENCIA, @OFFICE_365_PLAN, @DESCRICA_ATIVIDADE, @OBS_IMPORTANTES, @PATRIMONIO, @TECNICO_SOLICITANTE, @TECNICO_ATUANTE, @DATA_RETIRADA, @HORA_RETIRADA, @SITUACAO, @MODALIDADE, @PRIORIDADE, @DATA_PREVISTA, @HORA_PREVISTA, @AREA, @DATA, @ESTAGIO, @HORA, @NOME_USUARIO, @NUMERO_OS, @PREDIO_SETOR, @RAMAL_TEL, @ID_TECNICO_SOLICITANTE);
+SELECT EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, AREA, DATA, ESTAGIO, HORA, ID, NOME_USUARIO, NUMERO_OS, PREDIO_SETOR, RAMAL_TEL, ID_TECNICO_SOLICITANTE FROM MOVI_RETIRADA WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EQUIPAMENTO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EQUIPAMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SAI", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8236,6 +8272,7 @@ SELECT EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFI
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUMERO_OS", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUMERO_OS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PREDIO_SETOR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PREDIO_SETOR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RAMAL_TEL", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RAMAL_TEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [MOVI_RETIRADA] SET [EQUIPAMENTO] = @EQUIPAMENTO, [SAI] = @SAI, [SSD] = @S" +
@@ -8248,42 +8285,45 @@ SELECT EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFI
                 "PRIORIDADE, [DATA_PREVISTA] = @DATA_PREVISTA, [HORA_PREVISTA] = @HORA_PREVISTA, " +
                 "[AREA] = @AREA, [DATA] = @DATA, [ESTAGIO] = @ESTAGIO, [HORA] = @HORA, [NOME_USUA" +
                 "RIO] = @NOME_USUARIO, [NUMERO_OS] = @NUMERO_OS, [PREDIO_SETOR] = @PREDIO_SETOR, " +
-                "[RAMAL_TEL] = @RAMAL_TEL WHERE (((@IsNull_EQUIPAMENTO = 1 AND [EQUIPAMENTO] IS N" +
-                "ULL) OR ([EQUIPAMENTO] = @Original_EQUIPAMENTO)) AND ((@IsNull_SAI = 1 AND [SAI]" +
-                " IS NULL) OR ([SAI] = @Original_SAI)) AND ((@IsNull_SSD = 1 AND [SSD] IS NULL) O" +
-                "R ([SSD] = @Original_SSD)) AND ((@IsNull_OFFICE_365 = 1 AND [OFFICE_365] IS NULL" +
-                ") OR ([OFFICE_365] = @Original_OFFICE_365)) AND ((@IsNull_MAINFRAME = 1 AND [MAI" +
-                "NFRAME] IS NULL) OR ([MAINFRAME] = @Original_MAINFRAME)) AND ((@IsNull_CNS = 1 A" +
-                "ND [CNS] IS NULL) OR ([CNS] = @Original_CNS)) AND ((@IsNull_BOTAO_EMERGENCIA = 1" +
-                " AND [BOTAO_EMERGENCIA] IS NULL) OR ([BOTAO_EMERGENCIA] = @Original_BOTAO_EMERGE" +
-                "NCIA)) AND ((@IsNull_OFFICE_365_PLAN = 1 AND [OFFICE_365_PLAN] IS NULL) OR ([OFF" +
-                "ICE_365_PLAN] = @Original_OFFICE_365_PLAN)) AND ((@IsNull_PATRIMONIO = 1 AND [PA" +
-                "TRIMONIO] IS NULL) OR ([PATRIMONIO] = @Original_PATRIMONIO)) AND ((@IsNull_TECNI" +
-                "CO_SOLICITANTE = 1 AND [TECNICO_SOLICITANTE] IS NULL) OR ([TECNICO_SOLICITANTE] " +
-                "= @Original_TECNICO_SOLICITANTE)) AND ((@IsNull_TECNICO_ATUANTE = 1 AND [TECNICO" +
-                "_ATUANTE] IS NULL) OR ([TECNICO_ATUANTE] = @Original_TECNICO_ATUANTE)) AND ((@Is" +
-                "Null_DATA_RETIRADA = 1 AND [DATA_RETIRADA] IS NULL) OR ([DATA_RETIRADA] = @Origi" +
-                "nal_DATA_RETIRADA)) AND ((@IsNull_HORA_RETIRADA = 1 AND [HORA_RETIRADA] IS NULL)" +
-                " OR ([HORA_RETIRADA] = @Original_HORA_RETIRADA)) AND ((@IsNull_SITUACAO = 1 AND " +
-                "[SITUACAO] IS NULL) OR ([SITUACAO] = @Original_SITUACAO)) AND ((@IsNull_MODALIDA" +
-                "DE = 1 AND [MODALIDADE] IS NULL) OR ([MODALIDADE] = @Original_MODALIDADE)) AND (" +
-                "(@IsNull_PRIORIDADE = 1 AND [PRIORIDADE] IS NULL) OR ([PRIORIDADE] = @Original_P" +
-                "RIORIDADE)) AND ((@IsNull_DATA_PREVISTA = 1 AND [DATA_PREVISTA] IS NULL) OR ([DA" +
-                "TA_PREVISTA] = @Original_DATA_PREVISTA)) AND ((@IsNull_HORA_PREVISTA = 1 AND [HO" +
-                "RA_PREVISTA] IS NULL) OR ([HORA_PREVISTA] = @Original_HORA_PREVISTA)) AND ((@IsN" +
-                "ull_AREA = 1 AND [AREA] IS NULL) OR ([AREA] = @Original_AREA)) AND ([DATA] = @Or" +
-                "iginal_DATA) AND ((@IsNull_ESTAGIO = 1 AND [ESTAGIO] IS NULL) OR ([ESTAGIO] = @O" +
-                "riginal_ESTAGIO)) AND ([HORA] = @Original_HORA) AND ([ID] = @Original_ID) AND ((" +
-                "@IsNull_NOME_USUARIO = 1 AND [NOME_USUARIO] IS NULL) OR ([NOME_USUARIO] = @Origi" +
-                "nal_NOME_USUARIO)) AND ((@IsNull_NUMERO_OS = 1 AND [NUMERO_OS] IS NULL) OR ([NUM" +
-                "ERO_OS] = @Original_NUMERO_OS)) AND ((@IsNull_PREDIO_SETOR = 1 AND [PREDIO_SETOR" +
-                "] IS NULL) OR ([PREDIO_SETOR] = @Original_PREDIO_SETOR)) AND ((@IsNull_RAMAL_TEL" +
-                " = 1 AND [RAMAL_TEL] IS NULL) OR ([RAMAL_TEL] = @Original_RAMAL_TEL)));\r\nSELECT " +
-                "EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_" +
-                "PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECN" +
-                "ICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DAT" +
-                "A_PREVISTA, HORA_PREVISTA, AREA, DATA, ESTAGIO, HORA, ID, NOME_USUARIO, NUMERO_O" +
-                "S, PREDIO_SETOR, RAMAL_TEL FROM MOVI_RETIRADA WHERE (ID = @ID)";
+                "[RAMAL_TEL] = @RAMAL_TEL, [ID_TECNICO_SOLICITANTE] = @ID_TECNICO_SOLICITANTE WHE" +
+                "RE (((@IsNull_EQUIPAMENTO = 1 AND [EQUIPAMENTO] IS NULL) OR ([EQUIPAMENTO] = @Or" +
+                "iginal_EQUIPAMENTO)) AND ((@IsNull_SAI = 1 AND [SAI] IS NULL) OR ([SAI] = @Origi" +
+                "nal_SAI)) AND ((@IsNull_SSD = 1 AND [SSD] IS NULL) OR ([SSD] = @Original_SSD)) A" +
+                "ND ((@IsNull_OFFICE_365 = 1 AND [OFFICE_365] IS NULL) OR ([OFFICE_365] = @Origin" +
+                "al_OFFICE_365)) AND ((@IsNull_MAINFRAME = 1 AND [MAINFRAME] IS NULL) OR ([MAINFR" +
+                "AME] = @Original_MAINFRAME)) AND ((@IsNull_CNS = 1 AND [CNS] IS NULL) OR ([CNS] " +
+                "= @Original_CNS)) AND ((@IsNull_BOTAO_EMERGENCIA = 1 AND [BOTAO_EMERGENCIA] IS N" +
+                "ULL) OR ([BOTAO_EMERGENCIA] = @Original_BOTAO_EMERGENCIA)) AND ((@IsNull_OFFICE_" +
+                "365_PLAN = 1 AND [OFFICE_365_PLAN] IS NULL) OR ([OFFICE_365_PLAN] = @Original_OF" +
+                "FICE_365_PLAN)) AND ((@IsNull_PATRIMONIO = 1 AND [PATRIMONIO] IS NULL) OR ([PATR" +
+                "IMONIO] = @Original_PATRIMONIO)) AND ((@IsNull_TECNICO_SOLICITANTE = 1 AND [TECN" +
+                "ICO_SOLICITANTE] IS NULL) OR ([TECNICO_SOLICITANTE] = @Original_TECNICO_SOLICITA" +
+                "NTE)) AND ((@IsNull_TECNICO_ATUANTE = 1 AND [TECNICO_ATUANTE] IS NULL) OR ([TECN" +
+                "ICO_ATUANTE] = @Original_TECNICO_ATUANTE)) AND ((@IsNull_DATA_RETIRADA = 1 AND [" +
+                "DATA_RETIRADA] IS NULL) OR ([DATA_RETIRADA] = @Original_DATA_RETIRADA)) AND ((@I" +
+                "sNull_HORA_RETIRADA = 1 AND [HORA_RETIRADA] IS NULL) OR ([HORA_RETIRADA] = @Orig" +
+                "inal_HORA_RETIRADA)) AND ((@IsNull_SITUACAO = 1 AND [SITUACAO] IS NULL) OR ([SIT" +
+                "UACAO] = @Original_SITUACAO)) AND ((@IsNull_MODALIDADE = 1 AND [MODALIDADE] IS N" +
+                "ULL) OR ([MODALIDADE] = @Original_MODALIDADE)) AND ((@IsNull_PRIORIDADE = 1 AND " +
+                "[PRIORIDADE] IS NULL) OR ([PRIORIDADE] = @Original_PRIORIDADE)) AND ((@IsNull_DA" +
+                "TA_PREVISTA = 1 AND [DATA_PREVISTA] IS NULL) OR ([DATA_PREVISTA] = @Original_DAT" +
+                "A_PREVISTA)) AND ((@IsNull_HORA_PREVISTA = 1 AND [HORA_PREVISTA] IS NULL) OR ([H" +
+                "ORA_PREVISTA] = @Original_HORA_PREVISTA)) AND ((@IsNull_AREA = 1 AND [AREA] IS N" +
+                "ULL) OR ([AREA] = @Original_AREA)) AND ([DATA] = @Original_DATA) AND ((@IsNull_E" +
+                "STAGIO = 1 AND [ESTAGIO] IS NULL) OR ([ESTAGIO] = @Original_ESTAGIO)) AND ([HORA" +
+                "] = @Original_HORA) AND ([ID] = @Original_ID) AND ((@IsNull_NOME_USUARIO = 1 AND" +
+                " [NOME_USUARIO] IS NULL) OR ([NOME_USUARIO] = @Original_NOME_USUARIO)) AND ((@Is" +
+                "Null_NUMERO_OS = 1 AND [NUMERO_OS] IS NULL) OR ([NUMERO_OS] = @Original_NUMERO_O" +
+                "S)) AND ((@IsNull_PREDIO_SETOR = 1 AND [PREDIO_SETOR] IS NULL) OR ([PREDIO_SETOR" +
+                "] = @Original_PREDIO_SETOR)) AND ((@IsNull_RAMAL_TEL = 1 AND [RAMAL_TEL] IS NULL" +
+                ") OR ([RAMAL_TEL] = @Original_RAMAL_TEL)) AND ((@IsNull_ID_TECNICO_SOLICITANTE =" +
+                " 1 AND [ID_TECNICO_SOLICITANTE] IS NULL) OR ([ID_TECNICO_SOLICITANTE] = @Origina" +
+                "l_ID_TECNICO_SOLICITANTE)));\r\nSELECT EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAM" +
+                "E, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, " +
+                "PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, " +
+                "SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, AREA, DATA, ESTA" +
+                "GIO, HORA, ID, NOME_USUARIO, NUMERO_OS, PREDIO_SETOR, RAMAL_TEL, ID_TECNICO_SOLI" +
+                "CITANTE FROM MOVI_RETIRADA WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EQUIPAMENTO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EQUIPAMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SAI", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8313,6 +8353,7 @@ SELECT EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFI
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUMERO_OS", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUMERO_OS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PREDIO_SETOR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PREDIO_SETOR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RAMAL_TEL", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RAMAL_TEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EQUIPAMENTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EQUIPAMENTO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EQUIPAMENTO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EQUIPAMENTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SAI", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SAI", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -8364,6 +8405,8 @@ SELECT EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFI
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PREDIO_SETOR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PREDIO_SETOR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RAMAL_TEL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RAMAL_TEL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RAMAL_TEL", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RAMAL_TEL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -8380,14 +8423,13 @@ SELECT EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFI
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, AREA, DATA, ESTAGIO, HORA, ID, NOME_USUARIO, NUMERO_OS, PREDIO_SETOR, RAMAL_TEL FROM MOVI_RETIRADA";
+            this._commandCollection[0].CommandText = @"SELECT        EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, 
+                         HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, AREA, DATA, ESTAGIO, HORA, ID, NOME_USUARIO, NUMERO_OS, PREDIO_SETOR, RAMAL_TEL, ID_TECNICO_SOLICITANTE
+FROM            MOVI_RETIRADA";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        BOTAO_EMERGENCIA, CNS, DATA_PREVISTA, DATA_RETIRADA, DESCRICA_ATIVIDADE, EQUIPAMENTO, HORA_PREVISTA, HORA_RETIRADA, MAINFRAME, MODALIDADE, OBS_IMPORTANTES, OFFICE_365, OFFICE_365_PLAN, 
-                         PATRIMONIO, PRIORIDADE, SAI, SITUACAO, SSD, TECNICO_ATUANTE, TECNICO_SOLICITANTE, AREA, DATA, ESTAGIO, HORA, ID, NOME_USUARIO, NUMERO_OS, PREDIO_SETOR, RAMAL_TEL
-FROM            MOVI_RETIRADA
-WHERE        (ID = @ID)";
+            this._commandCollection[1].CommandText = @"SELECT AREA, BOTAO_EMERGENCIA, CNS, DATA, DATA_PREVISTA, DATA_RETIRADA, DESCRICA_ATIVIDADE, EQUIPAMENTO, ESTAGIO, HORA, HORA_PREVISTA, HORA_RETIRADA, ID, ID_TECNICO_SOLICITANTE, MAINFRAME, MODALIDADE, NOME_USUARIO, NUMERO_OS, OBS_IMPORTANTES, OFFICE_365, OFFICE_365_PLAN, PATRIMONIO, PREDIO_SETOR, PRIORIDADE, RAMAL_TEL, SAI, SITUACAO, SSD, TECNICO_ATUANTE, TECNICO_SOLICITANTE FROM MOVI_RETIRADA WHERE (ID = @ID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();

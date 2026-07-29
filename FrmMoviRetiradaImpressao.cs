@@ -373,9 +373,38 @@ namespace HELP_Princ
                 page.Canvas.DrawString(Descrica_Atividade, cabecalho, PdfBrushes.Black, new RectangleF(38, 540, 520, 710));
                 page.Canvas.DrawString(obsImportantes, cabecalho, PdfBrushes.Black, new RectangleF(38, 660, 520, 820));
 
-                // Insere a imagem
-                page.Canvas.DrawImage(logo, 36, 745, 450, 100);
+                // Insere Assinatura conforme tabela: TECNICOS
+                // Execute a consulta: TECNICOS
+                try
+                {
+                    this.tECNICOSTableAdapter.FillByID(this.helpdesk01DataSet.TECNICOS , 25);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao CONSULTAR (SELECT): TECNICOS " + ex.Message);
+                    this.Close();
+                }
+                DataRowView row = (DataRowView)tECNICOSBindingSource.Current;
+                
+                try
+                {
+                    object v = row["ASSINATURA"];
+                    using (MemoryStream ms = new MemoryStream((byte[])v))
+                    using (Image img = Image.FromStream(ms))
+                    {
+                        PdfImage pdfImg = PdfImage.FromImage(img);
 
+                        // Insere a imagem
+                        page.Canvas.DrawImage(pdfImg , 36, 745, 450, 100);   
+
+                    }
+
+                    
+                }
+                catch (Exception ex)
+                {
+                    // Nada
+                }
             }
 
             // 3. Salva o resultado em .PDF e .HTML
