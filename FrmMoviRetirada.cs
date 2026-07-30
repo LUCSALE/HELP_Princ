@@ -274,8 +274,8 @@ namespace HELP_Princ
                     string strWork = cbxTecnicos.Text;
                     strWork = strWork.Trim();
                     strWork = strWork.Substring(0, strWork.IndexOf("-")).Trim(); // Extrai o ID do técnico antes do hífen   
-                    //row["ID_TECNICO_SOLICITANTE"] = Convert.ToInt32(strWork); // Converte para inteiro e atribui ao campo ID_TECNICO_SOLICITANTE
-                    row["ID_TECNICO_SOLICITANTE"] = 13;
+                    row["ID_TECNICO_SOLICITANTE"] = Convert.ToInt32(strWork); // Converte para inteiro e atribui ao campo ID_TECNICO_SOLICITANTE
+                    
 
                     if (InfoWork.MoviRetiradaModalidade == "AGENDAMENTO")
                     {

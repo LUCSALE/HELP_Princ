@@ -4,8 +4,17 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
-using System.Net;
+
 using System.Diagnostics.Eventing.Reader;
+using Spire.Pdf;
+using Spire.Pdf.Graphics;
+using Spire.Pdf.Texts;
+
+using System.Net;
+using System.Net.Mail;
+using System.IO;
+using System.Web.UI.WebControls;
+
 
 namespace HELP_Princ
 {
@@ -16,45 +25,28 @@ namespace HELP_Princ
             InitializeComponent();
 
             this.AutoScroll = true; // Habilita a barra de rolagem automática
-            fcnConfigCampos(); //Conifigura campos para navegação com a tecla Enter e Destaque do campo ao entrar e restaura a cor ao sair
         }
 
 
         private void FrmMoviRetiradaImpressao_Load(object sender, EventArgs e)
         {
-            fncAtualizaTecnico();
             tmiEfeitos.Start();
 
-            if (InfoApp.opcao == "Incluir RETIRADA DE EQUIPAMENTO")
+            // Execute a consulta: MOVI_RETIRADA
+            try
             {
-                gbxRetirada.Enabled = false;
-                rbtAgendamento.Checked = true;
-                rbtAgendamento.Focus();
-            }
-            else if (InfoApp.opcao == "Editar RETIRADA DE EQUIPAMENTO")
-            {
-                //Pesquisa para preencher o comboBox de MODALIDADE
                 this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
-
-                if (helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("MODALIDADE").Trim() == "AGENDAMENTO")
-                {
-                    rbtAgendamento.Checked = true;
-                }
-                else if (helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("MODALIDADE").Trim() == "MANUTENÇÃO")
-                {
-                    rbtManutencao.Checked = true;
-                }
-                else if (helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("MODALIDADE").Trim() == "SUBS./PREPARAÇÃO")
-                {
-                    rtbSubstituicao.Checked = true;
-                }
-                else if (helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("MODALIDADE").Trim() == "SIMPLES RETIRADA")
-                {
-                    rtbSimples.Checked = true;
-                }
-                cbxTecnico_Atuante.Text = helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_ATUANTE").Trim();
-                gbxRetirada.Enabled = true;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao CONSULTAR (SELECT): MOVI_RETIRADA: " + ex.Message);
+                this.Close();
+            }
+
+            fcnDesativaCampos();
+            fcnGeraPDF();
+            fcnImpressao();
+
         }
 
 
@@ -156,37 +148,12 @@ namespace HELP_Princ
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            InfoWork.MoviRetiradaUpdate = "S";
 
-            if (rbtAgendamento.Checked)
-            {
-                InfoWork.MoviRetiradaModalidade = "AGENDAMENTO";
-            }
-
-            if (rbtManutencao .Checked)
-            {
-                InfoWork.MoviRetiradaModalidade = "MANUTENÇÃO";
-            }
-
-            if (rtbSubstituicao.Checked)
-            {
-                InfoWork.MoviRetiradaModalidade = "SUBS./PREPARAÇÃO";
-            }
-
-            if (rtbSimples.Checked)
-            {
-                InfoWork.MoviRetiradaModalidade = "SIMPLES RETIRADA";
-            }
-            InfoWork.TecnicoAtuante = cbxTecnico_Atuante.Text.Trim();
-            InfoWork.DataRetirada = txtDataRetirada.Text.Trim();
-            InfoWork.HoraRetirada = txtHoraRetirada.Text.Trim();    
-
-            this.Close();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            InfoWork.MoviRetiradaUpdate = "N";  
+
             this.Close();
         }
 
@@ -290,98 +257,300 @@ namespace HELP_Princ
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             InfoWork.MoviRetiradaUpdate = "N";
-            
+
         }
 
         private void rbtAgendamento_Click(object sender, EventArgs e)
         {
-            gbxRetirada.Enabled = false;
-            txtDataRetirada.Clear();
-            txtHoraRetirada.Clear();
-            cbxTecnico_Atuante.SelectedIndex = -1;
 
         }
 
         private void rtbSimples_CheckedChanged(object sender, EventArgs e)
         {
-            
+
+
         }
 
         private void rtbSimples_Click(object sender, EventArgs e)
         {
-            gbxRetirada.Enabled = true;
+
         }
 
         private void rtbSubstituicao_Click(object sender, EventArgs e)
         {
-            gbxRetirada.Enabled = true;
+
         }
 
         private void rbtManutencao_Click(object sender, EventArgs e)
         {
-            gbxRetirada.Enabled = true;
-        }
 
-        private void fncAtualizaTecnico()
-        {
-
-            // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.TECNICOS'. Você pode movê-la ou removê-la conforme necessário.
-            this.tECNICOSTableAdapter.FillByATIVO(this.helpdesk01DataSet.TECNICOS);
-
-            cbxTecnico_Atuante.Items.Clear();
-            for (int i = 0; i < this.helpdesk01DataSet.TECNICOS.Count; i++)
-            {
-                string strNOME_ENTIDADE = this.helpdesk01DataSet.TECNICOS.Rows[i].Field<string>("NOME_COMPLETO").Trim();
-                cbxTecnico_Atuante.Items.Add(strNOME_ENTIDADE);
-            }
-            cbxTecnico_Atuante.SelectedIndex = -1; // Limpa a seleção do ComboBox  
-
-        }
-
-        private void fcnConfigCampos()
-        {
-            foreach (Control c in this.gbxRetirada.Controls)
-            {
-                if (c is TextBox)
-                {
-                    c.KeyDown += fcnEnter;
-                    c.Enter += (s, e) => { c.BackColor = Color.LightYellow; }; // Destaca o campo ao entrar
-                    c.Leave += (s, e) => { c.BackColor = Color.White; }; // Restaura a cor ao sair  
-                }
-            }
-        }
-
-        private void fcnEnter(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                e.SuppressKeyPress = true; // evita o som "beep" 
-                this.SelectNextControl((Control)sender, true,   // próximo controle
-                                                        true,
-                                                        true,
-                                                        true);
-            }
         }
 
         private void cbtnNovoTecnico_Click(object sender, EventArgs e)
         {
-            cbxTecnico_Atuante.SelectedIndex = -1; // Limpa a seleção do ComboBox   
 
-            this.Enabled = false;
-            InfoApp.opcao = "Incluir NOVO TÉCNICO";
-            FrmTecnicosForm TecnicosForm = new FrmTecnicosForm();
-            TecnicosForm.ShowDialog();
-            this.Enabled = true;
+        }
 
-            fncAtualizaTecnico();
+        private void fcnDesativaCampos()
+        {
 
-            int posicao = cbxTecnico_Atuante.FindStringExact(InfoWork.strWork.Trim());
-            if (posicao >= 0)
+            foreach (Control c in this.gbxIdentificacao.Controls)
             {
-                cbxTecnico_Atuante.SelectedIndex = posicao;
+                if (c is TextBox)
+                {
+                    c.Enabled = false; // Desativa o campo  
+                }
+            }
+
+        }
+
+        private void btnImpressao_Click(object sender, EventArgs e)
+        {
+            fcnImpressao();
+            //this.Close();
+        }
+
+        private void fcnImpressao()
+        {
+            this.pdfViewer1.LoadFromFile(@"C:\Windows\Temp\TAREFA_BANCADA.pdf");
+
+        }
+
+        private void fcnGeraPDF()
+        {
+
+            // 1. Carrega o documento
+            PdfDocument doc = new PdfDocument();
+            doc.LoadFromFile(@"E:\DESENVOL_WEB\HELP_Princ\modelo_pdf\MODELO_TAREFA_BANCADA.pdf");
+
+            // 2. Percorre as páginas
+            foreach (PdfPageBase page in doc.Pages)
+            {
+                // Cria o substituidor para a página atual
+                PdfTextReplacer replacer = new PdfTextReplacer(page);
+
+                // Substitui todo o texto correspondente - Cabeçalho
+                replacer.ReplaceAllText("{numero_os}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim());
+                replacer.ReplaceAllText("{SITUACAO}", "A EXECUTAR");
+
+                // Primeira Linha: substitui os campos 
+                replacer.ReplaceAllText("{ID}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<int>("ID").ToString());
+                replacer.ReplaceAllText("{DATA}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<DateTime>("DATA").ToString("dd/MM/yyyy"));
+                replacer.ReplaceAllText("{HORA}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<TimeSpan>("HORA").ToString(@"hh\:mm"));
+                replacer.ReplaceAllText("{DATA_P}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<DateTime>("DATA_PREVISTA").ToString("dd/MM/yyyy"));
+                replacer.ReplaceAllText("{HORA_P}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<TimeSpan>("HORA_PREVISTA").ToString(@"hh\:mm"));
+                replacer.ReplaceAllText("{TECNICO_SOLICITANTE}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_SOLICITANTE").Trim());
+
+                // Segunda Linha: substitui os campos 
+                replacer.ReplaceAllText("{RAMAL}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("RAMAL_TEL").Trim());
+                replacer.ReplaceAllText("{NOME_USUARIO}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NOME_USUARIO").Trim());
+                replacer.ReplaceAllText("{PREDIO_SETOR}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PREDIO_SETOR").Trim());
+                replacer.ReplaceAllText("{AREA}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("AREA").Trim());
+
+
+                // Terceira Linha: substitui os campos 
+                replacer.ReplaceAllText("{PATRIMONIO}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PATRIMONIO").Trim());
+                replacer.ReplaceAllText("{SAI}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SAI").Trim());
+                replacer.ReplaceAllText("{PRIORIDADE}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PRIORIDADE").Trim());
+                replacer.ReplaceAllText("{EQUIPAMENTO}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("EQUIPAMENTO").Trim());
+
+                replacer.ReplaceAllText("{SSD}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SSD").Trim());
+                replacer.ReplaceAllText("{OFFI}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("OFFICE_365").Trim());
+                replacer.ReplaceAllText("{MAIN}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("MAINFRAME").Trim());
+
+
+                replacer.ReplaceAllText("{CNS}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("CNS").Trim());
+                replacer.ReplaceAllText("{BOT}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("BOTAO_EMERGENCIA").Trim());
+                replacer.ReplaceAllText("{PLA}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("OFFICE_365_PLAN").Trim());
+
+
+                //Impressão MANUAL dos campos MEMO´S
+                string obsImportantes = helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("OBS_IMPORTANTES") ?? "";
+                string Descrica_Atividade = helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("DESCRICA_ATIVIDADE") ?? "";
+                PdfFont cabecalho = new PdfFont(PdfFontFamily.Helvetica, 10, PdfFontStyle.Bold);
+                page.Canvas.DrawString(Descrica_Atividade, cabecalho, PdfBrushes.Black, new RectangleF(38, 540, 520, 710));
+                page.Canvas.DrawString(obsImportantes, cabecalho, PdfBrushes.Black, new RectangleF(38, 660, 520, 820));
+
+                // Insere Assinatura conforme tabela: TECNICOS
+                // Execute a consulta: TECNICOS
+                try
+                {
+                    this.tECNICOSTableAdapter.FillByID(this.helpdesk01DataSet.TECNICOS , helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<int>("ID_TECNICO_SOLICITANTE"));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao CONSULTAR (SELECT): TECNICOS " + ex.Message);
+                    this.Close();
+                }
+                DataRowView row = (DataRowView)tECNICOSBindingSource.Current;
+                
+                try
+                {
+                    object v = row["ASSINATURA"];
+                    using (MemoryStream ms = new MemoryStream((byte[])v))
+                    using (Image img = Image.FromStream(ms))
+                    {
+                        PdfImage pdfImg = PdfImage.FromImage(img);
+
+                        // Insere a imagem
+                        page.Canvas.DrawImage(pdfImg , 36, 745, 450, 100);   
+
+                    }
+
+                    
+                }
+                catch (Exception ex)
+                {
+                    // Nada
+                }
+            }
+
+            // 3. Salva o resultado em .PDF e .HTML
+            doc.SaveToFile(@"C:\Windows\Temp\TAREFA_BANCADA.pdf");
+            doc.SaveToFile(@"C:\Windows\Temp\TAREFA_BANCADA_HTML.html", FileFormat.HTML);
+
+            doc.Close();
+
+
+
+
+
+            //PdfDocument pdf = new PdfDocument();
+            //PdfPageBase pagina = pdf.Pages.Add();
+
+            //float y = 40;
+
+            //// Título
+            //PdfFont titulo = new PdfFont(PdfFontFamily.Helvetica, 30 , PdfFontStyle.Bold);
+            //pagina.Canvas.DrawString("T A R E F A  B A N C A D A", titulo,
+            //                         PdfBrushes.Black, 180, y);
+
+            //y += 40;
+
+            //// Cabeçalhos
+            //PdfFont cabecalho = new PdfFont(PdfFontFamily.Helvetica, 10, PdfFontStyle.Bold);
+
+            //pagina.Canvas.DrawString("Código", cabecalho, PdfBrushes.Black, 20, y);
+            //pagina.Canvas.DrawString("Nome", cabecalho, PdfBrushes.Black, 90, y);
+            //pagina.Canvas.DrawString("Cidade", cabecalho, PdfBrushes.Black, 300, y);
+
+            //y += 20;
+
+            //// Linha separadora
+            //pagina.Canvas.DrawLine(
+            //    new PdfPen(Color.Black, 1),
+            //    20, y, 550, y);
+
+            //y += 10;
+
+
+            //pdf.SaveToFile(@"C:\Windows\Temp\MOVI_RETIRADA.pdf");
+            //pdf.Close();
+        }
+
+        private void btnEMail_Click(object sender, EventArgs e)
+        {
+            fcnEnviaEmailTexto();
+            //fcnEnviaEmailHTML();
+            
+        }
+
+        private void fcnEnviaEmailTexto()
+        {
+            
+            try
+            {
+                MailMessage email = new MailMessage();
+
+                //email.From = new MailAddress((string)row["EMAIL"]);
+                //email.To.Add("luciano.ale@santacasasp.org.br");
+                //email.Subject = "TAREFA BANCADA - Versão: 1.14";
+                //email.Body = "TAREFA BANCADA - Ordem de Serviço: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim();
+                //email.Body = "-> NOME USUÁRIO(A): " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NOME_USUARIO").Trim();
+                //email.Body = " -> RAMAL: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("RAMAL_TEL").Trim();
+|               //email.Body = "-> PREDIO/SETOR: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PREDIO_SETOR").Trim();
+            
+
+                email.IsBodyHtml = false;
+
+                // Anexo (opcional)
+                email.Attachments.Add(new Attachment(@"C:\Windows\Temp\TAREFA_BANCADA.pdf"));
+
+                SmtpClient smtp = new SmtpClient("smtp.santacasasp.org.br", 587);
+                smtp.Credentials = new NetworkCredential(
+                    "luciano.ale@santacasasp.org.br",
+                    "Mag160163@"
+                );
+                smtp.EnableSsl = false;
+
+                smtp.Send(email);
+
+                MessageBox.Show("E-mail enviado com sucesso!",
+                                "Sucesso",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao enviar o e-mail:\n" + ex.Message,
+                                "Erro",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+
+
+        }
+
+
+
+        private void fcnEnviaEmailHTML()
+        {
+            try
+            {
+                MailMessage email = new MailMessage();
+
+                email.From = new MailAddress("luciano@lucsale.com.br");
+                email.To.Add("luciano@lucsale.com.br");
+                email.Subject = "Teste Incial - TAREFA BANCADA - Versão: 1.10 (HTML)";
+
+                if (File.Exists(@"C:\Windows\Temp\TAREFA_BANCADA_HTML.html"))
+                {
+                    email.Body = File.ReadAllText(@"C:\Windows\Temp\TAREFA_BANCADA_HTML.html");
+                }
+                else
+                {
+                    MessageBox.Show("Arquivo não encontrado.");
+                }
+                
+                email.IsBodyHtml = true;
+
+                SmtpClient smtp = new SmtpClient("mail.lucsale.com.br", 587);
+                smtp.Credentials = new NetworkCredential(
+                    "luciano@lucsale.com.br",
+                    "Mag160163@"
+                );
+                smtp.EnableSsl = false;
+
+                smtp.Send(email);
+
+                MessageBox.Show("E-mail enviado com sucesso!",
+                                "Sucesso",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao enviar o e-mail:\n" + ex.Message,
+                                "Erro",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
 
         }
     }
 }
+
+
+
+
  

@@ -333,7 +333,7 @@ namespace HELP_Princ
 
                 // Substitui todo o texto correspondente - Cabeçalho
                 replacer.ReplaceAllText("{numero_os}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim());
-                replacer.ReplaceAllText("{SITUACAO}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SITUACAO").Trim());
+                replacer.ReplaceAllText("{SITUACAO}", "A EXECUTAR");
 
                 // Primeira Linha: substitui os campos 
                 replacer.ReplaceAllText("{ID}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<int>("ID").ToString());
@@ -377,7 +377,7 @@ namespace HELP_Princ
                 // Execute a consulta: TECNICOS
                 try
                 {
-                    this.tECNICOSTableAdapter.FillByID(this.helpdesk01DataSet.TECNICOS , 25);
+                    this.tECNICOSTableAdapter.FillByID(this.helpdesk01DataSet.TECNICOS , helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<int>("ID_TECNICO_SOLICITANTE"));
                 }
                 catch (Exception ex)
                 {
@@ -459,14 +459,18 @@ namespace HELP_Princ
 
         private void fcnEnviaEmailTexto()
         {
+            DataRowView row = (DataRowView)tECNICOSBindingSource.Current;
             try
             {
                 MailMessage email = new MailMessage();
 
+                //email.From = new MailAddress((string)row["EMAIL"]);
                 email.From = new MailAddress("luciano.ale@santacasasp.org.br");
-                email.To.Add("helpdesk@santacasasp.org.br");
-                email.Subject = "Teste Incial - TAREFA BANCADA - Versão: 1.12 (Assinatura)";
-                email.Body = "Este e-mail foi enviado pelo APP HELP_Princ.";
+                email.To.Add("luciano.ale@santacasasp.org.br");
+                email.Subject = "TAREFA BANCADA - Ordem de Serviço: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim();
+
+                email.Body = "-> NOME USUÁRIO(A): " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NOME_USUARIO").Trim() + " -> RAMAL: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("RAMAL_TEL").Trim() + " -> PREDIO/SETOR: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PREDIO_SETOR").Trim();
+                
                 email.IsBodyHtml = false;
 
                 // Anexo (opcional)

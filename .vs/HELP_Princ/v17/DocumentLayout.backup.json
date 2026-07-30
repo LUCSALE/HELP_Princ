@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\DESENVOL_WEB\\HELP_Princ\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\frmmoviretiradaimpressao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmmoviretiradaimpressao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|E:\\DESENVOL_WEB\\HELP_Princ\\frmmoviretiradaimpressao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmmoviretiradaimpressao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|E:\\DESENVOL_WEB\\HELP_Princ\\frmmoviretirada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmmoviretirada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|E:\\DESENVOL_WEB\\HELP_Princ\\frmmoviretirada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmmoviretirada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,6 +59,67 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T18:15:53.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmMoviRetiradaImpressao.cs",
+              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviRetiradaImpressao.cs",
+              "RelativeDocumentMoniker": "FrmMoviRetiradaImpressao.cs",
+              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviRetiradaImpressao.cs",
+              "RelativeToolTip": "FrmMoviRetiradaImpressao.cs",
+              "ViewState": "AgIAAMYBAAAAAAAAAAAAANUBAACRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T11:50:37.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmMoviRetiradaImpressao.cs [Design]",
+              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviRetiradaImpressao.cs",
+              "RelativeDocumentMoniker": "FrmMoviRetiradaImpressao.cs",
+              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviRetiradaImpressao.cs [Design]",
+              "RelativeToolTip": "FrmMoviRetiradaImpressao.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T11:50:32.041Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmMoviRetirada.cs",
+              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviRetirada.cs",
+              "RelativeDocumentMoniker": "FrmMoviRetirada.cs",
+              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviRetirada.cs",
+              "RelativeToolTip": "FrmMoviRetirada.cs",
+              "ViewState": "AgIAAPUAAAAAAAAAAAAAABUBAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T11:33:40.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmMoviRetirada.cs [Design]",
+              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviRetirada.cs",
+              "RelativeDocumentMoniker": "FrmMoviRetirada.cs",
+              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviRetirada.cs [Design]",
+              "RelativeToolTip": "FrmMoviRetirada.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T11:24:26.671Z"
             }
           ]
         }

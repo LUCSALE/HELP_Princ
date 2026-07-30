@@ -30,7 +30,7 @@ namespace HELP_Princ
             dbgRetirada.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
             dbgRetirada.GridColor = Color.White;      // Remove borda padrão     
             dbgRetirada.CellBorderStyle = DataGridViewCellBorderStyle.Single;      // Espaçamento visual
-            dbgRetirada.RowTemplate.Height = 35;      // Estilo das células     
+            dbgRetirada.RowTemplate.Height = 45;      // Estilo das células     
             dbgRetirada.DefaultCellStyle.BackColor = Color.LightBlue;
             dbgRetirada.DefaultCellStyle.SelectionBackColor = Color.RoyalBlue;      // Margem interna do texto
             dbgRetirada.DefaultCellStyle.Padding =         new Padding(5);
