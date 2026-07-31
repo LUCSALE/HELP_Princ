@@ -31,6 +31,17 @@ namespace HELP_Princ
         private void FrmMoviRetiradaImpressao_Load(object sender, EventArgs e)
         {
             tmiEfeitos.Start();
+            tmiProgressBar.Start();
+
+            // Ajusta PROGRESSBAR
+            prgCarregamento.Animated = true;
+            prgCarregamento.AnimationSpeed = 0.8f;
+            prgCarregamento.ShowText = true;
+            prgCarregamento.ProgressColor = Color.RoyalBlue;
+            prgCarregamento.ProgressColor2 = Color.DeepSkyBlue;
+            prgCarregamento.FillColor = Color.Gainsboro;
+            //prgCarregamento.Thickness = 12;
+            prgCarregamento.FillThickness = 12;
 
             // Execute a consulta: MOVI_RETIRADA
             try
@@ -46,6 +57,7 @@ namespace HELP_Princ
             fcnDesativaCampos();
             fcnGeraPDF();
             fcnImpressao();
+            tmiProgressBar.Stop();
 
         }
 
