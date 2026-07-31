@@ -13,6 +13,7 @@ using Spire.Pdf.Texts;
 using System.Net;
 using System.Net.Mail;
 using System.IO;
+using System.Windows.Controls;
 
 
 namespace HELP_Princ
@@ -293,9 +294,9 @@ namespace HELP_Princ
         private void fcnDesativaCampos()
         {
 
-            foreach (Control c in this.gbxIdentificacao.Controls)
+            foreach (System.Windows.Forms.Control c in this.gbxIdentificacao.Controls)
             {
-                if (c is TextBox)
+                if (c is System.Windows.Forms.TextBox)
                 {
                     c.Enabled = false; // Desativa o campo  
                 }
@@ -390,7 +391,7 @@ namespace HELP_Princ
                 {
                     object v = row["ASSINATURA"];
                     using (MemoryStream ms = new MemoryStream((byte[])v))
-                    using (Image img = Image.FromStream(ms))
+                    using (System.Drawing.Image img = System.Drawing.Image.FromStream(ms))
                     {
                         PdfImage pdfImg = PdfImage.FromImage(img);
 
@@ -469,8 +470,10 @@ namespace HELP_Princ
                 email.To.Add("luciano.ale@santacasasp.org.br");
                 email.Subject = "TAREFA BANCADA - Ordem de Serviço: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim();
 
-                email.Body = "-> NOME USUÁRIO(A): " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NOME_USUARIO").Trim() + " -> RAMAL: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("RAMAL_TEL").Trim() + " -> PREDIO/SETOR: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PREDIO_SETOR").Trim();
-                
+                //email.Body = @" T A R E F A  B A N C A D A: 
+                // -> ORDEM DE SERVIÇO: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim() + "\n\n -> TÉCNICO SOLICITANTE: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_SOLICITANTE").Trim() + "\n\n -> NOME USUÁRIO(A): " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NOME_USUARIO").Trim() + " RAMAL: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("RAMAL_TEL").Trim() + " PREDIO/SETOR: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PREDIO_SETOR").Trim() + "\n\n Para mais detalhes , queira por gentileza VISUALIZAR o arquivo ANEXO. \n\n Obrigado.";
+
+                email.Body = @" T A R E F A  B A N C A D A: ORDEM DE SERVIÇO: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim() + "\n\n -> TÉCNICO SOLICITANTE: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_SOLICITANTE").Trim() + "\n\n -> NOME USUÁRIO(A): " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NOME_USUARIO").Trim() + " RAMAL: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("RAMAL_TEL").Trim() + " PREDIO/SETOR: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PREDIO_SETOR").Trim() + "\n\n Para mais detalhes , queira por gentileza VISUALIZAR o arquivo ANEXO. \n\n Obrigado.";
                 email.IsBodyHtml = false;
 
                 // Anexo (opcional)
@@ -509,9 +512,14 @@ namespace HELP_Princ
             {
                 MailMessage email = new MailMessage();
 
-                email.From = new MailAddress("luciano@lucsale.com.br");
-                email.To.Add("luciano@lucsale.com.br");
-                email.Subject = "Teste Incial - TAREFA BANCADA - Versão: 1.10 (HTML)";
+                //email.From = new MailAddress("luciano@lucsale.com.br");
+                //email.To.Add("luciano@lucsale.com.br");
+                //email.Subject = "Teste Incial - TAREFA BANCADA - Versão: 1.10 (HTML)";
+
+                email.From = new MailAddress("luciano.ale@santacasasp.org.br");
+                email.To.Add("luciano.ale@santacasasp.org.br");
+                email.Subject = "TAREFA BANCADA - Ordem de Serviço: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim();
+
 
                 if (File.Exists(@"C:\Windows\Temp\TAREFA_BANCADA_HTML.html"))
                 {
@@ -524,9 +532,15 @@ namespace HELP_Princ
                 
                 email.IsBodyHtml = true;
 
-                SmtpClient smtp = new SmtpClient("mail.lucsale.com.br", 587);
+                //SmtpClient smtp = new SmtpClient("mail.lucsale.com.br", 587);
+                //smtp.Credentials = new NetworkCredential(
+                //    "luciano@lucsale.com.br",
+                //    "Mag160163@"
+                //);
+
+                SmtpClient smtp = new SmtpClient("smtp.santacasasp.org.br", 587);
                 smtp.Credentials = new NetworkCredential(
-                    "luciano@lucsale.com.br",
+                    "luciano.ale@santacasasp.org.br",
                     "Mag160163@"
                 );
                 smtp.EnableSsl = false;
