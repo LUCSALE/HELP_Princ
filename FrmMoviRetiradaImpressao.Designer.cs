@@ -67,7 +67,6 @@ namespace HELP_Princ
             this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tECNICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TECNICOSTableAdapter();
             this.tmiProgressBar = new System.Windows.Forms.Timer(this.components);
-            this.prgCarregamento = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pnlFooter.SuspendLayout();
@@ -203,7 +202,6 @@ namespace HELP_Princ
             this.pnlGrid.BorderColor = System.Drawing.Color.SlateGray;
             this.pnlGrid.BorderRadius = 10;
             this.pnlGrid.BorderThickness = 1;
-            this.pnlGrid.Controls.Add(this.prgCarregamento);
             this.pnlGrid.Controls.Add(this.pdfViewer1);
             this.pnlGrid.Controls.Add(this.gbxIdentificacao);
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -461,18 +459,6 @@ namespace HELP_Princ
             // 
             this.tECNICOSTableAdapter.ClearBeforeFill = true;
             // 
-            // prgCarregamento
-            // 
-            this.prgCarregamento.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.prgCarregamento.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.prgCarregamento.ForeColor = System.Drawing.Color.White;
-            this.prgCarregamento.Location = new System.Drawing.Point(389, 272);
-            this.prgCarregamento.Minimum = 0;
-            this.prgCarregamento.Name = "prgCarregamento";
-            this.prgCarregamento.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.prgCarregamento.Size = new System.Drawing.Size(130, 130);
-            this.prgCarregamento.TabIndex = 54;
-            // 
             // FrmMoviRetiradaImpressao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -541,6 +527,5 @@ namespace HELP_Princ
         private Spire.PdfViewer.Forms.PdfViewer pdfViewer1;
         private Button btnEMail;
         private Timer tmiProgressBar;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar prgCarregamento;
     }
 }
