@@ -46,7 +46,7 @@ namespace HELP_Princ
                     string HoraFormat = DataAtual.ToString("HH:mm:ss");
 
                     // Atualiza DADOS da aplicação
-                    txtID.Text = fcnNumeracaoID();
+                    txtID.Text = FcnNumeracaoID().ToString();
                     txtData.Text = DataFormat;
                     txtHora.Text = HoraFormat;
                     txtDATA_PREVISTA.Text = DataFormat;
@@ -1191,6 +1191,14 @@ namespace HELP_Princ
             txtDESCRICA_ATIVIDADE.Enabled = false;
             txtOBS_IMPORTANTES.Enabled = false; 
         }
+
+        public static int FcnNumeracaoID()
+        {
+            Random random = new Random();
+            int numeroAleatorio = random.Next(1, 1000000); // Gera um número aleatório entre 1 e 1000000
+            return numeroAleatorio;
+        }
+
     }
 }
  

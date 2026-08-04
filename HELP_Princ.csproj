@@ -213,6 +213,7 @@
     <Compile Include="FrmUsuariosList.Designer.cs">
       <DependentUpon>FrmUsuariosList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FuncoesApoio.cs" />
     <Compile Include="helpdesk01DataSet.cs">
       <DependentUpon>helpdesk01DataSet.xsd</DependentUpon>
     </Compile>
