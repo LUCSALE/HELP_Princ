@@ -33,15 +33,15 @@ namespace HELP_Princ
             tmiEfeitos.Start();
             tmiProgressBar.Start();
 
-            // Ajusta PROGRESSBAR
-            prgCarregamento.Animated = true;
-            prgCarregamento.AnimationSpeed = 0.8f;
-            prgCarregamento.ShowText = true;
-            prgCarregamento.ProgressColor = Color.RoyalBlue;
-            prgCarregamento.ProgressColor2 = Color.DeepSkyBlue;
-            prgCarregamento.FillColor = Color.Gainsboro;
-            //prgCarregamento.Thickness = 12;
-            prgCarregamento.FillThickness = 12;
+            //// Ajusta PROGRESSBAR
+            //prgCarregamento.Animated = true;
+            //prgCarregamento.AnimationSpeed = 0.8f;
+            //prgCarregamento.ShowText = true;
+            //prgCarregamento.ProgressColor = Color.RoyalBlue;
+            //prgCarregamento.ProgressColor2 = Color.DeepSkyBlue;
+            //prgCarregamento.FillColor = Color.Gainsboro;
+            ////prgCarregamento.Thickness = 12;
+            //prgCarregamento.FillThickness = 12;
 
             // Execute a consulta: MOVI_RETIRADA
             try

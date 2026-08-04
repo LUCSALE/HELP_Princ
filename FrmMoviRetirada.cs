@@ -46,6 +46,7 @@ namespace HELP_Princ
                     string HoraFormat = DataAtual.ToString("HH:mm:ss");
 
                     // Atualiza DADOS da aplicação
+                    txtID.Text = fcnNumeracaoID();
                     txtData.Text = DataFormat;
                     txtHora.Text = HoraFormat;
                     txtDATA_PREVISTA.Text = DataFormat;
@@ -368,6 +369,13 @@ namespace HELP_Princ
                     {
                         MessageBox.Show("Erro ao Salvar: MOVI_RETIRADA: " + ex.Message);
                     }
+
+                    // IMPRESSÃO do registro
+                    // 
+                    
+                    FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
+                    MoviRetiradaImpressao.ShowDialog();
+
 
                     this.Close();
                 }

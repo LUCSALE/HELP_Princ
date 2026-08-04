@@ -282,6 +282,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include=".editorconfig" />
     <None Include="helpdesk01DataSet.xsc">
       <DependentUpon>helpdesk01DataSet.xsd</DependentUpon>
     </None>

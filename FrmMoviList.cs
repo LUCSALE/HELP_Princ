@@ -165,6 +165,13 @@ namespace HELP_Princ
                     InfoApp.opcao = "Baixa RETIRADA DE EQUIPAMENTO";
                     FrmMoviRetiradaBaixa MoviRetiradaBaixa = new FrmMoviRetiradaBaixa();
                     MoviRetiradaBaixa.ShowDialog();
+
+                    // IMPRESSÃO do registro
+                    // 
+                    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[3].Value; // Pega o ID da pesquisa
+                    FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
+                    MoviRetiradaImpressao.ShowDialog();
+
                 }
             }
 
