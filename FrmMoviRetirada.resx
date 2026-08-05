@@ -151,21 +151,12 @@
         iiehvPVhUfz4LApPEYUn2tDfyj8SFQaGPwBq1dkltGieWwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="cbtnNovoTecnico.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH4SURBVDhPdZLP
-        S1RRFMcPSOOiVqnUUEnQUh2YyYUtXZQLQbGgRaAutLEmx3xCzFLdKEijzht1nHnqQhBEEPxBEOVM1MaK
-        ihZKMjb/RDatJr6dc+c+33s5HvjyLo/z/dxzzj10Jox0ExlWgnXA+q3F56VZGlpq1FkVImpW07C1wMl/
-        WThHJRqx5mhsw6ddOsRsZHIVDOcp64UYVsqd4I93IbR1FaGdKyz+7mrt+HHN7OScjCipzapnT9mBjZsY
-        +daO9ULco9j3+whuXQc9nZa8EkMa5HYZmDI2JzvQ+8qP1uxFrByPA8UiVvJjmD96oc4CCW4z4PEkKGJK
-        FdMMyBzagP43NYh9Idz74FOA5fwouj+G8Gg/gNRRzAGEp0BP4qBBMy8VnJwC3noB64WX6Pt8Bz2fmrH6
-        c0IDbpTN0kYkURTALwdQ6wFI2WuFKVWJ0wIDymZQNHnibUED2t77EP16V0HcksEGt+ttM2go9YMBvGH/
-        AXr3qxREKrHVmruEwOYt+GceavMC6Hk6QWo91ZMIoE4BKqnntftmMS/qZ5SQ9WRAy2I7wtnLGMhpvRPV
-        8L863J574DaDhjNm2Swha2lYe0wsD0je2X4qZ2COWXLD6QvarUNBeD2lnWdsqGwuqZvPmN0hfcmGyZJE
-        Zv/QYLKopi0DO+3ZDqJ/fKDUyL9vMZsAAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="nUMERACAO_IDBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>515, 138</value>
+  </metadata>
+  <metadata name="helpdesk01DataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>355, 12</value>
+  </metadata>
   <data name="cbtnNovoEquipamento.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -184,15 +175,21 @@
   <metadata name="mOVI_RETIRADABindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>503, 15</value>
   </metadata>
-  <metadata name="mOVI_RETIRADABindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>503, 15</value>
-  </metadata>
-  <metadata name="helpdesk01DataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>355, 12</value>
-  </metadata>
-  <metadata name="helpdesk01DataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>355, 12</value>
-  </metadata>
+  <data name="cbtnNovoTecnico.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH4SURBVDhPdZLP
+        S1RRFMcPSOOiVqnUUEnQUh2YyYUtXZQLQbGgRaAutLEmx3xCzFLdKEijzht1nHnqQhBEEPxBEOVM1MaK
+        ihZKMjb/RDatJr6dc+c+33s5HvjyLo/z/dxzzj10Jox0ExlWgnXA+q3F56VZGlpq1FkVImpW07C1wMl/
+        WThHJRqx5mhsw6ddOsRsZHIVDOcp64UYVsqd4I93IbR1FaGdKyz+7mrt+HHN7OScjCipzapnT9mBjZsY
+        +daO9ULco9j3+whuXQc9nZa8EkMa5HYZmDI2JzvQ+8qP1uxFrByPA8UiVvJjmD96oc4CCW4z4PEkKGJK
+        FdMMyBzagP43NYh9Idz74FOA5fwouj+G8Gg/gNRRzAGEp0BP4qBBMy8VnJwC3noB64WX6Pt8Bz2fmrH6
+        c0IDbpTN0kYkURTALwdQ6wFI2WuFKVWJ0wIDymZQNHnibUED2t77EP16V0HcksEGt+ttM2go9YMBvGH/
+        AXr3qxREKrHVmruEwOYt+GceavMC6Hk6QWo91ZMIoE4BKqnntftmMS/qZ5SQ9WRAy2I7wtnLGMhpvRPV
+        8L863J574DaDhjNm2Swha2lYe0wsD0je2X4qZ2COWXLD6QvarUNBeD2lnWdsqGwuqZvPmN0hfcmGyZJE
+        Zv/QYLKopi0DO+3ZDqJ/fKDUyL9vMZsAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="guna2BorderlessForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>26, 18</value>
   </metadata>
@@ -228,5 +225,8 @@
   </metadata>
   <metadata name="eQUIPAMENTOSTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>731, 108</value>
+  </metadata>
+  <metadata name="nUMERACAO_IDTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>729, 134</value>
   </metadata>
 </root>

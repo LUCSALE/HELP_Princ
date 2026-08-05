@@ -23,11 +23,9 @@ namespace HELP_Princ
 
         private void FrmMoviRetirada_Load(object sender, EventArgs e)
         {
+            
             // Atualiza Tecnicos & Equpamentos
             fncAtualizaTecnicos();
-
-
-
             fcnAtualizaEquipamentos();
 
             tmiEfeitos.Start();
@@ -40,13 +38,32 @@ namespace HELP_Princ
                 try
                 {
                     this.mOVI_RETIRADABindingSource.AddNew();
-
                     DateTime DataAtual = DateTime.Now;
                     string DataFormat = DataAtual.ToString("dd/MM/yyyy");
                     string HoraFormat = DataAtual.ToString("HH:mm:ss");
 
                     // Atualiza DADOS da aplicação
-                    txtID.Text = FcnNumeracaoID().ToString();
+                    // Define e Atualiza tabela: NUMERACAO_ID
+                    this.nUMERACAO_IDTableAdapter.Fill(this.helpdesk01DataSet.NUMERACAO_ID, "RETIRADA");
+                    DataRowView row_NUMERACAO_ID = (DataRowView)nUMERACAO_IDBindingSource.Current;
+                    int intNUMERACAO_ID = Convert.ToInt32(row_NUMERACAO_ID["NUMERACAO_ID"]);
+                    ++ intNUMERACAO_ID;
+                    row_NUMERACAO_ID["NUMERACAO_ID"] = intNUMERACAO_ID;
+                    txtID.Text = row_NUMERACAO_ID["NUMERACAO_ID"].ToString();
+                    InfoPesq.ID = (int)row_NUMERACAO_ID["NUMERACAO_ID"];
+                    // Atualiza os dados da tabela: NUMERACAO_ID
+                    try
+                    {
+                        this.nUMERACAO_IDTableAdapter.FillUpdate(intNUMERACAO_ID, "RETIRADA");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao Salvar: NUMERACAO_ID: " + ex.Message);
+                    }
+
+
+
+                    //txtID.Text = FcnNumeracaoID().ToString();
                     txtData.Text = DataFormat;
                     txtHora.Text = HoraFormat;
                     txtDATA_PREVISTA.Text = DataFormat;
@@ -266,6 +283,7 @@ namespace HELP_Princ
 
                     // Atualiza TABELA: MOVI_RETIRADA com os dados dos Comboboxes: Técnico Solicitante e Equipamento e chave principal: ID_RETIRADA   
                     DataRowView row = (DataRowView)mOVI_RETIRADABindingSource.Current;
+                    row["ID"] = InfoPesq.ID;
                     row["EQUIPAMENTO"] = cbxEquipamento.Text.Trim();
                     row["TECNICO_SOLICITANTE"] = cbxTecnicos.Text.Trim();
                     row["MODALIDADE"] = InfoWork.MoviRetiradaModalidade;
@@ -372,9 +390,8 @@ namespace HELP_Princ
 
                     // IMPRESSÃO do registro
                     // 
-                    
-                    FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
-                    MoviRetiradaImpressao.ShowDialog();
+                    //FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
+                    //MoviRetiradaImpressao.ShowDialog();
 
 
                     this.Close();
