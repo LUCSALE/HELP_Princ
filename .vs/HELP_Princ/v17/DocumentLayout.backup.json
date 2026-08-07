@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\DESENVOL_WEB\\HELP_Princ\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\frmmoviretiradaimpressao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmmoviretiradaimpressao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\frmmoviretiradaimpressao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmmoviretiradaimpressao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,31 +38,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmMoviRetiradaImpressao.cs",
-              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviRetiradaImpressao.cs",
-              "RelativeDocumentMoniker": "FrmMoviRetiradaImpressao.cs",
-              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviRetiradaImpressao.cs",
-              "RelativeToolTip": "FrmMoviRetiradaImpressao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-07T15:29:39.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmMoviRetiradaImpressao.cs [Design]",
-              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviRetiradaImpressao.cs",
-              "RelativeDocumentMoniker": "FrmMoviRetiradaImpressao.cs",
-              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviRetiradaImpressao.cs [Design]",
-              "RelativeToolTip": "FrmMoviRetiradaImpressao.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-07T15:22:01.533Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }
