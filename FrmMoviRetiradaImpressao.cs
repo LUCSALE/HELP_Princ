@@ -333,10 +333,10 @@ namespace HELP_Princ
 
             // 1. Carrega o documento
             PdfDocument doc = new PdfDocument();
-            doc.LoadFromFile(@"E:\DESENVOL_WEB\HELP_Princ\modelo_pdf\MODELO_TAREFA_BANCADA.pdf");
+            doc.LoadFromFile(@"C:\Windows\Temp\MODELO_TAREFA_BANCADA.pdf");
 
             // Carrega a imagem
-            PdfImage logo = PdfImage.FromFile(@"E:\DESENVOL_WEB\HELP_Princ\Imagens\Assinaturas\ass_Luciano.png");
+            //PdfImage logo = PdfImage.FromFile(@"E:\DESENVOL_WEB\HELP_Princ\Imagens\Assinaturas\ass_Luciano.png");
 
             // 2. Percorre as páginas
             foreach (PdfPageBase page in doc.Pages)
