@@ -324,7 +324,7 @@ namespace HELP_Princ
 
         private void fcnImpressao()
         {
-            this.pdfViewer1.LoadFromFile(@"C:\Windows\Temp\TAREFA_BANCADA.pdf");
+            //this.pdfViewer1.LoadFromFile(@"C:\Windows\Temp\TAREFA_BANCADA.pdf");
 
         }
 
@@ -570,6 +570,26 @@ namespace HELP_Princ
                                 "Erro",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btnImpressao_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                PdfDocument pdf = new PdfDocument();
+
+                pdf.LoadFromFile(@"C:\Windows\Temp\TAREFA_BANCADA.pdf");
+
+                // Imprime usando a impressora padrão
+                pdf.Print();
+
+                MessageBox.Show("PDF enviado para impressão.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
         }

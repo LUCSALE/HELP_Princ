@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HELP_Princ.exe" size="5897672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HELP_Princ.exe" size="5898184">
       <assemblyIdentity name="HELP_Princ" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wIojQjwyqhv1YebKWTJ6ZiQLxU4Nih97IxWDMxgt3vA=</dsig:DigestValue>
+        <dsig:DigestValue>HmkpQsyXgmrTKRWdEcxa8IHXn48iY8lWwR82bJAWLwY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Spire.Pdf.dll" size="23053288">
-      <assemblyIdentity name="Spire.Pdf" version="11.11.0.0" publicKeyToken="663F351905198CB3" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Spire.Pdf.dll" size="23163880">
+      <assemblyIdentity name="Spire.Pdf" version="12.4.0.0" publicKeyToken="663F351905198CB3" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>adU2oVXwWrvia3ZEizjmHsIb6pE2jr4Yt39GBD4LfZE=</dsig:DigestValue>
+        <dsig:DigestValue>xhjciMJSqCGnfRf6LSFJV1bTqDzE+Ste36AiU/piGQQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
