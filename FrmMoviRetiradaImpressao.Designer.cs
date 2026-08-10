@@ -39,6 +39,7 @@ namespace HELP_Princ
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnImpressao = new System.Windows.Forms.Button();
             this.btnEMail = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.mOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -66,7 +67,7 @@ namespace HELP_Princ
             this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tECNICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TECNICOSTableAdapter();
             this.tmiProgressBar = new System.Windows.Forms.Timer(this.components);
-            this.btnImpressao = new System.Windows.Forms.Button();
+            this.pdfViewer1 = new Spire.PdfViewer.Forms.PdfViewer();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pnlFooter.SuspendLayout();
@@ -162,11 +163,21 @@ namespace HELP_Princ
             this.pnlFooter.Controls.Add(this.btnEMail);
             this.pnlFooter.Controls.Add(this.btnVoltar);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 263);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 563);
             this.pnlFooter.Name = "pnlFooter";
             this.pnlFooter.Size = new System.Drawing.Size(999, 36);
             this.pnlFooter.TabIndex = 3;
             this.pnlFooter.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlFooter_Paint);
+            // 
+            // btnImpressao
+            // 
+            this.btnImpressao.Image = ((System.Drawing.Image)(resources.GetObject("btnImpressao.Image")));
+            this.btnImpressao.Location = new System.Drawing.Point(15, 6);
+            this.btnImpressao.Name = "btnImpressao";
+            this.btnImpressao.Size = new System.Drawing.Size(75, 23);
+            this.btnImpressao.TabIndex = 5;
+            this.btnImpressao.UseVisualStyleBackColor = true;
+            this.btnImpressao.Click += new System.EventHandler(this.btnImpressao_Click_1);
             // 
             // btnEMail
             // 
@@ -203,11 +214,12 @@ namespace HELP_Princ
             this.pnlGrid.BorderColor = System.Drawing.Color.SlateGray;
             this.pnlGrid.BorderRadius = 10;
             this.pnlGrid.BorderThickness = 1;
+            this.pnlGrid.Controls.Add(this.pdfViewer1);
             this.pnlGrid.Controls.Add(this.gbxIdentificacao);
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrid.Location = new System.Drawing.Point(0, 114);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(999, 149);
+            this.pnlGrid.Size = new System.Drawing.Size(999, 449);
             this.pnlGrid.TabIndex = 4;
             // 
             // gbxIdentificacao
@@ -444,22 +456,26 @@ namespace HELP_Princ
             // 
             this.tECNICOSTableAdapter.ClearBeforeFill = true;
             // 
-            // btnImpressao
+            // pdfViewer1
             // 
-            this.btnImpressao.Image = ((System.Drawing.Image)(resources.GetObject("btnImpressao.Image")));
-            this.btnImpressao.Location = new System.Drawing.Point(15, 6);
-            this.btnImpressao.Name = "btnImpressao";
-            this.btnImpressao.Size = new System.Drawing.Size(75, 23);
-            this.btnImpressao.TabIndex = 5;
-            this.btnImpressao.UseVisualStyleBackColor = true;
-            this.btnImpressao.Click += new System.EventHandler(this.btnImpressao_Click_1);
+            this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pdfViewer1.FindTextHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(153)))), ((int)(((byte)(193)))), ((int)(((byte)(218)))));
+            this.pdfViewer1.FormFillEnabled = false;
+            this.pdfViewer1.IgnoreCase = false;
+            this.pdfViewer1.IsToolBarVisible = true;
+            this.pdfViewer1.Location = new System.Drawing.Point(0, 149);
+            this.pdfViewer1.Name = "pdfViewer1";
+            this.pdfViewer1.OnRenderPageExceptionEvent = null;
+            this.pdfViewer1.Size = new System.Drawing.Size(999, 300);
+            this.pdfViewer1.TabIndex = 51;
+            this.pdfViewer1.ViewerBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             // 
             // FrmMoviRetiradaImpressao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(999, 299);
+            this.ClientSize = new System.Drawing.Size(999, 599);
             this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.pnlHeader);
@@ -522,5 +538,6 @@ namespace HELP_Princ
         private Button btnEMail;
         private Timer tmiProgressBar;
         private Button btnImpressao;
+        private Spire.PdfViewer.Forms.PdfViewer pdfViewer1;
     }
 }

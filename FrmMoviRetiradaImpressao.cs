@@ -55,8 +55,10 @@ namespace HELP_Princ
             }
 
             fcnDesativaCampos();
+            fcnDesativaBotoes();
             fcnGeraPDF();
             fcnImpressao();
+            fcnAtivaBotoes();
             tmiProgressBar.Stop();
 
         }
@@ -324,19 +326,20 @@ namespace HELP_Princ
 
         private void fcnImpressao()
         {
-            //this.pdfViewer1.LoadFromFile(@"C:\Windows\Temp\TAREFA_BANCADA.pdf");
+            string strArquivoPDF = Path.Combine(Application.StartupPath, "TAREFA_BANCADA.pdf");
+            this.pdfViewer1.LoadFromFile(strArquivoPDF);
 
         }
 
         private void fcnGeraPDF()
         {
+            string strArquivoPDF = Path.Combine(Application.StartupPath, "TAREFA_BANCADA.pdf");
+            string strArquivoHTML = Path.Combine(Application.StartupPath, "TAREFA_BANCADA_HTML.html");
+            string strArquivoMODELO = Path.Combine(Application.StartupPath, "MODELO_TAREFA_BANCADA.pdf");
 
             // 1. Carrega o documento
             PdfDocument doc = new PdfDocument();
-            doc.LoadFromFile(@"C:\Windows\Temp\MODELO_TAREFA_BANCADA.pdf");
-
-            // Carrega a imagem
-            //PdfImage logo = PdfImage.FromFile(@"E:\DESENVOL_WEB\HELP_Princ\Imagens\Assinaturas\ass_Luciano.png");
+            doc.LoadFromFile(strArquivoMODELO);
 
             // 2. Percorre as páginas
             foreach (PdfPageBase page in doc.Pages)
@@ -421,8 +424,8 @@ namespace HELP_Princ
             }
 
             // 3. Salva o resultado em .PDF e .HTML
-            doc.SaveToFile(@"C:\Windows\Temp\TAREFA_BANCADA.pdf");
-            doc.SaveToFile(@"C:\Windows\Temp\TAREFA_BANCADA_HTML.html", FileFormat.HTML);
+            doc.SaveToFile(strArquivoPDF);
+            doc.SaveToFile(strArquivoHTML, FileFormat.HTML);
 
             doc.Close();
 
@@ -472,6 +475,8 @@ namespace HELP_Princ
 
         private void fcnEnviaEmailTexto()
         {
+
+            string caminhoPdf = Path.Combine(Application.StartupPath, "TAREFA_BANCADA.pdf");
             DataRowView row = (DataRowView)tECNICOSBindingSource.Current;
             try
             {
@@ -489,7 +494,7 @@ namespace HELP_Princ
                 email.IsBodyHtml = false;
 
                 // Anexo (opcional)
-                email.Attachments.Add(new Attachment(@"C:\Windows\Temp\TAREFA_BANCADA.pdf"));
+                email.Attachments.Add(new Attachment(caminhoPdf));
 
                 SmtpClient smtp = new SmtpClient("smtp.santacasasp.org.br", 587);
                 smtp.Credentials = new NetworkCredential(
@@ -527,15 +532,16 @@ namespace HELP_Princ
                 //email.From = new MailAddress("luciano@lucsale.com.br");
                 //email.To.Add("luciano@lucsale.com.br");
                 //email.Subject = "Teste Incial - TAREFA BANCADA - Versão: 1.10 (HTML)";
-
+                
+                string caminhoPdf = Path.Combine(Application.StartupPath, "TAREFA_BANCADA_HTML.html");
                 email.From = new MailAddress("luciano.ale@santacasasp.org.br");
                 email.To.Add("luciano.ale@santacasasp.org.br");
                 email.Subject = "TAREFA BANCADA - Ordem de Serviço: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim();
 
 
-                if (File.Exists(@"C:\Windows\Temp\TAREFA_BANCADA_HTML.html"))
+                if (File.Exists(caminhoPdf))
                 {
-                    email.Body = File.ReadAllText(@"C:\Windows\Temp\TAREFA_BANCADA_HTML.html");
+                    email.Body = File.ReadAllText(caminhoPdf);
                 }
                 else
                 {
@@ -576,11 +582,14 @@ namespace HELP_Princ
 
         private void btnImpressao_Click_1(object sender, EventArgs e)
         {
+            string caminhoPdf = Path.Combine(Application.StartupPath,"TAREFA_BANCADA.pdf");
             try
             {
                 PdfDocument pdf = new PdfDocument();
 
-                pdf.LoadFromFile(@"C:\Windows\Temp\TAREFA_BANCADA.pdf");
+                //pdf.LoadFromFile(@"C:\Windows\Temp\TAREFA_BANCADA.pdf");
+                pdf.LoadFromFile(caminhoPdf);
+
 
                 // Imprime usando a impressora padrão
                 pdf.Print();
@@ -592,6 +601,20 @@ namespace HELP_Princ
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void fcnDesativaBotoes()
+        {
+            btnEMail.Enabled = false;
+            btnImpressao.Enabled = false;
+            btnVoltar.Enabled = false;
+        }
+
+        private void fcnAtivaBotoes()
+        {
+            btnEMail.Enabled = true;
+            btnImpressao.Enabled = true;
+            btnVoltar.Enabled = true;
         }
     }
 }

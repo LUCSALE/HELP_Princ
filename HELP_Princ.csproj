@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>16</ApplicationRevision>
+    <ApplicationRevision>18</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -75,8 +75,14 @@
     <Reference Include="Spire.Email, Version=6.8.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
       <HintPath>packages\Spire.Email.6.8.1\lib\net48\Spire.Email.dll</HintPath>
     </Reference>
-    <Reference Include="Spire.Pdf, Version=12.4.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
-      <HintPath>packages\FreeSpire.PDF.12.4.0\lib\net48\Spire.Pdf.dll</HintPath>
+    <Reference Include="Spire.Pdf, Version=11.11.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>packages\FreeSpire.PDFViewer.8.2.0\lib\net48\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Asp, Version=8.2.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>packages\FreeSpire.PDFViewer.8.2.0\lib\net48\Spire.PdfViewer.Asp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Forms, Version=8.2.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>packages\FreeSpire.PDFViewer.8.2.0\lib\net48\Spire.PdfViewer.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Spire.XLS, Version=16.3.6.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
       <HintPath>packages\Spire.XLS.16.3.6\lib\net48\Spire.XLS.dll</HintPath>
@@ -290,6 +296,7 @@
       <DependentUpon>helpdesk01DataSet.xsd</DependentUpon>
     </None>
     <None Include="HELP_Princ_TemporaryKey.pfx" />
+    <AdditionalFiles Include="MODELO_TAREFA_BANCADA.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

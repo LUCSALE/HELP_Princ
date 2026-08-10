@@ -88,3 +88,7 @@ E:\DESENVOL_WEB\HELP_Princ\bin\Debug\Microsoft.mshtml.dll
 E:\DESENVOL_WEB\HELP_Princ\bin\Debug\Spire.Pdf.xml
 E:\DESENVOL_WEB\HELP_Princ\bin\Debug\Spire.Email.dll
 E:\DESENVOL_WEB\HELP_Princ\bin\Debug\Spire.Email.xml
+E:\DESENVOL_WEB\HELP_Princ\bin\Debug\Spire.PdfViewer.Asp.dll
+E:\DESENVOL_WEB\HELP_Princ\bin\Debug\Spire.PdfViewer.Forms.dll
+E:\DESENVOL_WEB\HELP_Princ\bin\Debug\Spire.PdfViewer.Asp.xml
+E:\DESENVOL_WEB\HELP_Princ\bin\Debug\Spire.PdfViewer.Forms.xml
