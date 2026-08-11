@@ -92,3 +92,4 @@ E:\DESENVOL_WEB\HELP_Princ\bin\Debug\Spire.PdfViewer.Asp.dll
 E:\DESENVOL_WEB\HELP_Princ\bin\Debug\Spire.PdfViewer.Forms.dll
 E:\DESENVOL_WEB\HELP_Princ\bin\Debug\Spire.PdfViewer.Asp.xml
 E:\DESENVOL_WEB\HELP_Princ\bin\Debug\Spire.PdfViewer.Forms.xml
+E:\DESENVOL_WEB\HELP_Princ\bin\Debug\MODELO_TAREFA_BANCADA.pdf

@@ -12,7 +12,7 @@ namespace HELP_Princ.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.14.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.11.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,8 +26,8 @@ namespace HELP_Princ.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SQL1003.site4now.net;Initial Catalog=db_ab2460_helpdesk01;Persist Sec" +
-            "urity Info=True;User ID=db_ab2460_helpdesk01_admin;Password=Mag160163@")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SQL1003.site4now.net;Initial Catalog=db_ab2460_helpdesk02;Persist Sec" +
+            "urity Info=True;User ID=db_ab2460_helpdesk02_admin;Password=Mag160163@")]
         public string helpdesk01 {
             get {
                 return ((string)(this["helpdesk01"]));
@@ -38,7 +38,7 @@ namespace HELP_Princ.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SQL1003.site4now.net;Initial Catalog=db_ab2460_helpdesk02;Persist Sec" +
-            "urity Info=True;User ID=db_ab2460_helpdesk02_admin")]
+            "urity Info=True;User ID=db_ab2460_helpdesk02_admin;Password=Mag160163@")]
         public string db_ab2460_helpdesk02ConnectionString {
             get {
                 return ((string)(this["db_ab2460_helpdesk02ConnectionString"]));
