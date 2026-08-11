@@ -14,6 +14,7 @@ using System.Net;
 using System.Net.Mail;
 using System.IO;
 using System.Windows.Controls;
+using System.Threading.Tasks;
 
 
 namespace HELP_Princ
@@ -25,41 +26,38 @@ namespace HELP_Princ
             InitializeComponent();
 
             this.AutoScroll = true; // Habilita a barra de rolagem automática
+
+            // Ajusta o cicleProgressBar
+            circleProgress.Minimum = 0;
+            circleProgress.Maximum = 100;
+            circleProgress.Value = 0;
+            circleProgress.Text = "0%";
+            
+
         }
 
 
         private void FrmMoviRetiradaImpressao_Load(object sender, EventArgs e)
         {
-            tmiEfeitos.Start();
-            tmiProgressBar.Start();
+            //tmiEfeitos.Start();
 
-            //// Ajusta PROGRESSBAR
-            //prgCarregamento.Animated = true;
-            //prgCarregamento.AnimationSpeed = 0.8f;
-            //prgCarregamento.ShowText = true;
-            //prgCarregamento.ProgressColor = Color.RoyalBlue;
-            //prgCarregamento.ProgressColor2 = Color.DeepSkyBlue;
-            //prgCarregamento.FillColor = Color.Gainsboro;
-            ////prgCarregamento.Thickness = 12;
-            //prgCarregamento.FillThickness = 12;
+            //// Execute a consulta: MOVI_RETIRADA
+            //try
+            //{
+            //    this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Erro ao CONSULTAR (SELECT): MOVI_RETIRADA: " + ex.Message);
+            //    this.Close();
+            //}
 
-            // Execute a consulta: MOVI_RETIRADA
-            try
-            {
-                this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao CONSULTAR (SELECT): MOVI_RETIRADA: " + ex.Message);
-                this.Close();
-            }
-
-            fcnDesativaCampos();
-            fcnDesativaBotoes();
-            fcnGeraPDF();
-            fcnImpressao();
-            fcnAtivaBotoes();
-            tmiProgressBar.Stop();
+            //fcnDesativaCampos();
+            //fcnDesativaBotoes();
+            //fcnGeraPDF();
+            //fcnImpressao();
+            //fcnAtivaBotoes();
+            //tmiProgressBar.Stop();
 
         }
 
@@ -616,6 +614,59 @@ namespace HELP_Princ
             btnImpressao.Enabled = true;
             btnVoltar.Enabled = true;
         }
+
+        private  async void btnIniciar_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                btnIniciar.Enabled = false;
+
+                circleProgress.Value = 0;
+                circleProgress.Text = "0%";
+
+                // Executa o processamento
+                await ProcessarAsync();
+
+                circleProgress.Value = 100;
+                circleProgress.Text = "100%";
+
+                MessageBox.Show(
+                    "Processamento concluído!",
+                    "Sucesso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    ex.Message,
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            finally
+            {
+                btnIniciar.Enabled = true;
+            }
+        }
+
+        private async Task ProcessarAsync()
+        {
+            // Simula 100 etapas
+            for (int i = 0; i <= 100; i++)
+            {
+                // Simula uma operação demorada
+                await Task.Delay(50);
+
+                // Atualiza o progresso
+                circleProgress.Value = i;
+
+                // Atualiza o texto central
+                circleProgress.Text = $"{i}%";
+            }
+        }
+
     }
 }
 

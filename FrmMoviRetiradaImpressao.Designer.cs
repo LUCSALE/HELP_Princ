@@ -45,6 +45,7 @@ namespace HELP_Princ
             this.mOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
+            this.pdfViewer1 = new Spire.PdfViewer.Forms.PdfViewer();
             this.gbxIdentificacao = new Guna.UI2.WinForms.Guna2GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtHoraPrevista = new System.Windows.Forms.TextBox();
@@ -67,7 +68,8 @@ namespace HELP_Princ
             this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tECNICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TECNICOSTableAdapter();
             this.tmiProgressBar = new System.Windows.Forms.Timer(this.components);
-            this.pdfViewer1 = new Spire.PdfViewer.Forms.PdfViewer();
+            this.circleProgress = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.btnIniciar = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pnlFooter.SuspendLayout();
@@ -159,6 +161,7 @@ namespace HELP_Princ
             this.pnlFooter.BorderColor = System.Drawing.Color.SlateGray;
             this.pnlFooter.BorderRadius = 10;
             this.pnlFooter.BorderThickness = 1;
+            this.pnlFooter.Controls.Add(this.btnIniciar);
             this.pnlFooter.Controls.Add(this.btnImpressao);
             this.pnlFooter.Controls.Add(this.btnEMail);
             this.pnlFooter.Controls.Add(this.btnVoltar);
@@ -214,6 +217,7 @@ namespace HELP_Princ
             this.pnlGrid.BorderColor = System.Drawing.Color.SlateGray;
             this.pnlGrid.BorderRadius = 10;
             this.pnlGrid.BorderThickness = 1;
+            this.pnlGrid.Controls.Add(this.circleProgress);
             this.pnlGrid.Controls.Add(this.pdfViewer1);
             this.pnlGrid.Controls.Add(this.gbxIdentificacao);
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -221,6 +225,20 @@ namespace HELP_Princ
             this.pnlGrid.Name = "pnlGrid";
             this.pnlGrid.Size = new System.Drawing.Size(999, 449);
             this.pnlGrid.TabIndex = 4;
+            // 
+            // pdfViewer1
+            // 
+            this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pdfViewer1.FindTextHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(153)))), ((int)(((byte)(193)))), ((int)(((byte)(218)))));
+            this.pdfViewer1.FormFillEnabled = false;
+            this.pdfViewer1.IgnoreCase = false;
+            this.pdfViewer1.IsToolBarVisible = true;
+            this.pdfViewer1.Location = new System.Drawing.Point(0, 149);
+            this.pdfViewer1.Name = "pdfViewer1";
+            this.pdfViewer1.OnRenderPageExceptionEvent = null;
+            this.pdfViewer1.Size = new System.Drawing.Size(999, 300);
+            this.pdfViewer1.TabIndex = 51;
+            this.pdfViewer1.ViewerBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             // 
             // gbxIdentificacao
             // 
@@ -456,19 +474,27 @@ namespace HELP_Princ
             // 
             this.tECNICOSTableAdapter.ClearBeforeFill = true;
             // 
-            // pdfViewer1
+            // circleProgress
             // 
-            this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pdfViewer1.FindTextHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(153)))), ((int)(((byte)(193)))), ((int)(((byte)(218)))));
-            this.pdfViewer1.FormFillEnabled = false;
-            this.pdfViewer1.IgnoreCase = false;
-            this.pdfViewer1.IsToolBarVisible = true;
-            this.pdfViewer1.Location = new System.Drawing.Point(0, 149);
-            this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.OnRenderPageExceptionEvent = null;
-            this.pdfViewer1.Size = new System.Drawing.Size(999, 300);
-            this.pdfViewer1.TabIndex = 51;
-            this.pdfViewer1.ViewerBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.circleProgress.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.circleProgress.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.circleProgress.ForeColor = System.Drawing.Color.White;
+            this.circleProgress.Location = new System.Drawing.Point(397, 230);
+            this.circleProgress.Minimum = 0;
+            this.circleProgress.Name = "circleProgress";
+            this.circleProgress.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.circleProgress.Size = new System.Drawing.Size(130, 130);
+            this.circleProgress.TabIndex = 52;
+            // 
+            // btnIniciar
+            // 
+            this.btnIniciar.Location = new System.Drawing.Point(462, 7);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(75, 23);
+            this.btnIniciar.TabIndex = 6;
+            this.btnIniciar.Text = "Iniciar";
+            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // FrmMoviRetiradaImpressao
             // 
@@ -539,5 +565,7 @@ namespace HELP_Princ
         private Timer tmiProgressBar;
         private Button btnImpressao;
         private Spire.PdfViewer.Forms.PdfViewer pdfViewer1;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar circleProgress;
+        private Button btnIniciar;
     }
 }
