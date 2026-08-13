@@ -39,13 +39,13 @@ namespace HELP_Princ
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnProcessar = new System.Windows.Forms.Button();
             this.btnImpressao = new System.Windows.Forms.Button();
             this.btnEMail = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.mOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2WinProgressIndicator1 = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.pdfViewer1 = new Spire.PdfViewer.Forms.PdfViewer();
             this.gbxIdentificacao = new Guna.UI2.WinForms.Guna2GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -69,7 +69,6 @@ namespace HELP_Princ
             this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tECNICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TECNICOSTableAdapter();
             this.tmiProgressBar = new System.Windows.Forms.Timer(this.components);
-            this.guna2WinProgressIndicator1 = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pnlFooter.SuspendLayout();
@@ -161,7 +160,6 @@ namespace HELP_Princ
             this.pnlFooter.BorderColor = System.Drawing.Color.SlateGray;
             this.pnlFooter.BorderRadius = 10;
             this.pnlFooter.BorderThickness = 1;
-            this.pnlFooter.Controls.Add(this.btnProcessar);
             this.pnlFooter.Controls.Add(this.btnImpressao);
             this.pnlFooter.Controls.Add(this.btnEMail);
             this.pnlFooter.Controls.Add(this.btnVoltar);
@@ -171,15 +169,6 @@ namespace HELP_Princ
             this.pnlFooter.Size = new System.Drawing.Size(999, 36);
             this.pnlFooter.TabIndex = 3;
             this.pnlFooter.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlFooter_Paint);
-            // 
-            // btnProcessar
-            // 
-            this.btnProcessar.Location = new System.Drawing.Point(462, 7);
-            this.btnProcessar.Name = "btnProcessar";
-            this.btnProcessar.Size = new System.Drawing.Size(75, 23);
-            this.btnProcessar.TabIndex = 6;
-            this.btnProcessar.UseVisualStyleBackColor = true;
-            this.btnProcessar.Click += new System.EventHandler(this.btnProcessar_Click);
             // 
             // btnImpressao
             // 
@@ -234,6 +223,15 @@ namespace HELP_Princ
             this.pnlGrid.Name = "pnlGrid";
             this.pnlGrid.Size = new System.Drawing.Size(999, 449);
             this.pnlGrid.TabIndex = 4;
+            // 
+            // guna2WinProgressIndicator1
+            // 
+            this.guna2WinProgressIndicator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2WinProgressIndicator1.Location = new System.Drawing.Point(454, 179);
+            this.guna2WinProgressIndicator1.Name = "guna2WinProgressIndicator1";
+            this.guna2WinProgressIndicator1.Size = new System.Drawing.Size(90, 90);
+            this.guna2WinProgressIndicator1.TabIndex = 52;
+            this.guna2WinProgressIndicator1.UseTransparentBackground = true;
             // 
             // pdfViewer1
             // 
@@ -483,15 +481,6 @@ namespace HELP_Princ
             // 
             this.tECNICOSTableAdapter.ClearBeforeFill = true;
             // 
-            // guna2WinProgressIndicator1
-            // 
-            this.guna2WinProgressIndicator1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2WinProgressIndicator1.Location = new System.Drawing.Point(454, 179);
-            this.guna2WinProgressIndicator1.Name = "guna2WinProgressIndicator1";
-            this.guna2WinProgressIndicator1.Size = new System.Drawing.Size(90, 90);
-            this.guna2WinProgressIndicator1.TabIndex = 52;
-            this.guna2WinProgressIndicator1.UseTransparentBackground = true;
-            // 
             // FrmMoviRetiradaImpressao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -561,7 +550,6 @@ namespace HELP_Princ
         private Timer tmiProgressBar;
         private Button btnImpressao;
         private Spire.PdfViewer.Forms.PdfViewer pdfViewer1;
-        private Button btnProcessar;
         private Guna.UI2.WinForms.Guna2WinProgressIndicator guna2WinProgressIndicator1;
     }
 }

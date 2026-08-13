@@ -50,7 +50,8 @@ namespace HELP_Princ
 
             fcnDesativaCampos();
             fcnDesativaBotoes();
-            btnProcessar.PerformClick();
+            //btnProcessar.PerformClick();
+            fcnProcessar();
 
 
 
@@ -637,6 +638,25 @@ namespace HELP_Princ
 
         }
 
+        private async void fcnProcessar()
+        {
+            try
+            {
+                await ProcessarAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                guna2WinProgressIndicator1.AutoStart = false;
+                guna2WinProgressIndicator1.Visible = false;
+
+            }
+        }
+
+
         private async Task ProcessarAsync()
         {
             for (int i = 0; i < 10; i++)
@@ -653,6 +673,8 @@ namespace HELP_Princ
                 }
             }
         }
+
+
     }
 }
 
