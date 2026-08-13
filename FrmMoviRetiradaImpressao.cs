@@ -27,37 +27,34 @@ namespace HELP_Princ
 
             this.AutoScroll = true; // Habilita a barra de rolagem automática
 
-            // Ajusta o cicleProgressBar
-            circleProgress.Minimum = 0;
-            circleProgress.Maximum = 100;
-            circleProgress.Value = 0;
-            circleProgress.Text = "0%";
-            
+            guna2WinProgressIndicator1.Visible = true;
+            guna2WinProgressIndicator1.AutoStart = true;
 
         }
 
 
         private void FrmMoviRetiradaImpressao_Load(object sender, EventArgs e)
         {
-            //tmiEfeitos.Start();
+            tmiEfeitos.Start();
 
-            //// Execute a consulta: MOVI_RETIRADA
-            //try
-            //{
-            //    this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Erro ao CONSULTAR (SELECT): MOVI_RETIRADA: " + ex.Message);
-            //    this.Close();
-            //}
+            // Execute a consulta: MOVI_RETIRADA
+            try
+            {
+                this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao CONSULTAR (SELECT): MOVI_RETIRADA: " + ex.Message);
+                this.Close();
+            }
 
-            //fcnDesativaCampos();
-            //fcnDesativaBotoes();
-            //fcnGeraPDF();
-            //fcnImpressao();
-            //fcnAtivaBotoes();
-            //tmiProgressBar.Stop();
+            fcnDesativaCampos();
+            fcnDesativaBotoes();
+            btnProcessar.PerformClick();
+
+
+
+             tmiProgressBar.Stop();
 
         }
 
@@ -615,58 +612,47 @@ namespace HELP_Princ
             btnVoltar.Enabled = true;
         }
 
-        private  async void btnIniciar_Click(object sender, EventArgs e)
+        private  void btnIniciar_Click(object sender, EventArgs e)
         {
 
+            
+        }
+
+        private async void btnProcessar_Click(object sender, EventArgs e)
+        {
             try
             {
-                btnIniciar.Enabled = false;
-
-                circleProgress.Value = 0;
-                circleProgress.Text = "0%";
-
-                // Executa o processamento
-                await ProcessarAsync();
-
-                circleProgress.Value = 100;
-                circleProgress.Text = "100%";
-
-                MessageBox.Show(
-                    "Processamento concluído!",
-                    "Sucesso",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                   await ProcessarAsync();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(
-                    ex.Message,
-                    "Erro",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
-                btnIniciar.Enabled = true;
+                guna2WinProgressIndicator1.AutoStart = false;
+                guna2WinProgressIndicator1.Visible = false;
+
             }
+
         }
 
         private async Task ProcessarAsync()
         {
-            // Simula 100 etapas
-            for (int i = 0; i <= 100; i++)
+            for (int i = 0; i < 10; i++)
             {
-                // Simula uma operação demorada
-                await Task.Delay(50);
+                await Task.Delay(500);
 
-                // Atualiza o progresso
-                circleProgress.Value = i;
-
-                // Atualiza o texto central
-                circleProgress.Text = $"{i}%";
+                // Seu processamento aqui
+                if (i == 5)
+                {
+                    
+                    fcnGeraPDF();
+                    fcnImpressao();
+                    fcnAtivaBotoes();
+                }
             }
         }
-
     }
 }
 
