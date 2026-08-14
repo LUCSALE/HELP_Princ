@@ -37,8 +37,7 @@ namespace HELP_Princ
 
             // Ajuste do GRID - Ativa SCROLL horizontal
             dbgRetirada.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            //dbgRetirada.Columns["MODALIDADE"].AutoSizeMode.None;
-            //dbgRetirada.Columns["MODALIDADE"].Width = 30;
+            
 
         }
 
@@ -174,7 +173,8 @@ namespace HELP_Princ
             if (e.ColumnIndex == 2)
             {
                 // IMPRESSÃO do registro
-                // 
+                //
+                InfoWork.strWork = "MOVIRETIRADA_LIST";
                 InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[3].Value; // Pega o ID da pesquisa
                 FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
                 MoviRetiradaImpressao.ShowDialog();

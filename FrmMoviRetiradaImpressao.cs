@@ -21,6 +21,8 @@ namespace HELP_Princ
 {
     public partial class FrmMoviRetiradaImpressao : Form
     {
+        private string strOrigem;
+        
         public FrmMoviRetiradaImpressao()
         {
             InitializeComponent();
@@ -345,14 +347,21 @@ namespace HELP_Princ
                 // Substitui todo o texto correspondente - Cabeçalho
                 replacer.ReplaceAllText("{numero_os}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim());
 
-                if (helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SITUACAO").Trim() == "PENDENTE")
+                if (InfoWork.strWork == "BAIXA")
                 {
                     replacer.ReplaceAllText("{SITUACAO}", "A EXECUTAR");
                 }
                 else
                 {
-                    replacer.ReplaceAllText("{SITUACAO}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SITUACAO").Trim());
-                }   
+                    if (helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SITUACAO").Trim() == "PENDENTE")
+                    {
+                        replacer.ReplaceAllText("{SITUACAO}", "A EXECUTAR");
+                    }
+                    else
+                    {
+                        replacer.ReplaceAllText("{SITUACAO}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SITUACAO").Trim());
+                    }
+                }
 
                 // Primeira Linha: substitui os campos 
                 replacer.ReplaceAllText("{ID}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<int>("ID").ToString());

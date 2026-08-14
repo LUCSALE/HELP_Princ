@@ -377,6 +377,7 @@ namespace HELP_Princ
                     // IMPRESSÃO do registro
                     if (InfoWork.MoviRetiradaModalidade == "RETIRADA DE EQUIPAMENTO")
                     {
+                        InfoWork.strWork = "MOVIRETIRADA";
                         FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
                         MoviRetiradaImpressao.ShowDialog();
                     }

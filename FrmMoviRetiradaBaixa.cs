@@ -242,6 +242,7 @@ namespace HELP_Princ
 
                 // IMPRESSÃO do registro
                 // 
+                InfoWork.strWork = "BAIXA";
                 FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
                 MoviRetiradaImpressao.ShowDialog();
                 
