@@ -161,7 +161,7 @@ namespace HELP_Princ
 
             if (rtbTarefa_Bancada.Checked)
             {
-                InfoWork.MoviRetiradaModalidade = "TAREFA BANCADA";
+                InfoWork.MoviRetiradaModalidade = "RETIRADA DE EQUIPAMENTO";
             }
 
             if (rtbSimples.Checked)

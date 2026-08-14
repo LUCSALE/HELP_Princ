@@ -239,6 +239,13 @@ namespace HELP_Princ
                 {
                     MessageBox.Show("Erro ao ATUALIZAR: MOVI_RETIRADA: " + ex.Message);
                 }
+
+                // IMPRESSÃO do registro
+                // 
+                FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
+                MoviRetiradaImpressao.ShowDialog();
+                
+                
                 this.Close();
             }
             

@@ -34,38 +34,18 @@ namespace HELP_Princ
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMoviList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
             this.tbcEstagios = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabRetirada = new System.Windows.Forms.TabPage();
             this.dbgRetirada = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnRetiradaEdicao = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnRegistrarRegistrar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnImpressao = new System.Windows.Forms.DataGridViewImageColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hORADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TECNICO_SOLICITANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NUMERO_OS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAMALTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nOMEUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pREDIOSETORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MODALIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SITUACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PATRIMONIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HORA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HORA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TECNICO_ATUANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRetiradaExcluir = new System.Windows.Forms.DataGridViewImageColumn();
             this.mOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
             this.pnlFooterRetirada = new Guna.UI2.WinForms.Guna2Panel();
@@ -89,6 +69,27 @@ namespace HELP_Princ
             this.elpGrid = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.elpTab = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.mOVI_RETIRADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter();
+            this.btnRetiradaEdicao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnRegistrarRegistrar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnImpressao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hORADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TECNICO_SOLICITANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NUMERO_OS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAMALTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOMEUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pREDIOSETORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MODALIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SITUACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PATRIMONIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HORA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HORA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TECNICO_ATUANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRetiradaExcluir = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlHeader.SuspendLayout();
             this.pnlGrid.SuspendLayout();
             this.tbcEstagios.SuspendLayout();
@@ -228,32 +229,32 @@ namespace HELP_Princ
             this.TECNICO_ATUANTE,
             this.btnRetiradaExcluir});
             this.dbgRetirada.DataSource = this.mOVI_RETIRADABindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(237)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(197)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dbgRetirada.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(237)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(197)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dbgRetirada.DefaultCellStyle = dataGridViewCellStyle5;
             this.dbgRetirada.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbgRetirada.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(230)))), ((int)(((byte)(251)))));
             this.dbgRetirada.Location = new System.Drawing.Point(3, 3);
             this.dbgRetirada.MultiSelect = false;
             this.dbgRetirada.Name = "dbgRetirada";
             this.dbgRetirada.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgRetirada.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dbgRetirada.RowHeadersVisible = false;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgRetirada.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dbgRetirada.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dbgRetirada.RowHeadersVisible = false;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgRetirada.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dbgRetirada.RowTemplate.DividerHeight = 2;
             this.dbgRetirada.Size = new System.Drawing.Size(1142, 392);
             this.dbgRetirada.TabIndex = 5;
@@ -283,178 +284,6 @@ namespace HELP_Princ
             this.dbgRetirada.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dbgRetirada_CellFormatting);
             this.dbgRetirada.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dbgRetirada_CellPainting);
             this.dbgRetirada.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dbgRetirada_RowPrePaint);
-            // 
-            // btnRetiradaEdicao
-            // 
-            this.btnRetiradaEdicao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            this.btnRetiradaEdicao.DefaultCellStyle = dataGridViewCellStyle3;
-            this.btnRetiradaEdicao.HeaderText = "Editar:";
-            this.btnRetiradaEdicao.Image = ((System.Drawing.Image)(resources.GetObject("btnRetiradaEdicao.Image")));
-            this.btnRetiradaEdicao.Name = "btnRetiradaEdicao";
-            this.btnRetiradaEdicao.ReadOnly = true;
-            this.btnRetiradaEdicao.Width = 51;
-            // 
-            // btnRegistrarRegistrar
-            // 
-            this.btnRegistrarRegistrar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.btnRegistrarRegistrar.HeaderText = "Baixar:";
-            this.btnRegistrarRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarRegistrar.Image")));
-            this.btnRegistrarRegistrar.Name = "btnRegistrarRegistrar";
-            this.btnRegistrarRegistrar.ReadOnly = true;
-            this.btnRegistrarRegistrar.Width = 53;
-            // 
-            // btnImpressao
-            // 
-            this.btnImpressao.HeaderText = "Impressão:";
-            this.btnImpressao.Image = ((System.Drawing.Image)(resources.GetObject("btnImpressao.Image")));
-            this.btnImpressao.Name = "btnImpressao";
-            this.btnImpressao.ReadOnly = true;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID:";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Width = 54;
-            // 
-            // dATADataGridViewTextBoxColumn
-            // 
-            this.dATADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dATADataGridViewTextBoxColumn.DataPropertyName = "DATA";
-            this.dATADataGridViewTextBoxColumn.HeaderText = "Data:";
-            this.dATADataGridViewTextBoxColumn.Name = "dATADataGridViewTextBoxColumn";
-            this.dATADataGridViewTextBoxColumn.ReadOnly = true;
-            this.dATADataGridViewTextBoxColumn.Width = 66;
-            // 
-            // hORADataGridViewTextBoxColumn
-            // 
-            this.hORADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.hORADataGridViewTextBoxColumn.DataPropertyName = "HORA";
-            this.hORADataGridViewTextBoxColumn.HeaderText = "Hora:";
-            this.hORADataGridViewTextBoxColumn.Name = "hORADataGridViewTextBoxColumn";
-            this.hORADataGridViewTextBoxColumn.ReadOnly = true;
-            this.hORADataGridViewTextBoxColumn.Width = 66;
-            // 
-            // TECNICO_SOLICITANTE
-            // 
-            this.TECNICO_SOLICITANTE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.TECNICO_SOLICITANTE.DataPropertyName = "TECNICO_SOLICITANTE";
-            this.TECNICO_SOLICITANTE.HeaderText = "Técnico Solicitante:";
-            this.TECNICO_SOLICITANTE.Name = "TECNICO_SOLICITANTE";
-            this.TECNICO_SOLICITANTE.ReadOnly = true;
-            this.TECNICO_SOLICITANTE.Width = 134;
-            // 
-            // NUMERO_OS
-            // 
-            this.NUMERO_OS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.NUMERO_OS.DataPropertyName = "NUMERO_OS";
-            this.NUMERO_OS.HeaderText = "Número O.S.:";
-            this.NUMERO_OS.Name = "NUMERO_OS";
-            this.NUMERO_OS.ReadOnly = true;
-            this.NUMERO_OS.Width = 104;
-            // 
-            // rAMALTELDataGridViewTextBoxColumn
-            // 
-            this.rAMALTELDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.rAMALTELDataGridViewTextBoxColumn.DataPropertyName = "RAMAL_TEL";
-            this.rAMALTELDataGridViewTextBoxColumn.HeaderText = "Ramal / Tel.:";
-            this.rAMALTELDataGridViewTextBoxColumn.Name = "rAMALTELDataGridViewTextBoxColumn";
-            this.rAMALTELDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rAMALTELDataGridViewTextBoxColumn.Width = 102;
-            // 
-            // nOMEUSUARIODataGridViewTextBoxColumn
-            // 
-            this.nOMEUSUARIODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.nOMEUSUARIODataGridViewTextBoxColumn.DataPropertyName = "NOME_USUARIO";
-            this.nOMEUSUARIODataGridViewTextBoxColumn.HeaderText = "Usuário:";
-            this.nOMEUSUARIODataGridViewTextBoxColumn.Name = "nOMEUSUARIODataGridViewTextBoxColumn";
-            this.nOMEUSUARIODataGridViewTextBoxColumn.ReadOnly = true;
-            this.nOMEUSUARIODataGridViewTextBoxColumn.Width = 79;
-            // 
-            // pREDIOSETORDataGridViewTextBoxColumn
-            // 
-            this.pREDIOSETORDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.pREDIOSETORDataGridViewTextBoxColumn.DataPropertyName = "PREDIO_SETOR";
-            this.pREDIOSETORDataGridViewTextBoxColumn.HeaderText = "Prédio / Setor:";
-            this.pREDIOSETORDataGridViewTextBoxColumn.Name = "pREDIOSETORDataGridViewTextBoxColumn";
-            this.pREDIOSETORDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pREDIOSETORDataGridViewTextBoxColumn.Width = 109;
-            // 
-            // MODALIDADE
-            // 
-            this.MODALIDADE.DataPropertyName = "MODALIDADE";
-            this.MODALIDADE.HeaderText = "Modalidade:";
-            this.MODALIDADE.Name = "MODALIDADE";
-            this.MODALIDADE.ReadOnly = true;
-            // 
-            // SITUACAO
-            // 
-            this.SITUACAO.DataPropertyName = "SITUACAO";
-            this.SITUACAO.HeaderText = "Situação:";
-            this.SITUACAO.Name = "SITUACAO";
-            this.SITUACAO.ReadOnly = true;
-            // 
-            // PATRIMONIO
-            // 
-            this.PATRIMONIO.DataPropertyName = "PATRIMONIO";
-            this.PATRIMONIO.HeaderText = "Patrimonio:";
-            this.PATRIMONIO.Name = "PATRIMONIO";
-            this.PATRIMONIO.ReadOnly = true;
-            // 
-            // SAI
-            // 
-            this.SAI.DataPropertyName = "SAI";
-            this.SAI.HeaderText = "SAI.:";
-            this.SAI.Name = "SAI";
-            this.SAI.ReadOnly = true;
-            // 
-            // DATA_PREVISTA
-            // 
-            this.DATA_PREVISTA.DataPropertyName = "DATA_PREVISTA";
-            this.DATA_PREVISTA.HeaderText = "Data Prevista:";
-            this.DATA_PREVISTA.Name = "DATA_PREVISTA";
-            this.DATA_PREVISTA.ReadOnly = true;
-            // 
-            // HORA_PREVISTA
-            // 
-            this.HORA_PREVISTA.DataPropertyName = "HORA_PREVISTA";
-            this.HORA_PREVISTA.HeaderText = "Hora Prevista:";
-            this.HORA_PREVISTA.Name = "HORA_PREVISTA";
-            this.HORA_PREVISTA.ReadOnly = true;
-            // 
-            // DATA_RETIRADA
-            // 
-            this.DATA_RETIRADA.DataPropertyName = "DATA_RETIRADA";
-            this.DATA_RETIRADA.HeaderText = "Data da Retirada:";
-            this.DATA_RETIRADA.Name = "DATA_RETIRADA";
-            this.DATA_RETIRADA.ReadOnly = true;
-            // 
-            // HORA_RETIRADA
-            // 
-            this.HORA_RETIRADA.DataPropertyName = "HORA_RETIRADA";
-            this.HORA_RETIRADA.HeaderText = "Hora da Retirada:";
-            this.HORA_RETIRADA.Name = "HORA_RETIRADA";
-            this.HORA_RETIRADA.ReadOnly = true;
-            // 
-            // TECNICO_ATUANTE
-            // 
-            this.TECNICO_ATUANTE.DataPropertyName = "TECNICO_ATUANTE";
-            this.TECNICO_ATUANTE.HeaderText = "Técnico Atuante:";
-            this.TECNICO_ATUANTE.Name = "TECNICO_ATUANTE";
-            this.TECNICO_ATUANTE.ReadOnly = true;
-            // 
-            // btnRetiradaExcluir
-            // 
-            this.btnRetiradaExcluir.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.btnRetiradaExcluir.HeaderText = "Excluir ?";
-            this.btnRetiradaExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnRetiradaExcluir.Image")));
-            this.btnRetiradaExcluir.Name = "btnRetiradaExcluir";
-            this.btnRetiradaExcluir.ReadOnly = true;
-            this.btnRetiradaExcluir.Width = 61;
             // 
             // mOVI_RETIRADABindingSource
             // 
@@ -673,6 +502,181 @@ namespace HELP_Princ
             // 
             this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
             // 
+            // btnRetiradaEdicao
+            // 
+            this.btnRetiradaEdicao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
+            this.btnRetiradaEdicao.DefaultCellStyle = dataGridViewCellStyle3;
+            this.btnRetiradaEdicao.HeaderText = "Editar:";
+            this.btnRetiradaEdicao.Image = ((System.Drawing.Image)(resources.GetObject("btnRetiradaEdicao.Image")));
+            this.btnRetiradaEdicao.Name = "btnRetiradaEdicao";
+            this.btnRetiradaEdicao.ReadOnly = true;
+            this.btnRetiradaEdicao.Width = 51;
+            // 
+            // btnRegistrarRegistrar
+            // 
+            this.btnRegistrarRegistrar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.btnRegistrarRegistrar.HeaderText = "Baixar:";
+            this.btnRegistrarRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarRegistrar.Image")));
+            this.btnRegistrarRegistrar.Name = "btnRegistrarRegistrar";
+            this.btnRegistrarRegistrar.ReadOnly = true;
+            this.btnRegistrarRegistrar.Width = 53;
+            // 
+            // btnImpressao
+            // 
+            this.btnImpressao.HeaderText = "Impressão:";
+            this.btnImpressao.Image = ((System.Drawing.Image)(resources.GetObject("btnImpressao.Image")));
+            this.btnImpressao.Name = "btnImpressao";
+            this.btnImpressao.ReadOnly = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID:";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // dATADataGridViewTextBoxColumn
+            // 
+            this.dATADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dATADataGridViewTextBoxColumn.DataPropertyName = "DATA";
+            this.dATADataGridViewTextBoxColumn.HeaderText = "Data:";
+            this.dATADataGridViewTextBoxColumn.Name = "dATADataGridViewTextBoxColumn";
+            this.dATADataGridViewTextBoxColumn.ReadOnly = true;
+            this.dATADataGridViewTextBoxColumn.Width = 66;
+            // 
+            // hORADataGridViewTextBoxColumn
+            // 
+            this.hORADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.hORADataGridViewTextBoxColumn.DataPropertyName = "HORA";
+            this.hORADataGridViewTextBoxColumn.HeaderText = "Hora:";
+            this.hORADataGridViewTextBoxColumn.Name = "hORADataGridViewTextBoxColumn";
+            this.hORADataGridViewTextBoxColumn.ReadOnly = true;
+            this.hORADataGridViewTextBoxColumn.Width = 66;
+            // 
+            // TECNICO_SOLICITANTE
+            // 
+            this.TECNICO_SOLICITANTE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.TECNICO_SOLICITANTE.DataPropertyName = "TECNICO_SOLICITANTE";
+            this.TECNICO_SOLICITANTE.HeaderText = "Técnico Solicitante:";
+            this.TECNICO_SOLICITANTE.Name = "TECNICO_SOLICITANTE";
+            this.TECNICO_SOLICITANTE.ReadOnly = true;
+            this.TECNICO_SOLICITANTE.Width = 134;
+            // 
+            // NUMERO_OS
+            // 
+            this.NUMERO_OS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.NUMERO_OS.DataPropertyName = "NUMERO_OS";
+            this.NUMERO_OS.HeaderText = "Número O.S.:";
+            this.NUMERO_OS.Name = "NUMERO_OS";
+            this.NUMERO_OS.ReadOnly = true;
+            this.NUMERO_OS.Width = 104;
+            // 
+            // rAMALTELDataGridViewTextBoxColumn
+            // 
+            this.rAMALTELDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.rAMALTELDataGridViewTextBoxColumn.DataPropertyName = "RAMAL_TEL";
+            this.rAMALTELDataGridViewTextBoxColumn.HeaderText = "Ramal / Tel.:";
+            this.rAMALTELDataGridViewTextBoxColumn.Name = "rAMALTELDataGridViewTextBoxColumn";
+            this.rAMALTELDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rAMALTELDataGridViewTextBoxColumn.Width = 102;
+            // 
+            // nOMEUSUARIODataGridViewTextBoxColumn
+            // 
+            this.nOMEUSUARIODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.nOMEUSUARIODataGridViewTextBoxColumn.DataPropertyName = "NOME_USUARIO";
+            this.nOMEUSUARIODataGridViewTextBoxColumn.HeaderText = "Usuário:";
+            this.nOMEUSUARIODataGridViewTextBoxColumn.Name = "nOMEUSUARIODataGridViewTextBoxColumn";
+            this.nOMEUSUARIODataGridViewTextBoxColumn.ReadOnly = true;
+            this.nOMEUSUARIODataGridViewTextBoxColumn.Width = 79;
+            // 
+            // pREDIOSETORDataGridViewTextBoxColumn
+            // 
+            this.pREDIOSETORDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.pREDIOSETORDataGridViewTextBoxColumn.DataPropertyName = "PREDIO_SETOR";
+            this.pREDIOSETORDataGridViewTextBoxColumn.HeaderText = "Prédio / Setor:";
+            this.pREDIOSETORDataGridViewTextBoxColumn.Name = "pREDIOSETORDataGridViewTextBoxColumn";
+            this.pREDIOSETORDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pREDIOSETORDataGridViewTextBoxColumn.Width = 109;
+            // 
+            // MODALIDADE
+            // 
+            this.MODALIDADE.DataPropertyName = "MODALIDADE";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MODALIDADE.DefaultCellStyle = dataGridViewCellStyle4;
+            this.MODALIDADE.HeaderText = "Modalidade:";
+            this.MODALIDADE.Name = "MODALIDADE";
+            this.MODALIDADE.ReadOnly = true;
+            // 
+            // SITUACAO
+            // 
+            this.SITUACAO.DataPropertyName = "SITUACAO";
+            this.SITUACAO.HeaderText = "Situação:";
+            this.SITUACAO.Name = "SITUACAO";
+            this.SITUACAO.ReadOnly = true;
+            // 
+            // PATRIMONIO
+            // 
+            this.PATRIMONIO.DataPropertyName = "PATRIMONIO";
+            this.PATRIMONIO.HeaderText = "Patrimonio:";
+            this.PATRIMONIO.Name = "PATRIMONIO";
+            this.PATRIMONIO.ReadOnly = true;
+            // 
+            // SAI
+            // 
+            this.SAI.DataPropertyName = "SAI";
+            this.SAI.HeaderText = "SAI.:";
+            this.SAI.Name = "SAI";
+            this.SAI.ReadOnly = true;
+            // 
+            // DATA_PREVISTA
+            // 
+            this.DATA_PREVISTA.DataPropertyName = "DATA_PREVISTA";
+            this.DATA_PREVISTA.HeaderText = "Data Prevista:";
+            this.DATA_PREVISTA.Name = "DATA_PREVISTA";
+            this.DATA_PREVISTA.ReadOnly = true;
+            // 
+            // HORA_PREVISTA
+            // 
+            this.HORA_PREVISTA.DataPropertyName = "HORA_PREVISTA";
+            this.HORA_PREVISTA.HeaderText = "Hora Prevista:";
+            this.HORA_PREVISTA.Name = "HORA_PREVISTA";
+            this.HORA_PREVISTA.ReadOnly = true;
+            // 
+            // DATA_RETIRADA
+            // 
+            this.DATA_RETIRADA.DataPropertyName = "DATA_RETIRADA";
+            this.DATA_RETIRADA.HeaderText = "Data da Retirada:";
+            this.DATA_RETIRADA.Name = "DATA_RETIRADA";
+            this.DATA_RETIRADA.ReadOnly = true;
+            // 
+            // HORA_RETIRADA
+            // 
+            this.HORA_RETIRADA.DataPropertyName = "HORA_RETIRADA";
+            this.HORA_RETIRADA.HeaderText = "Hora da Retirada:";
+            this.HORA_RETIRADA.Name = "HORA_RETIRADA";
+            this.HORA_RETIRADA.ReadOnly = true;
+            // 
+            // TECNICO_ATUANTE
+            // 
+            this.TECNICO_ATUANTE.DataPropertyName = "TECNICO_ATUANTE";
+            this.TECNICO_ATUANTE.HeaderText = "Técnico Atuante:";
+            this.TECNICO_ATUANTE.Name = "TECNICO_ATUANTE";
+            this.TECNICO_ATUANTE.ReadOnly = true;
+            // 
+            // btnRetiradaExcluir
+            // 
+            this.btnRetiradaExcluir.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.btnRetiradaExcluir.HeaderText = "Excluir ?";
+            this.btnRetiradaExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnRetiradaExcluir.Image")));
+            this.btnRetiradaExcluir.Name = "btnRetiradaExcluir";
+            this.btnRetiradaExcluir.ReadOnly = true;
+            this.btnRetiradaExcluir.Width = 61;
+            // 
             // FrmMoviList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -739,6 +743,8 @@ namespace HELP_Princ
         private DataGridViewTextBoxColumn sITUACAODataGridViewTextBoxColumn;
         private Guna.UI2.WinForms.Guna2Elipse elpGrid;
         private Guna.UI2.WinForms.Guna2Elipse elpTab;
+        private BindingSource mOVI_RETIRADABindingSource;
+        private helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter mOVI_RETIRADATableAdapter;
         private DataGridViewImageColumn btnRetiradaEdicao;
         private DataGridViewImageColumn btnRegistrarRegistrar;
         private DataGridViewImageColumn btnImpressao;
@@ -760,7 +766,5 @@ namespace HELP_Princ
         private DataGridViewTextBoxColumn HORA_RETIRADA;
         private DataGridViewTextBoxColumn TECNICO_ATUANTE;
         private DataGridViewImageColumn btnRetiradaExcluir;
-        private BindingSource mOVI_RETIRADABindingSource;
-        private helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter mOVI_RETIRADATableAdapter;
     }
 }

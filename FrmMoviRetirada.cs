@@ -237,20 +237,6 @@ namespace HELP_Princ
         private void btnSalvar_Click(object sender, EventArgs e)
         {
 
-            //if (this.ValidateChildren())
-            //{
-            //    if (InfoApp.opcao == "Incluir RETIRADA DE EQUIPAMENTO")
-            //    {
-            //        this.Enabled = false;
-            //        FrmMoviRetiradaUpdate MoviRetiradaUpdate = new FrmMoviRetiradaUpdate();
-            //        MoviRetiradaUpdate.ShowDialog();
-            //        this.Enabled = true;
-            //    }
-            //    else
-            //    {
-            //        InfoWork.MoviRetiradaUpdate = "S";
-            //    }
-
 
             if (this.ValidateChildren())
             {
@@ -389,10 +375,11 @@ namespace HELP_Princ
                     }
 
                     // IMPRESSÃO do registro
-                    // 
-                    //FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
-                    //MoviRetiradaImpressao.ShowDialog();
-
+                    if (InfoWork.MoviRetiradaModalidade == "RETIRADA DE EQUIPAMENTO")
+                    {
+                        FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
+                        MoviRetiradaImpressao.ShowDialog();
+                    }
 
                     this.Close();
                 }

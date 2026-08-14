@@ -50,7 +50,6 @@ namespace HELP_Princ
 
             fcnDesativaCampos();
             fcnDesativaBotoes();
-            //btnProcessar.PerformClick();
             fcnProcessar();
 
 
@@ -345,7 +344,15 @@ namespace HELP_Princ
 
                 // Substitui todo o texto correspondente - Cabeçalho
                 replacer.ReplaceAllText("{numero_os}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim());
-                replacer.ReplaceAllText("{SITUACAO}", "A EXECUTAR");
+
+                if (helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SITUACAO").Trim() == "PENDENTE")
+                {
+                    replacer.ReplaceAllText("{SITUACAO}", "A EXECUTAR");
+                }
+                else
+                {
+                    replacer.ReplaceAllText("{SITUACAO}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SITUACAO").Trim());
+                }   
 
                 // Primeira Linha: substitui os campos 
                 replacer.ReplaceAllText("{ID}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<int>("ID").ToString());
