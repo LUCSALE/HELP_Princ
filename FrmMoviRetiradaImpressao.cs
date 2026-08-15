@@ -480,9 +480,13 @@ namespace HELP_Princ
 
         private void btnEMail_Click(object sender, EventArgs e)
         {
-            fcnEnviaEmailTexto();
+            //fcnEnviaEmailTexto();
             //fcnEnviaEmailHTML();
-            
+
+            fcnDesativaBotoes();
+            fcnProcessarEMAIL();
+            fcnAtivaBotoes();
+
         }
 
         private void fcnEnviaEmailTexto()
@@ -686,6 +690,42 @@ namespace HELP_Princ
                     fcnGeraPDF();
                     fcnImpressao();
                     fcnAtivaBotoes();
+                }
+            }
+        }
+        private async void fcnProcessarEMAIL()
+        {
+            guna2WinProgressIndicator1.AutoStart = true;
+            guna2WinProgressIndicator1.Visible = true;
+
+
+            try
+            {
+                await ProcessarEMAILAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                guna2WinProgressIndicator1.AutoStart = false;
+                guna2WinProgressIndicator1.Visible = false;
+
+            }
+        }
+
+
+        private async Task ProcessarEMAILAsync()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                await Task.Delay(500);
+
+                // Seu processamento aqui
+                if (i == 5)
+                {
+                    fcnEnviaEmailTexto();
                 }
             }
         }
