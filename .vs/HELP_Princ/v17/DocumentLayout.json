@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmmoviretiradaimpressao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\frmmoviretiradaimpressao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|E:\\DESENVOL_WEB\\HELP_Princ\\frmmoviretiradaimpressao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmmoviretiradaimpressao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\frmmovilist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|E:\\DESENVOL_WEB\\HELP_Princ\\frmmovilist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmmovilist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\frmmovilist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|E:\\DESENVOL_WEB\\HELP_Princ\\frmmovilist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmmovilist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -78,8 +78,7 @@
               "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviRetiradaImpressao.cs [Design]",
               "RelativeToolTip": "FrmMoviRetiradaImpressao.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-15T13:45:32.51Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-08-15T13:45:32.51Z"
             },
             {
               "$type": "Document",
@@ -91,8 +90,7 @@
               "RelativeToolTip": "FrmMoviList.cs",
               "ViewState": "AgIAAM8AAAAAAAAAAAAAANQAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-15T12:32:02.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-15T12:32:02.612Z"
             },
             {
               "$type": "Document",
@@ -103,8 +101,7 @@
               "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmMoviList.cs [Design]",
               "RelativeToolTip": "FrmMoviList.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-14T17:28:21.268Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-08-14T17:28:21.268Z"
             }
           ]
         }
