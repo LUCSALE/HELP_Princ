@@ -127,12 +127,8 @@ namespace HELP_Princ
             {
                 if (dbgRetirada.CurrentRow.Cells[12].Value.ToString().Trim() == "CONCLUÍDO")
                 {
-                    // Consultar o registro
-                    // 
-                    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[3].Value; // Pega o ID da pesquisa
-                    InfoApp.opcao = "Consultar RETIRADA DE EQUIPAMENTO";
-                    FrmMoviRetirada MoviRetirada = new FrmMoviRetirada();
-                    MoviRetirada.ShowDialog();
+                    MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível EDITAR !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
                 }
                 else
                 {
@@ -149,12 +145,8 @@ namespace HELP_Princ
             {
                 if (dbgRetirada.CurrentRow.Cells[12].Value.ToString().Trim() == "CONCLUÍDO")
                 {
-                    // BAIXA do registro
-                    // 
-                    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[3].Value; // Pega o ID da pesquisa   
-                    InfoApp.opcao = "Baixa RETIRADA DE EQUIPAMENTO (CONSULTA)";
-                    FrmMoviRetiradaBaixa MoviRetiradaBaixa = new FrmMoviRetiradaBaixa();
-                    MoviRetiradaBaixa.ShowDialog();
+                    MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível BAIXAR !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
                 }
                 else
                 {
@@ -172,12 +164,20 @@ namespace HELP_Princ
 
             if (e.ColumnIndex == 2)
             {
-                // IMPRESSÃO do registro
-                //
-                InfoWork.strWork = "MOVIRETIRADA_LIST";
-                InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[3].Value; // Pega o ID da pesquisa
-                FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
-                MoviRetiradaImpressao.ShowDialog();
+                if (dbgRetirada.CurrentRow.Cells[12].Value.ToString().Trim() == "CONCLUÍDO")
+                {
+                    MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível IMPRIMIR !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                else
+                {
+                    // IMPRESSÃO do registro
+                    //
+                    InfoWork.strWork = "MOVIRETIRADA_LIST";
+                    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[3].Value; // Pega o ID da pesquisa
+                    FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
+                    MoviRetiradaImpressao.ShowDialog();
+                }
             }
 
             if (e.ColumnIndex == 20)

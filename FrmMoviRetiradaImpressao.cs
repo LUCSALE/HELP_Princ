@@ -22,7 +22,7 @@ namespace HELP_Princ
     public partial class FrmMoviRetiradaImpressao : Form
     {
         private string strOrigem;
-        
+
         public FrmMoviRetiradaImpressao()
         {
             InitializeComponent();
@@ -56,7 +56,7 @@ namespace HELP_Princ
 
 
 
-             tmiProgressBar.Stop();
+            tmiProgressBar.Stop();
 
         }
 
@@ -347,21 +347,23 @@ namespace HELP_Princ
                 // Substitui todo o texto correspondente - Cabeçalho
                 replacer.ReplaceAllText("{numero_os}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim());
 
-                if (InfoWork.strWork == "BAIXA")
-                {
-                    replacer.ReplaceAllText("{SITUACAO}", "A EXECUTAR");
-                }
-                else
-                {
-                    if (helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SITUACAO").Trim() == "PENDENTE")
-                    {
-                        replacer.ReplaceAllText("{SITUACAO}", "A EXECUTAR");
-                    }
-                    else
-                    {
-                        replacer.ReplaceAllText("{SITUACAO}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SITUACAO").Trim());
-                    }
-                }
+                //if (InfoWork.strWork == "BAIXA")
+                //{
+                //    replacer.ReplaceAllText("{SITUACAO}", "A EXECUTAR");
+                //}
+                //else
+                //{
+                //    if (helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SITUACAO").Trim() == "PENDENTE")
+                //    {
+                //        replacer.ReplaceAllText("{SITUACAO}", "A EXECUTAR");
+                //    }
+                //    else
+                //    {
+                //        replacer.ReplaceAllText("{SITUACAO}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SITUACAO").Trim());
+                //    }
+                //}
+                replacer.ReplaceAllText("{SITUACAO}", "PENDENTE");
+
 
                 // Primeira Linha: substitui os campos 
                 replacer.ReplaceAllText("{ID}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<int>("ID").ToString());
@@ -405,7 +407,7 @@ namespace HELP_Princ
                 // Execute a consulta: TECNICOS
                 try
                 {
-                    this.tECNICOSTableAdapter.FillByID(this.helpdesk01DataSet.TECNICOS , helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<int>("ID_TECNICO_SOLICITANTE"));
+                    this.tECNICOSTableAdapter.FillByID(this.helpdesk01DataSet.TECNICOS, helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<int>("ID_TECNICO_SOLICITANTE"));
                 }
                 catch (Exception ex)
                 {
@@ -413,7 +415,7 @@ namespace HELP_Princ
                     this.Close();
                 }
                 DataRowView row = (DataRowView)tECNICOSBindingSource.Current;
-                
+
                 try
                 {
                     object v = row["ASSINATURA"];
@@ -423,11 +425,11 @@ namespace HELP_Princ
                         PdfImage pdfImg = PdfImage.FromImage(img);
 
                         // Insere a imagem
-                        page.Canvas.DrawImage(pdfImg , 36, 745, 450, 100);   
+                        page.Canvas.DrawImage(pdfImg, 36, 745, 450, 100);
 
                     }
 
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -521,10 +523,10 @@ namespace HELP_Princ
 
                 smtp.Send(email);
 
-                MessageBox.Show("E-mail enviado com sucesso!",
-                                "Sucesso",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                //MessageBox.Show("E-mail enviado com sucesso!",
+                //                "Sucesso",
+                //                MessageBoxButtons.OK,
+                //                MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -548,7 +550,7 @@ namespace HELP_Princ
                 //email.From = new MailAddress("luciano@lucsale.com.br");
                 //email.To.Add("luciano@lucsale.com.br");
                 //email.Subject = "Teste Incial - TAREFA BANCADA - Versão: 1.10 (HTML)";
-                
+
                 string caminhoPdf = Path.Combine(Application.StartupPath, "TAREFA_BANCADA_HTML.html");
                 email.From = new MailAddress("luciano.ale@santacasasp.org.br");
                 email.To.Add("luciano.ale@santacasasp.org.br");
@@ -563,7 +565,7 @@ namespace HELP_Princ
                 {
                     MessageBox.Show("Arquivo não encontrado.");
                 }
-                
+
                 email.IsBodyHtml = true;
 
                 //SmtpClient smtp = new SmtpClient("mail.lucsale.com.br", 587);
@@ -581,10 +583,10 @@ namespace HELP_Princ
 
                 smtp.Send(email);
 
-                MessageBox.Show("E-mail enviado com sucesso!",
-                                "Sucesso",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                //MessageBox.Show("E-mail enviado com sucesso!",
+                //                "Sucesso",
+                //                MessageBoxButtons.OK,
+                //                MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -598,24 +600,9 @@ namespace HELP_Princ
 
         private void btnImpressao_Click_1(object sender, EventArgs e)
         {
-            string caminhoPdf = Path.Combine(Application.StartupPath,"TAREFA_BANCADA.pdf");
-            try
-            {
-                PdfDocument pdf = new PdfDocument();
-
-                //pdf.LoadFromFile(@"C:\Windows\Temp\TAREFA_BANCADA.pdf");
-                pdf.LoadFromFile(caminhoPdf);
-
-
-                // Imprime usando a impressora padrão
-                pdf.Print();
-
-                MessageBox.Show("PDF enviado para impressão.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            fcnDesativaBotoes();
+            fcnEnviaImp();
+            fcnAtivaBotoes();
 
         }
 
@@ -623,6 +610,7 @@ namespace HELP_Princ
         {
             btnEMail.Enabled = false;
             btnImpressao.Enabled = false;
+            btnTodos.Enabled = false;
             btnVoltar.Enabled = false;
         }
 
@@ -630,20 +618,21 @@ namespace HELP_Princ
         {
             btnEMail.Enabled = true;
             btnImpressao.Enabled = true;
+            btnTodos.Enabled = true;    
             btnVoltar.Enabled = true;
         }
 
-        private  void btnIniciar_Click(object sender, EventArgs e)
+        private void btnIniciar_Click(object sender, EventArgs e)
         {
 
-            
+
         }
 
         private async void btnProcessar_Click(object sender, EventArgs e)
         {
             try
             {
-                   await ProcessarAsync();
+                await ProcessarAsync();
             }
             catch (Exception ex)
             {
@@ -686,7 +675,7 @@ namespace HELP_Princ
                 // Seu processamento aqui
                 if (i == 5)
                 {
-                    
+
                     fcnGeraPDF();
                     fcnImpressao();
                     fcnAtivaBotoes();
@@ -711,6 +700,10 @@ namespace HELP_Princ
             {
                 guna2WinProgressIndicator1.AutoStart = false;
                 guna2WinProgressIndicator1.Visible = false;
+                MessageBox.Show("E-mail enviado com sucesso!",
+                                "Sucesso",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
 
             }
         }
@@ -730,7 +723,73 @@ namespace HELP_Princ
             }
         }
 
+        private async void fcnEnviaImp()
+        {
+            guna2WinProgressIndicator1.AutoStart = true;
+            guna2WinProgressIndicator1.Visible = true;
 
+
+            try
+            {
+                await fcnEnviaImpAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                guna2WinProgressIndicator1.AutoStart = false;
+                guna2WinProgressIndicator1.Visible = false;
+                MessageBox.Show("Impressão realizada com sucesso!",
+                                "Sucesso",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+
+            }
+        }
+
+
+
+        private async Task fcnEnviaImpAsync()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                await Task.Delay(500);
+
+                // Seu processamento aqui
+                if (i == 5)
+                {
+                    string caminhoPdf = Path.Combine(Application.StartupPath, "TAREFA_BANCADA.pdf");
+                    try
+                    {
+                        PdfDocument pdf = new PdfDocument();
+
+                        //pdf.LoadFromFile(@"C:\Windows\Temp\TAREFA_BANCADA.pdf");
+                        pdf.LoadFromFile(caminhoPdf);
+
+
+                        // Imprime usando a impressora padrão
+                        pdf.Print();
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void btnTodos_Click(object sender, EventArgs e)
+        {
+            fcnDesativaBotoes();
+            fcnEnviaImp();
+            fcnProcessarEMAIL();
+            fcnAtivaBotoes();
+            this.Close();   
+        }
     }
 }
 

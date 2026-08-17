@@ -69,6 +69,7 @@ namespace HELP_Princ
             this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tECNICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TECNICOSTableAdapter();
             this.tmiProgressBar = new System.Windows.Forms.Timer(this.components);
+            this.btnTodos = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pnlFooter.SuspendLayout();
@@ -160,6 +161,7 @@ namespace HELP_Princ
             this.pnlFooter.BorderColor = System.Drawing.Color.SlateGray;
             this.pnlFooter.BorderRadius = 10;
             this.pnlFooter.BorderThickness = 1;
+            this.pnlFooter.Controls.Add(this.btnTodos);
             this.pnlFooter.Controls.Add(this.btnImpressao);
             this.pnlFooter.Controls.Add(this.btnEMail);
             this.pnlFooter.Controls.Add(this.btnVoltar);
@@ -183,7 +185,7 @@ namespace HELP_Princ
             // btnEMail
             // 
             this.btnEMail.Image = ((System.Drawing.Image)(resources.GetObject("btnEMail.Image")));
-            this.btnEMail.Location = new System.Drawing.Point(93, 6);
+            this.btnEMail.Location = new System.Drawing.Point(96, 6);
             this.btnEMail.Name = "btnEMail";
             this.btnEMail.Size = new System.Drawing.Size(75, 23);
             this.btnEMail.TabIndex = 4;
@@ -193,7 +195,7 @@ namespace HELP_Princ
             // btnVoltar
             // 
             this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
-            this.btnVoltar.Location = new System.Drawing.Point(174, 6);
+            this.btnVoltar.Location = new System.Drawing.Point(275, 6);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
             this.btnVoltar.TabIndex = 3;
@@ -481,6 +483,16 @@ namespace HELP_Princ
             // 
             this.tECNICOSTableAdapter.ClearBeforeFill = true;
             // 
+            // btnTodos
+            // 
+            this.btnTodos.Location = new System.Drawing.Point(177, 6);
+            this.btnTodos.Name = "btnTodos";
+            this.btnTodos.Size = new System.Drawing.Size(92, 23);
+            this.btnTodos.TabIndex = 6;
+            this.btnTodos.Text = "Imp. + E-MAIL";
+            this.btnTodos.UseVisualStyleBackColor = true;
+            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
+            // 
             // FrmMoviRetiradaImpressao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -551,5 +563,6 @@ namespace HELP_Princ
         private Button btnImpressao;
         private Spire.PdfViewer.Forms.PdfViewer pdfViewer1;
         private Guna.UI2.WinForms.Guna2WinProgressIndicator guna2WinProgressIndicator1;
+        private Button btnTodos;
     }
 }

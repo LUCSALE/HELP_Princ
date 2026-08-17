@@ -16,7 +16,7 @@ namespace HELP_Princ
         [STAThread]
         static void Main()
         {
-            InfoApp.versao = "1.00.166";
+            InfoApp.versao = "1.00.168";
             InfoApp.sistema = "HELP_Princ";
 
             Application.EnableVisualStyles();
