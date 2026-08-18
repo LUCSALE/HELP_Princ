@@ -91,6 +91,7 @@ namespace HELP_Princ
             this.HORA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TECNICO_ATUANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRetiradaExcluir = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlHeader.SuspendLayout();
             this.pnlGrid.SuspendLayout();
             this.tbcEstagios.SuspendLayout();
@@ -228,7 +229,8 @@ namespace HELP_Princ
             this.DATA_RETIRADA,
             this.HORA_RETIRADA,
             this.TECNICO_ATUANTE,
-            this.btnRetiradaExcluir});
+            this.btnRetiradaExcluir,
+            this.Column1});
             this.dbgRetirada.DataSource = this.mOVI_RETIRADABindingSource;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(237)))), ((int)(((byte)(252)))));
@@ -683,6 +685,13 @@ namespace HELP_Princ
             this.btnRetiradaExcluir.ReadOnly = true;
             this.btnRetiradaExcluir.Width = 61;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Image = ((System.Drawing.Image)(resources.GetObject("Column1.Image")));
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
             // FrmMoviList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -772,5 +781,6 @@ namespace HELP_Princ
         private DataGridViewTextBoxColumn HORA_RETIRADA;
         private DataGridViewTextBoxColumn TECNICO_ATUANTE;
         private DataGridViewImageColumn btnRetiradaExcluir;
+        private DataGridViewImageColumn Column1;
     }
 }

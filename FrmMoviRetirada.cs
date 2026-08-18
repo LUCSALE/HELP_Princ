@@ -23,14 +23,14 @@ namespace HELP_Princ
 
         private void FrmMoviRetirada_Load(object sender, EventArgs e)
         {
-            
+
             // Atualiza Tecnicos & Equpamentos
             fncAtualizaTecnicos();
             fcnAtualizaEquipamentos();
 
             tmiEfeitos.Start();
             txtDESCRICA_ATIVIDADE.DataBindings.Add("Text", mOVI_RETIRADABindingSource, "DESCRICA_ATIVIDADE", true, DataSourceUpdateMode.OnPropertyChanged);
-            txtOBS_IMPORTANTES.DataBindings.Add("Text", mOVI_RETIRADABindingSource, "OBS_IMPORTANTES", true, DataSourceUpdateMode.OnPropertyChanged);   
+            txtOBS_IMPORTANTES.DataBindings.Add("Text", mOVI_RETIRADABindingSource, "OBS_IMPORTANTES", true, DataSourceUpdateMode.OnPropertyChanged);
 
             if (InfoApp.opcao == "Incluir RETIRADA DE EQUIPAMENTO")
             {
@@ -47,7 +47,7 @@ namespace HELP_Princ
                     this.nUMERACAO_IDTableAdapter.Fill(this.helpdesk01DataSet.NUMERACAO_ID, "RETIRADA");
                     DataRowView row_NUMERACAO_ID = (DataRowView)nUMERACAO_IDBindingSource.Current;
                     int intNUMERACAO_ID = Convert.ToInt32(row_NUMERACAO_ID["NUMERACAO_ID"]);
-                    ++ intNUMERACAO_ID;
+                    ++intNUMERACAO_ID;
                     row_NUMERACAO_ID["NUMERACAO_ID"] = intNUMERACAO_ID;
                     txtID.Text = row_NUMERACAO_ID["NUMERACAO_ID"].ToString();
                     InfoPesq.ID = (int)row_NUMERACAO_ID["NUMERACAO_ID"];
@@ -86,7 +86,7 @@ namespace HELP_Princ
             if (InfoApp.opcao == "Editar RETIRADA DE EQUIPAMENTO")
             {
                 fcnAtivaCampos();
-                
+
                 try
                 {
                     // TODO: esta linha de código carrega dados na tabela 'db_ab2460_SALDOS_LCTO_DataSet.SALDOS'. Você pode movê-la ou removê-la conforme necessário.
@@ -247,132 +247,8 @@ namespace HELP_Princ
 
                 if (InfoWork.MoviRetiradaUpdate == "S")
                 {
-
-                    // Atualiza TABELA:Usuário pelo RAMAL
-                    this.uSUARIOSTableAdapter.FillByRAMAL_TEL(this.helpdesk01DataSet.USUARIOS, txtRAMAL_TEL.Text);
-
-                    if (this.helpdesk01DataSet.USUARIOS.Count > 0)
-                    {
-                        this.uSUARIOSTableAdapter.Update_por_RAMAL_TEL(txtNOME_USUARIO.Text, txtPREDIO_SETOR.Text, txtArea.Text, txtRAMAL_TEL.Text);
-                    }
-                    else
-                    {
-                        DateTime DataAtual = DateTime.Now;
-                        string DataFormat = DataAtual.ToString("dd/MM/yyyy");
-                        string HoraFormat = DataAtual.ToString("HH:mm:ss");
-                        string strNome_Usuario = txtNOME_USUARIO.Text;
-                        string strRamal = txtRAMAL_TEL.Text;
-                        string strPredio_Setor = txtPREDIO_SETOR.Text;
-
-                        this.uSUARIOSTableAdapter.USUARIOSInsert(DataFormat, HoraFormat, strRamal.ToUpper(), strNome_Usuario.ToUpper(), strPredio_Setor.ToUpper(), "SIM", "-> Incluído via RETIRADA , em: " + DataFormat);
-                    }
-
-                    // Atualiza TABELA: MOVI_RETIRADA com os dados dos Comboboxes: Técnico Solicitante e Equipamento e chave principal: ID_RETIRADA   
-                    DataRowView row = (DataRowView)mOVI_RETIRADABindingSource.Current;
-                    row["ID"] = InfoPesq.ID;
-                    row["EQUIPAMENTO"] = cbxEquipamento.Text.Trim();
-                    row["TECNICO_SOLICITANTE"] = cbxTecnicos.Text.Trim();
-                    row["MODALIDADE"] = InfoWork.MoviRetiradaModalidade;
-                    row["PRIORIDADE"] = cbxPrioridade.Text.Trim();
-
-                    // Atualiza Campo: ID_TECNICO_SOLICITANTE
-                    string strWork = cbxTecnicos.Text;
-                    strWork = strWork.Trim();
-                    strWork = strWork.Substring(0, strWork.IndexOf("-")).Trim(); // Extrai o ID do técnico antes do hífen   
-                    row["ID_TECNICO_SOLICITANTE"] = Convert.ToInt32(strWork); // Converte para inteiro e atribui ao campo ID_TECNICO_SOLICITANTE
-                    
-
-                    if (InfoWork.MoviRetiradaModalidade == "AGENDAMENTO")
-                    {
-                        row["SITUACAO"] = "PENDENTE";
-                        row["TECNICO_ATUANTE"] = "";
-                        row["DATA_RETIRADA"] = "01/01/1900";
-                        row["HORA_RETIRADA"] = "00:00:00";
-
-                    }
-                    else
-                    {
-                        row["SITUACAO"] = "CONCLUÍDO";
-                        row["TECNICO_ATUANTE"] = cbxTecnicos.Text.Trim();
-                        row["DATA_RETIRADA"] = txtData.Text;
-                        row["HORA_RETIRADA"] = txtHora.Text;
-
-                    }
-
-
-                    // Interpretaçlão dos RBTs para salvar no banco de dados
-                    if (rbtSDDsim.Checked)
-                    {
-
-                        row["SSD"] = "SIM";
-                    }
-                    else
-                    {
-                        row["SSD"] = "NAO";
-                    }
-
-                    if (rbtOFFICE365sim.Checked)
-                    {
-                        row["OFFICE_365"] = "SIM";
-                    }
-                    else
-                    {
-                        row["OFFICE_365"] = "NAO";
-                    }
-
-                    if (rbtMAINFRAMEsim.Checked)
-                    {
-                        row["MAINFRAME"] = "SIM";
-                    }
-                    else
-                    {
-                        row["MAINFRAME"] = "NAO";
-                    }
-
-                    if (rbtCNSEsim.Checked)
-                    {
-                        row["CNS"] = "SIM";
-                    }
-                    else
-                    {
-                        row["CNS"] = "NAO";
-                    }
-
-                    if (rbtBOTAOEMERGENCIAEsim.Checked)
-                    {
-                        row["BOTAO_EMERGENCIA"] = "SIM";
-                    }
-                    else
-                    {
-                        row["BOTAO_EMERGENCIA"] = "NAO";
-                    }
-
-                    if (rbtPLANILHAsim.Checked)
-                    {
-                        row["OFFICE_365_PLAN"] = "SIM";
-                    }
-                    else if (rbtPLANILHAnao.Checked)
-                    {
-                        row["OFFICE_365_PLAN"] = "NAO";
-                    }
-                    else if (rbtPLANILHAnsaplica.Checked)
-                    {
-                        row["OFFICE_365_PLAN"] = "N/A";
-                    }
-
-
-
-                    // Atualiza os dados da tabela MOVI_RETIRADA
-                    try
-                    {
-
-                        this.mOVI_RETIRADABindingSource.EndEdit();
-                        this.mOVI_RETIRADATableAdapter.Update(this.helpdesk01DataSet);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Erro ao Salvar: MOVI_RETIRADA: " + ex.Message);
-                    }
+                    // Atualiza TABELA: MOVI_RETIRADA
+                    fcnATUMOVIRETIRADA();
 
                     // IMPRESSÃO do registro
                     if (InfoWork.MoviRetiradaModalidade == "RETIRADA DE EQUIPAMENTO")
@@ -383,10 +259,7 @@ namespace HELP_Princ
                     }
 
                     this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Operação CANCELADA pelo usuário!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
             }
             else
@@ -394,8 +267,8 @@ namespace HELP_Princ
                 MessageBox.Show("Existem campos inválidos!");
             }
         }
-   
-        
+
+
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -912,18 +785,18 @@ namespace HELP_Princ
             }
         }
 
-        
 
-       
+
+
         private void cbxTecnicos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtRAMAL_TEL.Focus();   
+            txtRAMAL_TEL.Focus();
         }
 
         private void txtArea_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Tab) 
-            { 
+            if (e.KeyChar == (char)Keys.Tab)
+            {
                 txtPATRIMONIO.Focus();
             }
         }
@@ -996,12 +869,12 @@ namespace HELP_Princ
 
         private void txtOBS_IMPORTANTES_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            
+
         }
 
         private void lblTitulo_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void cbxPrioridade_Validating(object sender, System.ComponentModel.CancelEventArgs e)
@@ -1194,7 +1067,7 @@ namespace HELP_Princ
 
             // Desativa campos MULTI-LINE
             txtDESCRICA_ATIVIDADE.Enabled = false;
-            txtOBS_IMPORTANTES.Enabled = false; 
+            txtOBS_IMPORTANTES.Enabled = false;
         }
 
         public static int FcnNumeracaoID()
@@ -1204,6 +1077,135 @@ namespace HELP_Princ
             return numeroAleatorio;
         }
 
+        private void fcnATUMOVIRETIRADA()
+        {
+
+            // Atualiza TABELA:Usuário pelo RAMAL
+            this.uSUARIOSTableAdapter.FillByRAMAL_TEL(this.helpdesk01DataSet.USUARIOS, txtRAMAL_TEL.Text);
+
+            if (this.helpdesk01DataSet.USUARIOS.Count > 0)
+            {
+                this.uSUARIOSTableAdapter.Update_por_RAMAL_TEL(txtNOME_USUARIO.Text, txtPREDIO_SETOR.Text, txtArea.Text, txtRAMAL_TEL.Text);
+            }
+            else
+            {
+                DateTime DataAtual = DateTime.Now;
+                string DataFormat = DataAtual.ToString("dd/MM/yyyy");
+                string HoraFormat = DataAtual.ToString("HH:mm:ss");
+                string strNome_Usuario = txtNOME_USUARIO.Text;
+                string strRamal = txtRAMAL_TEL.Text;
+                string strPredio_Setor = txtPREDIO_SETOR.Text;
+
+                this.uSUARIOSTableAdapter.USUARIOSInsert(DataFormat, HoraFormat, strRamal.ToUpper(), strNome_Usuario.ToUpper(), strPredio_Setor.ToUpper(), "SIM", "-> Incluído via RETIRADA , em: " + DataFormat);
+            }
+
+            // Atualiza TABELA: MOVI_RETIRADA com os dados dos Comboboxes: Técnico Solicitante e Equipamento e chave principal: ID_RETIRADA   
+            DataRowView row = (DataRowView)mOVI_RETIRADABindingSource.Current;
+            row["ID"] = InfoPesq.ID;
+            row["EQUIPAMENTO"] = cbxEquipamento.Text.Trim();
+            row["TECNICO_SOLICITANTE"] = cbxTecnicos.Text.Trim();
+            row["MODALIDADE"] = InfoWork.MoviRetiradaModalidade;
+            row["PRIORIDADE"] = cbxPrioridade.Text.Trim();
+
+            // Atualiza Campo: ID_TECNICO_SOLICITANTE
+            string strWork = cbxTecnicos.Text;
+            strWork = strWork.Trim();
+            strWork = strWork.Substring(0, strWork.IndexOf("-")).Trim(); // Extrai o ID do técnico antes do hífen   
+            row["ID_TECNICO_SOLICITANTE"] = Convert.ToInt32(strWork); // Converte para inteiro e atribui ao campo ID_TECNICO_SOLICITANTE
+
+
+            if (InfoWork.MoviRetiradaModalidade == "AGENDAMENTO")
+            {
+                row["SITUACAO"] = "PENDENTE";
+                row["TECNICO_ATUANTE"] = "";
+                row["DATA_RETIRADA"] = "01/01/1900";
+                row["HORA_RETIRADA"] = "00:00:00";
+
+            }
+            else
+            {
+                row["SITUACAO"] = "CONCLUÍDO";
+                row["TECNICO_ATUANTE"] = cbxTecnicos.Text.Trim();
+                row["DATA_RETIRADA"] = txtData.Text;
+                row["HORA_RETIRADA"] = txtHora.Text;
+
+            }
+
+
+            // Interpretaçlão dos RBTs para salvar no banco de dados
+            if (rbtSDDsim.Checked)
+            {
+
+                row["SSD"] = "SIM";
+            }
+            else
+            {
+                row["SSD"] = "NAO";
+            }
+
+            if (rbtOFFICE365sim.Checked)
+            {
+                row["OFFICE_365"] = "SIM";
+            }
+            else
+            {
+                row["OFFICE_365"] = "NAO";
+            }
+
+            if (rbtMAINFRAMEsim.Checked)
+            {
+                row["MAINFRAME"] = "SIM";
+            }
+            else
+            {
+                row["MAINFRAME"] = "NAO";
+            }
+
+            if (rbtCNSEsim.Checked)
+            {
+                row["CNS"] = "SIM";
+            }
+            else
+            {
+                row["CNS"] = "NAO";
+            }
+
+            if (rbtBOTAOEMERGENCIAEsim.Checked)
+            {
+                row["BOTAO_EMERGENCIA"] = "SIM";
+            }
+            else
+            {
+                row["BOTAO_EMERGENCIA"] = "NAO";
+            }
+
+            if (rbtPLANILHAsim.Checked)
+            {
+                row["OFFICE_365_PLAN"] = "SIM";
+            }
+            else if (rbtPLANILHAnao.Checked)
+            {
+                row["OFFICE_365_PLAN"] = "NAO";
+            }
+            else if (rbtPLANILHAnsaplica.Checked)
+            {
+                row["OFFICE_365_PLAN"] = "N/A";
+            }
+
+
+            // Atualiza os dados da tabela MOVI_RETIRADA
+            try
+            {
+
+                this.mOVI_RETIRADABindingSource.EndEdit();
+                this.mOVI_RETIRADATableAdapter.Update(this.helpdesk01DataSet);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao Salvar: MOVI_RETIRADA: " + ex.Message);
+            }
+
+        }
     }
 }
  

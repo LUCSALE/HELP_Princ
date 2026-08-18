@@ -346,22 +346,6 @@ namespace HELP_Princ
 
                 // Substitui todo o texto correspondente - Cabeçalho
                 replacer.ReplaceAllText("{numero_os}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim());
-
-                //if (InfoWork.strWork == "BAIXA")
-                //{
-                //    replacer.ReplaceAllText("{SITUACAO}", "A EXECUTAR");
-                //}
-                //else
-                //{
-                //    if (helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SITUACAO").Trim() == "PENDENTE")
-                //    {
-                //        replacer.ReplaceAllText("{SITUACAO}", "A EXECUTAR");
-                //    }
-                //    else
-                //    {
-                //        replacer.ReplaceAllText("{SITUACAO}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SITUACAO").Trim());
-                //    }
-                //}
                 replacer.ReplaceAllText("{SITUACAO}", "PENDENTE");
 
 
