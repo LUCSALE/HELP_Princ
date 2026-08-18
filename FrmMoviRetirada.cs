@@ -17,7 +17,8 @@ namespace HELP_Princ
 
             this.AutoScroll = true; // Habilita a barra de rolagem automática
             fcnConfigCampos(); //Conifigura campos para navegação com a tecla Enter e Destaque do campo ao entrar e restaura a cor ao sair
-
+            guna2WinProgressIndicator1.AutoStart = false;
+            guna2WinProgressIndicator1.Visible = false;
         }
 
 
@@ -248,7 +249,13 @@ namespace HELP_Princ
                 if (InfoWork.MoviRetiradaUpdate == "S")
                 {
                     // Atualiza TABELA: MOVI_RETIRADA
+
+                    guna2WinProgressIndicator1.AutoStart = false;
+                    guna2WinProgressIndicator1.Visible = false;
                     fcnATUMOVIRETIRADA();
+                    guna2WinProgressIndicator1.AutoStart = true;
+                    guna2WinProgressIndicator1.Visible = true;
+
 
                     // IMPRESSÃO do registro
                     if (InfoWork.MoviRetiradaModalidade == "RETIRADA DE EQUIPAMENTO")

@@ -120,6 +120,7 @@ namespace HELP_Princ
             this.tECNICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TECNICOSTableAdapter();
             this.eQUIPAMENTOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.EQUIPAMENTOSTableAdapter();
             this.nUMERACAO_IDTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.NUMERACAO_IDTableAdapter();
+            this.guna2WinProgressIndicator1 = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pnlFooter.SuspendLayout();
@@ -1383,12 +1384,22 @@ namespace HELP_Princ
             // 
             this.nUMERACAO_IDTableAdapter.ClearBeforeFill = true;
             // 
+            // guna2WinProgressIndicator1
+            // 
+            this.guna2WinProgressIndicator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2WinProgressIndicator1.Location = new System.Drawing.Point(548, 290);
+            this.guna2WinProgressIndicator1.Name = "guna2WinProgressIndicator1";
+            this.guna2WinProgressIndicator1.Size = new System.Drawing.Size(90, 90);
+            this.guna2WinProgressIndicator1.TabIndex = 53;
+            this.guna2WinProgressIndicator1.UseTransparentBackground = true;
+            // 
             // FrmMoviRetirada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1186, 670);
+            this.Controls.Add(this.guna2WinProgressIndicator1);
             this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.pnlHeader);
@@ -1527,5 +1538,6 @@ namespace HELP_Princ
         private Guna.UI2.WinForms.Guna2TextBox txtOBS_IMPORTANTES;
         private BindingSource nUMERACAO_IDBindingSource;
         private helpdesk01DataSetTableAdapters.NUMERACAO_IDTableAdapter nUMERACAO_IDTableAdapter;
+        private Guna.UI2.WinForms.Guna2WinProgressIndicator guna2WinProgressIndicator1;
     }
 }
