@@ -1386,11 +1386,12 @@ namespace HELP_Princ
             // 
             // guna2WinProgressIndicator1
             // 
+            this.guna2WinProgressIndicator1.AutoStart = true;
             this.guna2WinProgressIndicator1.BackColor = System.Drawing.Color.Transparent;
             this.guna2WinProgressIndicator1.Location = new System.Drawing.Point(548, 290);
             this.guna2WinProgressIndicator1.Name = "guna2WinProgressIndicator1";
             this.guna2WinProgressIndicator1.Size = new System.Drawing.Size(90, 90);
-            this.guna2WinProgressIndicator1.TabIndex = 53;
+            this.guna2WinProgressIndicator1.TabIndex = 55;
             this.guna2WinProgressIndicator1.UseTransparentBackground = true;
             // 
             // FrmMoviRetirada

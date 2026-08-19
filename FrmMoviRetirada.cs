@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace HELP_Princ
 {
@@ -17,13 +18,15 @@ namespace HELP_Princ
 
             this.AutoScroll = true; // Habilita a barra de rolagem automática
             fcnConfigCampos(); //Conifigura campos para navegação com a tecla Enter e Destaque do campo ao entrar e restaura a cor ao sair
-            guna2WinProgressIndicator1.AutoStart = false;
-            guna2WinProgressIndicator1.Visible = false;
+            
         }
 
 
         private void FrmMoviRetirada_Load(object sender, EventArgs e)
         {
+
+            guna2WinProgressIndicator1.AutoStart = false;
+            guna2WinProgressIndicator1.Visible = false;
 
             // Atualiza Tecnicos & Equpamentos
             fncAtualizaTecnicos();
@@ -237,27 +240,23 @@ namespace HELP_Princ
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            guna2WinProgressIndicator1.AutoStart = true;
+            guna2WinProgressIndicator1.Visible = true;
 
 
             if (this.ValidateChildren())
             {
-                this.Enabled = false;
                 FrmMoviRetiradaUpdate MoviRetiradaUpdate = new FrmMoviRetiradaUpdate();
                 MoviRetiradaUpdate.ShowDialog();
-                this.Enabled = true;
+
 
                 if (InfoWork.MoviRetiradaUpdate == "S")
                 {
                     // Atualiza TABELA: MOVI_RETIRADA
-
-                    guna2WinProgressIndicator1.AutoStart = false;
-                    guna2WinProgressIndicator1.Visible = false;
-                    fcnATUMOVIRETIRADA();
-                    guna2WinProgressIndicator1.AutoStart = true;
-                    guna2WinProgressIndicator1.Visible = true;
+                    fcnATUMOVIRETIRADA_Async();
 
 
-                    // IMPRESSÃO do registro
+                    //IMPRESSÃO do registro
                     if (InfoWork.MoviRetiradaModalidade == "RETIRADA DE EQUIPAMENTO")
                     {
                         InfoWork.strWork = "MOVIRETIRADA";
@@ -273,6 +272,10 @@ namespace HELP_Princ
             {
                 MessageBox.Show("Existem campos inválidos!");
             }
+
+
+
+
         }
 
 
@@ -304,6 +307,7 @@ namespace HELP_Princ
 
         }
 
+               
         private void txtNUMERO_OS_Validated(object sender, EventArgs e)
         {
 
@@ -1083,6 +1087,55 @@ namespace HELP_Princ
             int numeroAleatorio = random.Next(1, 1000000); // Gera um número aleatório entre 1 e 1000000
             return numeroAleatorio;
         }
+
+        private async void fcnATUMOVIRETIRADA_Async()
+        {
+            try
+            {
+                await fcnATUMOVIRETIRADA_AsyncAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                guna2WinProgressIndicator1.AutoStart = false;
+                guna2WinProgressIndicator1.Visible = false;
+                
+
+            }
+        }
+
+
+        private async Task fcnATUMOVIRETIRADA_AsyncAsync()
+        {
+            for (int i = 0; i < 101; i++)
+            {
+                await Task.Delay(10);
+
+                // Seu processamento aqui
+                if (i == 50)
+                {
+                    fcnATUMOVIRETIRADA();
+                }
+            }
+        }
+
+        //private async Task fcnATUMOVIRETIRADA_Async()
+        //{
+        //    for (int i = 0; i < 101; i++)
+        //    {
+        //        await Task.Delay(60000);
+
+        //        // Seu processamento aqui
+        //        if (i == 50)
+        //        {
+        //            fcnATUMOVIRETIRADA();
+
+        //        }
+        //    }
+        //}
 
         private void fcnATUMOVIRETIRADA()
         {
