@@ -129,6 +129,12 @@
     <Compile Include="FrmMoviRetiradaImpressao.Designer.cs">
       <DependentUpon>FrmMoviRetiradaImpressao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMoviRetiradaMovimentacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMoviRetiradaMovimentacao.Designer.cs">
+      <DependentUpon>FrmMoviRetiradaMovimentacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="FrmMoviRetiradaImpressao.resx">
       <DependentUpon>FrmMoviRetiradaImpressao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMoviRetiradaMovimentacao.resx">
+      <DependentUpon>FrmMoviRetiradaMovimentacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSplashScreen.resx">
       <DependentUpon>FrmSplashScreen.cs</DependentUpon>
