@@ -38,30 +38,19 @@ namespace HELP_Princ
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2WinProgressIndicator1 = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.mOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.tmiEfeitos = new System.Windows.Forms.Timer(this.components);
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.mOVIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mOVI_RETIRADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter();
-            this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tECNICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TECNICOSTableAdapter();
-            this.mOVITableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.MOVITableAdapter();
-            this.eQUIPAMENTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eQUIPAMENTOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.EQUIPAMENTOSTableAdapter();
-            this.guna2WinProgressIndicator1 = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mOVIBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eQUIPAMENTOSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -134,6 +123,39 @@ namespace HELP_Princ
             this.pnlGrid.Size = new System.Drawing.Size(687, 157);
             this.pnlGrid.TabIndex = 4;
             // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(262, 132);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(163, 17);
+            this.guna2HtmlLabel2.TabIndex = 55;
+            this.guna2HtmlLabel2.TabStop = false;
+            this.guna2HtmlLabel2.Text = "...Por Favor: AGUARDE...";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(295, 109);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(96, 17);
+            this.guna2HtmlLabel1.TabIndex = 54;
+            this.guna2HtmlLabel1.TabStop = false;
+            this.guna2HtmlLabel1.Text = "Atualizando....";
+            // 
+            // guna2WinProgressIndicator1
+            // 
+            this.guna2WinProgressIndicator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2WinProgressIndicator1.Location = new System.Drawing.Point(298, 6);
+            this.guna2WinProgressIndicator1.Name = "guna2WinProgressIndicator1";
+            this.guna2WinProgressIndicator1.Size = new System.Drawing.Size(90, 90);
+            this.guna2WinProgressIndicator1.TabIndex = 53;
+            this.guna2WinProgressIndicator1.UseTransparentBackground = true;
+            // 
             // mOVI_RETIRADABindingSource
             // 
             this.mOVI_RETIRADABindingSource.DataMember = "MOVI_RETIRADA";
@@ -158,73 +180,9 @@ namespace HELP_Princ
             this.tmiEfeitos.Interval = 700;
             this.tmiEfeitos.Tick += new System.EventHandler(this.tmiEfeitos_Tick);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // mOVIBindingSource
-            // 
-            this.mOVIBindingSource.DataMember = "MOVI";
-            this.mOVIBindingSource.DataSource = this.helpdesk01DataSet;
-            // 
             // mOVI_RETIRADATableAdapter
             // 
             this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
-            // 
-            // tECNICOSBindingSource
-            // 
-            this.tECNICOSBindingSource.DataMember = "TECNICOS";
-            this.tECNICOSBindingSource.DataSource = this.helpdesk01DataSet;
-            // 
-            // tECNICOSTableAdapter
-            // 
-            this.tECNICOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // mOVITableAdapter
-            // 
-            this.mOVITableAdapter.ClearBeforeFill = true;
-            // 
-            // eQUIPAMENTOSBindingSource
-            // 
-            this.eQUIPAMENTOSBindingSource.DataMember = "EQUIPAMENTOS";
-            this.eQUIPAMENTOSBindingSource.DataSource = this.helpdesk01DataSet;
-            // 
-            // eQUIPAMENTOSTableAdapter
-            // 
-            this.eQUIPAMENTOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // guna2WinProgressIndicator1
-            // 
-            this.guna2WinProgressIndicator1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2WinProgressIndicator1.Location = new System.Drawing.Point(298, 6);
-            this.guna2WinProgressIndicator1.Name = "guna2WinProgressIndicator1";
-            this.guna2WinProgressIndicator1.Size = new System.Drawing.Size(90, 90);
-            this.guna2WinProgressIndicator1.TabIndex = 53;
-            this.guna2WinProgressIndicator1.UseTransparentBackground = true;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(295, 109);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(96, 17);
-            this.guna2HtmlLabel1.TabIndex = 54;
-            this.guna2HtmlLabel1.TabStop = false;
-            this.guna2HtmlLabel1.Text = "Atualizando....";
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(262, 132);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(163, 17);
-            this.guna2HtmlLabel2.TabIndex = 55;
-            this.guna2HtmlLabel2.TabStop = false;
-            this.guna2HtmlLabel2.Text = "...Por Favor: AGUARDE...";
             // 
             // FrmMoviRetiradaMovimentacao
             // 
@@ -249,10 +207,6 @@ namespace HELP_Princ
             this.pnlGrid.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mOVIBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eQUIPAMENTOSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,14 +222,7 @@ namespace HELP_Princ
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private BindingSource mOVI_RETIRADABindingSource;
         private helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter mOVI_RETIRADATableAdapter;
-        private ErrorProvider errorProvider1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private BindingSource tECNICOSBindingSource;
-        private helpdesk01DataSetTableAdapters.TECNICOSTableAdapter tECNICOSTableAdapter;
-        private BindingSource mOVIBindingSource;
-        private helpdesk01DataSetTableAdapters.MOVITableAdapter mOVITableAdapter;
-        private BindingSource eQUIPAMENTOSBindingSource;
-        private helpdesk01DataSetTableAdapters.EQUIPAMENTOSTableAdapter eQUIPAMENTOSTableAdapter;
         private Guna.UI2.WinForms.Guna2WinProgressIndicator guna2WinProgressIndicator1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;

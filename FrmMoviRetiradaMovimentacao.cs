@@ -129,7 +129,7 @@ namespace HELP_Princ
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -203,7 +203,7 @@ namespace HELP_Princ
 
         private void cbtnNovoEquipamento_Click(object sender, EventArgs e)
         {
-            
+
         }
 
 
@@ -224,7 +224,7 @@ namespace HELP_Princ
 
         private async void fcnAtualiza_ASYNC()
         {
-            
+
 
 
             try
@@ -239,7 +239,7 @@ namespace HELP_Princ
             {
                 guna2WinProgressIndicator1.AutoStart = false;
                 guna2WinProgressIndicator1.Visible = false;
-                this.Close();   
+                this.Close();
 
             }
         }
@@ -251,17 +251,36 @@ namespace HELP_Princ
             {
                 await Task.Delay(500);
 
-                //// Seu processamento aqui
-                //if (i == 5)
-                //{
-                //    fcnEnviaEmailTexto();
-                //}
+                // Seu processamento aqui
+                if (i == 5)
+                {
+                    fcnAtualiza();
+                }
             }
         }
 
+        private void fcnAtualiza()
+        {
+            // Simula um processamento demorado
+            //System.Threading.Thread.Sleep(5000);
 
+            try
+            {
+
+                this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao Salvar Consultar: MOVI_RETIRADA: " + ex.Message);
+            }
+            if (this.helpdesk01DataSet.MOVI_RETIRADA.Count > 0)
+            {
+                this.mOVI_RETIRADABindingSource.AddNew();
+
+
+
+            }
+        }
     }
-
-
 }
  
