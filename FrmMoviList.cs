@@ -187,6 +187,32 @@ namespace HELP_Princ
                 }
             }
 
+            if (e.ColumnIndex == 3)
+            {
+                // MOVIMENTAÇÃO do registro
+                //
+                InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[4].Value; // Pega o ID da pesquisa
+                FrmMoviRetiradaMovimentacao MoviRetiradaMovimentacao = new FrmMoviRetiradaMovimentacao();
+                MoviRetiradaMovimentacao.ShowDialog();
+
+
+
+                //if (dbgRetirada.CurrentRow.Cells[13].Value.ToString().Trim() == "CONCLUÍDO")
+                //{
+                //    MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível MOVIMENTAR PARA TAREFA BANCADA !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //    return;
+                //}
+                //else
+                //{
+                //    // MOVIMENTAÇÃO do registro
+                //    //
+                //    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[4].Value; // Pega o ID da pesquisa
+                //    FrmMoviRetiradaMovimentacao MoviRetiradaMovimentacao = new FrmMoviRetiradaMovimentacao();
+                //    MoviRetiradaMovimentacao.ShowDialog();
+                //}
+            }
+
+
             if (e.ColumnIndex == 20)
             {
                 if (dbgRetirada.CurrentRow.Cells[13].Value.ToString().Trim() == "CONCLUÍDO")

@@ -1,4 +1,4 @@
-﻿                      using System;
+﻿using System;
 using System.Drawing; // Necessário para Color
 using System.Data;
 using System.Data.SqlClient;
@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Diagnostics.Eventing.Reader;
 using Guna.UI2.WinForms;
+using System.Threading.Tasks;
 
 namespace HELP_Princ
 {
@@ -24,9 +25,14 @@ namespace HELP_Princ
         private void FrmMoviRetiradaMovimentacao_Load(object sender, EventArgs e)
         {
             tmiEfeitos.Start();
+            fcnAtualiza_ASYNC();
+            guna2WinProgressIndicator1.Visible = true;
+            guna2WinProgressIndicator1.AutoStart = true;
+
+
 
             //this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
-            
+
 
         }
 
@@ -215,8 +221,47 @@ namespace HELP_Princ
         {
 
         }
+
+        private async void fcnAtualiza_ASYNC()
+        {
+            
+
+
+            try
+            {
+                await fcnAtualiza_ASYNC_ASYNC();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                guna2WinProgressIndicator1.AutoStart = false;
+                guna2WinProgressIndicator1.Visible = false;
+                this.Close();   
+
+            }
+        }
+
+
+        private async Task fcnAtualiza_ASYNC_ASYNC()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                await Task.Delay(500);
+
+                //// Seu processamento aqui
+                //if (i == 5)
+                //{
+                //    fcnEnviaEmailTexto();
+                //}
+            }
+        }
+
+
     }
-        
+
 
 }
  

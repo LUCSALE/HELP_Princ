@@ -35,7 +35,6 @@ namespace HELP_Princ
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMoviRetiradaMovimentacao));
             this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
@@ -51,8 +50,12 @@ namespace HELP_Princ
             this.mOVITableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.MOVITableAdapter();
             this.eQUIPAMENTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eQUIPAMENTOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.EQUIPAMENTOSTableAdapter();
+            this.guna2WinProgressIndicator1 = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -67,14 +70,13 @@ namespace HELP_Princ
             this.pnlHeader.BorderRadius = 10;
             this.pnlHeader.BorderThickness = 1;
             this.pnlHeader.Controls.Add(this.guna2HtmlLabel3);
-            this.pnlHeader.Controls.Add(this.guna2ControlBox1);
             this.pnlHeader.Controls.Add(this.guna2PictureBox2);
             this.pnlHeader.Controls.Add(this.lblTitulo);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 2);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.pnlHeader.Size = new System.Drawing.Size(687, 112);
+            this.pnlHeader.Size = new System.Drawing.Size(687, 62);
             this.pnlHeader.TabIndex = 0;
             // 
             // guna2HtmlLabel3
@@ -82,30 +84,12 @@ namespace HELP_Princ
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.SlateGray;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(304, 64);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(304, 41);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(79, 15);
             this.guna2HtmlLabel3.TabIndex = 6;
             this.guna2HtmlLabel3.TabStop = false;
             this.guna2HtmlLabel3.Text = "(Movimentação)";
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.Animated = true;
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2ControlBox1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2ControlBox1.BorderRadius = 10;
-            this.guna2ControlBox1.BorderThickness = 1;
-            this.guna2ControlBox1.CausesValidation = false;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.LightGray;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.DimGray;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(658, 5);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(20, 20);
-            this.guna2ControlBox1.TabIndex = 4;
-            this.guna2ControlBox1.TabStop = false;
-            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2PictureBox2
             // 
@@ -129,7 +113,7 @@ namespace HELP_Princ
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblTitulo.Location = new System.Drawing.Point(193, 37);
+            this.lblTitulo.Location = new System.Drawing.Point(193, 10);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(300, 31);
             this.lblTitulo.TabIndex = 0;
@@ -141,10 +125,13 @@ namespace HELP_Princ
             this.pnlGrid.BorderColor = System.Drawing.Color.SlateGray;
             this.pnlGrid.BorderRadius = 10;
             this.pnlGrid.BorderThickness = 1;
+            this.pnlGrid.Controls.Add(this.guna2HtmlLabel2);
+            this.pnlGrid.Controls.Add(this.guna2HtmlLabel1);
+            this.pnlGrid.Controls.Add(this.guna2WinProgressIndicator1);
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlGrid.Location = new System.Drawing.Point(0, 114);
+            this.pnlGrid.Location = new System.Drawing.Point(0, 64);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(687, 192);
+            this.pnlGrid.Size = new System.Drawing.Size(687, 157);
             this.pnlGrid.TabIndex = 4;
             // 
             // mOVI_RETIRADABindingSource
@@ -206,12 +193,45 @@ namespace HELP_Princ
             // 
             this.eQUIPAMENTOSTableAdapter.ClearBeforeFill = true;
             // 
+            // guna2WinProgressIndicator1
+            // 
+            this.guna2WinProgressIndicator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2WinProgressIndicator1.Location = new System.Drawing.Point(298, 6);
+            this.guna2WinProgressIndicator1.Name = "guna2WinProgressIndicator1";
+            this.guna2WinProgressIndicator1.Size = new System.Drawing.Size(90, 90);
+            this.guna2WinProgressIndicator1.TabIndex = 53;
+            this.guna2WinProgressIndicator1.UseTransparentBackground = true;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(295, 109);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(96, 17);
+            this.guna2HtmlLabel1.TabIndex = 54;
+            this.guna2HtmlLabel1.TabStop = false;
+            this.guna2HtmlLabel1.Text = "Atualizando....";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(262, 132);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(163, 17);
+            this.guna2HtmlLabel2.TabIndex = 55;
+            this.guna2HtmlLabel2.TabStop = false;
+            this.guna2HtmlLabel2.Text = "...Por Favor: AGUARDE...";
+            // 
             // FrmMoviRetiradaMovimentacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(687, 306);
+            this.ClientSize = new System.Drawing.Size(687, 221);
             this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -225,6 +245,8 @@ namespace HELP_Princ
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.pnlGrid.ResumeLayout(false);
+            this.pnlGrid.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -246,7 +268,6 @@ namespace HELP_Princ
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private BindingSource mOVI_RETIRADABindingSource;
         private helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter mOVI_RETIRADATableAdapter;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private ErrorProvider errorProvider1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private BindingSource tECNICOSBindingSource;
@@ -255,5 +276,8 @@ namespace HELP_Princ
         private helpdesk01DataSetTableAdapters.MOVITableAdapter mOVITableAdapter;
         private BindingSource eQUIPAMENTOSBindingSource;
         private helpdesk01DataSetTableAdapters.EQUIPAMENTOSTableAdapter eQUIPAMENTOSTableAdapter;
+        private Guna.UI2.WinForms.Guna2WinProgressIndicator guna2WinProgressIndicator1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }
