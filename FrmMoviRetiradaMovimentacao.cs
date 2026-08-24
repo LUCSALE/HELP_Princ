@@ -24,6 +24,8 @@ namespace HELP_Princ
 
         private void FrmMoviRetiradaMovimentacao_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.TAREFA_BANCADA'. Você pode movê-la ou removê-la conforme necessário.
+            this.tAREFA_BANCADATableAdapter.Fill(this.helpdesk01DataSet.TAREFA_BANCADA);
             tmiEfeitos.Start();
             fcnAtualiza_ASYNC();
             guna2WinProgressIndicator1.Visible = true;
@@ -275,7 +277,7 @@ namespace HELP_Princ
             }
             if (this.helpdesk01DataSet.MOVI_RETIRADA.Count > 0)
             {
-                this.mOVI_RETIRADABindingSource.AddNew();
+                this.tAREFA_BANCADABindingSource.AddNew();
 
 
 
