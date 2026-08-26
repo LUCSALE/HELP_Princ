@@ -278,8 +278,27 @@ namespace HELP_Princ
             if (this.helpdesk01DataSet.MOVI_RETIRADA.Count > 0)
             {
                 this.tAREFA_BANCADABindingSource.AddNew();
+                
+                // Atualiza TABELA: MOVI_RETIRADA com os dados 
+                DataRowView rowMOVI_RETIRADA = (DataRowView)mOVI_RETIRADABindingSource.Current;
+                DataRowView rowTAREFA_BANCADA = (DataRowView)tAREFA_BANCADABindingSource.Current;
+
+                rowTAREFA_BANCADA["ID"] = rowMOVI_RETIRADA["ID"];
+                rowTAREFA_BANCADA["DATA"] = rowMOVI_RETIRADA["DATA"];
+                rowTAREFA_BANCADA["HORA"] = rowMOVI_RETIRADA["HORA"];
 
 
+                // Atualiza os dados da tabela TAREFA_BANCADA
+                try
+                {
+
+                    this.tAREFA_BANCADABindingSource.EndEdit();
+                    this.tAREFA_BANCADATableAdapter.Update(this.helpdesk01DataSet);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao Salvar: TAREFA_BANCADA: " + ex.Message);
+                }
 
             }
         }
