@@ -286,7 +286,34 @@ namespace HELP_Princ
                 rowTAREFA_BANCADA["ID"] = rowMOVI_RETIRADA["ID"];
                 rowTAREFA_BANCADA["DATA"] = rowMOVI_RETIRADA["DATA"];
                 rowTAREFA_BANCADA["HORA"] = rowMOVI_RETIRADA["HORA"];
-
+                
+                rowTAREFA_BANCADA["ESTAGIO"] = rowMOVI_RETIRADA["ESTAGIO"]
+                rowTAREFA_BANCADA["RAMAL_TEL"] = rowMOVI_RETIRADA["RAMAL_TEL"]
+                rowTAREFA_BANCADA["NOME_USUARIO"] = rowMOVI_RETIRADA["NOME_USUARIO\"]
+                rowTAREFA_BANCADA["PREDIO_SETOR"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["AREA"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["NUMERO_OS"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["EQUIPAMENTO"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["SAI"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["SSD"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["OFFICE_365"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["MAINFRAME"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["CNS"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["BOTAO_EMERGENCIA"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["OFFICE_365_PLAN"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["DESCRICA_ATIVIDADE"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["OBS_IMPORTANTES"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["PATRIMONIO"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["TECNICO_SOLICITANTE"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["TECNICO_ATUANTE"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["DATA_RETIRADA"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["HORA_RETIRADA"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["SITUACAO"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["MODALIDADE"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["PRIORIDADE"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["DATA_PREVISTA"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["HORA_PREVISTA"] = rowMOVI_RETIRADA["
+                rowTAREFA_BANCADA["ID_TECNICO_SOLICITANTE"] = rowMOVI_RETIRADA["
 
                 // Atualiza os dados da tabela TAREFA_BANCADA
                 try
