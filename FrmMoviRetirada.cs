@@ -255,6 +255,8 @@ namespace HELP_Princ
                     // Atualiza TABELA: MOVI_RETIRADA
                     fcnATUMOVIRETIRADA_Async();
 
+                    FrmMoviRetiradaMovimentacao MoviRetiradaMovimentacao = new FrmMoviRetiradaMovimentacao();
+                    MoviRetiradaMovimentacao.ShowDialog();
 
                     //IMPRESSÃO do registro
                     if (InfoWork.MoviRetiradaModalidade == "RETIRADA DE EQUIPAMENTO")
@@ -263,6 +265,8 @@ namespace HELP_Princ
                         FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
                         MoviRetiradaImpressao.ShowDialog();
                     }
+
+
 
                     this.Close();
 

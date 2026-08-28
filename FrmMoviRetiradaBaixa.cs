@@ -240,6 +240,12 @@ namespace HELP_Princ
                     MessageBox.Show("Erro ao ATUALIZAR: MOVI_RETIRADA: " + ex.Message);
                 }
 
+                // MOVIMENTAÇÃO para TAREFA BANCADA
+                //
+                InfoWork.strWork_b = "ATUALIZA TAREFA BANCADA";
+                FrmMoviRetiradaMovimentacao MoviRetiradaMovimentacao = new FrmMoviRetiradaMovimentacao();
+                MoviRetiradaMovimentacao.ShowDialog();
+
                 // IMPRESSÃO do registro
                 // 
                 InfoWork.strWork = "BAIXA";

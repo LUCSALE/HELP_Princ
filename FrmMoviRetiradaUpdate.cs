@@ -157,16 +157,19 @@ namespace HELP_Princ
             if (rbtAgendamento.Checked)
             {
                 InfoWork.MoviRetiradaModalidade = "AGENDAMENTO";
+                InfoWork.strWork_b = "NÃO ATUALIZA TAREFA BANCADA";
             }
 
             if (rtbTarefa_Bancada.Checked)
             {
                 InfoWork.MoviRetiradaModalidade = "RETIRADA DE EQUIPAMENTO";
+                InfoWork.strWork_b = "ATUALIZA TAREFA BANCADA";
             }
 
             if (rtbSimples.Checked)
             {
                 InfoWork.MoviRetiradaModalidade = "SIMPLES RETIRADA";
+                InfoWork.strWork_b = "NÃO ATUALIZA TAREFA BANCADA";
             }
 
             this.Close();

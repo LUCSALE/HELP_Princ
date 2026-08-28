@@ -104,6 +104,13 @@ namespace HELP_Princ
             set { m_strWork = value; }
         }
 
+        private static string m_strWork_b = "";
+        public static string strWork_b
+        {
+            get { return m_strWork_b; }
+            set { m_strWork_b = value; }
+        }
+
         private static string m_MoviRetiradaUpdate = "";
         public static string MoviRetiradaUpdate
         {

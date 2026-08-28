@@ -191,6 +191,8 @@ namespace HELP_Princ
             {
                 // MOVIMENTAÇÃO do registro
                 //
+
+                InfoWork.strWork_b = "ATUALIZA TAREFA BANCADA"; 
                 InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[4].Value; // Pega o ID da pesquisa
                 FrmMoviRetiradaMovimentacao MoviRetiradaMovimentacao = new FrmMoviRetiradaMovimentacao();
                 MoviRetiradaMovimentacao.ShowDialog();

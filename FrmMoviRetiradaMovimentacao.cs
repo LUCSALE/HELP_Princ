@@ -256,7 +256,10 @@ namespace HELP_Princ
                 // Seu processamento aqui
                 if (i == 5)
                 {
-                    fcnAtualiza();
+                    if (InfoWork.strWork_b == "ATUALIZA TAREFA BANCADA")
+                    {
+                        fcnAtualiza();
+                    }
                 }
             }
         }
@@ -286,34 +289,34 @@ namespace HELP_Princ
                 rowTAREFA_BANCADA["ID"] = rowMOVI_RETIRADA["ID"];
                 rowTAREFA_BANCADA["DATA"] = rowMOVI_RETIRADA["DATA"];
                 rowTAREFA_BANCADA["HORA"] = rowMOVI_RETIRADA["HORA"];
-                
-                rowTAREFA_BANCADA["ESTAGIO"] = rowMOVI_RETIRADA["ESTAGIO"]
-                rowTAREFA_BANCADA["RAMAL_TEL"] = rowMOVI_RETIRADA["RAMAL_TEL"]
-                rowTAREFA_BANCADA["NOME_USUARIO"] = rowMOVI_RETIRADA["NOME_USUARIO\"]
-                rowTAREFA_BANCADA["PREDIO_SETOR"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["AREA"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["NUMERO_OS"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["EQUIPAMENTO"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["SAI"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["SSD"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["OFFICE_365"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["MAINFRAME"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["CNS"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["BOTAO_EMERGENCIA"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["OFFICE_365_PLAN"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["DESCRICA_ATIVIDADE"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["OBS_IMPORTANTES"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["PATRIMONIO"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["TECNICO_SOLICITANTE"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["TECNICO_ATUANTE"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["DATA_RETIRADA"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["HORA_RETIRADA"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["SITUACAO"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["MODALIDADE"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["PRIORIDADE"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["DATA_PREVISTA"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["HORA_PREVISTA"] = rowMOVI_RETIRADA["
-                rowTAREFA_BANCADA["ID_TECNICO_SOLICITANTE"] = rowMOVI_RETIRADA["
+
+                rowTAREFA_BANCADA["ESTAGIO"] = rowMOVI_RETIRADA["ESTAGIO"];
+                rowTAREFA_BANCADA["RAMAL_TEL"] = rowMOVI_RETIRADA["RAMAL_TEL"];
+                rowTAREFA_BANCADA["NOME_USUARIO"] = rowMOVI_RETIRADA["NOME_USUARIO"];
+                rowTAREFA_BANCADA["PREDIO_SETOR"] = rowMOVI_RETIRADA["PREDIO_SETOR"];
+                rowTAREFA_BANCADA["AREA"] = rowMOVI_RETIRADA["AREA"];
+                rowTAREFA_BANCADA["NUMERO_OS"] = rowMOVI_RETIRADA["NUMERO_OS"];
+                rowTAREFA_BANCADA["EQUIPAMENTO"] = rowMOVI_RETIRADA["EQUIPAMENTO"];
+                rowTAREFA_BANCADA["SAI"] = rowMOVI_RETIRADA["SAI"];
+                rowTAREFA_BANCADA["SSD"] = rowMOVI_RETIRADA["SSD"];
+                rowTAREFA_BANCADA["OFFICE_365"] = rowMOVI_RETIRADA["OFFICE_365"];
+                rowTAREFA_BANCADA["MAINFRAME"] = rowMOVI_RETIRADA["MAINFRAME"];
+                rowTAREFA_BANCADA["CNS"] = rowMOVI_RETIRADA["CNS"];
+                rowTAREFA_BANCADA["BOTAO_EMERGENCIA"] = rowMOVI_RETIRADA["BOTAO_EMERGENCIA"];
+                rowTAREFA_BANCADA["OFFICE_365_PLAN"] = rowMOVI_RETIRADA["OFFICE_365_PLAN"];
+                rowTAREFA_BANCADA["DESCRICA_ATIVIDADE"] = rowMOVI_RETIRADA["DESCRICA_ATIVIDADE"];
+                rowTAREFA_BANCADA["OBS_IMPORTANTES"] = rowMOVI_RETIRADA["OBS_IMPORTANTES"];
+                rowTAREFA_BANCADA["PATRIMONIO"] = rowMOVI_RETIRADA["PATRIMONIO"];
+                rowTAREFA_BANCADA["TECNICO_SOLICITANTE"] = rowMOVI_RETIRADA["TECNICO_SOLICITANTE"];
+                rowTAREFA_BANCADA["TECNICO_ATUANTE"] = rowMOVI_RETIRADA["TECNICO_ATUANTE"];
+                rowTAREFA_BANCADA["DATA_RETIRADA"] = rowMOVI_RETIRADA["DATA_RETIRADA"];
+                rowTAREFA_BANCADA["HORA_RETIRADA"] = rowMOVI_RETIRADA["HORA_RETIRADA"];
+                rowTAREFA_BANCADA["SITUACAO"] = "PENDENTE";
+                rowTAREFA_BANCADA["MODALIDADE"] = "TAREFA BANCADA";
+                rowTAREFA_BANCADA["PRIORIDADE"] = rowMOVI_RETIRADA["PRIORIDADE"];
+                rowTAREFA_BANCADA["DATA_PREVISTA"] = rowMOVI_RETIRADA["DATA_PREVISTA"];
+                rowTAREFA_BANCADA["HORA_PREVISTA"] = rowMOVI_RETIRADA["HORA_PREVISTA"];
+                rowTAREFA_BANCADA["ID_TECNICO_SOLICITANTE"] = rowMOVI_RETIRADA["ID_TECNICO_SOLICITANTE"];
 
                 // Atualiza os dados da tabela TAREFA_BANCADA
                 try
