@@ -47,6 +47,28 @@ namespace HELP_Princ
             this.tbcEstagios = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabRetirada = new System.Windows.Forms.TabPage();
             this.dbgRetirada = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnRetiradaEdicao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnRegistrarRegistrar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnImpressao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnMovimentacao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hORADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TECNICO_SOLICITANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NUMERO_OS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAMALTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOMEUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pREDIOSETORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MODALIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SITUACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PATRIMONIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HORA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HORA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TECNICO_ATUANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRetiradaExcluir = new System.Windows.Forms.DataGridViewImageColumn();
             this.mOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
             this.pnlFooterRetirada = new Guna.UI2.WinForms.Guna2Panel();
@@ -70,28 +92,6 @@ namespace HELP_Princ
             this.elpGrid = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.elpTab = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.mOVI_RETIRADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter();
-            this.btnRetiradaEdicao = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnRegistrarRegistrar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnImpressao = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnMovimentacao = new System.Windows.Forms.DataGridViewImageColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hORADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TECNICO_SOLICITANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NUMERO_OS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAMALTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nOMEUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pREDIOSETORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MODALIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SITUACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PATRIMONIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HORA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HORA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TECNICO_ATUANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRetiradaExcluir = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlHeader.SuspendLayout();
             this.pnlGrid.SuspendLayout();
             this.tbcEstagios.SuspendLayout();
@@ -118,7 +118,7 @@ namespace HELP_Princ
             this.pnlHeader.Location = new System.Drawing.Point(0, 2);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.pnlHeader.Size = new System.Drawing.Size(1156, 38);
+            this.pnlHeader.Size = new System.Drawing.Size(1850, 38);
             this.pnlHeader.TabIndex = 0;
             // 
             // lblTitulo
@@ -126,7 +126,7 @@ namespace HELP_Princ
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblTitulo.Location = new System.Drawing.Point(523, 3);
+            this.lblTitulo.Location = new System.Drawing.Point(864, 3);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(185, 31);
             this.lblTitulo.TabIndex = 0;
@@ -139,7 +139,7 @@ namespace HELP_Princ
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrid.Location = new System.Drawing.Point(0, 40);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(1156, 472);
+            this.pnlGrid.Size = new System.Drawing.Size(1850, 990);
             this.pnlGrid.TabIndex = 4;
             // 
             // tbcEstagios
@@ -152,7 +152,7 @@ namespace HELP_Princ
             this.tbcEstagios.Location = new System.Drawing.Point(0, 0);
             this.tbcEstagios.Name = "tbcEstagios";
             this.tbcEstagios.SelectedIndex = 0;
-            this.tbcEstagios.Size = new System.Drawing.Size(1156, 472);
+            this.tbcEstagios.Size = new System.Drawing.Size(1850, 990);
             this.tbcEstagios.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tbcEstagios.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.tbcEstagios.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -183,7 +183,7 @@ namespace HELP_Princ
             this.tabRetirada.Location = new System.Drawing.Point(4, 44);
             this.tabRetirada.Name = "tabRetirada";
             this.tabRetirada.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRetirada.Size = new System.Drawing.Size(1148, 424);
+            this.tabRetirada.Size = new System.Drawing.Size(1842, 942);
             this.tabRetirada.TabIndex = 0;
             this.tabRetirada.Text = "Retirada de Equipamento";
             this.tabRetirada.UseVisualStyleBackColor = true;
@@ -240,7 +240,7 @@ namespace HELP_Princ
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dbgRetirada.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dbgRetirada.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dbgRetirada.Dock = System.Windows.Forms.DockStyle.Top;
             this.dbgRetirada.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(230)))), ((int)(((byte)(251)))));
             this.dbgRetirada.Location = new System.Drawing.Point(3, 3);
             this.dbgRetirada.MultiSelect = false;
@@ -259,7 +259,7 @@ namespace HELP_Princ
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dbgRetirada.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dbgRetirada.RowTemplate.DividerHeight = 2;
-            this.dbgRetirada.Size = new System.Drawing.Size(1142, 392);
+            this.dbgRetirada.Size = new System.Drawing.Size(1836, 392);
             this.dbgRetirada.TabIndex = 5;
             this.dbgRetirada.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightBlue;
             this.dbgRetirada.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(229)))), ((int)(((byte)(251)))));
@@ -287,223 +287,6 @@ namespace HELP_Princ
             this.dbgRetirada.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dbgRetirada_CellFormatting);
             this.dbgRetirada.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dbgRetirada_CellPainting);
             this.dbgRetirada.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dbgRetirada_RowPrePaint);
-            // 
-            // mOVI_RETIRADABindingSource
-            // 
-            this.mOVI_RETIRADABindingSource.DataMember = "MOVI_RETIRADA";
-            this.mOVI_RETIRADABindingSource.DataSource = this.helpdesk01DataSet;
-            // 
-            // helpdesk01DataSet
-            // 
-            this.helpdesk01DataSet.DataSetName = "helpdesk01DataSet";
-            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pnlFooterRetirada
-            // 
-            this.pnlFooterRetirada.Controls.Add(this.mOVIBindingNavigator);
-            this.pnlFooterRetirada.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooterRetirada.Location = new System.Drawing.Point(3, 395);
-            this.pnlFooterRetirada.Name = "pnlFooterRetirada";
-            this.pnlFooterRetirada.Size = new System.Drawing.Size(1142, 26);
-            this.pnlFooterRetirada.TabIndex = 4;
-            // 
-            // mOVIBindingNavigator
-            // 
-            this.mOVIBindingNavigator.AddNewItem = null;
-            this.mOVIBindingNavigator.BackColor = System.Drawing.Color.DarkGray;
-            this.mOVIBindingNavigator.BindingSource = this.mOVI_RETIRADABindingSource;
-            this.mOVIBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.mOVIBindingNavigator.DeleteItem = null;
-            this.mOVIBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mOVIBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.toolStripSeparator1,
-            this.btnIncluirRETIRADA,
-            this.toolStripSeparator2,
-            this.toolStripButton2});
-            this.mOVIBindingNavigator.Location = new System.Drawing.Point(0, 1);
-            this.mOVIBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.mOVIBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.mOVIBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.mOVIBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.mOVIBindingNavigator.Name = "mOVIBindingNavigator";
-            this.mOVIBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.mOVIBindingNavigator.Size = new System.Drawing.Size(1142, 25);
-            this.mOVIBindingNavigator.TabIndex = 7;
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorSeparator.ForeColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorSeparator1.ForeColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator1.ForeColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnIncluirRETIRADA
-            // 
-            this.btnIncluirRETIRADA.BackColor = System.Drawing.Color.LightGray;
-            this.btnIncluirRETIRADA.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnIncluirRETIRADA.Image = ((System.Drawing.Image)(resources.GetObject("btnIncluirRETIRADA.Image")));
-            this.btnIncluirRETIRADA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIncluirRETIRADA.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnIncluirRETIRADA.Name = "btnIncluirRETIRADA";
-            this.btnIncluirRETIRADA.Size = new System.Drawing.Size(232, 22);
-            this.btnIncluirRETIRADA.Text = "Registrar: RETIRADA DE EQUIPAMENTO";
-            this.btnIncluirRETIRADA.ToolTipText = "Registrar: RETIRADA DE EQUIPAMENTO";
-            this.btnIncluirRETIRADA.Click += new System.EventHandler(this.btnIncluirRETIRADA_Click_1);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator2.ForeColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.ToolTipText = "Voltar...";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
-            // 
-            // tabTarefa
-            // 
-            this.tabTarefa.Controls.Add(this.guna2PictureBox2);
-            this.tabTarefa.Location = new System.Drawing.Point(4, 44);
-            this.tabTarefa.Name = "tabTarefa";
-            this.tabTarefa.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTarefa.Size = new System.Drawing.Size(1148, 424);
-            this.tabTarefa.TabIndex = 1;
-            this.tabTarefa.Text = "Tarefa Bancada";
-            this.tabTarefa.UseVisualStyleBackColor = true;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(6, 6);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(16, 16);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox2.TabIndex = 1;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // tabEntrega
-            // 
-            this.tabEntrega.Controls.Add(this.guna2PictureBox3);
-            this.tabEntrega.Location = new System.Drawing.Point(4, 44);
-            this.tabEntrega.Name = "tabEntrega";
-            this.tabEntrega.Size = new System.Drawing.Size(1148, 424);
-            this.tabEntrega.TabIndex = 2;
-            this.tabEntrega.Text = "Entrega de Equipamento";
-            this.tabEntrega.UseVisualStyleBackColor = true;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(3, 3);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(16, 16);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox3.TabIndex = 1;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // elpGrid
-            // 
-            this.elpGrid.BorderRadius = 10;
-            this.elpGrid.TargetControl = this.dbgRetirada;
-            // 
-            // elpTab
-            // 
-            this.elpTab.BorderRadius = 10;
-            this.elpTab.TargetControl = this.tbcEstagios;
-            // 
-            // mOVI_RETIRADATableAdapter
-            // 
-            this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
             // 
             // btnRetiradaEdicao
             // 
@@ -696,12 +479,229 @@ namespace HELP_Princ
             this.btnRetiradaExcluir.ReadOnly = true;
             this.btnRetiradaExcluir.Width = 61;
             // 
+            // mOVI_RETIRADABindingSource
+            // 
+            this.mOVI_RETIRADABindingSource.DataMember = "MOVI_RETIRADA";
+            this.mOVI_RETIRADABindingSource.DataSource = this.helpdesk01DataSet;
+            // 
+            // helpdesk01DataSet
+            // 
+            this.helpdesk01DataSet.DataSetName = "helpdesk01DataSet";
+            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pnlFooterRetirada
+            // 
+            this.pnlFooterRetirada.Controls.Add(this.mOVIBindingNavigator);
+            this.pnlFooterRetirada.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlFooterRetirada.Location = new System.Drawing.Point(3, 913);
+            this.pnlFooterRetirada.Name = "pnlFooterRetirada";
+            this.pnlFooterRetirada.Size = new System.Drawing.Size(1836, 26);
+            this.pnlFooterRetirada.TabIndex = 4;
+            // 
+            // mOVIBindingNavigator
+            // 
+            this.mOVIBindingNavigator.AddNewItem = null;
+            this.mOVIBindingNavigator.BackColor = System.Drawing.Color.DarkGray;
+            this.mOVIBindingNavigator.BindingSource = this.mOVI_RETIRADABindingSource;
+            this.mOVIBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.mOVIBindingNavigator.DeleteItem = null;
+            this.mOVIBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.mOVIBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.toolStripSeparator1,
+            this.btnIncluirRETIRADA,
+            this.toolStripSeparator2,
+            this.toolStripButton2});
+            this.mOVIBindingNavigator.Location = new System.Drawing.Point(0, 1);
+            this.mOVIBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.mOVIBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.mOVIBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.mOVIBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.mOVIBindingNavigator.Name = "mOVIBindingNavigator";
+            this.mOVIBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.mOVIBindingNavigator.Size = new System.Drawing.Size(1836, 25);
+            this.mOVIBindingNavigator.TabIndex = 7;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorSeparator.ForeColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorSeparator1.ForeColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator1.ForeColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnIncluirRETIRADA
+            // 
+            this.btnIncluirRETIRADA.BackColor = System.Drawing.Color.LightGray;
+            this.btnIncluirRETIRADA.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnIncluirRETIRADA.Image = ((System.Drawing.Image)(resources.GetObject("btnIncluirRETIRADA.Image")));
+            this.btnIncluirRETIRADA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIncluirRETIRADA.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnIncluirRETIRADA.Name = "btnIncluirRETIRADA";
+            this.btnIncluirRETIRADA.Size = new System.Drawing.Size(232, 22);
+            this.btnIncluirRETIRADA.Text = "Registrar: RETIRADA DE EQUIPAMENTO";
+            this.btnIncluirRETIRADA.ToolTipText = "Registrar: RETIRADA DE EQUIPAMENTO";
+            this.btnIncluirRETIRADA.Click += new System.EventHandler(this.btnIncluirRETIRADA_Click_1);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator2.ForeColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.ToolTipText = "Voltar...";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
+            // 
+            // tabTarefa
+            // 
+            this.tabTarefa.Controls.Add(this.guna2PictureBox2);
+            this.tabTarefa.Location = new System.Drawing.Point(4, 44);
+            this.tabTarefa.Name = "tabTarefa";
+            this.tabTarefa.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTarefa.Size = new System.Drawing.Size(1148, 424);
+            this.tabTarefa.TabIndex = 1;
+            this.tabTarefa.Text = "Tarefa Bancada";
+            this.tabTarefa.UseVisualStyleBackColor = true;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(6, 6);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(16, 16);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox2.TabIndex = 1;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // tabEntrega
+            // 
+            this.tabEntrega.Controls.Add(this.guna2PictureBox3);
+            this.tabEntrega.Location = new System.Drawing.Point(4, 44);
+            this.tabEntrega.Name = "tabEntrega";
+            this.tabEntrega.Size = new System.Drawing.Size(1148, 424);
+            this.tabEntrega.TabIndex = 2;
+            this.tabEntrega.Text = "Entrega de Equipamento";
+            this.tabEntrega.UseVisualStyleBackColor = true;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(3, 3);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(16, 16);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox3.TabIndex = 1;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // elpGrid
+            // 
+            this.elpGrid.BorderRadius = 10;
+            this.elpGrid.TargetControl = this.dbgRetirada;
+            // 
+            // elpTab
+            // 
+            this.elpTab.BorderRadius = 10;
+            this.elpTab.TargetControl = this.tbcEstagios;
+            // 
+            // mOVI_RETIRADATableAdapter
+            // 
+            this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
+            // 
             // FrmMoviList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1156, 512);
+            this.ClientSize = new System.Drawing.Size(1850, 1030);
             this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

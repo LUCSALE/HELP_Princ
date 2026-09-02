@@ -125,6 +125,13 @@ namespace HELP_Princ
             set { m_MoviRetiradaModalidade = value; }
         }
 
+        private static string m_Estagio = "";
+        public static string Estagio
+        {
+            get { return m_Estagio; }
+            set { m_Estagio = value; }
+        }
+
         private static string m_TecnicoAtuante = "";
         public static string TecnicoAtuante
         {

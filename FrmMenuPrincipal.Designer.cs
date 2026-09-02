@@ -64,6 +64,7 @@ namespace HELP_Princ
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnlForm = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnlLateral.SuspendLayout();
             this.pnlLateralHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -93,7 +94,7 @@ namespace HELP_Princ
             this.pnlLateral.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.pnlLateral.Location = new System.Drawing.Point(0, 0);
             this.pnlLateral.Name = "pnlLateral";
-            this.pnlLateral.Size = new System.Drawing.Size(243, 600);
+            this.pnlLateral.Size = new System.Drawing.Size(243, 1080);
             this.pnlLateral.TabIndex = 1;
             // 
             // pnlLateralHeader
@@ -105,10 +106,10 @@ namespace HELP_Princ
             this.pnlLateralHeader.Controls.Add(this.guna2HtmlLabel1);
             this.pnlLateralHeader.Controls.Add(this.lblCopy);
             this.pnlLateralHeader.Controls.Add(this.lblVersao);
-            this.pnlLateralHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLateralHeader.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlLateralHeader.FillColor = System.Drawing.Color.WhiteSmoke;
             this.pnlLateralHeader.FillColor2 = System.Drawing.Color.LightGray;
-            this.pnlLateralHeader.Location = new System.Drawing.Point(0, 548);
+            this.pnlLateralHeader.Location = new System.Drawing.Point(0, 1028);
             this.pnlLateralHeader.Name = "pnlLateralHeader";
             this.pnlLateralHeader.Size = new System.Drawing.Size(243, 52);
             this.pnlLateralHeader.TabIndex = 12;
@@ -520,6 +521,7 @@ namespace HELP_Princ
             // 
             // pnlHeader
             // 
+            this.pnlHeader.Controls.Add(this.guna2ControlBox2);
             this.pnlHeader.Controls.Add(this.guna2HtmlLabel4);
             this.pnlHeader.Controls.Add(this.guna2HtmlLabel3);
             this.pnlHeader.Controls.Add(this.lblSistema);
@@ -530,18 +532,19 @@ namespace HELP_Princ
             this.pnlHeader.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.pnlHeader.Location = new System.Drawing.Point(243, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1157, 87);
+            this.pnlHeader.Size = new System.Drawing.Size(1677, 87);
             this.pnlHeader.TabIndex = 2;
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(455, 55);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(704, 53);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(255, 23);
             this.guna2HtmlLabel4.TabIndex = 6;
             this.guna2HtmlLabel4.Text = "Movimentação de Equipamentos";
+            this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // guna2HtmlLabel3
             // 
@@ -551,7 +554,7 @@ namespace HELP_Princ
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Bauhaus 93", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(73, 6);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(1020, 75);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(1516, 75);
             this.guna2HtmlLabel3.TabIndex = 5;
             this.guna2HtmlLabel3.TabStop = false;
             this.guna2HtmlLabel3.Text = "HELP-DESK \r\n";
@@ -579,7 +582,7 @@ namespace HELP_Princ
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.LightGray;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1099, 3);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1595, 3);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(23, 25);
             this.guna2ControlBox3.TabIndex = 3;
@@ -594,26 +597,43 @@ namespace HELP_Princ
             this.guna2ControlBox1.BorderThickness = 1;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.LightGray;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1128, 4);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1648, 4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(23, 25);
             this.guna2ControlBox1.TabIndex = 0;
             // 
             // pnlForm
             // 
-            this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlForm.FillColor = System.Drawing.Color.LightGray;
             this.pnlForm.Font = new System.Drawing.Font("Berlin Sans FB Demi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlForm.Location = new System.Drawing.Point(243, 87);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(1157, 513);
+            this.pnlForm.Size = new System.Drawing.Size(1677, 1070);
             this.pnlForm.TabIndex = 14;
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.Animated = true;
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2ControlBox2.BorderColor = System.Drawing.Color.Silver;
+            this.guna2ControlBox2.BorderRadius = 10;
+            this.guna2ControlBox2.BorderThickness = 1;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.LightGray;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1622, 3);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(23, 25);
+            this.guna2ControlBox2.TabIndex = 7;
+            this.guna2ControlBox2.Click += new System.EventHandler(this.guna2ControlBox2_Click);
             // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 600);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlLateral);
@@ -622,7 +642,9 @@ namespace HELP_Princ
             this.Name = "FrmMenuPrincipal";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load_1);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FrmMenuPrincipal_Paint);
             this.pnlLateral.ResumeLayout(false);
             this.pnlLateralHeader.ResumeLayout(false);
             this.pnlLateralHeader.PerformLayout();
@@ -671,5 +693,6 @@ namespace HELP_Princ
         private Guna.UI2.WinForms.Guna2GradientButton btnConsultaDinamica;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
     }
 }
