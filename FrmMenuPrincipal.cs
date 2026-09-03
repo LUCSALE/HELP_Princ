@@ -22,7 +22,7 @@ namespace HELP_Princ
 
         private void FormShow(Form frm)
         {
-            MessageBox.Show(FrmMenuPrincipal.ActiveForm.Size.ToString(), "Teste", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+           
 
 
 
@@ -101,7 +101,7 @@ namespace HELP_Princ
 
         private void guna2ControlBox2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Estou aqui !!!", "Teste", MessageBoxButtons.YesNo, MessageBoxIcon.Question); 
+            
         }
 
         private void FrmMenuPrincipal_Paint(object sender, PaintEventArgs e)

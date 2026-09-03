@@ -33,8 +33,8 @@ namespace HELP_Princ
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuariosList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
@@ -91,7 +91,7 @@ namespace HELP_Princ
             this.pnlHeader.Location = new System.Drawing.Point(0, 2);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.pnlHeader.Size = new System.Drawing.Size(1156, 38);
+            this.pnlHeader.Size = new System.Drawing.Size(1675, 38);
             this.pnlHeader.TabIndex = 0;
             // 
             // lblTitulo
@@ -99,7 +99,7 @@ namespace HELP_Princ
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblTitulo.Location = new System.Drawing.Point(523, 3);
+            this.lblTitulo.Location = new System.Drawing.Point(784, 3);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(106, 31);
             this.lblTitulo.TabIndex = 0;
@@ -110,9 +110,9 @@ namespace HELP_Princ
             // 
             this.pnlFooter.Controls.Add(this.bindingNavigator1);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 486);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 917);
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(1156, 26);
+            this.pnlFooter.Size = new System.Drawing.Size(1675, 26);
             this.pnlFooter.TabIndex = 3;
             this.pnlFooter.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlFooter_Paint);
             // 
@@ -143,7 +143,7 @@ namespace HELP_Princ
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1156, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1675, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -265,7 +265,7 @@ namespace HELP_Princ
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrid.Location = new System.Drawing.Point(0, 40);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(1156, 446);
+            this.pnlGrid.Size = new System.Drawing.Size(1675, 877);
             this.pnlGrid.TabIndex = 4;
             // 
             // dbgUsuarios
@@ -275,14 +275,14 @@ namespace HELP_Princ
             this.dbgUsuarios.AllowUserToOrderColumns = true;
             this.dbgUsuarios.AutoGenerateColumns = false;
             this.dbgUsuarios.BackgroundColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dbgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dbgUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnEdicao,
@@ -298,20 +298,21 @@ namespace HELP_Princ
             this.dATADESDataGridViewTextBoxColumn,
             this.OBS_GERAL});
             this.dbgUsuarios.DataSource = this.uSUARIOSBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dbgUsuarios.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dbgUsuarios.DefaultCellStyle = dataGridViewCellStyle4;
             this.dbgUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbgUsuarios.Location = new System.Drawing.Point(0, 0);
             this.dbgUsuarios.Name = "dbgUsuarios";
             this.dbgUsuarios.ReadOnly = true;
-            this.dbgUsuarios.Size = new System.Drawing.Size(1156, 446);
+            this.dbgUsuarios.Size = new System.Drawing.Size(1675, 877);
             this.dbgUsuarios.TabIndex = 0;
+            this.dbgUsuarios.TabStop = false;
             this.dbgUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgTecnicos_CellContentClick);
             this.dbgUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgUsuarios_CellDoubleClick);
             this.dbgUsuarios.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dbgUsuarios_RowPrePaint);
@@ -429,7 +430,9 @@ namespace HELP_Princ
             this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
             this.tableAdapterManager.MOVI_RETIRADATableAdapter = null;
             this.tableAdapterManager.MOVITableAdapter = null;
+            this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
             this.tableAdapterManager.SERVICOSTableAdapter = null;
+            this.tableAdapterManager.TAREFA_BANCADATableAdapter = null;
             this.tableAdapterManager.TECNICOSTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.USUARIOSTableAdapter = null;
@@ -443,7 +446,7 @@ namespace HELP_Princ
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1156, 512);
+            this.ClientSize = new System.Drawing.Size(1675, 943);
             this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.pnlHeader);

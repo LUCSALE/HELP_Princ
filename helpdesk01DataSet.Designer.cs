@@ -2793,6 +2793,8 @@ namespace HELP_Princ {
             
             private global::System.Data.DataColumn columnID_TECNICO_SOLICITANTE;
             
+            private global::System.Data.DataColumn columnORIGEM;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public MOVI_RETIRADADataTable() {
@@ -3068,6 +3070,14 @@ namespace HELP_Princ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ORIGEMColumn {
+                get {
+                    return this.columnORIGEM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3133,7 +3143,8 @@ namespace HELP_Princ {
                         string PRIORIDADE, 
                         System.DateTime DATA_PREVISTA, 
                         System.TimeSpan HORA_PREVISTA, 
-                        int ID_TECNICO_SOLICITANTE) {
+                        int ID_TECNICO_SOLICITANTE, 
+                        string ORIGEM) {
                 MOVI_RETIRADARow rowMOVI_RETIRADARow = ((MOVI_RETIRADARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -3165,7 +3176,8 @@ namespace HELP_Princ {
                         PRIORIDADE,
                         DATA_PREVISTA,
                         HORA_PREVISTA,
-                        ID_TECNICO_SOLICITANTE};
+                        ID_TECNICO_SOLICITANTE,
+                        ORIGEM};
                 rowMOVI_RETIRADARow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMOVI_RETIRADARow);
                 return rowMOVI_RETIRADARow;
@@ -3225,6 +3237,7 @@ namespace HELP_Princ {
                 this.columnDATA_PREVISTA = base.Columns["DATA_PREVISTA"];
                 this.columnHORA_PREVISTA = base.Columns["HORA_PREVISTA"];
                 this.columnID_TECNICO_SOLICITANTE = base.Columns["ID_TECNICO_SOLICITANTE"];
+                this.columnORIGEM = base.Columns["ORIGEM"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3290,6 +3303,8 @@ namespace HELP_Princ {
                 base.Columns.Add(this.columnHORA_PREVISTA);
                 this.columnID_TECNICO_SOLICITANTE = new global::System.Data.DataColumn("ID_TECNICO_SOLICITANTE", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_TECNICO_SOLICITANTE);
+                this.columnORIGEM = new global::System.Data.DataColumn("ORIGEM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnORIGEM);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AllowDBNull = false;
@@ -3318,6 +3333,7 @@ namespace HELP_Princ {
                 this.columnSITUACAO.MaxLength = 50;
                 this.columnMODALIDADE.MaxLength = 30;
                 this.columnPRIORIDADE.MaxLength = 30;
+                this.columnORIGEM.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3510,6 +3526,8 @@ namespace HELP_Princ {
             private global::System.Data.DataColumn columnHORA_PREVISTA;
             
             private global::System.Data.DataColumn columnID_TECNICO_SOLICITANTE;
+            
+            private global::System.Data.DataColumn columnORIGEM;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -3786,6 +3804,14 @@ namespace HELP_Princ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ORIGEMColumn {
+                get {
+                    return this.columnORIGEM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3851,7 +3877,8 @@ namespace HELP_Princ {
                         string PRIORIDADE, 
                         System.DateTime DATA_PREVISTA, 
                         System.TimeSpan HORA_PREVISTA, 
-                        int ID_TECNICO_SOLICITANTE) {
+                        int ID_TECNICO_SOLICITANTE, 
+                        string ORIGEM) {
                 TAREFA_BANCADARow rowTAREFA_BANCADARow = ((TAREFA_BANCADARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -3883,7 +3910,8 @@ namespace HELP_Princ {
                         PRIORIDADE,
                         DATA_PREVISTA,
                         HORA_PREVISTA,
-                        ID_TECNICO_SOLICITANTE};
+                        ID_TECNICO_SOLICITANTE,
+                        ORIGEM};
                 rowTAREFA_BANCADARow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTAREFA_BANCADARow);
                 return rowTAREFA_BANCADARow;
@@ -3943,6 +3971,7 @@ namespace HELP_Princ {
                 this.columnDATA_PREVISTA = base.Columns["DATA_PREVISTA"];
                 this.columnHORA_PREVISTA = base.Columns["HORA_PREVISTA"];
                 this.columnID_TECNICO_SOLICITANTE = base.Columns["ID_TECNICO_SOLICITANTE"];
+                this.columnORIGEM = base.Columns["ORIGEM"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4008,6 +4037,8 @@ namespace HELP_Princ {
                 base.Columns.Add(this.columnHORA_PREVISTA);
                 this.columnID_TECNICO_SOLICITANTE = new global::System.Data.DataColumn("ID_TECNICO_SOLICITANTE", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_TECNICO_SOLICITANTE);
+                this.columnORIGEM = new global::System.Data.DataColumn("ORIGEM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnORIGEM);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AllowDBNull = false;
@@ -4036,6 +4067,7 @@ namespace HELP_Princ {
                 this.columnSITUACAO.MaxLength = 50;
                 this.columnMODALIDADE.MaxLength = 30;
                 this.columnPRIORIDADE.MaxLength = 30;
+                this.columnORIGEM.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5878,6 +5910,22 @@ namespace HELP_Princ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ORIGEM {
+                get {
+                    try {
+                        return ((string)(this[this.tableMOVI_RETIRADA.ORIGEMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'ORIGEM\' na tabela \'MOVI_RETIRADA\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMOVI_RETIRADA.ORIGEMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsESTAGIONull() {
                 return this.IsNull(this.tableMOVI_RETIRADA.ESTAGIOColumn);
             }
@@ -6198,6 +6246,18 @@ namespace HELP_Princ {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetID_TECNICO_SOLICITANTENull() {
                 this[this.tableMOVI_RETIRADA.ID_TECNICO_SOLICITANTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsORIGEMNull() {
+                return this.IsNull(this.tableMOVI_RETIRADA.ORIGEMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetORIGEMNull() {
+                this[this.tableMOVI_RETIRADA.ORIGEMColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6682,6 +6742,22 @@ namespace HELP_Princ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ORIGEM {
+                get {
+                    try {
+                        return ((string)(this[this.tableTAREFA_BANCADA.ORIGEMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'ORIGEM\' na tabela \'TAREFA_BANCADA\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTAREFA_BANCADA.ORIGEMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsESTAGIONull() {
                 return this.IsNull(this.tableTAREFA_BANCADA.ESTAGIOColumn);
             }
@@ -7002,6 +7078,18 @@ namespace HELP_Princ {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetID_TECNICO_SOLICITANTENull() {
                 this[this.tableTAREFA_BANCADA.ID_TECNICO_SOLICITANTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsORIGEMNull() {
+                return this.IsNull(this.tableTAREFA_BANCADA.ORIGEMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetORIGEMNull() {
+                this[this.tableTAREFA_BANCADA.ORIGEMColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -10900,42 +10988,44 @@ SELECT ID, DATA, HORA, DESCRICAO_EQUIPAMENTO, ATIVO, DATA_DES, HORA_DES FROM EQU
             tableMapping.ColumnMappings.Add("DATA_PREVISTA", "DATA_PREVISTA");
             tableMapping.ColumnMappings.Add("HORA_PREVISTA", "HORA_PREVISTA");
             tableMapping.ColumnMappings.Add("ID_TECNICO_SOLICITANTE", "ID_TECNICO_SOLICITANTE");
+            tableMapping.ColumnMappings.Add("ORIGEM", "ORIGEM");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[MOVI_RETIRADA] WHERE (([ID] = @Original_ID) AND ([DATA] = @Ori" +
-                "ginal_DATA) AND ([HORA] = @Original_HORA) AND ((@IsNull_ESTAGIO = 1 AND [ESTAGIO" +
-                "] IS NULL) OR ([ESTAGIO] = @Original_ESTAGIO)) AND ((@IsNull_RAMAL_TEL = 1 AND [" +
-                "RAMAL_TEL] IS NULL) OR ([RAMAL_TEL] = @Original_RAMAL_TEL)) AND ((@IsNull_NOME_U" +
-                "SUARIO = 1 AND [NOME_USUARIO] IS NULL) OR ([NOME_USUARIO] = @Original_NOME_USUAR" +
-                "IO)) AND ((@IsNull_PREDIO_SETOR = 1 AND [PREDIO_SETOR] IS NULL) OR ([PREDIO_SETO" +
-                "R] = @Original_PREDIO_SETOR)) AND ((@IsNull_AREA = 1 AND [AREA] IS NULL) OR ([AR" +
-                "EA] = @Original_AREA)) AND ((@IsNull_NUMERO_OS = 1 AND [NUMERO_OS] IS NULL) OR (" +
-                "[NUMERO_OS] = @Original_NUMERO_OS)) AND ((@IsNull_EQUIPAMENTO = 1 AND [EQUIPAMEN" +
-                "TO] IS NULL) OR ([EQUIPAMENTO] = @Original_EQUIPAMENTO)) AND ((@IsNull_SAI = 1 A" +
-                "ND [SAI] IS NULL) OR ([SAI] = @Original_SAI)) AND ((@IsNull_SSD = 1 AND [SSD] IS" +
-                " NULL) OR ([SSD] = @Original_SSD)) AND ((@IsNull_OFFICE_365 = 1 AND [OFFICE_365]" +
-                " IS NULL) OR ([OFFICE_365] = @Original_OFFICE_365)) AND ((@IsNull_MAINFRAME = 1 " +
-                "AND [MAINFRAME] IS NULL) OR ([MAINFRAME] = @Original_MAINFRAME)) AND ((@IsNull_C" +
-                "NS = 1 AND [CNS] IS NULL) OR ([CNS] = @Original_CNS)) AND ((@IsNull_BOTAO_EMERGE" +
-                "NCIA = 1 AND [BOTAO_EMERGENCIA] IS NULL) OR ([BOTAO_EMERGENCIA] = @Original_BOTA" +
-                "O_EMERGENCIA)) AND ((@IsNull_OFFICE_365_PLAN = 1 AND [OFFICE_365_PLAN] IS NULL) " +
-                "OR ([OFFICE_365_PLAN] = @Original_OFFICE_365_PLAN)) AND ((@IsNull_PATRIMONIO = 1" +
-                " AND [PATRIMONIO] IS NULL) OR ([PATRIMONIO] = @Original_PATRIMONIO)) AND ((@IsNu" +
-                "ll_TECNICO_SOLICITANTE = 1 AND [TECNICO_SOLICITANTE] IS NULL) OR ([TECNICO_SOLIC" +
-                "ITANTE] = @Original_TECNICO_SOLICITANTE)) AND ((@IsNull_TECNICO_ATUANTE = 1 AND " +
-                "[TECNICO_ATUANTE] IS NULL) OR ([TECNICO_ATUANTE] = @Original_TECNICO_ATUANTE)) A" +
-                "ND ((@IsNull_DATA_RETIRADA = 1 AND [DATA_RETIRADA] IS NULL) OR ([DATA_RETIRADA] " +
-                "= @Original_DATA_RETIRADA)) AND ((@IsNull_HORA_RETIRADA = 1 AND [HORA_RETIRADA] " +
-                "IS NULL) OR ([HORA_RETIRADA] = @Original_HORA_RETIRADA)) AND ((@IsNull_SITUACAO " +
-                "= 1 AND [SITUACAO] IS NULL) OR ([SITUACAO] = @Original_SITUACAO)) AND ((@IsNull_" +
-                "MODALIDADE = 1 AND [MODALIDADE] IS NULL) OR ([MODALIDADE] = @Original_MODALIDADE" +
-                ")) AND ((@IsNull_PRIORIDADE = 1 AND [PRIORIDADE] IS NULL) OR ([PRIORIDADE] = @Or" +
-                "iginal_PRIORIDADE)) AND ((@IsNull_DATA_PREVISTA = 1 AND [DATA_PREVISTA] IS NULL)" +
-                " OR ([DATA_PREVISTA] = @Original_DATA_PREVISTA)) AND ((@IsNull_HORA_PREVISTA = 1" +
-                " AND [HORA_PREVISTA] IS NULL) OR ([HORA_PREVISTA] = @Original_HORA_PREVISTA)) AN" +
-                "D ((@IsNull_ID_TECNICO_SOLICITANTE = 1 AND [ID_TECNICO_SOLICITANTE] IS NULL) OR " +
-                "([ID_TECNICO_SOLICITANTE] = @Original_ID_TECNICO_SOLICITANTE)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [MOVI_RETIRADA] WHERE (([ID] = @Original_ID) AND ([DATA] = @Original_" +
+                "DATA) AND ([HORA] = @Original_HORA) AND ((@IsNull_ESTAGIO = 1 AND [ESTAGIO] IS N" +
+                "ULL) OR ([ESTAGIO] = @Original_ESTAGIO)) AND ((@IsNull_RAMAL_TEL = 1 AND [RAMAL_" +
+                "TEL] IS NULL) OR ([RAMAL_TEL] = @Original_RAMAL_TEL)) AND ((@IsNull_NOME_USUARIO" +
+                " = 1 AND [NOME_USUARIO] IS NULL) OR ([NOME_USUARIO] = @Original_NOME_USUARIO)) A" +
+                "ND ((@IsNull_PREDIO_SETOR = 1 AND [PREDIO_SETOR] IS NULL) OR ([PREDIO_SETOR] = @" +
+                "Original_PREDIO_SETOR)) AND ((@IsNull_AREA = 1 AND [AREA] IS NULL) OR ([AREA] = " +
+                "@Original_AREA)) AND ((@IsNull_NUMERO_OS = 1 AND [NUMERO_OS] IS NULL) OR ([NUMER" +
+                "O_OS] = @Original_NUMERO_OS)) AND ((@IsNull_EQUIPAMENTO = 1 AND [EQUIPAMENTO] IS" +
+                " NULL) OR ([EQUIPAMENTO] = @Original_EQUIPAMENTO)) AND ((@IsNull_SAI = 1 AND [SA" +
+                "I] IS NULL) OR ([SAI] = @Original_SAI)) AND ((@IsNull_SSD = 1 AND [SSD] IS NULL)" +
+                " OR ([SSD] = @Original_SSD)) AND ((@IsNull_OFFICE_365 = 1 AND [OFFICE_365] IS NU" +
+                "LL) OR ([OFFICE_365] = @Original_OFFICE_365)) AND ((@IsNull_MAINFRAME = 1 AND [M" +
+                "AINFRAME] IS NULL) OR ([MAINFRAME] = @Original_MAINFRAME)) AND ((@IsNull_CNS = 1" +
+                " AND [CNS] IS NULL) OR ([CNS] = @Original_CNS)) AND ((@IsNull_BOTAO_EMERGENCIA =" +
+                " 1 AND [BOTAO_EMERGENCIA] IS NULL) OR ([BOTAO_EMERGENCIA] = @Original_BOTAO_EMER" +
+                "GENCIA)) AND ((@IsNull_OFFICE_365_PLAN = 1 AND [OFFICE_365_PLAN] IS NULL) OR ([O" +
+                "FFICE_365_PLAN] = @Original_OFFICE_365_PLAN)) AND ((@IsNull_PATRIMONIO = 1 AND [" +
+                "PATRIMONIO] IS NULL) OR ([PATRIMONIO] = @Original_PATRIMONIO)) AND ((@IsNull_TEC" +
+                "NICO_SOLICITANTE = 1 AND [TECNICO_SOLICITANTE] IS NULL) OR ([TECNICO_SOLICITANTE" +
+                "] = @Original_TECNICO_SOLICITANTE)) AND ((@IsNull_TECNICO_ATUANTE = 1 AND [TECNI" +
+                "CO_ATUANTE] IS NULL) OR ([TECNICO_ATUANTE] = @Original_TECNICO_ATUANTE)) AND ((@" +
+                "IsNull_DATA_RETIRADA = 1 AND [DATA_RETIRADA] IS NULL) OR ([DATA_RETIRADA] = @Ori" +
+                "ginal_DATA_RETIRADA)) AND ((@IsNull_HORA_RETIRADA = 1 AND [HORA_RETIRADA] IS NUL" +
+                "L) OR ([HORA_RETIRADA] = @Original_HORA_RETIRADA)) AND ((@IsNull_SITUACAO = 1 AN" +
+                "D [SITUACAO] IS NULL) OR ([SITUACAO] = @Original_SITUACAO)) AND ((@IsNull_MODALI" +
+                "DADE = 1 AND [MODALIDADE] IS NULL) OR ([MODALIDADE] = @Original_MODALIDADE)) AND" +
+                " ((@IsNull_PRIORIDADE = 1 AND [PRIORIDADE] IS NULL) OR ([PRIORIDADE] = @Original" +
+                "_PRIORIDADE)) AND ((@IsNull_DATA_PREVISTA = 1 AND [DATA_PREVISTA] IS NULL) OR ([" +
+                "DATA_PREVISTA] = @Original_DATA_PREVISTA)) AND ((@IsNull_HORA_PREVISTA = 1 AND [" +
+                "HORA_PREVISTA] IS NULL) OR ([HORA_PREVISTA] = @Original_HORA_PREVISTA)) AND ((@I" +
+                "sNull_ID_TECNICO_SOLICITANTE = 1 AND [ID_TECNICO_SOLICITANTE] IS NULL) OR ([ID_T" +
+                "ECNICO_SOLICITANTE] = @Original_ID_TECNICO_SOLICITANTE)) AND ((@IsNull_ORIGEM = " +
+                "1 AND [ORIGEM] IS NULL) OR ([ORIGEM] = @Original_ORIGEM)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -10990,10 +11080,12 @@ SELECT ID, DATA, HORA, DESCRICAO_EQUIPAMENTO, ATIVO, DATA_DES, HORA_DES FROM EQU
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HORA_PREVISTA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_PREVISTA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ORIGEM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ORIGEM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ORIGEM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ORIGEM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[MOVI_RETIRADA] ([ID], [DATA], [HORA], [ESTAGIO], [RAMAL_TEL], [NOME_USUARIO], [PREDIO_SETOR], [AREA], [NUMERO_OS], [EQUIPAMENTO], [SAI], [SSD], [OFFICE_365], [MAINFRAME], [CNS], [BOTAO_EMERGENCIA], [OFFICE_365_PLAN], [DESCRICA_ATIVIDADE], [OBS_IMPORTANTES], [PATRIMONIO], [TECNICO_SOLICITANTE], [TECNICO_ATUANTE], [DATA_RETIRADA], [HORA_RETIRADA], [SITUACAO], [MODALIDADE], [PRIORIDADE], [DATA_PREVISTA], [HORA_PREVISTA], [ID_TECNICO_SOLICITANTE]) VALUES (@ID, @DATA, @HORA, @ESTAGIO, @RAMAL_TEL, @NOME_USUARIO, @PREDIO_SETOR, @AREA, @NUMERO_OS, @EQUIPAMENTO, @SAI, @SSD, @OFFICE_365, @MAINFRAME, @CNS, @BOTAO_EMERGENCIA, @OFFICE_365_PLAN, @DESCRICA_ATIVIDADE, @OBS_IMPORTANTES, @PATRIMONIO, @TECNICO_SOLICITANTE, @TECNICO_ATUANTE, @DATA_RETIRADA, @HORA_RETIRADA, @SITUACAO, @MODALIDADE, @PRIORIDADE, @DATA_PREVISTA, @HORA_PREVISTA, @ID_TECNICO_SOLICITANTE);
-SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE FROM MOVI_RETIRADA WHERE (ID = @ID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [MOVI_RETIRADA] ([ID], [DATA], [HORA], [ESTAGIO], [RAMAL_TEL], [NOME_USUARIO], [PREDIO_SETOR], [AREA], [NUMERO_OS], [EQUIPAMENTO], [SAI], [SSD], [OFFICE_365], [MAINFRAME], [CNS], [BOTAO_EMERGENCIA], [OFFICE_365_PLAN], [DESCRICA_ATIVIDADE], [OBS_IMPORTANTES], [PATRIMONIO], [TECNICO_SOLICITANTE], [TECNICO_ATUANTE], [DATA_RETIRADA], [HORA_RETIRADA], [SITUACAO], [MODALIDADE], [PRIORIDADE], [DATA_PREVISTA], [HORA_PREVISTA], [ID_TECNICO_SOLICITANTE], [ORIGEM]) VALUES (@ID, @DATA, @HORA, @ESTAGIO, @RAMAL_TEL, @NOME_USUARIO, @PREDIO_SETOR, @AREA, @NUMERO_OS, @EQUIPAMENTO, @SAI, @SSD, @OFFICE_365, @MAINFRAME, @CNS, @BOTAO_EMERGENCIA, @OFFICE_365_PLAN, @DESCRICA_ATIVIDADE, @OBS_IMPORTANTES, @PATRIMONIO, @TECNICO_SOLICITANTE, @TECNICO_ATUANTE, @DATA_RETIRADA, @HORA_RETIRADA, @SITUACAO, @MODALIDADE, @PRIORIDADE, @DATA_PREVISTA, @HORA_PREVISTA, @ID_TECNICO_SOLICITANTE, @ORIGEM);
+SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE, ORIGEM FROM MOVI_RETIRADA WHERE (ID = @ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11025,57 +11117,60 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA_PREVISTA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_PREVISTA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA_PREVISTA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_PREVISTA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ORIGEM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ORIGEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[MOVI_RETIRADA] SET [ID] = @ID, [DATA] = @DATA, [HORA] = @HORA, [EST" +
-                "AGIO] = @ESTAGIO, [RAMAL_TEL] = @RAMAL_TEL, [NOME_USUARIO] = @NOME_USUARIO, [PRE" +
-                "DIO_SETOR] = @PREDIO_SETOR, [AREA] = @AREA, [NUMERO_OS] = @NUMERO_OS, [EQUIPAMEN" +
-                "TO] = @EQUIPAMENTO, [SAI] = @SAI, [SSD] = @SSD, [OFFICE_365] = @OFFICE_365, [MAI" +
-                "NFRAME] = @MAINFRAME, [CNS] = @CNS, [BOTAO_EMERGENCIA] = @BOTAO_EMERGENCIA, [OFF" +
-                "ICE_365_PLAN] = @OFFICE_365_PLAN, [DESCRICA_ATIVIDADE] = @DESCRICA_ATIVIDADE, [O" +
-                "BS_IMPORTANTES] = @OBS_IMPORTANTES, [PATRIMONIO] = @PATRIMONIO, [TECNICO_SOLICIT" +
-                "ANTE] = @TECNICO_SOLICITANTE, [TECNICO_ATUANTE] = @TECNICO_ATUANTE, [DATA_RETIRA" +
-                "DA] = @DATA_RETIRADA, [HORA_RETIRADA] = @HORA_RETIRADA, [SITUACAO] = @SITUACAO, " +
-                "[MODALIDADE] = @MODALIDADE, [PRIORIDADE] = @PRIORIDADE, [DATA_PREVISTA] = @DATA_" +
-                "PREVISTA, [HORA_PREVISTA] = @HORA_PREVISTA, [ID_TECNICO_SOLICITANTE] = @ID_TECNI" +
-                "CO_SOLICITANTE WHERE (([ID] = @Original_ID) AND ([DATA] = @Original_DATA) AND ([" +
-                "HORA] = @Original_HORA) AND ((@IsNull_ESTAGIO = 1 AND [ESTAGIO] IS NULL) OR ([ES" +
-                "TAGIO] = @Original_ESTAGIO)) AND ((@IsNull_RAMAL_TEL = 1 AND [RAMAL_TEL] IS NULL" +
-                ") OR ([RAMAL_TEL] = @Original_RAMAL_TEL)) AND ((@IsNull_NOME_USUARIO = 1 AND [NO" +
-                "ME_USUARIO] IS NULL) OR ([NOME_USUARIO] = @Original_NOME_USUARIO)) AND ((@IsNull" +
-                "_PREDIO_SETOR = 1 AND [PREDIO_SETOR] IS NULL) OR ([PREDIO_SETOR] = @Original_PRE" +
-                "DIO_SETOR)) AND ((@IsNull_AREA = 1 AND [AREA] IS NULL) OR ([AREA] = @Original_AR" +
-                "EA)) AND ((@IsNull_NUMERO_OS = 1 AND [NUMERO_OS] IS NULL) OR ([NUMERO_OS] = @Ori" +
-                "ginal_NUMERO_OS)) AND ((@IsNull_EQUIPAMENTO = 1 AND [EQUIPAMENTO] IS NULL) OR ([" +
-                "EQUIPAMENTO] = @Original_EQUIPAMENTO)) AND ((@IsNull_SAI = 1 AND [SAI] IS NULL) " +
-                "OR ([SAI] = @Original_SAI)) AND ((@IsNull_SSD = 1 AND [SSD] IS NULL) OR ([SSD] =" +
-                " @Original_SSD)) AND ((@IsNull_OFFICE_365 = 1 AND [OFFICE_365] IS NULL) OR ([OFF" +
-                "ICE_365] = @Original_OFFICE_365)) AND ((@IsNull_MAINFRAME = 1 AND [MAINFRAME] IS" +
-                " NULL) OR ([MAINFRAME] = @Original_MAINFRAME)) AND ((@IsNull_CNS = 1 AND [CNS] I" +
-                "S NULL) OR ([CNS] = @Original_CNS)) AND ((@IsNull_BOTAO_EMERGENCIA = 1 AND [BOTA" +
-                "O_EMERGENCIA] IS NULL) OR ([BOTAO_EMERGENCIA] = @Original_BOTAO_EMERGENCIA)) AND" +
-                " ((@IsNull_OFFICE_365_PLAN = 1 AND [OFFICE_365_PLAN] IS NULL) OR ([OFFICE_365_PL" +
-                "AN] = @Original_OFFICE_365_PLAN)) AND ((@IsNull_PATRIMONIO = 1 AND [PATRIMONIO] " +
-                "IS NULL) OR ([PATRIMONIO] = @Original_PATRIMONIO)) AND ((@IsNull_TECNICO_SOLICIT" +
-                "ANTE = 1 AND [TECNICO_SOLICITANTE] IS NULL) OR ([TECNICO_SOLICITANTE] = @Origina" +
-                "l_TECNICO_SOLICITANTE)) AND ((@IsNull_TECNICO_ATUANTE = 1 AND [TECNICO_ATUANTE] " +
-                "IS NULL) OR ([TECNICO_ATUANTE] = @Original_TECNICO_ATUANTE)) AND ((@IsNull_DATA_" +
-                "RETIRADA = 1 AND [DATA_RETIRADA] IS NULL) OR ([DATA_RETIRADA] = @Original_DATA_R" +
-                "ETIRADA)) AND ((@IsNull_HORA_RETIRADA = 1 AND [HORA_RETIRADA] IS NULL) OR ([HORA" +
-                "_RETIRADA] = @Original_HORA_RETIRADA)) AND ((@IsNull_SITUACAO = 1 AND [SITUACAO]" +
-                " IS NULL) OR ([SITUACAO] = @Original_SITUACAO)) AND ((@IsNull_MODALIDADE = 1 AND" +
-                " [MODALIDADE] IS NULL) OR ([MODALIDADE] = @Original_MODALIDADE)) AND ((@IsNull_P" +
-                "RIORIDADE = 1 AND [PRIORIDADE] IS NULL) OR ([PRIORIDADE] = @Original_PRIORIDADE)" +
-                ") AND ((@IsNull_DATA_PREVISTA = 1 AND [DATA_PREVISTA] IS NULL) OR ([DATA_PREVIST" +
-                "A] = @Original_DATA_PREVISTA)) AND ((@IsNull_HORA_PREVISTA = 1 AND [HORA_PREVIST" +
-                "A] IS NULL) OR ([HORA_PREVISTA] = @Original_HORA_PREVISTA)) AND ((@IsNull_ID_TEC" +
-                "NICO_SOLICITANTE = 1 AND [ID_TECNICO_SOLICITANTE] IS NULL) OR ([ID_TECNICO_SOLIC" +
-                "ITANTE] = @Original_ID_TECNICO_SOLICITANTE)));\r\nSELECT ID, DATA, HORA, ESTAGIO, " +
-                "RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, O" +
-                "FFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE" +
-                ", OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRA" +
-                "DA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVIST" +
-                "A, ID_TECNICO_SOLICITANTE FROM MOVI_RETIRADA WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [MOVI_RETIRADA] SET [ID] = @ID, [DATA] = @DATA, [HORA] = @HORA, [ESTAGIO] " +
+                "= @ESTAGIO, [RAMAL_TEL] = @RAMAL_TEL, [NOME_USUARIO] = @NOME_USUARIO, [PREDIO_SE" +
+                "TOR] = @PREDIO_SETOR, [AREA] = @AREA, [NUMERO_OS] = @NUMERO_OS, [EQUIPAMENTO] = " +
+                "@EQUIPAMENTO, [SAI] = @SAI, [SSD] = @SSD, [OFFICE_365] = @OFFICE_365, [MAINFRAME" +
+                "] = @MAINFRAME, [CNS] = @CNS, [BOTAO_EMERGENCIA] = @BOTAO_EMERGENCIA, [OFFICE_36" +
+                "5_PLAN] = @OFFICE_365_PLAN, [DESCRICA_ATIVIDADE] = @DESCRICA_ATIVIDADE, [OBS_IMP" +
+                "ORTANTES] = @OBS_IMPORTANTES, [PATRIMONIO] = @PATRIMONIO, [TECNICO_SOLICITANTE] " +
+                "= @TECNICO_SOLICITANTE, [TECNICO_ATUANTE] = @TECNICO_ATUANTE, [DATA_RETIRADA] = " +
+                "@DATA_RETIRADA, [HORA_RETIRADA] = @HORA_RETIRADA, [SITUACAO] = @SITUACAO, [MODAL" +
+                "IDADE] = @MODALIDADE, [PRIORIDADE] = @PRIORIDADE, [DATA_PREVISTA] = @DATA_PREVIS" +
+                "TA, [HORA_PREVISTA] = @HORA_PREVISTA, [ID_TECNICO_SOLICITANTE] = @ID_TECNICO_SOL" +
+                "ICITANTE, [ORIGEM] = @ORIGEM WHERE (([ID] = @Original_ID) AND ([DATA] = @Origina" +
+                "l_DATA) AND ([HORA] = @Original_HORA) AND ((@IsNull_ESTAGIO = 1 AND [ESTAGIO] IS" +
+                " NULL) OR ([ESTAGIO] = @Original_ESTAGIO)) AND ((@IsNull_RAMAL_TEL = 1 AND [RAMA" +
+                "L_TEL] IS NULL) OR ([RAMAL_TEL] = @Original_RAMAL_TEL)) AND ((@IsNull_NOME_USUAR" +
+                "IO = 1 AND [NOME_USUARIO] IS NULL) OR ([NOME_USUARIO] = @Original_NOME_USUARIO))" +
+                " AND ((@IsNull_PREDIO_SETOR = 1 AND [PREDIO_SETOR] IS NULL) OR ([PREDIO_SETOR] =" +
+                " @Original_PREDIO_SETOR)) AND ((@IsNull_AREA = 1 AND [AREA] IS NULL) OR ([AREA] " +
+                "= @Original_AREA)) AND ((@IsNull_NUMERO_OS = 1 AND [NUMERO_OS] IS NULL) OR ([NUM" +
+                "ERO_OS] = @Original_NUMERO_OS)) AND ((@IsNull_EQUIPAMENTO = 1 AND [EQUIPAMENTO] " +
+                "IS NULL) OR ([EQUIPAMENTO] = @Original_EQUIPAMENTO)) AND ((@IsNull_SAI = 1 AND [" +
+                "SAI] IS NULL) OR ([SAI] = @Original_SAI)) AND ((@IsNull_SSD = 1 AND [SSD] IS NUL" +
+                "L) OR ([SSD] = @Original_SSD)) AND ((@IsNull_OFFICE_365 = 1 AND [OFFICE_365] IS " +
+                "NULL) OR ([OFFICE_365] = @Original_OFFICE_365)) AND ((@IsNull_MAINFRAME = 1 AND " +
+                "[MAINFRAME] IS NULL) OR ([MAINFRAME] = @Original_MAINFRAME)) AND ((@IsNull_CNS =" +
+                " 1 AND [CNS] IS NULL) OR ([CNS] = @Original_CNS)) AND ((@IsNull_BOTAO_EMERGENCIA" +
+                " = 1 AND [BOTAO_EMERGENCIA] IS NULL) OR ([BOTAO_EMERGENCIA] = @Original_BOTAO_EM" +
+                "ERGENCIA)) AND ((@IsNull_OFFICE_365_PLAN = 1 AND [OFFICE_365_PLAN] IS NULL) OR (" +
+                "[OFFICE_365_PLAN] = @Original_OFFICE_365_PLAN)) AND ((@IsNull_PATRIMONIO = 1 AND" +
+                " [PATRIMONIO] IS NULL) OR ([PATRIMONIO] = @Original_PATRIMONIO)) AND ((@IsNull_T" +
+                "ECNICO_SOLICITANTE = 1 AND [TECNICO_SOLICITANTE] IS NULL) OR ([TECNICO_SOLICITAN" +
+                "TE] = @Original_TECNICO_SOLICITANTE)) AND ((@IsNull_TECNICO_ATUANTE = 1 AND [TEC" +
+                "NICO_ATUANTE] IS NULL) OR ([TECNICO_ATUANTE] = @Original_TECNICO_ATUANTE)) AND (" +
+                "(@IsNull_DATA_RETIRADA = 1 AND [DATA_RETIRADA] IS NULL) OR ([DATA_RETIRADA] = @O" +
+                "riginal_DATA_RETIRADA)) AND ((@IsNull_HORA_RETIRADA = 1 AND [HORA_RETIRADA] IS N" +
+                "ULL) OR ([HORA_RETIRADA] = @Original_HORA_RETIRADA)) AND ((@IsNull_SITUACAO = 1 " +
+                "AND [SITUACAO] IS NULL) OR ([SITUACAO] = @Original_SITUACAO)) AND ((@IsNull_MODA" +
+                "LIDADE = 1 AND [MODALIDADE] IS NULL) OR ([MODALIDADE] = @Original_MODALIDADE)) A" +
+                "ND ((@IsNull_PRIORIDADE = 1 AND [PRIORIDADE] IS NULL) OR ([PRIORIDADE] = @Origin" +
+                "al_PRIORIDADE)) AND ((@IsNull_DATA_PREVISTA = 1 AND [DATA_PREVISTA] IS NULL) OR " +
+                "([DATA_PREVISTA] = @Original_DATA_PREVISTA)) AND ((@IsNull_HORA_PREVISTA = 1 AND" +
+                " [HORA_PREVISTA] IS NULL) OR ([HORA_PREVISTA] = @Original_HORA_PREVISTA)) AND ((" +
+                "@IsNull_ID_TECNICO_SOLICITANTE = 1 AND [ID_TECNICO_SOLICITANTE] IS NULL) OR ([ID" +
+                "_TECNICO_SOLICITANTE] = @Original_ID_TECNICO_SOLICITANTE)) AND ((@IsNull_ORIGEM " +
+                "= 1 AND [ORIGEM] IS NULL) OR ([ORIGEM] = @Original_ORIGEM)));\r\nSELECT ID, DATA, " +
+                "HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMEN" +
+                "TO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DES" +
+                "CRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUAN" +
+                "TE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVIST" +
+                "A, HORA_PREVISTA, ID_TECNICO_SOLICITANTE, ORIGEM FROM MOVI_RETIRADA WHERE (ID = " +
+                "@ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11107,6 +11202,7 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA_PREVISTA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_PREVISTA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA_PREVISTA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_PREVISTA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ORIGEM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ORIGEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HORA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -11160,6 +11256,8 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HORA_PREVISTA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_PREVISTA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ORIGEM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ORIGEM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ORIGEM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ORIGEM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11175,15 +11273,11 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE FROM dbo.MOVI_RETIRADA";
+            this._commandCollection[0].CommandText = @"SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE, ORIGEM FROM MOVI_RETIRADA";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, 
-                         OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, 
-                         ID_TECNICO_SOLICITANTE
-FROM            MOVI_RETIRADA
-WHERE        (ID = @ID)";
+            this._commandCollection[1].CommandText = @"SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE, ORIGEM FROM MOVI_RETIRADA WHERE (ID = @ID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
@@ -11307,7 +11401,8 @@ WHERE        (ID = @ID)";
                     string Original_PRIORIDADE, 
                     global::System.Nullable<global::System.DateTime> Original_DATA_PREVISTA, 
                     global::System.Nullable<global::System.TimeSpan> Original_HORA_PREVISTA, 
-                    global::System.Nullable<int> Original_ID_TECNICO_SOLICITANTE) {
+                    global::System.Nullable<int> Original_ID_TECNICO_SOLICITANTE, 
+                    string Original_ORIGEM) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_DATA));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((System.TimeSpan)(Original_HORA));
@@ -11511,6 +11606,14 @@ WHERE        (ID = @ID)";
                 this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
+            if ((Original_ORIGEM == null)) {
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[54].Value = ((string)(Original_ORIGEM));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11561,7 +11664,8 @@ WHERE        (ID = @ID)";
                     string PRIORIDADE, 
                     global::System.Nullable<global::System.DateTime> DATA_PREVISTA, 
                     global::System.Nullable<global::System.TimeSpan> HORA_PREVISTA, 
-                    global::System.Nullable<int> ID_TECNICO_SOLICITANTE) {
+                    global::System.Nullable<int> ID_TECNICO_SOLICITANTE, 
+                    string ORIGEM) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(DATA));
             this.Adapter.InsertCommand.Parameters[2].Value = ((System.TimeSpan)(HORA));
@@ -11727,6 +11831,12 @@ WHERE        (ID = @ID)";
             else {
                 this.Adapter.InsertCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
+            if ((ORIGEM == null)) {
+                this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[30].Value = ((string)(ORIGEM));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11778,6 +11888,7 @@ WHERE        (ID = @ID)";
                     global::System.Nullable<global::System.DateTime> DATA_PREVISTA, 
                     global::System.Nullable<global::System.TimeSpan> HORA_PREVISTA, 
                     global::System.Nullable<int> ID_TECNICO_SOLICITANTE, 
+                    string ORIGEM, 
                     int Original_ID, 
                     System.DateTime Original_DATA, 
                     System.TimeSpan Original_HORA, 
@@ -11805,7 +11916,8 @@ WHERE        (ID = @ID)";
                     string Original_PRIORIDADE, 
                     global::System.Nullable<global::System.DateTime> Original_DATA_PREVISTA, 
                     global::System.Nullable<global::System.TimeSpan> Original_HORA_PREVISTA, 
-                    global::System.Nullable<int> Original_ID_TECNICO_SOLICITANTE) {
+                    global::System.Nullable<int> Original_ID_TECNICO_SOLICITANTE, 
+                    string Original_ORIGEM) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(DATA));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((System.TimeSpan)(HORA));
@@ -11971,208 +12083,222 @@ WHERE        (ID = @ID)";
             else {
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_DATA));
-            this.Adapter.UpdateCommand.Parameters[32].Value = ((System.TimeSpan)(Original_HORA));
-            if ((Original_ESTAGIO == null)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            if ((ORIGEM == null)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_ESTAGIO));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(ORIGEM));
+            }
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[32].Value = ((System.DateTime)(Original_DATA));
+            this.Adapter.UpdateCommand.Parameters[33].Value = ((System.TimeSpan)(Original_HORA));
+            if ((Original_ESTAGIO == null)) {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_ESTAGIO));
             }
             if ((Original_RAMAL_TEL == null)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_RAMAL_TEL));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_RAMAL_TEL));
             }
             if ((Original_NOME_USUARIO == null)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_NOME_USUARIO));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_NOME_USUARIO));
             }
             if ((Original_PREDIO_SETOR == null)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_PREDIO_SETOR));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_PREDIO_SETOR));
             }
             if ((Original_AREA == null)) {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_AREA));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_AREA));
             }
             if ((Original_NUMERO_OS == null)) {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_NUMERO_OS));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_NUMERO_OS));
             }
             if ((Original_EQUIPAMENTO == null)) {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_EQUIPAMENTO));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((string)(Original_EQUIPAMENTO));
             }
             if ((Original_SAI == null)) {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_SAI));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((string)(Original_SAI));
             }
             if ((Original_SSD == null)) {
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_SSD));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((string)(Original_SSD));
             }
             if ((Original_OFFICE_365 == null)) {
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_OFFICE_365));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((string)(Original_OFFICE_365));
             }
             if ((Original_MAINFRAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_MAINFRAME));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_MAINFRAME));
             }
             if ((Original_CNS == null)) {
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_CNS));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((string)(Original_CNS));
             }
             if ((Original_BOTAO_EMERGENCIA == null)) {
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[59].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_BOTAO_EMERGENCIA));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((string)(Original_BOTAO_EMERGENCIA));
             }
             if ((Original_OFFICE_365_PLAN == null)) {
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[61].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((string)(Original_OFFICE_365_PLAN));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((string)(Original_OFFICE_365_PLAN));
             }
             if ((Original_PATRIMONIO == null)) {
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[63].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((string)(Original_PATRIMONIO));
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((string)(Original_PATRIMONIO));
             }
             if ((Original_TECNICO_SOLICITANTE == null)) {
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[64].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[65].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[64].Value = ((string)(Original_TECNICO_SOLICITANTE));
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((string)(Original_TECNICO_SOLICITANTE));
             }
             if ((Original_TECNICO_ATUANTE == null)) {
-                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[66].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[67].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((string)(Original_TECNICO_ATUANTE));
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((string)(Original_TECNICO_ATUANTE));
             }
             if ((Original_DATA_RETIRADA.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((System.DateTime)(Original_DATA_RETIRADA.Value));
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((System.DateTime)(Original_DATA_RETIRADA.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[68].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[69].Value = global::System.DBNull.Value;
             }
             if ((Original_HORA_RETIRADA.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((System.TimeSpan)(Original_HORA_RETIRADA.Value));
+                this.Adapter.UpdateCommand.Parameters[70].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((System.TimeSpan)(Original_HORA_RETIRADA.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[70].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[70].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[71].Value = global::System.DBNull.Value;
             }
             if ((Original_SITUACAO == null)) {
-                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[73].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((string)(Original_SITUACAO));
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((string)(Original_SITUACAO));
             }
             if ((Original_MODALIDADE == null)) {
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[74].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[75].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((string)(Original_MODALIDADE));
+                this.Adapter.UpdateCommand.Parameters[74].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((string)(Original_MODALIDADE));
             }
             if ((Original_PRIORIDADE == null)) {
-                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[77].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((string)(Original_PRIORIDADE));
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((string)(Original_PRIORIDADE));
             }
             if ((Original_DATA_PREVISTA.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((System.DateTime)(Original_DATA_PREVISTA.Value));
+                this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((System.DateTime)(Original_DATA_PREVISTA.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[78].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[79].Value = global::System.DBNull.Value;
             }
             if ((Original_HORA_PREVISTA.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[80].Value = ((System.TimeSpan)(Original_HORA_PREVISTA.Value));
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((System.TimeSpan)(Original_HORA_PREVISTA.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[80].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[81].Value = global::System.DBNull.Value;
             }
             if ((Original_ID_TECNICO_SOLICITANTE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[82].Value = ((int)(Original_ID_TECNICO_SOLICITANTE.Value));
+                this.Adapter.UpdateCommand.Parameters[82].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[83].Value = ((int)(Original_ID_TECNICO_SOLICITANTE.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[82].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[82].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[83].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ORIGEM == null)) {
+                this.Adapter.UpdateCommand.Parameters[84].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[85].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[84].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[85].Value = ((string)(Original_ORIGEM));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -12224,6 +12350,7 @@ WHERE        (ID = @ID)";
                     global::System.Nullable<global::System.DateTime> DATA_PREVISTA, 
                     global::System.Nullable<global::System.TimeSpan> HORA_PREVISTA, 
                     global::System.Nullable<int> ID_TECNICO_SOLICITANTE, 
+                    string ORIGEM, 
                     int Original_ID, 
                     System.DateTime Original_DATA, 
                     System.TimeSpan Original_HORA, 
@@ -12251,8 +12378,9 @@ WHERE        (ID = @ID)";
                     string Original_PRIORIDADE, 
                     global::System.Nullable<global::System.DateTime> Original_DATA_PREVISTA, 
                     global::System.Nullable<global::System.TimeSpan> Original_HORA_PREVISTA, 
-                    global::System.Nullable<int> Original_ID_TECNICO_SOLICITANTE) {
-            return this.Update(Original_ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE, Original_ID, Original_DATA, Original_HORA, Original_ESTAGIO, Original_RAMAL_TEL, Original_NOME_USUARIO, Original_PREDIO_SETOR, Original_AREA, Original_NUMERO_OS, Original_EQUIPAMENTO, Original_SAI, Original_SSD, Original_OFFICE_365, Original_MAINFRAME, Original_CNS, Original_BOTAO_EMERGENCIA, Original_OFFICE_365_PLAN, Original_PATRIMONIO, Original_TECNICO_SOLICITANTE, Original_TECNICO_ATUANTE, Original_DATA_RETIRADA, Original_HORA_RETIRADA, Original_SITUACAO, Original_MODALIDADE, Original_PRIORIDADE, Original_DATA_PREVISTA, Original_HORA_PREVISTA, Original_ID_TECNICO_SOLICITANTE);
+                    global::System.Nullable<int> Original_ID_TECNICO_SOLICITANTE, 
+                    string Original_ORIGEM) {
+            return this.Update(Original_ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE, ORIGEM, Original_ID, Original_DATA, Original_HORA, Original_ESTAGIO, Original_RAMAL_TEL, Original_NOME_USUARIO, Original_PREDIO_SETOR, Original_AREA, Original_NUMERO_OS, Original_EQUIPAMENTO, Original_SAI, Original_SSD, Original_OFFICE_365, Original_MAINFRAME, Original_CNS, Original_BOTAO_EMERGENCIA, Original_OFFICE_365_PLAN, Original_PATRIMONIO, Original_TECNICO_SOLICITANTE, Original_TECNICO_ATUANTE, Original_DATA_RETIRADA, Original_HORA_RETIRADA, Original_SITUACAO, Original_MODALIDADE, Original_PRIORIDADE, Original_DATA_PREVISTA, Original_HORA_PREVISTA, Original_ID_TECNICO_SOLICITANTE, Original_ORIGEM);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12503,42 +12631,44 @@ WHERE        (ID = @ID)";
             tableMapping.ColumnMappings.Add("DATA_PREVISTA", "DATA_PREVISTA");
             tableMapping.ColumnMappings.Add("HORA_PREVISTA", "HORA_PREVISTA");
             tableMapping.ColumnMappings.Add("ID_TECNICO_SOLICITANTE", "ID_TECNICO_SOLICITANTE");
+            tableMapping.ColumnMappings.Add("ORIGEM", "ORIGEM");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[TAREFA_BANCADA] WHERE (([ID] = @Original_ID) AND ([DATA] = @Or" +
-                "iginal_DATA) AND ([HORA] = @Original_HORA) AND ((@IsNull_ESTAGIO = 1 AND [ESTAGI" +
-                "O] IS NULL) OR ([ESTAGIO] = @Original_ESTAGIO)) AND ((@IsNull_RAMAL_TEL = 1 AND " +
-                "[RAMAL_TEL] IS NULL) OR ([RAMAL_TEL] = @Original_RAMAL_TEL)) AND ((@IsNull_NOME_" +
-                "USUARIO = 1 AND [NOME_USUARIO] IS NULL) OR ([NOME_USUARIO] = @Original_NOME_USUA" +
-                "RIO)) AND ((@IsNull_PREDIO_SETOR = 1 AND [PREDIO_SETOR] IS NULL) OR ([PREDIO_SET" +
-                "OR] = @Original_PREDIO_SETOR)) AND ((@IsNull_AREA = 1 AND [AREA] IS NULL) OR ([A" +
-                "REA] = @Original_AREA)) AND ((@IsNull_NUMERO_OS = 1 AND [NUMERO_OS] IS NULL) OR " +
-                "([NUMERO_OS] = @Original_NUMERO_OS)) AND ((@IsNull_EQUIPAMENTO = 1 AND [EQUIPAME" +
-                "NTO] IS NULL) OR ([EQUIPAMENTO] = @Original_EQUIPAMENTO)) AND ((@IsNull_SAI = 1 " +
-                "AND [SAI] IS NULL) OR ([SAI] = @Original_SAI)) AND ((@IsNull_SSD = 1 AND [SSD] I" +
-                "S NULL) OR ([SSD] = @Original_SSD)) AND ((@IsNull_OFFICE_365 = 1 AND [OFFICE_365" +
-                "] IS NULL) OR ([OFFICE_365] = @Original_OFFICE_365)) AND ((@IsNull_MAINFRAME = 1" +
-                " AND [MAINFRAME] IS NULL) OR ([MAINFRAME] = @Original_MAINFRAME)) AND ((@IsNull_" +
-                "CNS = 1 AND [CNS] IS NULL) OR ([CNS] = @Original_CNS)) AND ((@IsNull_BOTAO_EMERG" +
-                "ENCIA = 1 AND [BOTAO_EMERGENCIA] IS NULL) OR ([BOTAO_EMERGENCIA] = @Original_BOT" +
-                "AO_EMERGENCIA)) AND ((@IsNull_OFFICE_365_PLAN = 1 AND [OFFICE_365_PLAN] IS NULL)" +
-                " OR ([OFFICE_365_PLAN] = @Original_OFFICE_365_PLAN)) AND ((@IsNull_PATRIMONIO = " +
-                "1 AND [PATRIMONIO] IS NULL) OR ([PATRIMONIO] = @Original_PATRIMONIO)) AND ((@IsN" +
-                "ull_TECNICO_SOLICITANTE = 1 AND [TECNICO_SOLICITANTE] IS NULL) OR ([TECNICO_SOLI" +
-                "CITANTE] = @Original_TECNICO_SOLICITANTE)) AND ((@IsNull_TECNICO_ATUANTE = 1 AND" +
-                " [TECNICO_ATUANTE] IS NULL) OR ([TECNICO_ATUANTE] = @Original_TECNICO_ATUANTE)) " +
-                "AND ((@IsNull_DATA_RETIRADA = 1 AND [DATA_RETIRADA] IS NULL) OR ([DATA_RETIRADA]" +
-                " = @Original_DATA_RETIRADA)) AND ((@IsNull_HORA_RETIRADA = 1 AND [HORA_RETIRADA]" +
-                " IS NULL) OR ([HORA_RETIRADA] = @Original_HORA_RETIRADA)) AND ((@IsNull_SITUACAO" +
-                " = 1 AND [SITUACAO] IS NULL) OR ([SITUACAO] = @Original_SITUACAO)) AND ((@IsNull" +
-                "_MODALIDADE = 1 AND [MODALIDADE] IS NULL) OR ([MODALIDADE] = @Original_MODALIDAD" +
-                "E)) AND ((@IsNull_PRIORIDADE = 1 AND [PRIORIDADE] IS NULL) OR ([PRIORIDADE] = @O" +
-                "riginal_PRIORIDADE)) AND ((@IsNull_DATA_PREVISTA = 1 AND [DATA_PREVISTA] IS NULL" +
-                ") OR ([DATA_PREVISTA] = @Original_DATA_PREVISTA)) AND ((@IsNull_HORA_PREVISTA = " +
-                "1 AND [HORA_PREVISTA] IS NULL) OR ([HORA_PREVISTA] = @Original_HORA_PREVISTA)) A" +
-                "ND ((@IsNull_ID_TECNICO_SOLICITANTE = 1 AND [ID_TECNICO_SOLICITANTE] IS NULL) OR" +
-                " ([ID_TECNICO_SOLICITANTE] = @Original_ID_TECNICO_SOLICITANTE)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [TAREFA_BANCADA] WHERE (([ID] = @Original_ID) AND ([DATA] = @Original" +
+                "_DATA) AND ([HORA] = @Original_HORA) AND ((@IsNull_ESTAGIO = 1 AND [ESTAGIO] IS " +
+                "NULL) OR ([ESTAGIO] = @Original_ESTAGIO)) AND ((@IsNull_RAMAL_TEL = 1 AND [RAMAL" +
+                "_TEL] IS NULL) OR ([RAMAL_TEL] = @Original_RAMAL_TEL)) AND ((@IsNull_NOME_USUARI" +
+                "O = 1 AND [NOME_USUARIO] IS NULL) OR ([NOME_USUARIO] = @Original_NOME_USUARIO)) " +
+                "AND ((@IsNull_PREDIO_SETOR = 1 AND [PREDIO_SETOR] IS NULL) OR ([PREDIO_SETOR] = " +
+                "@Original_PREDIO_SETOR)) AND ((@IsNull_AREA = 1 AND [AREA] IS NULL) OR ([AREA] =" +
+                " @Original_AREA)) AND ((@IsNull_NUMERO_OS = 1 AND [NUMERO_OS] IS NULL) OR ([NUME" +
+                "RO_OS] = @Original_NUMERO_OS)) AND ((@IsNull_EQUIPAMENTO = 1 AND [EQUIPAMENTO] I" +
+                "S NULL) OR ([EQUIPAMENTO] = @Original_EQUIPAMENTO)) AND ((@IsNull_SAI = 1 AND [S" +
+                "AI] IS NULL) OR ([SAI] = @Original_SAI)) AND ((@IsNull_SSD = 1 AND [SSD] IS NULL" +
+                ") OR ([SSD] = @Original_SSD)) AND ((@IsNull_OFFICE_365 = 1 AND [OFFICE_365] IS N" +
+                "ULL) OR ([OFFICE_365] = @Original_OFFICE_365)) AND ((@IsNull_MAINFRAME = 1 AND [" +
+                "MAINFRAME] IS NULL) OR ([MAINFRAME] = @Original_MAINFRAME)) AND ((@IsNull_CNS = " +
+                "1 AND [CNS] IS NULL) OR ([CNS] = @Original_CNS)) AND ((@IsNull_BOTAO_EMERGENCIA " +
+                "= 1 AND [BOTAO_EMERGENCIA] IS NULL) OR ([BOTAO_EMERGENCIA] = @Original_BOTAO_EME" +
+                "RGENCIA)) AND ((@IsNull_OFFICE_365_PLAN = 1 AND [OFFICE_365_PLAN] IS NULL) OR ([" +
+                "OFFICE_365_PLAN] = @Original_OFFICE_365_PLAN)) AND ((@IsNull_PATRIMONIO = 1 AND " +
+                "[PATRIMONIO] IS NULL) OR ([PATRIMONIO] = @Original_PATRIMONIO)) AND ((@IsNull_TE" +
+                "CNICO_SOLICITANTE = 1 AND [TECNICO_SOLICITANTE] IS NULL) OR ([TECNICO_SOLICITANT" +
+                "E] = @Original_TECNICO_SOLICITANTE)) AND ((@IsNull_TECNICO_ATUANTE = 1 AND [TECN" +
+                "ICO_ATUANTE] IS NULL) OR ([TECNICO_ATUANTE] = @Original_TECNICO_ATUANTE)) AND ((" +
+                "@IsNull_DATA_RETIRADA = 1 AND [DATA_RETIRADA] IS NULL) OR ([DATA_RETIRADA] = @Or" +
+                "iginal_DATA_RETIRADA)) AND ((@IsNull_HORA_RETIRADA = 1 AND [HORA_RETIRADA] IS NU" +
+                "LL) OR ([HORA_RETIRADA] = @Original_HORA_RETIRADA)) AND ((@IsNull_SITUACAO = 1 A" +
+                "ND [SITUACAO] IS NULL) OR ([SITUACAO] = @Original_SITUACAO)) AND ((@IsNull_MODAL" +
+                "IDADE = 1 AND [MODALIDADE] IS NULL) OR ([MODALIDADE] = @Original_MODALIDADE)) AN" +
+                "D ((@IsNull_PRIORIDADE = 1 AND [PRIORIDADE] IS NULL) OR ([PRIORIDADE] = @Origina" +
+                "l_PRIORIDADE)) AND ((@IsNull_DATA_PREVISTA = 1 AND [DATA_PREVISTA] IS NULL) OR (" +
+                "[DATA_PREVISTA] = @Original_DATA_PREVISTA)) AND ((@IsNull_HORA_PREVISTA = 1 AND " +
+                "[HORA_PREVISTA] IS NULL) OR ([HORA_PREVISTA] = @Original_HORA_PREVISTA)) AND ((@" +
+                "IsNull_ID_TECNICO_SOLICITANTE = 1 AND [ID_TECNICO_SOLICITANTE] IS NULL) OR ([ID_" +
+                "TECNICO_SOLICITANTE] = @Original_ID_TECNICO_SOLICITANTE)) AND ((@IsNull_ORIGEM =" +
+                " 1 AND [ORIGEM] IS NULL) OR ([ORIGEM] = @Original_ORIGEM)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -12593,10 +12723,12 @@ WHERE        (ID = @ID)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HORA_PREVISTA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_PREVISTA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ORIGEM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ORIGEM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ORIGEM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ORIGEM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TAREFA_BANCADA] ([ID], [DATA], [HORA], [ESTAGIO], [RAMAL_TEL], [NOME_USUARIO], [PREDIO_SETOR], [AREA], [NUMERO_OS], [EQUIPAMENTO], [SAI], [SSD], [OFFICE_365], [MAINFRAME], [CNS], [BOTAO_EMERGENCIA], [OFFICE_365_PLAN], [DESCRICA_ATIVIDADE], [OBS_IMPORTANTES], [PATRIMONIO], [TECNICO_SOLICITANTE], [TECNICO_ATUANTE], [DATA_RETIRADA], [HORA_RETIRADA], [SITUACAO], [MODALIDADE], [PRIORIDADE], [DATA_PREVISTA], [HORA_PREVISTA], [ID_TECNICO_SOLICITANTE]) VALUES (@ID, @DATA, @HORA, @ESTAGIO, @RAMAL_TEL, @NOME_USUARIO, @PREDIO_SETOR, @AREA, @NUMERO_OS, @EQUIPAMENTO, @SAI, @SSD, @OFFICE_365, @MAINFRAME, @CNS, @BOTAO_EMERGENCIA, @OFFICE_365_PLAN, @DESCRICA_ATIVIDADE, @OBS_IMPORTANTES, @PATRIMONIO, @TECNICO_SOLICITANTE, @TECNICO_ATUANTE, @DATA_RETIRADA, @HORA_RETIRADA, @SITUACAO, @MODALIDADE, @PRIORIDADE, @DATA_PREVISTA, @HORA_PREVISTA, @ID_TECNICO_SOLICITANTE);
-SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE FROM TAREFA_BANCADA WHERE (ID = @ID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TAREFA_BANCADA] ([ID], [DATA], [HORA], [ESTAGIO], [RAMAL_TEL], [NOME_USUARIO], [PREDIO_SETOR], [AREA], [NUMERO_OS], [EQUIPAMENTO], [SAI], [SSD], [OFFICE_365], [MAINFRAME], [CNS], [BOTAO_EMERGENCIA], [OFFICE_365_PLAN], [DESCRICA_ATIVIDADE], [OBS_IMPORTANTES], [PATRIMONIO], [TECNICO_SOLICITANTE], [TECNICO_ATUANTE], [DATA_RETIRADA], [HORA_RETIRADA], [SITUACAO], [MODALIDADE], [PRIORIDADE], [DATA_PREVISTA], [HORA_PREVISTA], [ID_TECNICO_SOLICITANTE], [ORIGEM]) VALUES (@ID, @DATA, @HORA, @ESTAGIO, @RAMAL_TEL, @NOME_USUARIO, @PREDIO_SETOR, @AREA, @NUMERO_OS, @EQUIPAMENTO, @SAI, @SSD, @OFFICE_365, @MAINFRAME, @CNS, @BOTAO_EMERGENCIA, @OFFICE_365_PLAN, @DESCRICA_ATIVIDADE, @OBS_IMPORTANTES, @PATRIMONIO, @TECNICO_SOLICITANTE, @TECNICO_ATUANTE, @DATA_RETIRADA, @HORA_RETIRADA, @SITUACAO, @MODALIDADE, @PRIORIDADE, @DATA_PREVISTA, @HORA_PREVISTA, @ID_TECNICO_SOLICITANTE, @ORIGEM);
+SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE, ORIGEM FROM TAREFA_BANCADA WHERE (ID = @ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12628,57 +12760,60 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA_PREVISTA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_PREVISTA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA_PREVISTA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_PREVISTA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ORIGEM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ORIGEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[TAREFA_BANCADA] SET [ID] = @ID, [DATA] = @DATA, [HORA] = @HORA, [ES" +
-                "TAGIO] = @ESTAGIO, [RAMAL_TEL] = @RAMAL_TEL, [NOME_USUARIO] = @NOME_USUARIO, [PR" +
-                "EDIO_SETOR] = @PREDIO_SETOR, [AREA] = @AREA, [NUMERO_OS] = @NUMERO_OS, [EQUIPAME" +
-                "NTO] = @EQUIPAMENTO, [SAI] = @SAI, [SSD] = @SSD, [OFFICE_365] = @OFFICE_365, [MA" +
-                "INFRAME] = @MAINFRAME, [CNS] = @CNS, [BOTAO_EMERGENCIA] = @BOTAO_EMERGENCIA, [OF" +
-                "FICE_365_PLAN] = @OFFICE_365_PLAN, [DESCRICA_ATIVIDADE] = @DESCRICA_ATIVIDADE, [" +
-                "OBS_IMPORTANTES] = @OBS_IMPORTANTES, [PATRIMONIO] = @PATRIMONIO, [TECNICO_SOLICI" +
-                "TANTE] = @TECNICO_SOLICITANTE, [TECNICO_ATUANTE] = @TECNICO_ATUANTE, [DATA_RETIR" +
-                "ADA] = @DATA_RETIRADA, [HORA_RETIRADA] = @HORA_RETIRADA, [SITUACAO] = @SITUACAO," +
-                " [MODALIDADE] = @MODALIDADE, [PRIORIDADE] = @PRIORIDADE, [DATA_PREVISTA] = @DATA" +
-                "_PREVISTA, [HORA_PREVISTA] = @HORA_PREVISTA, [ID_TECNICO_SOLICITANTE] = @ID_TECN" +
-                "ICO_SOLICITANTE WHERE (([ID] = @Original_ID) AND ([DATA] = @Original_DATA) AND (" +
-                "[HORA] = @Original_HORA) AND ((@IsNull_ESTAGIO = 1 AND [ESTAGIO] IS NULL) OR ([E" +
-                "STAGIO] = @Original_ESTAGIO)) AND ((@IsNull_RAMAL_TEL = 1 AND [RAMAL_TEL] IS NUL" +
-                "L) OR ([RAMAL_TEL] = @Original_RAMAL_TEL)) AND ((@IsNull_NOME_USUARIO = 1 AND [N" +
-                "OME_USUARIO] IS NULL) OR ([NOME_USUARIO] = @Original_NOME_USUARIO)) AND ((@IsNul" +
-                "l_PREDIO_SETOR = 1 AND [PREDIO_SETOR] IS NULL) OR ([PREDIO_SETOR] = @Original_PR" +
-                "EDIO_SETOR)) AND ((@IsNull_AREA = 1 AND [AREA] IS NULL) OR ([AREA] = @Original_A" +
-                "REA)) AND ((@IsNull_NUMERO_OS = 1 AND [NUMERO_OS] IS NULL) OR ([NUMERO_OS] = @Or" +
-                "iginal_NUMERO_OS)) AND ((@IsNull_EQUIPAMENTO = 1 AND [EQUIPAMENTO] IS NULL) OR (" +
-                "[EQUIPAMENTO] = @Original_EQUIPAMENTO)) AND ((@IsNull_SAI = 1 AND [SAI] IS NULL)" +
-                " OR ([SAI] = @Original_SAI)) AND ((@IsNull_SSD = 1 AND [SSD] IS NULL) OR ([SSD] " +
-                "= @Original_SSD)) AND ((@IsNull_OFFICE_365 = 1 AND [OFFICE_365] IS NULL) OR ([OF" +
-                "FICE_365] = @Original_OFFICE_365)) AND ((@IsNull_MAINFRAME = 1 AND [MAINFRAME] I" +
-                "S NULL) OR ([MAINFRAME] = @Original_MAINFRAME)) AND ((@IsNull_CNS = 1 AND [CNS] " +
-                "IS NULL) OR ([CNS] = @Original_CNS)) AND ((@IsNull_BOTAO_EMERGENCIA = 1 AND [BOT" +
-                "AO_EMERGENCIA] IS NULL) OR ([BOTAO_EMERGENCIA] = @Original_BOTAO_EMERGENCIA)) AN" +
-                "D ((@IsNull_OFFICE_365_PLAN = 1 AND [OFFICE_365_PLAN] IS NULL) OR ([OFFICE_365_P" +
-                "LAN] = @Original_OFFICE_365_PLAN)) AND ((@IsNull_PATRIMONIO = 1 AND [PATRIMONIO]" +
-                " IS NULL) OR ([PATRIMONIO] = @Original_PATRIMONIO)) AND ((@IsNull_TECNICO_SOLICI" +
-                "TANTE = 1 AND [TECNICO_SOLICITANTE] IS NULL) OR ([TECNICO_SOLICITANTE] = @Origin" +
-                "al_TECNICO_SOLICITANTE)) AND ((@IsNull_TECNICO_ATUANTE = 1 AND [TECNICO_ATUANTE]" +
-                " IS NULL) OR ([TECNICO_ATUANTE] = @Original_TECNICO_ATUANTE)) AND ((@IsNull_DATA" +
-                "_RETIRADA = 1 AND [DATA_RETIRADA] IS NULL) OR ([DATA_RETIRADA] = @Original_DATA_" +
-                "RETIRADA)) AND ((@IsNull_HORA_RETIRADA = 1 AND [HORA_RETIRADA] IS NULL) OR ([HOR" +
-                "A_RETIRADA] = @Original_HORA_RETIRADA)) AND ((@IsNull_SITUACAO = 1 AND [SITUACAO" +
-                "] IS NULL) OR ([SITUACAO] = @Original_SITUACAO)) AND ((@IsNull_MODALIDADE = 1 AN" +
-                "D [MODALIDADE] IS NULL) OR ([MODALIDADE] = @Original_MODALIDADE)) AND ((@IsNull_" +
-                "PRIORIDADE = 1 AND [PRIORIDADE] IS NULL) OR ([PRIORIDADE] = @Original_PRIORIDADE" +
-                ")) AND ((@IsNull_DATA_PREVISTA = 1 AND [DATA_PREVISTA] IS NULL) OR ([DATA_PREVIS" +
-                "TA] = @Original_DATA_PREVISTA)) AND ((@IsNull_HORA_PREVISTA = 1 AND [HORA_PREVIS" +
-                "TA] IS NULL) OR ([HORA_PREVISTA] = @Original_HORA_PREVISTA)) AND ((@IsNull_ID_TE" +
-                "CNICO_SOLICITANTE = 1 AND [ID_TECNICO_SOLICITANTE] IS NULL) OR ([ID_TECNICO_SOLI" +
-                "CITANTE] = @Original_ID_TECNICO_SOLICITANTE)));\r\nSELECT ID, DATA, HORA, ESTAGIO," +
-                " RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, " +
-                "OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDAD" +
-                "E, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIR" +
-                "ADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVIS" +
-                "TA, ID_TECNICO_SOLICITANTE FROM TAREFA_BANCADA WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [TAREFA_BANCADA] SET [ID] = @ID, [DATA] = @DATA, [HORA] = @HORA, [ESTAGIO]" +
+                " = @ESTAGIO, [RAMAL_TEL] = @RAMAL_TEL, [NOME_USUARIO] = @NOME_USUARIO, [PREDIO_S" +
+                "ETOR] = @PREDIO_SETOR, [AREA] = @AREA, [NUMERO_OS] = @NUMERO_OS, [EQUIPAMENTO] =" +
+                " @EQUIPAMENTO, [SAI] = @SAI, [SSD] = @SSD, [OFFICE_365] = @OFFICE_365, [MAINFRAM" +
+                "E] = @MAINFRAME, [CNS] = @CNS, [BOTAO_EMERGENCIA] = @BOTAO_EMERGENCIA, [OFFICE_3" +
+                "65_PLAN] = @OFFICE_365_PLAN, [DESCRICA_ATIVIDADE] = @DESCRICA_ATIVIDADE, [OBS_IM" +
+                "PORTANTES] = @OBS_IMPORTANTES, [PATRIMONIO] = @PATRIMONIO, [TECNICO_SOLICITANTE]" +
+                " = @TECNICO_SOLICITANTE, [TECNICO_ATUANTE] = @TECNICO_ATUANTE, [DATA_RETIRADA] =" +
+                " @DATA_RETIRADA, [HORA_RETIRADA] = @HORA_RETIRADA, [SITUACAO] = @SITUACAO, [MODA" +
+                "LIDADE] = @MODALIDADE, [PRIORIDADE] = @PRIORIDADE, [DATA_PREVISTA] = @DATA_PREVI" +
+                "STA, [HORA_PREVISTA] = @HORA_PREVISTA, [ID_TECNICO_SOLICITANTE] = @ID_TECNICO_SO" +
+                "LICITANTE, [ORIGEM] = @ORIGEM WHERE (([ID] = @Original_ID) AND ([DATA] = @Origin" +
+                "al_DATA) AND ([HORA] = @Original_HORA) AND ((@IsNull_ESTAGIO = 1 AND [ESTAGIO] I" +
+                "S NULL) OR ([ESTAGIO] = @Original_ESTAGIO)) AND ((@IsNull_RAMAL_TEL = 1 AND [RAM" +
+                "AL_TEL] IS NULL) OR ([RAMAL_TEL] = @Original_RAMAL_TEL)) AND ((@IsNull_NOME_USUA" +
+                "RIO = 1 AND [NOME_USUARIO] IS NULL) OR ([NOME_USUARIO] = @Original_NOME_USUARIO)" +
+                ") AND ((@IsNull_PREDIO_SETOR = 1 AND [PREDIO_SETOR] IS NULL) OR ([PREDIO_SETOR] " +
+                "= @Original_PREDIO_SETOR)) AND ((@IsNull_AREA = 1 AND [AREA] IS NULL) OR ([AREA]" +
+                " = @Original_AREA)) AND ((@IsNull_NUMERO_OS = 1 AND [NUMERO_OS] IS NULL) OR ([NU" +
+                "MERO_OS] = @Original_NUMERO_OS)) AND ((@IsNull_EQUIPAMENTO = 1 AND [EQUIPAMENTO]" +
+                " IS NULL) OR ([EQUIPAMENTO] = @Original_EQUIPAMENTO)) AND ((@IsNull_SAI = 1 AND " +
+                "[SAI] IS NULL) OR ([SAI] = @Original_SAI)) AND ((@IsNull_SSD = 1 AND [SSD] IS NU" +
+                "LL) OR ([SSD] = @Original_SSD)) AND ((@IsNull_OFFICE_365 = 1 AND [OFFICE_365] IS" +
+                " NULL) OR ([OFFICE_365] = @Original_OFFICE_365)) AND ((@IsNull_MAINFRAME = 1 AND" +
+                " [MAINFRAME] IS NULL) OR ([MAINFRAME] = @Original_MAINFRAME)) AND ((@IsNull_CNS " +
+                "= 1 AND [CNS] IS NULL) OR ([CNS] = @Original_CNS)) AND ((@IsNull_BOTAO_EMERGENCI" +
+                "A = 1 AND [BOTAO_EMERGENCIA] IS NULL) OR ([BOTAO_EMERGENCIA] = @Original_BOTAO_E" +
+                "MERGENCIA)) AND ((@IsNull_OFFICE_365_PLAN = 1 AND [OFFICE_365_PLAN] IS NULL) OR " +
+                "([OFFICE_365_PLAN] = @Original_OFFICE_365_PLAN)) AND ((@IsNull_PATRIMONIO = 1 AN" +
+                "D [PATRIMONIO] IS NULL) OR ([PATRIMONIO] = @Original_PATRIMONIO)) AND ((@IsNull_" +
+                "TECNICO_SOLICITANTE = 1 AND [TECNICO_SOLICITANTE] IS NULL) OR ([TECNICO_SOLICITA" +
+                "NTE] = @Original_TECNICO_SOLICITANTE)) AND ((@IsNull_TECNICO_ATUANTE = 1 AND [TE" +
+                "CNICO_ATUANTE] IS NULL) OR ([TECNICO_ATUANTE] = @Original_TECNICO_ATUANTE)) AND " +
+                "((@IsNull_DATA_RETIRADA = 1 AND [DATA_RETIRADA] IS NULL) OR ([DATA_RETIRADA] = @" +
+                "Original_DATA_RETIRADA)) AND ((@IsNull_HORA_RETIRADA = 1 AND [HORA_RETIRADA] IS " +
+                "NULL) OR ([HORA_RETIRADA] = @Original_HORA_RETIRADA)) AND ((@IsNull_SITUACAO = 1" +
+                " AND [SITUACAO] IS NULL) OR ([SITUACAO] = @Original_SITUACAO)) AND ((@IsNull_MOD" +
+                "ALIDADE = 1 AND [MODALIDADE] IS NULL) OR ([MODALIDADE] = @Original_MODALIDADE)) " +
+                "AND ((@IsNull_PRIORIDADE = 1 AND [PRIORIDADE] IS NULL) OR ([PRIORIDADE] = @Origi" +
+                "nal_PRIORIDADE)) AND ((@IsNull_DATA_PREVISTA = 1 AND [DATA_PREVISTA] IS NULL) OR" +
+                " ([DATA_PREVISTA] = @Original_DATA_PREVISTA)) AND ((@IsNull_HORA_PREVISTA = 1 AN" +
+                "D [HORA_PREVISTA] IS NULL) OR ([HORA_PREVISTA] = @Original_HORA_PREVISTA)) AND (" +
+                "(@IsNull_ID_TECNICO_SOLICITANTE = 1 AND [ID_TECNICO_SOLICITANTE] IS NULL) OR ([I" +
+                "D_TECNICO_SOLICITANTE] = @Original_ID_TECNICO_SOLICITANTE)) AND ((@IsNull_ORIGEM" +
+                " = 1 AND [ORIGEM] IS NULL) OR ([ORIGEM] = @Original_ORIGEM)));\r\nSELECT ID, DATA," +
+                " HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAME" +
+                "NTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DE" +
+                "SCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUA" +
+                "NTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVIS" +
+                "TA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE, ORIGEM FROM TAREFA_BANCADA WHERE (ID " +
+                "= @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12710,6 +12845,7 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA_PREVISTA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_PREVISTA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA_PREVISTA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_PREVISTA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ORIGEM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ORIGEM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HORA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -12763,6 +12899,8 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HORA_PREVISTA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_PREVISTA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TECNICO_SOLICITANTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TECNICO_SOLICITANTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ORIGEM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ORIGEM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ORIGEM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ORIGEM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12778,7 +12916,7 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE FROM dbo.TAREFA_BANCADA";
+            this._commandCollection[0].CommandText = @"SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE, ORIGEM FROM TAREFA_BANCADA";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -12867,7 +13005,8 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
                     string Original_PRIORIDADE, 
                     global::System.Nullable<global::System.DateTime> Original_DATA_PREVISTA, 
                     global::System.Nullable<global::System.TimeSpan> Original_HORA_PREVISTA, 
-                    global::System.Nullable<int> Original_ID_TECNICO_SOLICITANTE) {
+                    global::System.Nullable<int> Original_ID_TECNICO_SOLICITANTE, 
+                    string Original_ORIGEM) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_DATA));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((System.TimeSpan)(Original_HORA));
@@ -13071,6 +13210,14 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
                 this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
+            if ((Original_ORIGEM == null)) {
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[54].Value = ((string)(Original_ORIGEM));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -13121,7 +13268,8 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
                     string PRIORIDADE, 
                     global::System.Nullable<global::System.DateTime> DATA_PREVISTA, 
                     global::System.Nullable<global::System.TimeSpan> HORA_PREVISTA, 
-                    global::System.Nullable<int> ID_TECNICO_SOLICITANTE) {
+                    global::System.Nullable<int> ID_TECNICO_SOLICITANTE, 
+                    string ORIGEM) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(DATA));
             this.Adapter.InsertCommand.Parameters[2].Value = ((System.TimeSpan)(HORA));
@@ -13287,6 +13435,12 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
             else {
                 this.Adapter.InsertCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
+            if ((ORIGEM == null)) {
+                this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[30].Value = ((string)(ORIGEM));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -13338,6 +13492,7 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
                     global::System.Nullable<global::System.DateTime> DATA_PREVISTA, 
                     global::System.Nullable<global::System.TimeSpan> HORA_PREVISTA, 
                     global::System.Nullable<int> ID_TECNICO_SOLICITANTE, 
+                    string ORIGEM, 
                     int Original_ID, 
                     System.DateTime Original_DATA, 
                     System.TimeSpan Original_HORA, 
@@ -13365,7 +13520,8 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
                     string Original_PRIORIDADE, 
                     global::System.Nullable<global::System.DateTime> Original_DATA_PREVISTA, 
                     global::System.Nullable<global::System.TimeSpan> Original_HORA_PREVISTA, 
-                    global::System.Nullable<int> Original_ID_TECNICO_SOLICITANTE) {
+                    global::System.Nullable<int> Original_ID_TECNICO_SOLICITANTE, 
+                    string Original_ORIGEM) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(DATA));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((System.TimeSpan)(HORA));
@@ -13531,208 +13687,222 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
             else {
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_DATA));
-            this.Adapter.UpdateCommand.Parameters[32].Value = ((System.TimeSpan)(Original_HORA));
-            if ((Original_ESTAGIO == null)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            if ((ORIGEM == null)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_ESTAGIO));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(ORIGEM));
+            }
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[32].Value = ((System.DateTime)(Original_DATA));
+            this.Adapter.UpdateCommand.Parameters[33].Value = ((System.TimeSpan)(Original_HORA));
+            if ((Original_ESTAGIO == null)) {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_ESTAGIO));
             }
             if ((Original_RAMAL_TEL == null)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_RAMAL_TEL));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_RAMAL_TEL));
             }
             if ((Original_NOME_USUARIO == null)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_NOME_USUARIO));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_NOME_USUARIO));
             }
             if ((Original_PREDIO_SETOR == null)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_PREDIO_SETOR));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_PREDIO_SETOR));
             }
             if ((Original_AREA == null)) {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_AREA));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_AREA));
             }
             if ((Original_NUMERO_OS == null)) {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_NUMERO_OS));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_NUMERO_OS));
             }
             if ((Original_EQUIPAMENTO == null)) {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_EQUIPAMENTO));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((string)(Original_EQUIPAMENTO));
             }
             if ((Original_SAI == null)) {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_SAI));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((string)(Original_SAI));
             }
             if ((Original_SSD == null)) {
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_SSD));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((string)(Original_SSD));
             }
             if ((Original_OFFICE_365 == null)) {
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_OFFICE_365));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((string)(Original_OFFICE_365));
             }
             if ((Original_MAINFRAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_MAINFRAME));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_MAINFRAME));
             }
             if ((Original_CNS == null)) {
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_CNS));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((string)(Original_CNS));
             }
             if ((Original_BOTAO_EMERGENCIA == null)) {
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[59].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_BOTAO_EMERGENCIA));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((string)(Original_BOTAO_EMERGENCIA));
             }
             if ((Original_OFFICE_365_PLAN == null)) {
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[61].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((string)(Original_OFFICE_365_PLAN));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((string)(Original_OFFICE_365_PLAN));
             }
             if ((Original_PATRIMONIO == null)) {
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[63].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((string)(Original_PATRIMONIO));
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((string)(Original_PATRIMONIO));
             }
             if ((Original_TECNICO_SOLICITANTE == null)) {
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[64].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[65].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[64].Value = ((string)(Original_TECNICO_SOLICITANTE));
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((string)(Original_TECNICO_SOLICITANTE));
             }
             if ((Original_TECNICO_ATUANTE == null)) {
-                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[66].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[67].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((string)(Original_TECNICO_ATUANTE));
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((string)(Original_TECNICO_ATUANTE));
             }
             if ((Original_DATA_RETIRADA.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((System.DateTime)(Original_DATA_RETIRADA.Value));
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((System.DateTime)(Original_DATA_RETIRADA.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[68].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[69].Value = global::System.DBNull.Value;
             }
             if ((Original_HORA_RETIRADA.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((System.TimeSpan)(Original_HORA_RETIRADA.Value));
+                this.Adapter.UpdateCommand.Parameters[70].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((System.TimeSpan)(Original_HORA_RETIRADA.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[70].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[70].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[71].Value = global::System.DBNull.Value;
             }
             if ((Original_SITUACAO == null)) {
-                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[73].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((string)(Original_SITUACAO));
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((string)(Original_SITUACAO));
             }
             if ((Original_MODALIDADE == null)) {
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[74].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[75].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((string)(Original_MODALIDADE));
+                this.Adapter.UpdateCommand.Parameters[74].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((string)(Original_MODALIDADE));
             }
             if ((Original_PRIORIDADE == null)) {
-                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[77].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((string)(Original_PRIORIDADE));
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((string)(Original_PRIORIDADE));
             }
             if ((Original_DATA_PREVISTA.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((System.DateTime)(Original_DATA_PREVISTA.Value));
+                this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((System.DateTime)(Original_DATA_PREVISTA.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[78].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[79].Value = global::System.DBNull.Value;
             }
             if ((Original_HORA_PREVISTA.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[80].Value = ((System.TimeSpan)(Original_HORA_PREVISTA.Value));
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((System.TimeSpan)(Original_HORA_PREVISTA.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[80].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[81].Value = global::System.DBNull.Value;
             }
             if ((Original_ID_TECNICO_SOLICITANTE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[82].Value = ((int)(Original_ID_TECNICO_SOLICITANTE.Value));
+                this.Adapter.UpdateCommand.Parameters[82].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[83].Value = ((int)(Original_ID_TECNICO_SOLICITANTE.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[82].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[82].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[83].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ORIGEM == null)) {
+                this.Adapter.UpdateCommand.Parameters[84].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[85].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[84].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[85].Value = ((string)(Original_ORIGEM));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -13784,6 +13954,7 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
                     global::System.Nullable<global::System.DateTime> DATA_PREVISTA, 
                     global::System.Nullable<global::System.TimeSpan> HORA_PREVISTA, 
                     global::System.Nullable<int> ID_TECNICO_SOLICITANTE, 
+                    string ORIGEM, 
                     int Original_ID, 
                     System.DateTime Original_DATA, 
                     System.TimeSpan Original_HORA, 
@@ -13811,8 +13982,9 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
                     string Original_PRIORIDADE, 
                     global::System.Nullable<global::System.DateTime> Original_DATA_PREVISTA, 
                     global::System.Nullable<global::System.TimeSpan> Original_HORA_PREVISTA, 
-                    global::System.Nullable<int> Original_ID_TECNICO_SOLICITANTE) {
-            return this.Update(Original_ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE, Original_ID, Original_DATA, Original_HORA, Original_ESTAGIO, Original_RAMAL_TEL, Original_NOME_USUARIO, Original_PREDIO_SETOR, Original_AREA, Original_NUMERO_OS, Original_EQUIPAMENTO, Original_SAI, Original_SSD, Original_OFFICE_365, Original_MAINFRAME, Original_CNS, Original_BOTAO_EMERGENCIA, Original_OFFICE_365_PLAN, Original_PATRIMONIO, Original_TECNICO_SOLICITANTE, Original_TECNICO_ATUANTE, Original_DATA_RETIRADA, Original_HORA_RETIRADA, Original_SITUACAO, Original_MODALIDADE, Original_PRIORIDADE, Original_DATA_PREVISTA, Original_HORA_PREVISTA, Original_ID_TECNICO_SOLICITANTE);
+                    global::System.Nullable<int> Original_ID_TECNICO_SOLICITANTE, 
+                    string Original_ORIGEM) {
+            return this.Update(Original_ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUMERO_OS, EQUIPAMENTO, SAI, SSD, OFFICE_365, MAINFRAME, CNS, BOTAO_EMERGENCIA, OFFICE_365_PLAN, DESCRICA_ATIVIDADE, OBS_IMPORTANTES, PATRIMONIO, TECNICO_SOLICITANTE, TECNICO_ATUANTE, DATA_RETIRADA, HORA_RETIRADA, SITUACAO, MODALIDADE, PRIORIDADE, DATA_PREVISTA, HORA_PREVISTA, ID_TECNICO_SOLICITANTE, ORIGEM, Original_ID, Original_DATA, Original_HORA, Original_ESTAGIO, Original_RAMAL_TEL, Original_NOME_USUARIO, Original_PREDIO_SETOR, Original_AREA, Original_NUMERO_OS, Original_EQUIPAMENTO, Original_SAI, Original_SSD, Original_OFFICE_365, Original_MAINFRAME, Original_CNS, Original_BOTAO_EMERGENCIA, Original_OFFICE_365_PLAN, Original_PATRIMONIO, Original_TECNICO_SOLICITANTE, Original_TECNICO_ATUANTE, Original_DATA_RETIRADA, Original_HORA_RETIRADA, Original_SITUACAO, Original_MODALIDADE, Original_PRIORIDADE, Original_DATA_PREVISTA, Original_HORA_PREVISTA, Original_ID_TECNICO_SOLICITANTE, Original_ORIGEM);
         }
     }
     

@@ -55,8 +55,6 @@ namespace HELP_Princ
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
             this.dbgServicos = new System.Windows.Forms.DataGridView();
-            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
-            this.sERVICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.SERVICOSTableAdapter();
             this.btnEdicao = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnExclusao = new System.Windows.Forms.DataGridViewImageColumn();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +63,8 @@ namespace HELP_Princ
             this.dESCRICAOSERVICODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ATIVO2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATADESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
+            this.sERVICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.SERVICOSTableAdapter();
             this.pnlHeader.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -85,7 +85,7 @@ namespace HELP_Princ
             this.pnlHeader.Location = new System.Drawing.Point(0, 2);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.pnlHeader.Size = new System.Drawing.Size(1156, 38);
+            this.pnlHeader.Size = new System.Drawing.Size(1675, 38);
             this.pnlHeader.TabIndex = 0;
             // 
             // lblTitulo
@@ -104,9 +104,9 @@ namespace HELP_Princ
             // 
             this.pnlFooter.Controls.Add(this.bindingNavigator1);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 486);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 917);
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(1156, 26);
+            this.pnlFooter.Size = new System.Drawing.Size(1675, 26);
             this.pnlFooter.TabIndex = 3;
             this.pnlFooter.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlFooter_Paint);
             // 
@@ -136,7 +136,7 @@ namespace HELP_Princ
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1156, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1675, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -249,7 +249,7 @@ namespace HELP_Princ
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrid.Location = new System.Drawing.Point(0, 40);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(1156, 446);
+            this.pnlGrid.Size = new System.Drawing.Size(1675, 877);
             this.pnlGrid.TabIndex = 4;
             // 
             // dbgServicos
@@ -290,20 +290,9 @@ namespace HELP_Princ
             this.dbgServicos.Location = new System.Drawing.Point(0, 0);
             this.dbgServicos.Name = "dbgServicos";
             this.dbgServicos.ReadOnly = true;
-            this.dbgServicos.Size = new System.Drawing.Size(1156, 446);
+            this.dbgServicos.Size = new System.Drawing.Size(1675, 877);
             this.dbgServicos.TabIndex = 0;
             this.dbgServicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgTecnicos_CellContentClick);
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.SERVICOSTableAdapter = this.sERVICOSTableAdapter;
-            this.tableAdapterManager.TECNICOSTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // sERVICOSTableAdapter
-            // 
-            this.sERVICOSTableAdapter.ClearBeforeFill = true;
             // 
             // btnEdicao
             // 
@@ -376,12 +365,29 @@ namespace HELP_Princ
             this.dATADESDataGridViewTextBoxColumn.ReadOnly = true;
             this.dATADESDataGridViewTextBoxColumn.Width = 150;
             // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
+            this.tableAdapterManager.MOVI_RETIRADATableAdapter = null;
+            this.tableAdapterManager.MOVITableAdapter = null;
+            this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
+            this.tableAdapterManager.SERVICOSTableAdapter = this.sERVICOSTableAdapter;
+            this.tableAdapterManager.TAREFA_BANCADATableAdapter = null;
+            this.tableAdapterManager.TECNICOSTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.USUARIOSTableAdapter = null;
+            // 
+            // sERVICOSTableAdapter
+            // 
+            this.sERVICOSTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmServicosList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1156, 512);
+            this.ClientSize = new System.Drawing.Size(1675, 943);
             this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.pnlHeader);

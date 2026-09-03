@@ -274,6 +274,8 @@ namespace HELP_Princ
             }
             else
             {
+                guna2WinProgressIndicator1.AutoStart = false;
+                guna2WinProgressIndicator1.Visible = false;
                 MessageBox.Show("Existem campos inválidos!");
             }
 
@@ -1170,6 +1172,7 @@ namespace HELP_Princ
             row["TECNICO_SOLICITANTE"] = cbxTecnicos.Text.Trim();
             row["MODALIDADE"] = InfoWork.MoviRetiradaModalidade;
             row["PRIORIDADE"] = cbxPrioridade.Text.Trim();
+            row["ORIGEM"] = "RETIRADA DE EQUIPAMENTO";
 
             // Atualiza Campo: ID_TECNICO_SOLICITANTE
             string strWork = cbxTecnicos.Text;

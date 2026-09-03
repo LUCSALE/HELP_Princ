@@ -39,7 +39,7 @@ namespace HELP_Princ
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.sERVICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eQUIPAMENTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -53,12 +53,9 @@ namespace HELP_Princ
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.sERVICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
             this.dbgEquipamentos = new System.Windows.Forms.DataGridView();
-            this.eQUIPAMENTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
-            this.sERVICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.SERVICOSTableAdapter();
-            this.eQUIPAMENTOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.EQUIPAMENTOSTableAdapter();
             this.btnEdicao = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnExclusao = new System.Windows.Forms.DataGridViewImageColumn();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,15 +64,18 @@ namespace HELP_Princ
             this.DESCRICAO_EQUIPAMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ATIVO2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATADESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
+            this.sERVICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.SERVICOSTableAdapter();
+            this.eQUIPAMENTOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.EQUIPAMENTOSTableAdapter();
             this.pnlHeader.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sERVICOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eQUIPAMENTOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sERVICOSBindingSource)).BeginInit();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgEquipamentos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eQUIPAMENTOSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -88,7 +88,7 @@ namespace HELP_Princ
             this.pnlHeader.Location = new System.Drawing.Point(0, 2);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.pnlHeader.Size = new System.Drawing.Size(1156, 38);
+            this.pnlHeader.Size = new System.Drawing.Size(1675, 38);
             this.pnlHeader.TabIndex = 0;
             // 
             // lblTitulo
@@ -107,9 +107,9 @@ namespace HELP_Princ
             // 
             this.pnlFooter.Controls.Add(this.bindingNavigator1);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 486);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 917);
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(1156, 26);
+            this.pnlFooter.Size = new System.Drawing.Size(1675, 26);
             this.pnlFooter.TabIndex = 3;
             this.pnlFooter.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlFooter_Paint);
             // 
@@ -139,14 +139,14 @@ namespace HELP_Princ
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1156, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1675, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
-            // sERVICOSBindingSource
+            // eQUIPAMENTOSBindingSource
             // 
-            this.sERVICOSBindingSource.DataMember = "SERVICOS";
-            this.sERVICOSBindingSource.DataSource = this.helpdesk01DataSet;
+            this.eQUIPAMENTOSBindingSource.DataMember = "EQUIPAMENTOS";
+            this.eQUIPAMENTOSBindingSource.DataSource = this.helpdesk01DataSet;
             // 
             // helpdesk01DataSet
             // 
@@ -246,13 +246,18 @@ namespace HELP_Princ
             this.toolStripButton2.ToolTipText = "Voltar...";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
+            // sERVICOSBindingSource
+            // 
+            this.sERVICOSBindingSource.DataMember = "SERVICOS";
+            this.sERVICOSBindingSource.DataSource = this.helpdesk01DataSet;
+            // 
             // pnlGrid
             // 
             this.pnlGrid.Controls.Add(this.dbgEquipamentos);
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrid.Location = new System.Drawing.Point(0, 40);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(1156, 446);
+            this.pnlGrid.Size = new System.Drawing.Size(1675, 877);
             this.pnlGrid.TabIndex = 4;
             // 
             // dbgEquipamentos
@@ -294,33 +299,9 @@ namespace HELP_Princ
             this.dbgEquipamentos.Location = new System.Drawing.Point(0, 0);
             this.dbgEquipamentos.Name = "dbgEquipamentos";
             this.dbgEquipamentos.ReadOnly = true;
-            this.dbgEquipamentos.Size = new System.Drawing.Size(1156, 446);
+            this.dbgEquipamentos.Size = new System.Drawing.Size(1675, 877);
             this.dbgEquipamentos.TabIndex = 0;
             this.dbgEquipamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgTecnicos_CellContentClick);
-            // 
-            // eQUIPAMENTOSBindingSource
-            // 
-            this.eQUIPAMENTOSBindingSource.DataMember = "EQUIPAMENTOS";
-            this.eQUIPAMENTOSBindingSource.DataSource = this.helpdesk01DataSet;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
-            this.tableAdapterManager.MOVI_RETIRADATableAdapter = null;
-            this.tableAdapterManager.MOVITableAdapter = null;
-            this.tableAdapterManager.SERVICOSTableAdapter = this.sERVICOSTableAdapter;
-            this.tableAdapterManager.TECNICOSTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USUARIOSTableAdapter = null;
-            // 
-            // sERVICOSTableAdapter
-            // 
-            this.sERVICOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // eQUIPAMENTOSTableAdapter
-            // 
-            this.eQUIPAMENTOSTableAdapter.ClearBeforeFill = true;
             // 
             // btnEdicao
             // 
@@ -393,12 +374,33 @@ namespace HELP_Princ
             this.dATADESDataGridViewTextBoxColumn.ReadOnly = true;
             this.dATADESDataGridViewTextBoxColumn.Width = 150;
             // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
+            this.tableAdapterManager.MOVI_RETIRADATableAdapter = null;
+            this.tableAdapterManager.MOVITableAdapter = null;
+            this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
+            this.tableAdapterManager.SERVICOSTableAdapter = this.sERVICOSTableAdapter;
+            this.tableAdapterManager.TAREFA_BANCADATableAdapter = null;
+            this.tableAdapterManager.TECNICOSTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.USUARIOSTableAdapter = null;
+            // 
+            // sERVICOSTableAdapter
+            // 
+            this.sERVICOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // eQUIPAMENTOSTableAdapter
+            // 
+            this.eQUIPAMENTOSTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmEquipamentosList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1156, 512);
+            this.ClientSize = new System.Drawing.Size(1675, 943);
             this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.pnlHeader);
@@ -414,11 +416,11 @@ namespace HELP_Princ
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sERVICOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eQUIPAMENTOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sERVICOSBindingSource)).EndInit();
             this.pnlGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dbgEquipamentos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eQUIPAMENTOSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
