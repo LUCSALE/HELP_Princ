@@ -12,18 +12,15 @@ using System.Windows.Forms;
 
 namespace HELP_Princ
 {
-    public partial class FrmMoviList : Form
+    public partial class FrmWork : Form
     {
-        public FrmMoviList()
+        public FrmWork()
         {
             InitializeComponent();
         }
 
-        private void FrmMoviList_Load(object sender, EventArgs e)
+        private void FrmWork_Load(object sender, EventArgs e)
         {
-            // Ajusta espaçamento das linhas dos GRID´S
-            dbgRetirada.RowTemplate.Height = 45;      // Estilo das células     
-            dbgTarefa.RowTemplate.Height = 45;      // Estilo das células     
 
             // Inicia a ABA: RETIRADA DE EQUIPAMENTO
             tbcEstagios.SelectedIndex = 0;
@@ -315,8 +312,6 @@ namespace HELP_Princ
             else if (tbcEstagios.SelectedIndex == 1)
             {
                 // Atualiza o GRID - TAREFA BANCADA
-                fcnAtuTarefa(); 
-
             }
         }
 
@@ -340,20 +335,6 @@ namespace HELP_Princ
             dbgRetirada.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
-        private void fcnAtuTarefa()
-        {
-            // Ajuste do GRID - Espaçamento , cores e estilo das células
-            dbgTarefa.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
-            dbgTarefa.GridColor = Color.White;      // Remove borda padrão     
-            dbgTarefa.CellBorderStyle = DataGridViewCellBorderStyle.Single;      // Espaçamento visual
-            dbgTarefa.RowTemplate.Height = 45;      // Estilo das células     
-            dbgTarefa.DefaultCellStyle.Padding = new Padding(5);
-
-            // Ajuste do GRID - Ativa SCROLL horizontal
-            dbgTarefa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-
-
-        }
     }
 }
 

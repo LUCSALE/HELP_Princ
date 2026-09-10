@@ -97,3 +97,4 @@ E:\DESENVOL_WEB\HELP_Princ\bin\Debug\CircularProgressBar.dll
 E:\DESENVOL_WEB\HELP_Princ\bin\Debug\WinFormAnimation.dll
 E:\DESENVOL_WEB\HELP_Princ\bin\Debug\CircularProgressBar.xml
 E:\DESENVOL_WEB\HELP_Princ\obj\Debug\HELP_Princ.FrmMoviRetiradaMovimentacao.resources
+E:\DESENVOL_WEB\HELP_Princ\obj\Debug\HELP_Princ.FrmWork.resources
