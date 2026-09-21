@@ -342,6 +342,9 @@ namespace HELP_Princ
 
         private void fcnAtuTarefa()
         {
+            // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.TAREFA_BANCADA'. Você pode movê-la ou removê-la conforme necessário.
+            this.tAREFA_BANCADATableAdapter.Fill(this.helpdesk01DataSet.TAREFA_BANCADA);
+
             // Ajuste do GRID - Espaçamento , cores e estilo das células
             dbgTarefa.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
             dbgTarefa.GridColor = Color.White;      // Remove borda padrão     

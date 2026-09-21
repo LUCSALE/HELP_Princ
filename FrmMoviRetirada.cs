@@ -24,7 +24,6 @@ namespace HELP_Princ
 
         private void FrmMoviRetirada_Load(object sender, EventArgs e)
         {
-
             guna2WinProgressIndicator1.AutoStart = false;
             guna2WinProgressIndicator1.Visible = false;
 
