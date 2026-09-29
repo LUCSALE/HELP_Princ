@@ -306,7 +306,7 @@ namespace HELP_Princ
             {
                 // Atualiza o GRID - RETIRADA DE EQUIPAMENTO
                 fcnAtuRetirada();
-
+                
 
             }
             else if (tbcEstagios.SelectedIndex == 1)

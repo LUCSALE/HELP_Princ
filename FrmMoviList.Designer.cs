@@ -127,7 +127,7 @@ namespace HELP_Princ
             this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
             this.btnRetiradaEdicao = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnRegistrarRegistrar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnFreeze = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnRetiradaExcluir = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnImpressao = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnMovimentacao = new System.Windows.Forms.DataGridViewImageColumn();
@@ -286,7 +286,7 @@ namespace HELP_Princ
             this.dbgRetirada.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnRetiradaEdicao,
             this.btnRegistrarRegistrar,
-            this.Column1,
+            this.btnFreeze,
             this.btnRetiradaExcluir,
             this.btnImpressao,
             this.btnMovimentacao,
@@ -1110,14 +1110,17 @@ namespace HELP_Princ
             this.btnRegistrarRegistrar.ReadOnly = true;
             this.btnRegistrarRegistrar.Width = 53;
             // 
-            // Column1
+            // btnFreeze
             // 
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(230)))), ((int)(((byte)(251)))));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            this.btnFreeze.DefaultCellStyle = dataGridViewCellStyle4;
+            this.btnFreeze.HeaderText = "Freeze:";
+            this.btnFreeze.Image = ((System.Drawing.Image)(resources.GetObject("btnFreeze.Image")));
+            this.btnFreeze.Name = "btnFreeze";
+            this.btnFreeze.ReadOnly = true;
+            this.btnFreeze.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // btnRetiradaExcluir
             // 
@@ -1420,7 +1423,7 @@ namespace HELP_Princ
         private ToolStripSeparator toolStripSeparator8;
         private DataGridViewImageColumn btnRetiradaEdicao;
         private DataGridViewImageColumn btnRegistrarRegistrar;
-        private DataGridViewButtonColumn Column1;
+        private DataGridViewImageColumn btnFreeze;
         private DataGridViewImageColumn btnRetiradaExcluir;
         private DataGridViewImageColumn btnImpressao;
         private DataGridViewImageColumn btnMovimentacao;
