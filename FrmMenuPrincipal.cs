@@ -30,6 +30,7 @@ namespace HELP_Princ
             pnlForm.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
+            
 
 
         }
@@ -108,6 +109,17 @@ namespace HELP_Princ
         {
             
 
+        }
+
+        private void FrmMenuPrincipal_Activated(object sender, EventArgs e)
+        {
+              
+        }
+
+        private void FrmMenuPrincipal_Shown(object sender, EventArgs e)
+        {
+            //MessageBox.Show(FrmMenuPrincipal.ActiveForm.Size.ToString(), "Teste", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            FormShow(new FrmMoviList());
         }
     }
 }

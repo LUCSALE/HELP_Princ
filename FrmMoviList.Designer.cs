@@ -32,50 +32,63 @@ namespace HELP_Princ
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ToolStripButton btnPesquisarRETIRADA;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMoviList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.mOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
+            this.tAREFA_BANCADABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.elpGrid = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.elpTab = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.mOVI_RETIRADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter();
+            this.elpGridTarefa = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.tAREFA_BANCADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TAREFA_BANCADATableAdapter();
+            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
             this.tbcEstagios = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabRetirada = new System.Windows.Forms.TabPage();
             this.dbgRetirada = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.mOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
-            this.pnlFooterRetirada = new Guna.UI2.WinForms.Guna2Panel();
-            this.mOVIBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnIncluirRETIRADA = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnFiltroRETIRADA = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btnRetiradaEdicao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnRegistrarRegistrar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnFreeze = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnRetiradaExcluir = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnImpressao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnMovimentacao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hORADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TECNICO_SOLICITANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NUMERO_OS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAMALTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOMEUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pREDIOSETORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MODALIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SITUACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PATRIMONIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HORA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HORA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TECNICO_ATUANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ORIGEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabTarefa = new System.Windows.Forms.TabPage();
             this.dbgTarefa = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -101,86 +114,59 @@ namespace HELP_Princ
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tAREFA_BANCADABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlFooterTarefa = new Guna.UI2.WinForms.Guna2Panel();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.btnIncluirTAREFA = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.btnVoltarTAREFA = new System.Windows.Forms.ToolStripButton();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tabEntrega = new System.Windows.Forms.TabPage();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.elpGrid = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.elpTab = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.mOVI_RETIRADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter();
-            this.elpGridTarefa = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.tAREFA_BANCADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TAREFA_BANCADATableAdapter();
-            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
-            this.btnRetiradaEdicao = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnRegistrarRegistrar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnFreeze = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnRetiradaExcluir = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnImpressao = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnMovimentacao = new System.Windows.Forms.DataGridViewImageColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hORADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TECNICO_SOLICITANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NUMERO_OS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAMALTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nOMEUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pREDIOSETORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MODALIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SITUACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PATRIMONIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HORA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HORA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TECNICO_ATUANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ORIGEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            btnPesquisarRETIRADA = new System.Windows.Forms.ToolStripButton();
+            this.mOVIBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnIncluirRETIRADA = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnPesquisar = new Guna.UI2.WinForms.Guna2Button();
+            this.elpPesquisar = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tAREFA_BANCADABindingSource)).BeginInit();
             this.pnlGrid.SuspendLayout();
             this.tbcEstagios.SuspendLayout();
             this.tabRetirada.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgRetirada)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
-            this.pnlFooterRetirada.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mOVIBindingNavigator)).BeginInit();
-            this.mOVIBindingNavigator.SuspendLayout();
             this.tabTarefa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgTarefa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tAREFA_BANCADABindingSource)).BeginInit();
             this.pnlFooterTarefa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
+            this.bindingNavigator2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.tabEntrega.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mOVIBindingNavigator)).BeginInit();
+            this.mOVIBindingNavigator.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnPesquisarRETIRADA
-            // 
-            btnPesquisarRETIRADA.BackColor = System.Drawing.Color.LightGray;
-            btnPesquisarRETIRADA.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            btnPesquisarRETIRADA.ForeColor = System.Drawing.Color.RoyalBlue;
-            btnPesquisarRETIRADA.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisarRETIRADA.Image")));
-            btnPesquisarRETIRADA.ImageTransparentColor = System.Drawing.Color.Magenta;
-            btnPesquisarRETIRADA.Name = "btnPesquisarRETIRADA";
-            btnPesquisarRETIRADA.Size = new System.Drawing.Size(92, 22);
-            btnPesquisarRETIRADA.Text = "PESQUISAR";
             // 
             // pnlHeader
             // 
@@ -207,13 +193,63 @@ namespace HELP_Princ
             this.lblTitulo.TabStop = false;
             this.lblTitulo.Text = "Movimentações";
             // 
+            // mOVI_RETIRADABindingSource
+            // 
+            this.mOVI_RETIRADABindingSource.DataMember = "MOVI_RETIRADA";
+            this.mOVI_RETIRADABindingSource.DataSource = this.helpdesk01DataSet;
+            // 
+            // helpdesk01DataSet
+            // 
+            this.helpdesk01DataSet.DataSetName = "helpdesk01DataSet";
+            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tAREFA_BANCADABindingSource
+            // 
+            this.tAREFA_BANCADABindingSource.DataMember = "TAREFA_BANCADA";
+            this.tAREFA_BANCADABindingSource.DataSource = this.helpdesk01DataSet;
+            // 
+            // elpGrid
+            // 
+            this.elpGrid.BorderRadius = 10;
+            this.elpGrid.TargetControl = this.dbgRetirada;
+            // 
+            // elpTab
+            // 
+            this.elpTab.BorderRadius = 10;
+            // 
+            // mOVI_RETIRADATableAdapter
+            // 
+            this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
+            // 
+            // elpGridTarefa
+            // 
+            this.elpGridTarefa.BorderRadius = 10;
+            this.elpGridTarefa.TargetControl = this.dbgTarefa;
+            // 
+            // tAREFA_BANCADATableAdapter
+            // 
+            this.tAREFA_BANCADATableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
+            this.tableAdapterManager.MOVI_RETIRADATableAdapter = this.mOVI_RETIRADATableAdapter;
+            this.tableAdapterManager.MOVITableAdapter = null;
+            this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
+            this.tableAdapterManager.SERVICOSTableAdapter = null;
+            this.tableAdapterManager.TAREFA_BANCADATableAdapter = this.tAREFA_BANCADATableAdapter;
+            this.tableAdapterManager.TECNICOSTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.USUARIOSTableAdapter = null;
+            // 
             // pnlGrid
             // 
             this.pnlGrid.Controls.Add(this.tbcEstagios);
-            this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlGrid.Location = new System.Drawing.Point(0, 40);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(1675, 903);
+            this.pnlGrid.Size = new System.Drawing.Size(1675, 862);
             this.pnlGrid.TabIndex = 4;
             // 
             // tbcEstagios
@@ -226,7 +262,7 @@ namespace HELP_Princ
             this.tbcEstagios.Location = new System.Drawing.Point(0, 0);
             this.tbcEstagios.Name = "tbcEstagios";
             this.tbcEstagios.SelectedIndex = 0;
-            this.tbcEstagios.Size = new System.Drawing.Size(1675, 903);
+            this.tbcEstagios.Size = new System.Drawing.Size(1675, 862);
             this.tbcEstagios.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tbcEstagios.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.tbcEstagios.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -244,21 +280,20 @@ namespace HELP_Princ
             this.tbcEstagios.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
             this.tbcEstagios.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.tbcEstagios.TabButtonSize = new System.Drawing.Size(180, 40);
-            this.tbcEstagios.TabIndex = 0;
+            this.tbcEstagios.TabIndex = 9;
             this.tbcEstagios.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.tbcEstagios.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
-            this.tbcEstagios.SelectedIndexChanged += new System.EventHandler(this.tbcEstagios_SelectedIndexChanged);
             // 
             // tabRetirada
             // 
             this.tabRetirada.AutoScroll = true;
+            this.tabRetirada.Controls.Add(this.mOVIBindingNavigator);
             this.tabRetirada.Controls.Add(this.dbgRetirada);
-            this.tabRetirada.Controls.Add(this.pnlFooterRetirada);
             this.tabRetirada.ImageKey = "(nenhum/a)";
             this.tabRetirada.Location = new System.Drawing.Point(4, 44);
             this.tabRetirada.Name = "tabRetirada";
             this.tabRetirada.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRetirada.Size = new System.Drawing.Size(1667, 855);
+            this.tabRetirada.Size = new System.Drawing.Size(1667, 814);
             this.tabRetirada.TabIndex = 0;
             this.tabRetirada.Text = "Retirada de Equipamento";
             this.tabRetirada.UseVisualStyleBackColor = true;
@@ -268,19 +303,19 @@ namespace HELP_Princ
             this.dbgRetirada.AllowUserToAddRows = false;
             this.dbgRetirada.AllowUserToDeleteRows = false;
             this.dbgRetirada.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(229)))), ((int)(((byte)(251)))));
-            this.dbgRetirada.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(229)))), ((int)(((byte)(251)))));
+            this.dbgRetirada.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dbgRetirada.AutoGenerateColumns = false;
             this.dbgRetirada.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgRetirada.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgRetirada.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dbgRetirada.ColumnHeadersHeight = 30;
             this.dbgRetirada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dbgRetirada.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -309,34 +344,34 @@ namespace HELP_Princ
             this.TECNICO_ATUANTE,
             this.ORIGEM});
             this.dbgRetirada.DataSource = this.mOVI_RETIRADABindingSource;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(237)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(197)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dbgRetirada.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(237)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(197)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dbgRetirada.DefaultCellStyle = dataGridViewCellStyle24;
             this.dbgRetirada.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbgRetirada.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(230)))), ((int)(((byte)(251)))));
             this.dbgRetirada.Location = new System.Drawing.Point(3, 3);
             this.dbgRetirada.MultiSelect = false;
             this.dbgRetirada.Name = "dbgRetirada";
             this.dbgRetirada.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgRetirada.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgRetirada.RowHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dbgRetirada.RowHeadersVisible = false;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgRetirada.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgRetirada.RowsDefaultCellStyle = dataGridViewCellStyle26;
             this.dbgRetirada.RowTemplate.DividerHeight = 2;
-            this.dbgRetirada.Size = new System.Drawing.Size(1661, 823);
+            this.dbgRetirada.Size = new System.Drawing.Size(1661, 808);
             this.dbgRetirada.TabIndex = 5;
             this.dbgRetirada.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightBlue;
             this.dbgRetirada.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(229)))), ((int)(((byte)(251)))));
@@ -360,197 +395,218 @@ namespace HELP_Princ
             this.dbgRetirada.ThemeStyle.RowsStyle.Height = 22;
             this.dbgRetirada.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(197)))), ((int)(((byte)(247)))));
             this.dbgRetirada.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dbgRetirada.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgRetirada_CellContentClick);
-            this.dbgRetirada.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dbgRetirada_CellFormatting);
-            this.dbgRetirada.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dbgRetirada_CellPainting);
-            this.dbgRetirada.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dbgRetirada_RowPrePaint);
             // 
-            // mOVI_RETIRADABindingSource
+            // btnRetiradaEdicao
             // 
-            this.mOVI_RETIRADABindingSource.DataMember = "MOVI_RETIRADA";
-            this.mOVI_RETIRADABindingSource.DataSource = this.helpdesk01DataSet;
+            this.btnRetiradaEdicao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle20.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle20.NullValue")));
+            this.btnRetiradaEdicao.DefaultCellStyle = dataGridViewCellStyle20;
+            this.btnRetiradaEdicao.HeaderText = "Editar:";
+            this.btnRetiradaEdicao.Image = ((System.Drawing.Image)(resources.GetObject("btnRetiradaEdicao.Image")));
+            this.btnRetiradaEdicao.Name = "btnRetiradaEdicao";
+            this.btnRetiradaEdicao.ReadOnly = true;
+            this.btnRetiradaEdicao.Width = 51;
             // 
-            // helpdesk01DataSet
+            // btnRegistrarRegistrar
             // 
-            this.helpdesk01DataSet.DataSetName = "helpdesk01DataSet";
-            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnRegistrarRegistrar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.btnRegistrarRegistrar.HeaderText = "Baixar:";
+            this.btnRegistrarRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarRegistrar.Image")));
+            this.btnRegistrarRegistrar.Name = "btnRegistrarRegistrar";
+            this.btnRegistrarRegistrar.ReadOnly = true;
+            this.btnRegistrarRegistrar.Width = 53;
             // 
-            // pnlFooterRetirada
+            // btnFreeze
             // 
-            this.pnlFooterRetirada.Controls.Add(this.mOVIBindingNavigator);
-            this.pnlFooterRetirada.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooterRetirada.Location = new System.Drawing.Point(3, 826);
-            this.pnlFooterRetirada.Name = "pnlFooterRetirada";
-            this.pnlFooterRetirada.Size = new System.Drawing.Size(1661, 26);
-            this.pnlFooterRetirada.TabIndex = 4;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(230)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle21.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle21.NullValue")));
+            this.btnFreeze.DefaultCellStyle = dataGridViewCellStyle21;
+            this.btnFreeze.HeaderText = "Freeze:";
+            this.btnFreeze.Image = ((System.Drawing.Image)(resources.GetObject("btnFreeze.Image")));
+            this.btnFreeze.Name = "btnFreeze";
+            this.btnFreeze.ReadOnly = true;
+            this.btnFreeze.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // mOVIBindingNavigator
+            // btnRetiradaExcluir
             // 
-            this.mOVIBindingNavigator.AddNewItem = null;
-            this.mOVIBindingNavigator.BackColor = System.Drawing.Color.DarkGray;
-            this.mOVIBindingNavigator.BindingSource = this.mOVI_RETIRADABindingSource;
-            this.mOVIBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.mOVIBindingNavigator.DeleteItem = null;
-            this.mOVIBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mOVIBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.toolStripSeparator1,
-            this.btnIncluirRETIRADA,
-            this.toolStripSeparator7,
-            this.btnFiltroRETIRADA,
-            this.toolStripSeparator2,
-            btnPesquisarRETIRADA,
-            this.toolStripSeparator8,
-            this.toolStripButton2});
-            this.mOVIBindingNavigator.Location = new System.Drawing.Point(0, 1);
-            this.mOVIBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.mOVIBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.mOVIBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.mOVIBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.mOVIBindingNavigator.Name = "mOVIBindingNavigator";
-            this.mOVIBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.mOVIBindingNavigator.Size = new System.Drawing.Size(1661, 25);
-            this.mOVIBindingNavigator.TabIndex = 7;
+            this.btnRetiradaExcluir.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.btnRetiradaExcluir.HeaderText = "Excluir:";
+            this.btnRetiradaExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnRetiradaExcluir.Image")));
+            this.btnRetiradaExcluir.Name = "btnRetiradaExcluir";
+            this.btnRetiradaExcluir.ReadOnly = true;
+            this.btnRetiradaExcluir.Width = 55;
             // 
-            // bindingNavigatorCountItem
+            // btnImpressao
             // 
-            this.bindingNavigatorCountItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            this.btnImpressao.HeaderText = "Impressão:";
+            this.btnImpressao.Image = ((System.Drawing.Image)(resources.GetObject("btnImpressao.Image")));
+            this.btnImpressao.Name = "btnImpressao";
+            this.btnImpressao.ReadOnly = true;
+            this.btnImpressao.Visible = false;
             // 
-            // bindingNavigatorMoveFirstItem
+            // btnMovimentacao
             // 
-            this.bindingNavigatorMoveFirstItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            this.btnMovimentacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.btnMovimentacao.HeaderText = "Movimentação:";
+            this.btnMovimentacao.Image = ((System.Drawing.Image)(resources.GetObject("btnMovimentacao.Image")));
+            this.btnMovimentacao.Name = "btnMovimentacao";
+            this.btnMovimentacao.ReadOnly = true;
+            this.btnMovimentacao.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnMovimentacao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnMovimentacao.Visible = false;
+            this.btnMovimentacao.Width = 105;
             // 
-            // bindingNavigatorMovePreviousItem
+            // iDDataGridViewTextBoxColumn
             // 
-            this.bindingNavigatorMovePreviousItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            this.iDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID:";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 54;
             // 
-            // bindingNavigatorSeparator
+            // dATADataGridViewTextBoxColumn
             // 
-            this.bindingNavigatorSeparator.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorSeparator.ForeColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.dATADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dATADataGridViewTextBoxColumn.DataPropertyName = "DATA";
+            this.dATADataGridViewTextBoxColumn.HeaderText = "Data:";
+            this.dATADataGridViewTextBoxColumn.Name = "dATADataGridViewTextBoxColumn";
+            this.dATADataGridViewTextBoxColumn.ReadOnly = true;
+            this.dATADataGridViewTextBoxColumn.Width = 66;
             // 
-            // bindingNavigatorPositionItem
+            // hORADataGridViewTextBoxColumn
             // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
+            this.hORADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.hORADataGridViewTextBoxColumn.DataPropertyName = "HORA";
+            this.hORADataGridViewTextBoxColumn.HeaderText = "Hora:";
+            this.hORADataGridViewTextBoxColumn.Name = "hORADataGridViewTextBoxColumn";
+            this.hORADataGridViewTextBoxColumn.ReadOnly = true;
+            this.hORADataGridViewTextBoxColumn.Width = 66;
             // 
-            // bindingNavigatorSeparator1
+            // TECNICO_SOLICITANTE
             // 
-            this.bindingNavigatorSeparator1.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorSeparator1.ForeColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.TECNICO_SOLICITANTE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.TECNICO_SOLICITANTE.DataPropertyName = "TECNICO_SOLICITANTE";
+            this.TECNICO_SOLICITANTE.HeaderText = "Técnico Solicitante:";
+            this.TECNICO_SOLICITANTE.Name = "TECNICO_SOLICITANTE";
+            this.TECNICO_SOLICITANTE.ReadOnly = true;
+            this.TECNICO_SOLICITANTE.Width = 134;
             // 
-            // bindingNavigatorMoveNextItem
+            // NUMERO_OS
             // 
-            this.bindingNavigatorMoveNextItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            this.NUMERO_OS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.NUMERO_OS.DataPropertyName = "NUMERO_OS";
+            this.NUMERO_OS.HeaderText = "Número O.S.:";
+            this.NUMERO_OS.Name = "NUMERO_OS";
+            this.NUMERO_OS.ReadOnly = true;
+            this.NUMERO_OS.Width = 104;
             // 
-            // bindingNavigatorMoveLastItem
+            // rAMALTELDataGridViewTextBoxColumn
             // 
-            this.bindingNavigatorMoveLastItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            this.rAMALTELDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.rAMALTELDataGridViewTextBoxColumn.DataPropertyName = "RAMAL_TEL";
+            this.rAMALTELDataGridViewTextBoxColumn.HeaderText = "Ramal / Tel.:";
+            this.rAMALTELDataGridViewTextBoxColumn.Name = "rAMALTELDataGridViewTextBoxColumn";
+            this.rAMALTELDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rAMALTELDataGridViewTextBoxColumn.Width = 102;
             // 
-            // toolStripSeparator1
+            // nOMEUSUARIODataGridViewTextBoxColumn
             // 
-            this.toolStripSeparator1.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator1.ForeColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.nOMEUSUARIODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.nOMEUSUARIODataGridViewTextBoxColumn.DataPropertyName = "NOME_USUARIO";
+            this.nOMEUSUARIODataGridViewTextBoxColumn.HeaderText = "Usuário:";
+            this.nOMEUSUARIODataGridViewTextBoxColumn.Name = "nOMEUSUARIODataGridViewTextBoxColumn";
+            this.nOMEUSUARIODataGridViewTextBoxColumn.ReadOnly = true;
+            this.nOMEUSUARIODataGridViewTextBoxColumn.Width = 79;
             // 
-            // btnIncluirRETIRADA
+            // pREDIOSETORDataGridViewTextBoxColumn
             // 
-            this.btnIncluirRETIRADA.BackColor = System.Drawing.Color.LightGray;
-            this.btnIncluirRETIRADA.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnIncluirRETIRADA.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnIncluirRETIRADA.Image = ((System.Drawing.Image)(resources.GetObject("btnIncluirRETIRADA.Image")));
-            this.btnIncluirRETIRADA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIncluirRETIRADA.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnIncluirRETIRADA.Name = "btnIncluirRETIRADA";
-            this.btnIncluirRETIRADA.Size = new System.Drawing.Size(247, 22);
-            this.btnIncluirRETIRADA.Text = "Registrar: RETIRADA DE EQUIPAMENTO";
-            this.btnIncluirRETIRADA.ToolTipText = "Registrar: RETIRADA DE EQUIPAMENTO";
-            this.btnIncluirRETIRADA.Click += new System.EventHandler(this.btnIncluirRETIRADA_Click_1);
+            this.pREDIOSETORDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.pREDIOSETORDataGridViewTextBoxColumn.DataPropertyName = "PREDIO_SETOR";
+            this.pREDIOSETORDataGridViewTextBoxColumn.HeaderText = "Prédio / Setor:";
+            this.pREDIOSETORDataGridViewTextBoxColumn.Name = "pREDIOSETORDataGridViewTextBoxColumn";
+            this.pREDIOSETORDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pREDIOSETORDataGridViewTextBoxColumn.Width = 109;
             // 
-            // toolStripSeparator7
+            // MODALIDADE
             // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            this.MODALIDADE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.MODALIDADE.DataPropertyName = "MODALIDADE";
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.MODALIDADE.DefaultCellStyle = dataGridViewCellStyle22;
+            this.MODALIDADE.HeaderText = "Modalidade:";
+            this.MODALIDADE.Name = "MODALIDADE";
+            this.MODALIDADE.ReadOnly = true;
+            this.MODALIDADE.Width = 98;
             // 
-            // btnFiltroRETIRADA
+            // SITUACAO
             // 
-            this.btnFiltroRETIRADA.BackColor = System.Drawing.Color.LightGray;
-            this.btnFiltroRETIRADA.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnFiltroRETIRADA.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnFiltroRETIRADA.Image = ((System.Drawing.Image)(resources.GetObject("btnFiltroRETIRADA.Image")));
-            this.btnFiltroRETIRADA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltroRETIRADA.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnFiltroRETIRADA.Name = "btnFiltroRETIRADA";
-            this.btnFiltroRETIRADA.Size = new System.Drawing.Size(73, 22);
-            this.btnFiltroRETIRADA.Text = "FILTRAR";
+            this.SITUACAO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.SITUACAO.DataPropertyName = "SITUACAO";
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SITUACAO.DefaultCellStyle = dataGridViewCellStyle23;
+            this.SITUACAO.HeaderText = "Situação:";
+            this.SITUACAO.Name = "SITUACAO";
+            this.SITUACAO.ReadOnly = true;
+            this.SITUACAO.Width = 85;
             // 
-            // toolStripSeparator2
+            // PATRIMONIO
             // 
-            this.toolStripSeparator2.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator2.ForeColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.PATRIMONIO.DataPropertyName = "PATRIMONIO";
+            this.PATRIMONIO.HeaderText = "Patrimonio:";
+            this.PATRIMONIO.Name = "PATRIMONIO";
+            this.PATRIMONIO.ReadOnly = true;
             // 
-            // toolStripSeparator8
+            // SAI
             // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
+            this.SAI.DataPropertyName = "SAI";
+            this.SAI.HeaderText = "SAI.:";
+            this.SAI.Name = "SAI";
+            this.SAI.ReadOnly = true;
             // 
-            // toolStripButton2
+            // DATA_PREVISTA
             // 
-            this.toolStripButton2.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.ToolTipText = "Voltar...";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
+            this.DATA_PREVISTA.DataPropertyName = "DATA_PREVISTA";
+            this.DATA_PREVISTA.HeaderText = "Data Prevista:";
+            this.DATA_PREVISTA.Name = "DATA_PREVISTA";
+            this.DATA_PREVISTA.ReadOnly = true;
+            // 
+            // HORA_PREVISTA
+            // 
+            this.HORA_PREVISTA.DataPropertyName = "HORA_PREVISTA";
+            this.HORA_PREVISTA.HeaderText = "Hora Prevista:";
+            this.HORA_PREVISTA.Name = "HORA_PREVISTA";
+            this.HORA_PREVISTA.ReadOnly = true;
+            // 
+            // DATA_RETIRADA
+            // 
+            this.DATA_RETIRADA.DataPropertyName = "DATA_RETIRADA";
+            this.DATA_RETIRADA.HeaderText = "Data da Retirada:";
+            this.DATA_RETIRADA.Name = "DATA_RETIRADA";
+            this.DATA_RETIRADA.ReadOnly = true;
+            // 
+            // HORA_RETIRADA
+            // 
+            this.HORA_RETIRADA.DataPropertyName = "HORA_RETIRADA";
+            this.HORA_RETIRADA.HeaderText = "Hora da Retirada:";
+            this.HORA_RETIRADA.Name = "HORA_RETIRADA";
+            this.HORA_RETIRADA.ReadOnly = true;
+            // 
+            // TECNICO_ATUANTE
+            // 
+            this.TECNICO_ATUANTE.DataPropertyName = "TECNICO_ATUANTE";
+            this.TECNICO_ATUANTE.HeaderText = "Técnico Atuante:";
+            this.TECNICO_ATUANTE.Name = "TECNICO_ATUANTE";
+            this.TECNICO_ATUANTE.ReadOnly = true;
+            // 
+            // ORIGEM
+            // 
+            this.ORIGEM.DataPropertyName = "ORIGEM";
+            this.ORIGEM.HeaderText = "Origem";
+            this.ORIGEM.Name = "ORIGEM";
+            this.ORIGEM.ReadOnly = true;
             // 
             // tabTarefa
             // 
@@ -560,7 +616,7 @@ namespace HELP_Princ
             this.tabTarefa.Location = new System.Drawing.Point(4, 44);
             this.tabTarefa.Name = "tabTarefa";
             this.tabTarefa.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTarefa.Size = new System.Drawing.Size(1667, 855);
+            this.tabTarefa.Size = new System.Drawing.Size(1667, 814);
             this.tabTarefa.TabIndex = 1;
             this.tabTarefa.Text = "Tarefa Bancada";
             this.tabTarefa.UseVisualStyleBackColor = true;
@@ -570,19 +626,19 @@ namespace HELP_Princ
             this.dbgTarefa.AllowUserToAddRows = false;
             this.dbgTarefa.AllowUserToDeleteRows = false;
             this.dbgTarefa.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
-            this.dbgTarefa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
+            this.dbgTarefa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
             this.dbgTarefa.AutoGenerateColumns = false;
             this.dbgTarefa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgTarefa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgTarefa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dbgTarefa.ColumnHeadersHeight = 30;
             this.dbgTarefa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dbgTarefa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -610,34 +666,34 @@ namespace HELP_Princ
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18});
             this.dbgTarefa.DataSource = this.tAREFA_BANCADABindingSource;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dbgTarefa.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dbgTarefa.DefaultCellStyle = dataGridViewCellStyle32;
             this.dbgTarefa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbgTarefa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(235)))), ((int)(((byte)(199)))));
             this.dbgTarefa.Location = new System.Drawing.Point(3, 3);
             this.dbgTarefa.MultiSelect = false;
             this.dbgTarefa.Name = "dbgTarefa";
             this.dbgTarefa.ReadOnly = true;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgTarefa.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgTarefa.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.dbgTarefa.RowHeadersVisible = false;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgTarefa.RowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgTarefa.RowsDefaultCellStyle = dataGridViewCellStyle34;
             this.dbgTarefa.RowTemplate.DividerHeight = 2;
-            this.dbgTarefa.Size = new System.Drawing.Size(1661, 823);
+            this.dbgTarefa.Size = new System.Drawing.Size(1661, 782);
             this.dbgTarefa.TabIndex = 6;
             this.dbgTarefa.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGreen;
             this.dbgTarefa.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
@@ -665,9 +721,9 @@ namespace HELP_Princ
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle12.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle12.NullValue")));
-            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle29.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle29.NullValue")));
+            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridViewImageColumn1.HeaderText = "Editar:";
             this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
@@ -788,8 +844,8 @@ namespace HELP_Princ
             // 
             this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dataGridViewTextBoxColumn9.DataPropertyName = "MODALIDADE";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridViewTextBoxColumn9.HeaderText = "Modalidade:";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
@@ -799,8 +855,8 @@ namespace HELP_Princ
             // 
             this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dataGridViewTextBoxColumn10.DataPropertyName = "SITUACAO";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle31;
             this.dataGridViewTextBoxColumn10.HeaderText = "Situação:";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
@@ -862,133 +918,128 @@ namespace HELP_Princ
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             this.dataGridViewTextBoxColumn18.ReadOnly = true;
             // 
-            // tAREFA_BANCADABindingSource
-            // 
-            this.tAREFA_BANCADABindingSource.DataMember = "TAREFA_BANCADA";
-            this.tAREFA_BANCADABindingSource.DataSource = this.helpdesk01DataSet;
-            // 
             // pnlFooterTarefa
             // 
-            this.pnlFooterTarefa.Controls.Add(this.bindingNavigator1);
+            this.pnlFooterTarefa.Controls.Add(this.bindingNavigator2);
             this.pnlFooterTarefa.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooterTarefa.Location = new System.Drawing.Point(3, 826);
+            this.pnlFooterTarefa.Location = new System.Drawing.Point(3, 785);
             this.pnlFooterTarefa.Name = "pnlFooterTarefa";
             this.pnlFooterTarefa.Size = new System.Drawing.Size(1661, 26);
             this.pnlFooterTarefa.TabIndex = 5;
             // 
-            // bindingNavigator1
+            // bindingNavigator2
             // 
-            this.bindingNavigator1.AddNewItem = null;
-            this.bindingNavigator1.BackColor = System.Drawing.Color.DarkGray;
-            this.bindingNavigator1.BindingSource = this.mOVI_RETIRADABindingSource;
-            this.bindingNavigator1.CountItem = this.toolStripLabel1;
-            this.bindingNavigator1.DeleteItem = null;
-            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton3,
-            this.toolStripSeparator3,
-            this.toolStripTextBox1,
-            this.toolStripLabel1,
-            this.toolStripSeparator4,
-            this.toolStripButton4,
-            this.toolStripButton5,
-            this.toolStripSeparator5,
+            this.bindingNavigator2.AddNewItem = null;
+            this.bindingNavigator2.BackColor = System.Drawing.Color.DarkGray;
+            this.bindingNavigator2.BindingSource = this.mOVI_RETIRADABindingSource;
+            this.bindingNavigator2.CountItem = this.toolStripLabel2;
+            this.bindingNavigator2.DeleteItem = null;
+            this.bindingNavigator2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton8,
+            this.toolStripButton9,
+            this.toolStripSeparator11,
+            this.toolStripTextBox2,
+            this.toolStripLabel2,
+            this.toolStripSeparator12,
+            this.toolStripButton10,
+            this.toolStripButton11,
+            this.toolStripSeparator13,
             this.btnIncluirTAREFA,
-            this.toolStripSeparator6,
+            this.toolStripSeparator14,
             this.btnVoltarTAREFA});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 1);
-            this.bindingNavigator1.MoveFirstItem = this.toolStripButton1;
-            this.bindingNavigator1.MoveLastItem = this.toolStripButton5;
-            this.bindingNavigator1.MoveNextItem = this.toolStripButton4;
-            this.bindingNavigator1.MovePreviousItem = this.toolStripButton3;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1661, 25);
-            this.bindingNavigator1.TabIndex = 8;
+            this.bindingNavigator2.Location = new System.Drawing.Point(0, 1);
+            this.bindingNavigator2.MoveFirstItem = this.toolStripButton8;
+            this.bindingNavigator2.MoveLastItem = this.toolStripButton11;
+            this.bindingNavigator2.MoveNextItem = this.toolStripButton10;
+            this.bindingNavigator2.MovePreviousItem = this.toolStripButton9;
+            this.bindingNavigator2.Name = "bindingNavigator2";
+            this.bindingNavigator2.PositionItem = this.toolStripTextBox2;
+            this.bindingNavigator2.Size = new System.Drawing.Size(1661, 25);
+            this.bindingNavigator2.TabIndex = 8;
             // 
-            // toolStripLabel1
+            // toolStripLabel2
             // 
-            this.toolStripLabel1.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(37, 22);
-            this.toolStripLabel1.Text = "de {0}";
-            this.toolStripLabel1.ToolTipText = "Número total de itens";
+            this.toolStripLabel2.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(37, 22);
+            this.toolStripLabel2.Text = "de {0}";
+            this.toolStripLabel2.ToolTipText = "Número total de itens";
             // 
-            // toolStripButton1
+            // toolStripButton8
             // 
-            this.toolStripButton1.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "Mover primeiro";
+            this.toolStripButton8.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.ForeColor = System.Drawing.Color.DarkOrange;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton8.Text = "Mover primeiro";
             // 
-            // toolStripButton3
+            // toolStripButton9
             // 
-            this.toolStripButton3.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.ForeColor = System.Drawing.Color.DarkOrange;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "Mover anterior";
+            this.toolStripButton9.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.ForeColor = System.Drawing.Color.DarkOrange;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton9.Text = "Mover anterior";
             // 
-            // toolStripSeparator3
+            // toolStripSeparator11
             // 
-            this.toolStripSeparator3.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator3.ForeColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator11.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator11.ForeColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripTextBox1
+            // toolStripTextBox2
             // 
-            this.toolStripTextBox1.AccessibleName = "Posição";
-            this.toolStripTextBox1.AutoSize = false;
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
-            this.toolStripTextBox1.Text = "0";
-            this.toolStripTextBox1.ToolTipText = "Posição atual";
+            this.toolStripTextBox2.AccessibleName = "Posição";
+            this.toolStripTextBox2.AutoSize = false;
+            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox2.Text = "0";
+            this.toolStripTextBox2.ToolTipText = "Posição atual";
             // 
-            // toolStripSeparator4
+            // toolStripSeparator12
             // 
-            this.toolStripSeparator4.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator4.ForeColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator12.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator12.ForeColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton4
+            // toolStripButton10
             // 
-            this.toolStripButton4.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.ForeColor = System.Drawing.Color.DarkOrange;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "Mover próximo";
+            this.toolStripButton10.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton10.ForeColor = System.Drawing.Color.DarkOrange;
+            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton10.Text = "Mover próximo";
             // 
-            // toolStripButton5
+            // toolStripButton11
             // 
-            this.toolStripButton5.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.ForeColor = System.Drawing.Color.DarkOrange;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton5.Text = "Mover último";
+            this.toolStripButton11.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton11.ForeColor = System.Drawing.Color.DarkOrange;
+            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton11.Text = "Mover último";
             // 
-            // toolStripSeparator5
+            // toolStripSeparator13
             // 
-            this.toolStripSeparator5.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator5.ForeColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator13.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator13.ForeColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator13.Name = "toolStripSeparator13";
+            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 25);
             // 
             // btnIncluirTAREFA
             // 
@@ -1003,12 +1054,12 @@ namespace HELP_Princ
             this.btnIncluirTAREFA.Text = "Registrar: TAREFA BANCADA";
             this.btnIncluirTAREFA.ToolTipText = "Registrar: TAREFA BANCADA";
             // 
-            // toolStripSeparator6
+            // toolStripSeparator14
             // 
-            this.toolStripSeparator6.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator6.ForeColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator14.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator14.ForeColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator14.Name = "toolStripSeparator14";
+            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 25);
             // 
             // btnVoltarTAREFA
             // 
@@ -1053,253 +1104,177 @@ namespace HELP_Princ
             this.guna2PictureBox3.TabIndex = 1;
             this.guna2PictureBox3.TabStop = false;
             // 
-            // elpGrid
+            // mOVIBindingNavigator
             // 
-            this.elpGrid.BorderRadius = 10;
-            this.elpGrid.TargetControl = this.dbgRetirada;
+            this.mOVIBindingNavigator.AddNewItem = null;
+            this.mOVIBindingNavigator.BackColor = System.Drawing.Color.DarkGray;
+            this.mOVIBindingNavigator.BindingSource = this.mOVI_RETIRADABindingSource;
+            this.mOVIBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.mOVIBindingNavigator.DeleteItem = null;
+            this.mOVIBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.mOVIBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.toolStripSeparator1,
+            this.btnIncluirRETIRADA,
+            this.toolStripSeparator8,
+            this.toolStripButton2});
+            this.mOVIBindingNavigator.Location = new System.Drawing.Point(3, 786);
+            this.mOVIBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.mOVIBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.mOVIBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.mOVIBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.mOVIBindingNavigator.Name = "mOVIBindingNavigator";
+            this.mOVIBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.mOVIBindingNavigator.Size = new System.Drawing.Size(1661, 25);
+            this.mOVIBindingNavigator.TabIndex = 9;
             // 
-            // elpTab
+            // bindingNavigatorCountItem
             // 
-            this.elpTab.BorderRadius = 10;
-            this.elpTab.TargetControl = this.tbcEstagios;
+            this.bindingNavigatorCountItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
             // 
-            // mOVI_RETIRADATableAdapter
+            // bindingNavigatorMoveFirstItem
             // 
-            this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
+            this.bindingNavigatorMoveFirstItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
             // 
-            // elpGridTarefa
+            // bindingNavigatorMovePreviousItem
             // 
-            this.elpGridTarefa.BorderRadius = 10;
-            this.elpGridTarefa.TargetControl = this.dbgTarefa;
+            this.bindingNavigatorMovePreviousItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
-            // tAREFA_BANCADATableAdapter
+            // bindingNavigatorSeparator
             // 
-            this.tAREFA_BANCADATableAdapter.ClearBeforeFill = true;
+            this.bindingNavigatorSeparator.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorSeparator.ForeColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
             // 
-            // tableAdapterManager
+            // bindingNavigatorPositionItem
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
-            this.tableAdapterManager.MOVI_RETIRADATableAdapter = this.mOVI_RETIRADATableAdapter;
-            this.tableAdapterManager.MOVITableAdapter = null;
-            this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
-            this.tableAdapterManager.SERVICOSTableAdapter = null;
-            this.tableAdapterManager.TAREFA_BANCADATableAdapter = this.tAREFA_BANCADATableAdapter;
-            this.tableAdapterManager.TECNICOSTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USUARIOSTableAdapter = null;
+            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
             // 
-            // btnRetiradaEdicao
+            // bindingNavigatorSeparator1
             // 
-            this.btnRetiradaEdicao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            this.btnRetiradaEdicao.DefaultCellStyle = dataGridViewCellStyle3;
-            this.btnRetiradaEdicao.HeaderText = "Editar:";
-            this.btnRetiradaEdicao.Image = ((System.Drawing.Image)(resources.GetObject("btnRetiradaEdicao.Image")));
-            this.btnRetiradaEdicao.Name = "btnRetiradaEdicao";
-            this.btnRetiradaEdicao.ReadOnly = true;
-            this.btnRetiradaEdicao.Width = 51;
+            this.bindingNavigatorSeparator1.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorSeparator1.ForeColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // btnRegistrarRegistrar
+            // bindingNavigatorMoveNextItem
             // 
-            this.btnRegistrarRegistrar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.btnRegistrarRegistrar.HeaderText = "Baixar:";
-            this.btnRegistrarRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarRegistrar.Image")));
-            this.btnRegistrarRegistrar.Name = "btnRegistrarRegistrar";
-            this.btnRegistrarRegistrar.ReadOnly = true;
-            this.btnRegistrarRegistrar.Width = 53;
+            this.bindingNavigatorMoveNextItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
             // 
-            // btnFreeze
+            // bindingNavigatorMoveLastItem
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(230)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            this.btnFreeze.DefaultCellStyle = dataGridViewCellStyle4;
-            this.btnFreeze.HeaderText = "Freeze:";
-            this.btnFreeze.Image = ((System.Drawing.Image)(resources.GetObject("btnFreeze.Image")));
-            this.btnFreeze.Name = "btnFreeze";
-            this.btnFreeze.ReadOnly = true;
-            this.btnFreeze.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.bindingNavigatorMoveLastItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
-            // btnRetiradaExcluir
+            // toolStripSeparator1
             // 
-            this.btnRetiradaExcluir.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.btnRetiradaExcluir.HeaderText = "Excluir:";
-            this.btnRetiradaExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnRetiradaExcluir.Image")));
-            this.btnRetiradaExcluir.Name = "btnRetiradaExcluir";
-            this.btnRetiradaExcluir.ReadOnly = true;
-            this.btnRetiradaExcluir.Width = 55;
+            this.toolStripSeparator1.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator1.ForeColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // btnImpressao
+            // btnIncluirRETIRADA
             // 
-            this.btnImpressao.HeaderText = "Impressão:";
-            this.btnImpressao.Image = ((System.Drawing.Image)(resources.GetObject("btnImpressao.Image")));
-            this.btnImpressao.Name = "btnImpressao";
-            this.btnImpressao.ReadOnly = true;
-            this.btnImpressao.Visible = false;
+            this.btnIncluirRETIRADA.BackColor = System.Drawing.Color.LightGray;
+            this.btnIncluirRETIRADA.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.btnIncluirRETIRADA.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnIncluirRETIRADA.Image = ((System.Drawing.Image)(resources.GetObject("btnIncluirRETIRADA.Image")));
+            this.btnIncluirRETIRADA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIncluirRETIRADA.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnIncluirRETIRADA.Name = "btnIncluirRETIRADA";
+            this.btnIncluirRETIRADA.Size = new System.Drawing.Size(247, 22);
+            this.btnIncluirRETIRADA.Text = "Registrar: RETIRADA DE EQUIPAMENTO";
+            this.btnIncluirRETIRADA.ToolTipText = "Registrar: RETIRADA DE EQUIPAMENTO";
             // 
-            // btnMovimentacao
+            // toolStripSeparator8
             // 
-            this.btnMovimentacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.btnMovimentacao.HeaderText = "Movimentação:";
-            this.btnMovimentacao.Image = ((System.Drawing.Image)(resources.GetObject("btnMovimentacao.Image")));
-            this.btnMovimentacao.Name = "btnMovimentacao";
-            this.btnMovimentacao.ReadOnly = true;
-            this.btnMovimentacao.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnMovimentacao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnMovimentacao.Visible = false;
-            this.btnMovimentacao.Width = 105;
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
-            // iDDataGridViewTextBoxColumn
+            // toolStripButton2
             // 
-            this.iDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID:";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Width = 54;
+            this.toolStripButton2.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.ToolTipText = "Voltar...";
             // 
-            // dATADataGridViewTextBoxColumn
+            // guna2Panel1
             // 
-            this.dATADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dATADataGridViewTextBoxColumn.DataPropertyName = "DATA";
-            this.dATADataGridViewTextBoxColumn.HeaderText = "Data:";
-            this.dATADataGridViewTextBoxColumn.Name = "dATADataGridViewTextBoxColumn";
-            this.dATADataGridViewTextBoxColumn.ReadOnly = true;
-            this.dATADataGridViewTextBoxColumn.Width = 66;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.SlateGray;
+            this.guna2Panel1.BorderRadius = 10;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.btnPesquisar);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 902);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.guna2Panel1.Size = new System.Drawing.Size(1675, 41);
+            this.guna2Panel1.TabIndex = 5;
             // 
-            // hORADataGridViewTextBoxColumn
+            // btnPesquisar
             // 
-            this.hORADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.hORADataGridViewTextBoxColumn.DataPropertyName = "HORA";
-            this.hORADataGridViewTextBoxColumn.HeaderText = "Hora:";
-            this.hORADataGridViewTextBoxColumn.Name = "hORADataGridViewTextBoxColumn";
-            this.hORADataGridViewTextBoxColumn.ReadOnly = true;
-            this.hORADataGridViewTextBoxColumn.Width = 66;
+            this.btnPesquisar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPesquisar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPesquisar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPesquisar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPesquisar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPesquisar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
+            this.btnPesquisar.Location = new System.Drawing.Point(0, 2);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(1675, 39);
+            this.btnPesquisar.TabIndex = 0;
+            this.btnPesquisar.Text = "Pesquisar";
             // 
-            // TECNICO_SOLICITANTE
+            // elpPesquisar
             // 
-            this.TECNICO_SOLICITANTE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.TECNICO_SOLICITANTE.DataPropertyName = "TECNICO_SOLICITANTE";
-            this.TECNICO_SOLICITANTE.HeaderText = "Técnico Solicitante:";
-            this.TECNICO_SOLICITANTE.Name = "TECNICO_SOLICITANTE";
-            this.TECNICO_SOLICITANTE.ReadOnly = true;
-            this.TECNICO_SOLICITANTE.Width = 134;
-            // 
-            // NUMERO_OS
-            // 
-            this.NUMERO_OS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.NUMERO_OS.DataPropertyName = "NUMERO_OS";
-            this.NUMERO_OS.HeaderText = "Número O.S.:";
-            this.NUMERO_OS.Name = "NUMERO_OS";
-            this.NUMERO_OS.ReadOnly = true;
-            this.NUMERO_OS.Width = 104;
-            // 
-            // rAMALTELDataGridViewTextBoxColumn
-            // 
-            this.rAMALTELDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.rAMALTELDataGridViewTextBoxColumn.DataPropertyName = "RAMAL_TEL";
-            this.rAMALTELDataGridViewTextBoxColumn.HeaderText = "Ramal / Tel.:";
-            this.rAMALTELDataGridViewTextBoxColumn.Name = "rAMALTELDataGridViewTextBoxColumn";
-            this.rAMALTELDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rAMALTELDataGridViewTextBoxColumn.Width = 102;
-            // 
-            // nOMEUSUARIODataGridViewTextBoxColumn
-            // 
-            this.nOMEUSUARIODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.nOMEUSUARIODataGridViewTextBoxColumn.DataPropertyName = "NOME_USUARIO";
-            this.nOMEUSUARIODataGridViewTextBoxColumn.HeaderText = "Usuário:";
-            this.nOMEUSUARIODataGridViewTextBoxColumn.Name = "nOMEUSUARIODataGridViewTextBoxColumn";
-            this.nOMEUSUARIODataGridViewTextBoxColumn.ReadOnly = true;
-            this.nOMEUSUARIODataGridViewTextBoxColumn.Width = 79;
-            // 
-            // pREDIOSETORDataGridViewTextBoxColumn
-            // 
-            this.pREDIOSETORDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.pREDIOSETORDataGridViewTextBoxColumn.DataPropertyName = "PREDIO_SETOR";
-            this.pREDIOSETORDataGridViewTextBoxColumn.HeaderText = "Prédio / Setor:";
-            this.pREDIOSETORDataGridViewTextBoxColumn.Name = "pREDIOSETORDataGridViewTextBoxColumn";
-            this.pREDIOSETORDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pREDIOSETORDataGridViewTextBoxColumn.Width = 109;
-            // 
-            // MODALIDADE
-            // 
-            this.MODALIDADE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.MODALIDADE.DataPropertyName = "MODALIDADE";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.MODALIDADE.DefaultCellStyle = dataGridViewCellStyle5;
-            this.MODALIDADE.HeaderText = "Modalidade:";
-            this.MODALIDADE.Name = "MODALIDADE";
-            this.MODALIDADE.ReadOnly = true;
-            this.MODALIDADE.Width = 98;
-            // 
-            // SITUACAO
-            // 
-            this.SITUACAO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.SITUACAO.DataPropertyName = "SITUACAO";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.SITUACAO.DefaultCellStyle = dataGridViewCellStyle6;
-            this.SITUACAO.HeaderText = "Situação:";
-            this.SITUACAO.Name = "SITUACAO";
-            this.SITUACAO.ReadOnly = true;
-            this.SITUACAO.Width = 85;
-            // 
-            // PATRIMONIO
-            // 
-            this.PATRIMONIO.DataPropertyName = "PATRIMONIO";
-            this.PATRIMONIO.HeaderText = "Patrimonio:";
-            this.PATRIMONIO.Name = "PATRIMONIO";
-            this.PATRIMONIO.ReadOnly = true;
-            // 
-            // SAI
-            // 
-            this.SAI.DataPropertyName = "SAI";
-            this.SAI.HeaderText = "SAI.:";
-            this.SAI.Name = "SAI";
-            this.SAI.ReadOnly = true;
-            // 
-            // DATA_PREVISTA
-            // 
-            this.DATA_PREVISTA.DataPropertyName = "DATA_PREVISTA";
-            this.DATA_PREVISTA.HeaderText = "Data Prevista:";
-            this.DATA_PREVISTA.Name = "DATA_PREVISTA";
-            this.DATA_PREVISTA.ReadOnly = true;
-            // 
-            // HORA_PREVISTA
-            // 
-            this.HORA_PREVISTA.DataPropertyName = "HORA_PREVISTA";
-            this.HORA_PREVISTA.HeaderText = "Hora Prevista:";
-            this.HORA_PREVISTA.Name = "HORA_PREVISTA";
-            this.HORA_PREVISTA.ReadOnly = true;
-            // 
-            // DATA_RETIRADA
-            // 
-            this.DATA_RETIRADA.DataPropertyName = "DATA_RETIRADA";
-            this.DATA_RETIRADA.HeaderText = "Data da Retirada:";
-            this.DATA_RETIRADA.Name = "DATA_RETIRADA";
-            this.DATA_RETIRADA.ReadOnly = true;
-            // 
-            // HORA_RETIRADA
-            // 
-            this.HORA_RETIRADA.DataPropertyName = "HORA_RETIRADA";
-            this.HORA_RETIRADA.HeaderText = "Hora da Retirada:";
-            this.HORA_RETIRADA.Name = "HORA_RETIRADA";
-            this.HORA_RETIRADA.ReadOnly = true;
-            // 
-            // TECNICO_ATUANTE
-            // 
-            this.TECNICO_ATUANTE.DataPropertyName = "TECNICO_ATUANTE";
-            this.TECNICO_ATUANTE.HeaderText = "Técnico Atuante:";
-            this.TECNICO_ATUANTE.Name = "TECNICO_ATUANTE";
-            this.TECNICO_ATUANTE.ReadOnly = true;
-            // 
-            // ORIGEM
-            // 
-            this.ORIGEM.DataPropertyName = "ORIGEM";
-            this.ORIGEM.HeaderText = "Origem";
-            this.ORIGEM.Name = "ORIGEM";
-            this.ORIGEM.ReadOnly = true;
+            this.elpPesquisar.BorderRadius = 20;
+            this.elpPesquisar.TargetControl = this.btnPesquisar;
             // 
             // FrmMoviList
             // 
@@ -1307,6 +1282,7 @@ namespace HELP_Princ
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1675, 943);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1316,30 +1292,30 @@ namespace HELP_Princ
             this.Load += new System.EventHandler(this.FrmMoviList_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tAREFA_BANCADABindingSource)).EndInit();
             this.pnlGrid.ResumeLayout(false);
             this.tbcEstagios.ResumeLayout(false);
             this.tabRetirada.ResumeLayout(false);
+            this.tabRetirada.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgRetirada)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
-            this.pnlFooterRetirada.ResumeLayout(false);
-            this.pnlFooterRetirada.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mOVIBindingNavigator)).EndInit();
-            this.mOVIBindingNavigator.ResumeLayout(false);
-            this.mOVIBindingNavigator.PerformLayout();
             this.tabTarefa.ResumeLayout(false);
             this.tabTarefa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgTarefa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tAREFA_BANCADABindingSource)).EndInit();
             this.pnlFooterTarefa.ResumeLayout(false);
             this.pnlFooterTarefa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
+            this.bindingNavigator2.ResumeLayout(false);
+            this.bindingNavigator2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.tabEntrega.ResumeLayout(false);
             this.tabEntrega.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mOVIBindingNavigator)).EndInit();
+            this.mOVIBindingNavigator.ResumeLayout(false);
+            this.mOVIBindingNavigator.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1348,79 +1324,20 @@ namespace HELP_Princ
 
         private Guna.UI2.WinForms.Guna2Panel pnlHeader;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTitulo;
-        private Guna.UI2.WinForms.Guna2Panel pnlGrid;
         private helpdesk01DataSet helpdesk01DataSet;
-        private Guna.UI2.WinForms.Guna2TabControl tbcEstagios;
-        private TabPage tabRetirada;
-        private TabPage tabTarefa;
-        private TabPage tabEntrega;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2Panel pnlFooterRetirada;
-        private BindingNavigator mOVIBindingNavigator;
-        private ToolStripLabel bindingNavigatorCountItem;
-        private ToolStripButton bindingNavigatorMoveFirstItem;
-        private ToolStripButton bindingNavigatorMovePreviousItem;
-        private ToolStripSeparator bindingNavigatorSeparator;
-        private ToolStripTextBox bindingNavigatorPositionItem;
-        private ToolStripSeparator bindingNavigatorSeparator1;
-        private ToolStripButton bindingNavigatorMoveNextItem;
-        private ToolStripButton bindingNavigatorMoveLastItem;
-        private ToolStripSeparator toolStripSeparator1;
-        private ToolStripButton btnIncluirRETIRADA;
-        private ToolStripSeparator toolStripSeparator2;
-        private ToolStripButton toolStripButton2;
-        private Guna.UI2.WinForms.Guna2DataGridView dbgRetirada;
         private DataGridViewTextBoxColumn sITUACAODataGridViewTextBoxColumn;
         private Guna.UI2.WinForms.Guna2Elipse elpGrid;
         private Guna.UI2.WinForms.Guna2Elipse elpTab;
         private BindingSource mOVI_RETIRADABindingSource;
         private helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter mOVI_RETIRADATableAdapter;
-        private Guna.UI2.WinForms.Guna2Panel pnlFooterTarefa;
-        private BindingNavigator bindingNavigator1;
-        private ToolStripLabel toolStripLabel1;
-        private ToolStripSeparator toolStripSeparator3;
-        private ToolStripTextBox toolStripTextBox1;
-        private ToolStripSeparator toolStripSeparator4;
-        private ToolStripSeparator toolStripSeparator5;
-        private ToolStripButton btnIncluirTAREFA;
-        private ToolStripSeparator toolStripSeparator6;
-        private ToolStripButton btnVoltarTAREFA;
-        private Guna.UI2.WinForms.Guna2DataGridView dbgTarefa;
-        private DataGridViewImageColumn dataGridViewImageColumn1;
-        private DataGridViewImageColumn dataGridViewImageColumn2;
-        private DataGridViewImageColumn dataGridViewImageColumn3;
-        private DataGridViewImageColumn dataGridViewImageColumn4;
-        private DataGridViewImageColumn dataGridViewImageColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private Guna.UI2.WinForms.Guna2Elipse elpGridTarefa;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton3;
-        private ToolStripButton toolStripButton4;
-        private ToolStripButton toolStripButton5;
         private BindingSource tAREFA_BANCADABindingSource;
         private helpdesk01DataSetTableAdapters.TAREFA_BANCADATableAdapter tAREFA_BANCADATableAdapter;
         private helpdesk01DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private ToolStripSeparator toolStripSeparator7;
-        private ToolStripButton btnFiltroRETIRADA;
-        private ToolStripSeparator toolStripSeparator8;
+        private Guna.UI2.WinForms.Guna2Panel pnlGrid;
+        private Guna.UI2.WinForms.Guna2TabControl tbcEstagios;
+        private TabPage tabRetirada;
+        private Guna.UI2.WinForms.Guna2DataGridView dbgRetirada;
         private DataGridViewImageColumn btnRetiradaEdicao;
         private DataGridViewImageColumn btnRegistrarRegistrar;
         private DataGridViewImageColumn btnFreeze;
@@ -1445,5 +1362,63 @@ namespace HELP_Princ
         private DataGridViewTextBoxColumn HORA_RETIRADA;
         private DataGridViewTextBoxColumn TECNICO_ATUANTE;
         private DataGridViewTextBoxColumn ORIGEM;
+        private TabPage tabTarefa;
+        private Guna.UI2.WinForms.Guna2DataGridView dbgTarefa;
+        private DataGridViewImageColumn dataGridViewImageColumn1;
+        private DataGridViewImageColumn dataGridViewImageColumn2;
+        private DataGridViewImageColumn dataGridViewImageColumn3;
+        private DataGridViewImageColumn dataGridViewImageColumn4;
+        private DataGridViewImageColumn dataGridViewImageColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private Guna.UI2.WinForms.Guna2Panel pnlFooterTarefa;
+        private BindingNavigator bindingNavigator2;
+        private ToolStripLabel toolStripLabel2;
+        private ToolStripButton toolStripButton8;
+        private ToolStripButton toolStripButton9;
+        private ToolStripSeparator toolStripSeparator11;
+        private ToolStripTextBox toolStripTextBox2;
+        private ToolStripSeparator toolStripSeparator12;
+        private ToolStripButton toolStripButton10;
+        private ToolStripButton toolStripButton11;
+        private ToolStripSeparator toolStripSeparator13;
+        private ToolStripButton btnIncluirTAREFA;
+        private ToolStripSeparator toolStripSeparator14;
+        private ToolStripButton btnVoltarTAREFA;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private TabPage tabEntrega;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private BindingNavigator mOVIBindingNavigator;
+        private ToolStripLabel bindingNavigatorCountItem;
+        private ToolStripButton bindingNavigatorMoveFirstItem;
+        private ToolStripButton bindingNavigatorMovePreviousItem;
+        private ToolStripSeparator bindingNavigatorSeparator;
+        private ToolStripTextBox bindingNavigatorPositionItem;
+        private ToolStripSeparator bindingNavigatorSeparator1;
+        private ToolStripButton bindingNavigatorMoveNextItem;
+        private ToolStripButton bindingNavigatorMoveLastItem;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripButton btnIncluirRETIRADA;
+        private ToolStripSeparator toolStripSeparator8;
+        private ToolStripButton toolStripButton2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button btnPesquisar;
+        private Guna.UI2.WinForms.Guna2Elipse elpPesquisar;
     }
 }

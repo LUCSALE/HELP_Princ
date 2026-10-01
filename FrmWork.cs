@@ -21,6 +21,9 @@ namespace HELP_Princ
 
         private void FrmWork_Load(object sender, EventArgs e)
         {
+            // Ajusta espaçamento das linhas dos GRID´S
+            dbgRetirada.RowTemplate.Height = 45;      // Estilo das células     
+            dbgTarefa.RowTemplate.Height = 45;      // Estilo das células     
 
             // Inicia a ABA: RETIRADA DE EQUIPAMENTO
             tbcEstagios.SelectedIndex = 0;
@@ -112,16 +115,13 @@ namespace HELP_Princ
 
         private void dbgRetirada_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //MessageBox.Show(dbgRetirada.CurrentRow.Cells[15].Value.ToString().Trim(), "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             if (e.ColumnIndex == 0)
             {
-                // Editar o registro
-                // 
-                //InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[5].Value; // Pega o ID da pesquisa   
-                //InfoApp.opcao = "Editar RETIRADA DE EQUIPAMENTO";
-                //FrmMoviRetirada MoviRetirada = new FrmMoviRetirada();
-                //MoviRetirada.ShowDialog();
+                
 
-                if (dbgRetirada.CurrentRow.Cells[14].Value.ToString().Trim() == "CONCLUÍDO")
+                if (dbgRetirada.CurrentRow.Cells[15].Value.ToString().Trim() == "CONCLUÍDO")
                 {
                     MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível EDITAR !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
@@ -130,7 +130,7 @@ namespace HELP_Princ
                 {
                     // Editar o registro
                     // 
-                    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[5].Value; // Pega o ID da pesquisa   
+                    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa   
                     InfoApp.opcao = "Editar RETIRADA DE EQUIPAMENTO";
                     FrmMoviRetirada MoviRetirada = new FrmMoviRetirada();
                     MoviRetirada.ShowDialog();
@@ -139,7 +139,7 @@ namespace HELP_Princ
 
             if (e.ColumnIndex == 1)
             {
-                if (dbgRetirada.CurrentRow.Cells[14].Value.ToString().Trim() == "CONCLUÍDO")
+                if (dbgRetirada.CurrentRow.Cells[15].Value.ToString().Trim() == "CONCLUÍDO")
                 {
                     MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível BAIXAR !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
@@ -148,7 +148,7 @@ namespace HELP_Princ
                 {
                     // BAIXA do registro
                     // 
-                    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[5].Value; // Pega o ID da pesquisa   
+                    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa   
                     InfoApp.opcao = "Baixa RETIRADA DE EQUIPAMENTO";
                     FrmMoviRetiradaBaixa MoviRetiradaBaixa = new FrmMoviRetiradaBaixa();
                     MoviRetiradaBaixa.ShowDialog();
@@ -158,9 +158,9 @@ namespace HELP_Princ
                 }
             }
 
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex == 3)
             {
-                if (dbgRetirada.CurrentRow.Cells[14].Value.ToString().Trim() == "CONCLUÍDO")
+                if (dbgRetirada.CurrentRow.Cells[15].Value.ToString().Trim() == "CONCLUÍDO")
                 {
                     MessageBox.Show("Registro CONCLUÍDO, não é possível EXCLUÍR !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
@@ -195,7 +195,7 @@ namespace HELP_Princ
                                 // Criar o comando SQL
                                 using (SqlCommand command = new SqlCommand(strSql, connection))
                                 {
-                                    command.Parameters.AddWithValue("@ID", (int)dbgRetirada.CurrentRow.Cells[3].Value); // Pega o ID da pesquisa   
+                                    command.Parameters.AddWithValue("@ID", (int)dbgRetirada.CurrentRow.Cells[6].Value); // Pega o ID da pesquisa   
 
                                     // Executar o comando SQL
                                     int rowsAffected = command.ExecuteNonQuery();
@@ -231,7 +231,7 @@ namespace HELP_Princ
             //        // IMPRESSÃO do registro
             //        //
             //        InfoWork.strWork = "MOVIRETIRADA_LIST";
-            //        InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[5].Value; // Pega o ID da pesquisa
+            //        InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa
             //        FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
             //        MoviRetiradaImpressao.ShowDialog();
             //    }
@@ -243,7 +243,7 @@ namespace HELP_Princ
             //    //
 
             //    InfoWork.strWork_b = "ATUALIZA TAREFA BANCADA"; 
-            //    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[5].Value; // Pega o ID da pesquisa
+            //    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa
             //    FrmMoviRetiradaMovimentacao MoviRetiradaMovimentacao = new FrmMoviRetiradaMovimentacao();
             //    MoviRetiradaMovimentacao.ShowDialog();
 
@@ -258,7 +258,7 @@ namespace HELP_Princ
             //    //{
             //    //    // MOVIMENTAÇÃO do registro
             //    //    //
-            //    //    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[5].Value; // Pega o ID da pesquisa
+            //    //    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa
             //    //    FrmMoviRetiradaMovimentacao MoviRetiradaMovimentacao = new FrmMoviRetiradaMovimentacao();
             //    //    MoviRetiradaMovimentacao.ShowDialog();
             //    //}
@@ -306,12 +306,14 @@ namespace HELP_Princ
             {
                 // Atualiza o GRID - RETIRADA DE EQUIPAMENTO
                 fcnAtuRetirada();
-
+                
 
             }
             else if (tbcEstagios.SelectedIndex == 1)
             {
                 // Atualiza o GRID - TAREFA BANCADA
+                fcnAtuTarefa(); 
+
             }
         }
 
@@ -335,6 +337,23 @@ namespace HELP_Princ
             dbgRetirada.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
+        private void fcnAtuTarefa()
+        {
+            // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.TAREFA_BANCADA'. Você pode movê-la ou removê-la conforme necessário.
+            this.tAREFA_BANCADATableAdapter.Fill(this.helpdesk01DataSet.TAREFA_BANCADA);
+
+            // Ajuste do GRID - Espaçamento , cores e estilo das células
+            dbgTarefa.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
+            dbgTarefa.GridColor = Color.White;      // Remove borda padrão     
+            dbgTarefa.CellBorderStyle = DataGridViewCellBorderStyle.Single;      // Espaçamento visual
+            dbgTarefa.RowTemplate.Height = 45;      // Estilo das células     
+            dbgTarefa.DefaultCellStyle.Padding = new Padding(5);
+
+            // Ajuste do GRID - Ativa SCROLL horizontal
+            dbgTarefa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
+
+        }
     }
 }
 
