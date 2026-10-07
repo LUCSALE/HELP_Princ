@@ -13,7 +13,7 @@
     <Shape ID="DesignTable:EQUIPAMENTOS" ZOrder="5" X="1594" Y="63" Height="248" Width="241" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:NUMERACAO_ID" ZOrder="3" X="1905" Y="63" Height="134" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:MOVI_RETIRADA" ZOrder="2" X="1176" Y="61" Height="343" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="254" />
-    <Shape ID="DesignTable:TAREFA_BANCADA" ZOrder="1" X="2275" Y="61" Height="305" Width="256" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
+    <Shape ID="DesignTable:TAREFA_BANCADA" ZOrder="1" X="2275" Y="61" Height="324" Width="256" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
   </Shapes>
   <Connectors />
 </DiagramLayout>

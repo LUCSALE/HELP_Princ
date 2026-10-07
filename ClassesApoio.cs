@@ -93,6 +93,13 @@ namespace HELP_Princ
             set { m_ID = value; }
         }
 
+        private static string  m_FREEZE = "";
+        public static string FREEZE
+        {
+            get { return m_FREEZE; }
+            set { m_FREEZE = value; }
+        }
+
     }
 
     public static class InfoWork

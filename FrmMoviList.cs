@@ -21,6 +21,33 @@ namespace HELP_Princ
 
         private void FrmMoviList_Load(object sender, EventArgs e)
         {
+            // Ajuste do GRID: dbgRetirada - Espaçamento , cores e estilo das células
+                dbgRetirada.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
+                dbgRetirada.GridColor = Color.White;      // Remove borda padrão     
+                dbgRetirada.CellBorderStyle = DataGridViewCellBorderStyle.Single;      // Espaçamento visual
+                dbgRetirada.RowTemplate.Height = 45;      // Estilo das células     
+                dbgRetirada.DefaultCellStyle.BackColor = Color.LightBlue;
+                dbgRetirada.DefaultCellStyle.SelectionBackColor = Color.RoyalBlue;      // Margem interna do texto
+                dbgRetirada.DefaultCellStyle.Padding = new Padding(5);
+
+            // Ajuste do GRID: dbgRetirada - Ativa SCROLL horizontal
+                dbgRetirada.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
+
+            // Ajuste do GRID: dbgTarefa - Espaçamento , cores e estilo das células
+                dbgTarefa.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
+                dbgTarefa.GridColor = Color.White;      // Remove borda padrão     
+                dbgTarefa.CellBorderStyle = DataGridViewCellBorderStyle.Single;      // Espaçamento visual
+                dbgTarefa.RowTemplate.Height = 45;      // Estilo das células     
+                dbgTarefa.DefaultCellStyle.Padding = new Padding(5);
+
+            // Ajuste do GRID - Ativa SCROLL horizontal
+                dbgTarefa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
+
+            // Inicializa a variável de controle do modo FREEZE 
+            InfoPesq.FREEZE = "PESQUISA";
+
             // Ajusta espaçamento das linhas dos GRID´S
             dbgRetirada.RowTemplate.Height = 45;      // Estilo das células     
             dbgTarefa.RowTemplate.Height = 45;      // Estilo das células     
@@ -28,9 +55,9 @@ namespace HELP_Princ
             // Inicia a ABA: RETIRADA DE EQUIPAMENTO
             tbcEstagios.SelectedIndex = 0;
 
-            // Atualiza o GRID - RETIRADA DE EQUIPAMENTO
+            // Atualiza o GRID:RETIRADA DE EQUIPAMENTO + TAREFA BANCADA
             fcnAtuRetirada();
-
+            fcnAtuTarefa();
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
@@ -115,7 +142,7 @@ namespace HELP_Princ
 
         private void dbgRetirada_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //MessageBox.Show(dbgRetirada.CurrentRow.Cells[15].Value.ToString().Trim(), "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            
 
             if (e.ColumnIndex == 0)
             {
@@ -156,6 +183,28 @@ namespace HELP_Princ
 
 
                 }
+            }
+
+            if (e.ColumnIndex == 2)
+            {
+                if (InfoPesq.FREEZE == "FREEZE")
+                {
+                    InfoPesq.FREEZE = "PESQUISA";
+                    fcnAtuRetirada();
+                    fcnAtuTarefa();
+
+                }
+                else
+                {
+                    InfoPesq.ID = ((int)dbgRetirada.CurrentRow.Cells[6].Value); // Pega o ID da pesquisa   
+                    InfoPesq.FREEZE = "FREEZE";
+                    fcnAtuRetirada();
+                    fcnAtuTarefa();
+
+                }
+                lblModalidade.Text = "Modalidade: " + InfoPesq.FREEZE;
+
+                return;
             }
 
             if (e.ColumnIndex == 3)
@@ -319,39 +368,45 @@ namespace HELP_Princ
 
         private void fcnAtuRetirada()
         {
-            // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.MOVI_RETIRADA'. Você pode movê-la ou removê-la conforme necessário.
-            this.mOVI_RETIRADATableAdapter.Fill(this.helpdesk01DataSet.MOVI_RETIRADA);
+            if (InfoPesq.FREEZE == "FREEZE")
+            {
+
+                // Pesquisa de RETIRADA DE EQUIPAMENTO - MODO FREEZE
+                this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
+
+            }
+            else
+            {
+                // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.MOVI_RETIRADA'. Você pode movê-la ou removê-la conforme necessário.
+                this.mOVI_RETIRADATableAdapter.Fill(this.helpdesk01DataSet.MOVI_RETIRADA);
 
 
-
-            // Ajuste do GRID - Espaçamento , cores e estilo das células
-            dbgRetirada.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
-            dbgRetirada.GridColor = Color.White;      // Remove borda padrão     
-            dbgRetirada.CellBorderStyle = DataGridViewCellBorderStyle.Single;      // Espaçamento visual
-            dbgRetirada.RowTemplate.Height = 45;      // Estilo das células     
-            dbgRetirada.DefaultCellStyle.BackColor = Color.LightBlue;
-            dbgRetirada.DefaultCellStyle.SelectionBackColor = Color.RoyalBlue;      // Margem interna do texto
-            dbgRetirada.DefaultCellStyle.Padding = new Padding(5);
-
-            // Ajuste do GRID - Ativa SCROLL horizontal
-            dbgRetirada.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            }
         }
 
         private void fcnAtuTarefa()
         {
-            // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.TAREFA_BANCADA'. Você pode movê-la ou removê-la conforme necessário.
-            this.tAREFA_BANCADATableAdapter.Fill(this.helpdesk01DataSet.TAREFA_BANCADA);
+            if (InfoPesq.FREEZE == "FREEZE")
+            {
 
-            // Ajuste do GRID - Espaçamento , cores e estilo das células
-            dbgTarefa.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
-            dbgTarefa.GridColor = Color.White;      // Remove borda padrão     
-            dbgTarefa.CellBorderStyle = DataGridViewCellBorderStyle.Single;      // Espaçamento visual
-            dbgTarefa.RowTemplate.Height = 45;      // Estilo das células     
-            dbgTarefa.DefaultCellStyle.Padding = new Padding(5);
+                // Pesquisa de TAREFA BANCADA - MODO FREEZE
+                this.tAREFA_BANCADATableAdapter.FillByID(this.helpdesk01DataSet.TAREFA_BANCADA, InfoPesq.ID);
 
-            // Ajuste do GRID - Ativa SCROLL horizontal
-            dbgTarefa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            }
+            else
+            {
+                // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.TAREFA_BANCADA'. Você pode movê-la ou removê-la conforme necessário.
+                this.tAREFA_BANCADATableAdapter.Fill(this.helpdesk01DataSet.TAREFA_BANCADA);
+            }
+        }
 
+        private void lblTitulo_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lblModalidade_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

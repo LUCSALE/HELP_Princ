@@ -32,78 +32,38 @@ namespace HELP_Princ
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMoviList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.mOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
-            this.tAREFA_BANCADABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.elpGrid = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.elpTab = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.mOVI_RETIRADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter();
-            this.elpGridTarefa = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.tAREFA_BANCADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TAREFA_BANCADATableAdapter();
-            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
-            this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
-            this.tbcEstagios = new Guna.UI2.WinForms.Guna2TabControl();
-            this.tabRetirada = new System.Windows.Forms.TabPage();
             this.dbgRetirada = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnRetiradaEdicao = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnRegistrarRegistrar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnFreeze = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnRetiradaExcluir = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnImpressao = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnMovimentacao = new System.Windows.Forms.DataGridViewImageColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hORADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TECNICO_SOLICITANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NUMERO_OS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAMALTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nOMEUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pREDIOSETORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MODALIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SITUACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PATRIMONIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HORA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HORA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TECNICO_ATUANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ORIGEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabTarefa = new System.Windows.Forms.TabPage();
+            this.elpTab = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.elpGridTarefa = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dbgTarefa = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -114,6 +74,23 @@ namespace HELP_Princ
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
+            this.tbcEstagios = new Guna.UI2.WinForms.Guna2TabControl();
+            this.tabRetirada = new System.Windows.Forms.TabPage();
+            this.mOVIBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnIncluirRETIRADA = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.tabTarefa = new System.Windows.Forms.TabPage();
             this.pnlFooterTarefa = new Guna.UI2.WinForms.Guna2Panel();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
@@ -131,41 +108,65 @@ namespace HELP_Princ
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tabEntrega = new System.Windows.Forms.TabPage();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.mOVIBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnIncluirRETIRADA = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnPesquisar = new Guna.UI2.WinForms.Guna2Button();
             this.elpPesquisar = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnRetiradaEdicao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnRegistrarRegistrar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnFreeze = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnRetiradaExcluir = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnImpressao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnMovimentacao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.TECNICO_SOLICITANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NUMERO_OS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MODALIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SITUACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PATRIMONIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HORA_PREVISTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HORA_RETIRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TECNICO_ATUANTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ORIGEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hORADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAMALTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOMEUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pREDIOSETORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tAREFA_BANCADABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mOVI_RETIRADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter();
+            this.tAREFA_BANCADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TAREFA_BANCADATableAdapter();
+            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
+            this.lblModalidade = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tAREFA_BANCADABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbgRetirada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbgTarefa)).BeginInit();
             this.pnlGrid.SuspendLayout();
             this.tbcEstagios.SuspendLayout();
             this.tabRetirada.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbgRetirada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mOVIBindingNavigator)).BeginInit();
+            this.mOVIBindingNavigator.SuspendLayout();
             this.tabTarefa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbgTarefa)).BeginInit();
             this.pnlFooterTarefa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.tabEntrega.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mOVIBindingNavigator)).BeginInit();
-            this.mOVIBindingNavigator.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tAREFA_BANCADABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -173,6 +174,7 @@ namespace HELP_Princ
             this.pnlHeader.BorderColor = System.Drawing.Color.SlateGray;
             this.pnlHeader.BorderRadius = 10;
             this.pnlHeader.BorderThickness = 1;
+            this.pnlHeader.Controls.Add(this.lblModalidade);
             this.pnlHeader.Controls.Add(this.lblTitulo);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 2);
@@ -192,130 +194,31 @@ namespace HELP_Princ
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.TabStop = false;
             this.lblTitulo.Text = "Movimentações";
-            // 
-            // mOVI_RETIRADABindingSource
-            // 
-            this.mOVI_RETIRADABindingSource.DataMember = "MOVI_RETIRADA";
-            this.mOVI_RETIRADABindingSource.DataSource = this.helpdesk01DataSet;
-            // 
-            // helpdesk01DataSet
-            // 
-            this.helpdesk01DataSet.DataSetName = "helpdesk01DataSet";
-            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tAREFA_BANCADABindingSource
-            // 
-            this.tAREFA_BANCADABindingSource.DataMember = "TAREFA_BANCADA";
-            this.tAREFA_BANCADABindingSource.DataSource = this.helpdesk01DataSet;
+            this.lblTitulo.TextChanged += new System.EventHandler(this.lblTitulo_TextChanged);
             // 
             // elpGrid
             // 
             this.elpGrid.BorderRadius = 10;
             this.elpGrid.TargetControl = this.dbgRetirada;
             // 
-            // elpTab
-            // 
-            this.elpTab.BorderRadius = 10;
-            // 
-            // mOVI_RETIRADATableAdapter
-            // 
-            this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
-            // 
-            // elpGridTarefa
-            // 
-            this.elpGridTarefa.BorderRadius = 10;
-            this.elpGridTarefa.TargetControl = this.dbgTarefa;
-            // 
-            // tAREFA_BANCADATableAdapter
-            // 
-            this.tAREFA_BANCADATableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
-            this.tableAdapterManager.MOVI_RETIRADATableAdapter = this.mOVI_RETIRADATableAdapter;
-            this.tableAdapterManager.MOVITableAdapter = null;
-            this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
-            this.tableAdapterManager.SERVICOSTableAdapter = null;
-            this.tableAdapterManager.TAREFA_BANCADATableAdapter = this.tAREFA_BANCADATableAdapter;
-            this.tableAdapterManager.TECNICOSTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USUARIOSTableAdapter = null;
-            // 
-            // pnlGrid
-            // 
-            this.pnlGrid.Controls.Add(this.tbcEstagios);
-            this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGrid.Location = new System.Drawing.Point(0, 40);
-            this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(1675, 862);
-            this.pnlGrid.TabIndex = 4;
-            // 
-            // tbcEstagios
-            // 
-            this.tbcEstagios.Controls.Add(this.tabRetirada);
-            this.tbcEstagios.Controls.Add(this.tabTarefa);
-            this.tbcEstagios.Controls.Add(this.tabEntrega);
-            this.tbcEstagios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbcEstagios.ItemSize = new System.Drawing.Size(180, 40);
-            this.tbcEstagios.Location = new System.Drawing.Point(0, 0);
-            this.tbcEstagios.Name = "tbcEstagios";
-            this.tbcEstagios.SelectedIndex = 0;
-            this.tbcEstagios.Size = new System.Drawing.Size(1675, 862);
-            this.tbcEstagios.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
-            this.tbcEstagios.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.tbcEstagios.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.tbcEstagios.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
-            this.tbcEstagios.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.tbcEstagios.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
-            this.tbcEstagios.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.tbcEstagios.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.tbcEstagios.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
-            this.tbcEstagios.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.tbcEstagios.TabButtonImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tbcEstagios.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
-            this.tbcEstagios.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            this.tbcEstagios.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.tbcEstagios.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
-            this.tbcEstagios.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.tbcEstagios.TabButtonSize = new System.Drawing.Size(180, 40);
-            this.tbcEstagios.TabIndex = 9;
-            this.tbcEstagios.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.tbcEstagios.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
-            // 
-            // tabRetirada
-            // 
-            this.tabRetirada.AutoScroll = true;
-            this.tabRetirada.Controls.Add(this.mOVIBindingNavigator);
-            this.tabRetirada.Controls.Add(this.dbgRetirada);
-            this.tabRetirada.ImageKey = "(nenhum/a)";
-            this.tabRetirada.Location = new System.Drawing.Point(4, 44);
-            this.tabRetirada.Name = "tabRetirada";
-            this.tabRetirada.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRetirada.Size = new System.Drawing.Size(1667, 814);
-            this.tabRetirada.TabIndex = 0;
-            this.tabRetirada.Text = "Retirada de Equipamento";
-            this.tabRetirada.UseVisualStyleBackColor = true;
-            // 
             // dbgRetirada
             // 
             this.dbgRetirada.AllowUserToAddRows = false;
             this.dbgRetirada.AllowUserToDeleteRows = false;
             this.dbgRetirada.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(229)))), ((int)(((byte)(251)))));
-            this.dbgRetirada.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(229)))), ((int)(((byte)(251)))));
+            this.dbgRetirada.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle52;
             this.dbgRetirada.AutoGenerateColumns = false;
             this.dbgRetirada.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgRetirada.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle53.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle53.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgRetirada.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle53;
             this.dbgRetirada.ColumnHeadersHeight = 30;
             this.dbgRetirada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dbgRetirada.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -344,32 +247,32 @@ namespace HELP_Princ
             this.TECNICO_ATUANTE,
             this.ORIGEM});
             this.dbgRetirada.DataSource = this.mOVI_RETIRADABindingSource;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(237)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(197)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dbgRetirada.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(237)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle58.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(197)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dbgRetirada.DefaultCellStyle = dataGridViewCellStyle58;
             this.dbgRetirada.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbgRetirada.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(230)))), ((int)(((byte)(251)))));
             this.dbgRetirada.Location = new System.Drawing.Point(3, 3);
             this.dbgRetirada.MultiSelect = false;
             this.dbgRetirada.Name = "dbgRetirada";
             this.dbgRetirada.ReadOnly = true;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgRetirada.RowHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle59.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle59.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgRetirada.RowHeadersDefaultCellStyle = dataGridViewCellStyle59;
             this.dbgRetirada.RowHeadersVisible = false;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgRetirada.RowsDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgRetirada.RowsDefaultCellStyle = dataGridViewCellStyle60;
             this.dbgRetirada.RowTemplate.DividerHeight = 2;
             this.dbgRetirada.Size = new System.Drawing.Size(1661, 808);
             this.dbgRetirada.TabIndex = 5;
@@ -395,250 +298,35 @@ namespace HELP_Princ
             this.dbgRetirada.ThemeStyle.RowsStyle.Height = 22;
             this.dbgRetirada.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(197)))), ((int)(((byte)(247)))));
             this.dbgRetirada.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dbgRetirada.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgRetirada_CellContentClick);
             // 
-            // btnRetiradaEdicao
+            // elpTab
             // 
-            this.btnRetiradaEdicao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle20.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle20.NullValue")));
-            this.btnRetiradaEdicao.DefaultCellStyle = dataGridViewCellStyle20;
-            this.btnRetiradaEdicao.HeaderText = "Editar:";
-            this.btnRetiradaEdicao.Image = ((System.Drawing.Image)(resources.GetObject("btnRetiradaEdicao.Image")));
-            this.btnRetiradaEdicao.Name = "btnRetiradaEdicao";
-            this.btnRetiradaEdicao.ReadOnly = true;
-            this.btnRetiradaEdicao.Width = 51;
+            this.elpTab.BorderRadius = 10;
             // 
-            // btnRegistrarRegistrar
+            // elpGridTarefa
             // 
-            this.btnRegistrarRegistrar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.btnRegistrarRegistrar.HeaderText = "Baixar:";
-            this.btnRegistrarRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarRegistrar.Image")));
-            this.btnRegistrarRegistrar.Name = "btnRegistrarRegistrar";
-            this.btnRegistrarRegistrar.ReadOnly = true;
-            this.btnRegistrarRegistrar.Width = 53;
-            // 
-            // btnFreeze
-            // 
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(230)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle21.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle21.NullValue")));
-            this.btnFreeze.DefaultCellStyle = dataGridViewCellStyle21;
-            this.btnFreeze.HeaderText = "Freeze:";
-            this.btnFreeze.Image = ((System.Drawing.Image)(resources.GetObject("btnFreeze.Image")));
-            this.btnFreeze.Name = "btnFreeze";
-            this.btnFreeze.ReadOnly = true;
-            this.btnFreeze.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // btnRetiradaExcluir
-            // 
-            this.btnRetiradaExcluir.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.btnRetiradaExcluir.HeaderText = "Excluir:";
-            this.btnRetiradaExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnRetiradaExcluir.Image")));
-            this.btnRetiradaExcluir.Name = "btnRetiradaExcluir";
-            this.btnRetiradaExcluir.ReadOnly = true;
-            this.btnRetiradaExcluir.Width = 55;
-            // 
-            // btnImpressao
-            // 
-            this.btnImpressao.HeaderText = "Impressão:";
-            this.btnImpressao.Image = ((System.Drawing.Image)(resources.GetObject("btnImpressao.Image")));
-            this.btnImpressao.Name = "btnImpressao";
-            this.btnImpressao.ReadOnly = true;
-            this.btnImpressao.Visible = false;
-            // 
-            // btnMovimentacao
-            // 
-            this.btnMovimentacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.btnMovimentacao.HeaderText = "Movimentação:";
-            this.btnMovimentacao.Image = ((System.Drawing.Image)(resources.GetObject("btnMovimentacao.Image")));
-            this.btnMovimentacao.Name = "btnMovimentacao";
-            this.btnMovimentacao.ReadOnly = true;
-            this.btnMovimentacao.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnMovimentacao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnMovimentacao.Visible = false;
-            this.btnMovimentacao.Width = 105;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID:";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Width = 54;
-            // 
-            // dATADataGridViewTextBoxColumn
-            // 
-            this.dATADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dATADataGridViewTextBoxColumn.DataPropertyName = "DATA";
-            this.dATADataGridViewTextBoxColumn.HeaderText = "Data:";
-            this.dATADataGridViewTextBoxColumn.Name = "dATADataGridViewTextBoxColumn";
-            this.dATADataGridViewTextBoxColumn.ReadOnly = true;
-            this.dATADataGridViewTextBoxColumn.Width = 66;
-            // 
-            // hORADataGridViewTextBoxColumn
-            // 
-            this.hORADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.hORADataGridViewTextBoxColumn.DataPropertyName = "HORA";
-            this.hORADataGridViewTextBoxColumn.HeaderText = "Hora:";
-            this.hORADataGridViewTextBoxColumn.Name = "hORADataGridViewTextBoxColumn";
-            this.hORADataGridViewTextBoxColumn.ReadOnly = true;
-            this.hORADataGridViewTextBoxColumn.Width = 66;
-            // 
-            // TECNICO_SOLICITANTE
-            // 
-            this.TECNICO_SOLICITANTE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.TECNICO_SOLICITANTE.DataPropertyName = "TECNICO_SOLICITANTE";
-            this.TECNICO_SOLICITANTE.HeaderText = "Técnico Solicitante:";
-            this.TECNICO_SOLICITANTE.Name = "TECNICO_SOLICITANTE";
-            this.TECNICO_SOLICITANTE.ReadOnly = true;
-            this.TECNICO_SOLICITANTE.Width = 134;
-            // 
-            // NUMERO_OS
-            // 
-            this.NUMERO_OS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.NUMERO_OS.DataPropertyName = "NUMERO_OS";
-            this.NUMERO_OS.HeaderText = "Número O.S.:";
-            this.NUMERO_OS.Name = "NUMERO_OS";
-            this.NUMERO_OS.ReadOnly = true;
-            this.NUMERO_OS.Width = 104;
-            // 
-            // rAMALTELDataGridViewTextBoxColumn
-            // 
-            this.rAMALTELDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.rAMALTELDataGridViewTextBoxColumn.DataPropertyName = "RAMAL_TEL";
-            this.rAMALTELDataGridViewTextBoxColumn.HeaderText = "Ramal / Tel.:";
-            this.rAMALTELDataGridViewTextBoxColumn.Name = "rAMALTELDataGridViewTextBoxColumn";
-            this.rAMALTELDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rAMALTELDataGridViewTextBoxColumn.Width = 102;
-            // 
-            // nOMEUSUARIODataGridViewTextBoxColumn
-            // 
-            this.nOMEUSUARIODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.nOMEUSUARIODataGridViewTextBoxColumn.DataPropertyName = "NOME_USUARIO";
-            this.nOMEUSUARIODataGridViewTextBoxColumn.HeaderText = "Usuário:";
-            this.nOMEUSUARIODataGridViewTextBoxColumn.Name = "nOMEUSUARIODataGridViewTextBoxColumn";
-            this.nOMEUSUARIODataGridViewTextBoxColumn.ReadOnly = true;
-            this.nOMEUSUARIODataGridViewTextBoxColumn.Width = 79;
-            // 
-            // pREDIOSETORDataGridViewTextBoxColumn
-            // 
-            this.pREDIOSETORDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.pREDIOSETORDataGridViewTextBoxColumn.DataPropertyName = "PREDIO_SETOR";
-            this.pREDIOSETORDataGridViewTextBoxColumn.HeaderText = "Prédio / Setor:";
-            this.pREDIOSETORDataGridViewTextBoxColumn.Name = "pREDIOSETORDataGridViewTextBoxColumn";
-            this.pREDIOSETORDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pREDIOSETORDataGridViewTextBoxColumn.Width = 109;
-            // 
-            // MODALIDADE
-            // 
-            this.MODALIDADE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.MODALIDADE.DataPropertyName = "MODALIDADE";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.MODALIDADE.DefaultCellStyle = dataGridViewCellStyle22;
-            this.MODALIDADE.HeaderText = "Modalidade:";
-            this.MODALIDADE.Name = "MODALIDADE";
-            this.MODALIDADE.ReadOnly = true;
-            this.MODALIDADE.Width = 98;
-            // 
-            // SITUACAO
-            // 
-            this.SITUACAO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.SITUACAO.DataPropertyName = "SITUACAO";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.SITUACAO.DefaultCellStyle = dataGridViewCellStyle23;
-            this.SITUACAO.HeaderText = "Situação:";
-            this.SITUACAO.Name = "SITUACAO";
-            this.SITUACAO.ReadOnly = true;
-            this.SITUACAO.Width = 85;
-            // 
-            // PATRIMONIO
-            // 
-            this.PATRIMONIO.DataPropertyName = "PATRIMONIO";
-            this.PATRIMONIO.HeaderText = "Patrimonio:";
-            this.PATRIMONIO.Name = "PATRIMONIO";
-            this.PATRIMONIO.ReadOnly = true;
-            // 
-            // SAI
-            // 
-            this.SAI.DataPropertyName = "SAI";
-            this.SAI.HeaderText = "SAI.:";
-            this.SAI.Name = "SAI";
-            this.SAI.ReadOnly = true;
-            // 
-            // DATA_PREVISTA
-            // 
-            this.DATA_PREVISTA.DataPropertyName = "DATA_PREVISTA";
-            this.DATA_PREVISTA.HeaderText = "Data Prevista:";
-            this.DATA_PREVISTA.Name = "DATA_PREVISTA";
-            this.DATA_PREVISTA.ReadOnly = true;
-            // 
-            // HORA_PREVISTA
-            // 
-            this.HORA_PREVISTA.DataPropertyName = "HORA_PREVISTA";
-            this.HORA_PREVISTA.HeaderText = "Hora Prevista:";
-            this.HORA_PREVISTA.Name = "HORA_PREVISTA";
-            this.HORA_PREVISTA.ReadOnly = true;
-            // 
-            // DATA_RETIRADA
-            // 
-            this.DATA_RETIRADA.DataPropertyName = "DATA_RETIRADA";
-            this.DATA_RETIRADA.HeaderText = "Data da Retirada:";
-            this.DATA_RETIRADA.Name = "DATA_RETIRADA";
-            this.DATA_RETIRADA.ReadOnly = true;
-            // 
-            // HORA_RETIRADA
-            // 
-            this.HORA_RETIRADA.DataPropertyName = "HORA_RETIRADA";
-            this.HORA_RETIRADA.HeaderText = "Hora da Retirada:";
-            this.HORA_RETIRADA.Name = "HORA_RETIRADA";
-            this.HORA_RETIRADA.ReadOnly = true;
-            // 
-            // TECNICO_ATUANTE
-            // 
-            this.TECNICO_ATUANTE.DataPropertyName = "TECNICO_ATUANTE";
-            this.TECNICO_ATUANTE.HeaderText = "Técnico Atuante:";
-            this.TECNICO_ATUANTE.Name = "TECNICO_ATUANTE";
-            this.TECNICO_ATUANTE.ReadOnly = true;
-            // 
-            // ORIGEM
-            // 
-            this.ORIGEM.DataPropertyName = "ORIGEM";
-            this.ORIGEM.HeaderText = "Origem";
-            this.ORIGEM.Name = "ORIGEM";
-            this.ORIGEM.ReadOnly = true;
-            // 
-            // tabTarefa
-            // 
-            this.tabTarefa.Controls.Add(this.dbgTarefa);
-            this.tabTarefa.Controls.Add(this.pnlFooterTarefa);
-            this.tabTarefa.Controls.Add(this.guna2PictureBox2);
-            this.tabTarefa.Location = new System.Drawing.Point(4, 44);
-            this.tabTarefa.Name = "tabTarefa";
-            this.tabTarefa.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTarefa.Size = new System.Drawing.Size(1667, 814);
-            this.tabTarefa.TabIndex = 1;
-            this.tabTarefa.Text = "Tarefa Bancada";
-            this.tabTarefa.UseVisualStyleBackColor = true;
+            this.elpGridTarefa.BorderRadius = 10;
+            this.elpGridTarefa.TargetControl = this.dbgTarefa;
             // 
             // dbgTarefa
             // 
             this.dbgTarefa.AllowUserToAddRows = false;
             this.dbgTarefa.AllowUserToDeleteRows = false;
             this.dbgTarefa.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
-            this.dbgTarefa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(201)))));
+            this.dbgTarefa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle61;
             this.dbgTarefa.AutoGenerateColumns = false;
             this.dbgTarefa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgTarefa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(74)))));
+            dataGridViewCellStyle62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle62.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle62.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgTarefa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle62;
             this.dbgTarefa.ColumnHeadersHeight = 30;
             this.dbgTarefa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dbgTarefa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -666,32 +354,32 @@ namespace HELP_Princ
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18});
             this.dbgTarefa.DataSource = this.tAREFA_BANCADABindingSource;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dbgTarefa.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle66.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle66.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle66.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(214)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle66.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle66.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dbgTarefa.DefaultCellStyle = dataGridViewCellStyle66;
             this.dbgTarefa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbgTarefa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(235)))), ((int)(((byte)(199)))));
             this.dbgTarefa.Location = new System.Drawing.Point(3, 3);
             this.dbgTarefa.MultiSelect = false;
             this.dbgTarefa.Name = "dbgTarefa";
             this.dbgTarefa.ReadOnly = true;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgTarefa.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle67.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle67.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle67.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle67.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle67.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgTarefa.RowHeadersDefaultCellStyle = dataGridViewCellStyle67;
             this.dbgTarefa.RowHeadersVisible = false;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgTarefa.RowsDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle68.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgTarefa.RowsDefaultCellStyle = dataGridViewCellStyle68;
             this.dbgTarefa.RowTemplate.DividerHeight = 2;
             this.dbgTarefa.Size = new System.Drawing.Size(1661, 782);
             this.dbgTarefa.TabIndex = 6;
@@ -721,9 +409,9 @@ namespace HELP_Princ
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle29.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle29.NullValue")));
-            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle63.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle63.NullValue")));
+            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle63;
             this.dataGridViewImageColumn1.HeaderText = "Editar:";
             this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
@@ -768,33 +456,6 @@ namespace HELP_Princ
             this.dataGridViewImageColumn5.Visible = false;
             this.dataGridViewImageColumn5.Width = 105;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID:";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 54;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "DATA";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Data:";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 66;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "HORA";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Hora:";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 66;
-            // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -813,39 +474,12 @@ namespace HELP_Princ
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 104;
             // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "RAMAL_TEL";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Ramal / Tel.:";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 102;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "NOME_USUARIO";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Usuário:";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 79;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "PREDIO_SETOR";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Prédio / Setor:";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 109;
-            // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dataGridViewTextBoxColumn9.DataPropertyName = "MODALIDADE";
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle64;
             this.dataGridViewTextBoxColumn9.HeaderText = "Modalidade:";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
@@ -855,8 +489,8 @@ namespace HELP_Princ
             // 
             this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dataGridViewTextBoxColumn10.DataPropertyName = "SITUACAO";
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle65;
             this.dataGridViewTextBoxColumn10.HeaderText = "Situação:";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
@@ -917,6 +551,213 @@ namespace HELP_Princ
             this.dataGridViewTextBoxColumn18.HeaderText = "Origem";
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // pnlGrid
+            // 
+            this.pnlGrid.Controls.Add(this.tbcEstagios);
+            this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGrid.Location = new System.Drawing.Point(0, 40);
+            this.pnlGrid.Name = "pnlGrid";
+            this.pnlGrid.Size = new System.Drawing.Size(1675, 862);
+            this.pnlGrid.TabIndex = 4;
+            // 
+            // tbcEstagios
+            // 
+            this.tbcEstagios.Controls.Add(this.tabRetirada);
+            this.tbcEstagios.Controls.Add(this.tabTarefa);
+            this.tbcEstagios.Controls.Add(this.tabEntrega);
+            this.tbcEstagios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbcEstagios.ItemSize = new System.Drawing.Size(180, 40);
+            this.tbcEstagios.Location = new System.Drawing.Point(0, 0);
+            this.tbcEstagios.Name = "tbcEstagios";
+            this.tbcEstagios.SelectedIndex = 0;
+            this.tbcEstagios.Size = new System.Drawing.Size(1675, 862);
+            this.tbcEstagios.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
+            this.tbcEstagios.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.tbcEstagios.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tbcEstagios.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
+            this.tbcEstagios.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.tbcEstagios.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
+            this.tbcEstagios.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.tbcEstagios.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tbcEstagios.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.tbcEstagios.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.tbcEstagios.TabButtonImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbcEstagios.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
+            this.tbcEstagios.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.tbcEstagios.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tbcEstagios.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
+            this.tbcEstagios.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.tbcEstagios.TabButtonSize = new System.Drawing.Size(180, 40);
+            this.tbcEstagios.TabIndex = 9;
+            this.tbcEstagios.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.tbcEstagios.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
+            // 
+            // tabRetirada
+            // 
+            this.tabRetirada.AutoScroll = true;
+            this.tabRetirada.Controls.Add(this.mOVIBindingNavigator);
+            this.tabRetirada.Controls.Add(this.dbgRetirada);
+            this.tabRetirada.ImageKey = "(nenhum/a)";
+            this.tabRetirada.Location = new System.Drawing.Point(4, 44);
+            this.tabRetirada.Name = "tabRetirada";
+            this.tabRetirada.Padding = new System.Windows.Forms.Padding(3);
+            this.tabRetirada.Size = new System.Drawing.Size(1667, 814);
+            this.tabRetirada.TabIndex = 0;
+            this.tabRetirada.Text = "Retirada de Equipamento";
+            this.tabRetirada.UseVisualStyleBackColor = true;
+            // 
+            // mOVIBindingNavigator
+            // 
+            this.mOVIBindingNavigator.AddNewItem = null;
+            this.mOVIBindingNavigator.BackColor = System.Drawing.Color.DarkGray;
+            this.mOVIBindingNavigator.BindingSource = this.mOVI_RETIRADABindingSource;
+            this.mOVIBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.mOVIBindingNavigator.DeleteItem = null;
+            this.mOVIBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.mOVIBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.toolStripSeparator1,
+            this.btnIncluirRETIRADA,
+            this.toolStripSeparator8,
+            this.toolStripButton2});
+            this.mOVIBindingNavigator.Location = new System.Drawing.Point(3, 786);
+            this.mOVIBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.mOVIBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.mOVIBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.mOVIBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.mOVIBindingNavigator.Name = "mOVIBindingNavigator";
+            this.mOVIBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.mOVIBindingNavigator.Size = new System.Drawing.Size(1661, 25);
+            this.mOVIBindingNavigator.TabIndex = 9;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorSeparator.ForeColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorSeparator1.ForeColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.BackColor = System.Drawing.Color.LightGray;
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator1.ForeColor = System.Drawing.Color.LightGray;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnIncluirRETIRADA
+            // 
+            this.btnIncluirRETIRADA.BackColor = System.Drawing.Color.LightGray;
+            this.btnIncluirRETIRADA.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.btnIncluirRETIRADA.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnIncluirRETIRADA.Image = ((System.Drawing.Image)(resources.GetObject("btnIncluirRETIRADA.Image")));
+            this.btnIncluirRETIRADA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIncluirRETIRADA.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnIncluirRETIRADA.Name = "btnIncluirRETIRADA";
+            this.btnIncluirRETIRADA.Size = new System.Drawing.Size(247, 22);
+            this.btnIncluirRETIRADA.Text = "Registrar: RETIRADA DE EQUIPAMENTO";
+            this.btnIncluirRETIRADA.ToolTipText = "Registrar: RETIRADA DE EQUIPAMENTO";
+            this.btnIncluirRETIRADA.Click += new System.EventHandler(this.btnIncluirRETIRADA_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.ToolTipText = "Voltar...";
+            // 
+            // tabTarefa
+            // 
+            this.tabTarefa.Controls.Add(this.dbgTarefa);
+            this.tabTarefa.Controls.Add(this.pnlFooterTarefa);
+            this.tabTarefa.Controls.Add(this.guna2PictureBox2);
+            this.tabTarefa.Location = new System.Drawing.Point(4, 44);
+            this.tabTarefa.Name = "tabTarefa";
+            this.tabTarefa.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTarefa.Size = new System.Drawing.Size(1667, 814);
+            this.tabTarefa.TabIndex = 1;
+            this.tabTarefa.Text = "Tarefa Bancada";
+            this.tabTarefa.UseVisualStyleBackColor = true;
             // 
             // pnlFooterTarefa
             // 
@@ -1088,7 +929,7 @@ namespace HELP_Princ
             this.tabEntrega.Controls.Add(this.guna2PictureBox3);
             this.tabEntrega.Location = new System.Drawing.Point(4, 44);
             this.tabEntrega.Name = "tabEntrega";
-            this.tabEntrega.Size = new System.Drawing.Size(1667, 855);
+            this.tabEntrega.Size = new System.Drawing.Size(1667, 814);
             this.tabEntrega.TabIndex = 2;
             this.tabEntrega.Text = "Entrega de Equipamento";
             this.tabEntrega.UseVisualStyleBackColor = true;
@@ -1103,144 +944,6 @@ namespace HELP_Princ
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.guna2PictureBox3.TabIndex = 1;
             this.guna2PictureBox3.TabStop = false;
-            // 
-            // mOVIBindingNavigator
-            // 
-            this.mOVIBindingNavigator.AddNewItem = null;
-            this.mOVIBindingNavigator.BackColor = System.Drawing.Color.DarkGray;
-            this.mOVIBindingNavigator.BindingSource = this.mOVI_RETIRADABindingSource;
-            this.mOVIBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.mOVIBindingNavigator.DeleteItem = null;
-            this.mOVIBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mOVIBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.toolStripSeparator1,
-            this.btnIncluirRETIRADA,
-            this.toolStripSeparator8,
-            this.toolStripButton2});
-            this.mOVIBindingNavigator.Location = new System.Drawing.Point(3, 786);
-            this.mOVIBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.mOVIBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.mOVIBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.mOVIBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.mOVIBindingNavigator.Name = "mOVIBindingNavigator";
-            this.mOVIBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.mOVIBindingNavigator.Size = new System.Drawing.Size(1661, 25);
-            this.mOVIBindingNavigator.TabIndex = 9;
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorSeparator.ForeColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorSeparator1.ForeColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.BackColor = System.Drawing.Color.LightGray;
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator1.ForeColor = System.Drawing.Color.LightGray;
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnIncluirRETIRADA
-            // 
-            this.btnIncluirRETIRADA.BackColor = System.Drawing.Color.LightGray;
-            this.btnIncluirRETIRADA.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnIncluirRETIRADA.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnIncluirRETIRADA.Image = ((System.Drawing.Image)(resources.GetObject("btnIncluirRETIRADA.Image")));
-            this.btnIncluirRETIRADA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIncluirRETIRADA.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnIncluirRETIRADA.Name = "btnIncluirRETIRADA";
-            this.btnIncluirRETIRADA.Size = new System.Drawing.Size(247, 22);
-            this.btnIncluirRETIRADA.Text = "Registrar: RETIRADA DE EQUIPAMENTO";
-            this.btnIncluirRETIRADA.ToolTipText = "Registrar: RETIRADA DE EQUIPAMENTO";
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.ToolTipText = "Voltar...";
             // 
             // guna2Panel1
             // 
@@ -1262,6 +965,7 @@ namespace HELP_Princ
             this.btnPesquisar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnPesquisar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnPesquisar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPesquisar.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnPesquisar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.ForeColor = System.Drawing.Color.White;
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
@@ -1275,6 +979,320 @@ namespace HELP_Princ
             // 
             this.elpPesquisar.BorderRadius = 20;
             this.elpPesquisar.TargetControl = this.btnPesquisar;
+            // 
+            // btnRetiradaEdicao
+            // 
+            this.btnRetiradaEdicao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle54.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle54.NullValue")));
+            this.btnRetiradaEdicao.DefaultCellStyle = dataGridViewCellStyle54;
+            this.btnRetiradaEdicao.HeaderText = "Editar:";
+            this.btnRetiradaEdicao.Image = ((System.Drawing.Image)(resources.GetObject("btnRetiradaEdicao.Image")));
+            this.btnRetiradaEdicao.Name = "btnRetiradaEdicao";
+            this.btnRetiradaEdicao.ReadOnly = true;
+            this.btnRetiradaEdicao.Width = 51;
+            // 
+            // btnRegistrarRegistrar
+            // 
+            this.btnRegistrarRegistrar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.btnRegistrarRegistrar.HeaderText = "Baixar:";
+            this.btnRegistrarRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarRegistrar.Image")));
+            this.btnRegistrarRegistrar.Name = "btnRegistrarRegistrar";
+            this.btnRegistrarRegistrar.ReadOnly = true;
+            this.btnRegistrarRegistrar.Width = 53;
+            // 
+            // btnFreeze
+            // 
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(230)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle55.NullValue = false;
+            this.btnFreeze.DefaultCellStyle = dataGridViewCellStyle55;
+            this.btnFreeze.HeaderText = "Freeze:";
+            this.btnFreeze.Name = "btnFreeze";
+            this.btnFreeze.ReadOnly = true;
+            this.btnFreeze.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // btnRetiradaExcluir
+            // 
+            this.btnRetiradaExcluir.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.btnRetiradaExcluir.HeaderText = "Excluir:";
+            this.btnRetiradaExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnRetiradaExcluir.Image")));
+            this.btnRetiradaExcluir.Name = "btnRetiradaExcluir";
+            this.btnRetiradaExcluir.ReadOnly = true;
+            this.btnRetiradaExcluir.Width = 55;
+            // 
+            // btnImpressao
+            // 
+            this.btnImpressao.HeaderText = "Impressão:";
+            this.btnImpressao.Image = ((System.Drawing.Image)(resources.GetObject("btnImpressao.Image")));
+            this.btnImpressao.Name = "btnImpressao";
+            this.btnImpressao.ReadOnly = true;
+            this.btnImpressao.Visible = false;
+            // 
+            // btnMovimentacao
+            // 
+            this.btnMovimentacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.btnMovimentacao.HeaderText = "Movimentação:";
+            this.btnMovimentacao.Image = ((System.Drawing.Image)(resources.GetObject("btnMovimentacao.Image")));
+            this.btnMovimentacao.Name = "btnMovimentacao";
+            this.btnMovimentacao.ReadOnly = true;
+            this.btnMovimentacao.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnMovimentacao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnMovimentacao.Visible = false;
+            this.btnMovimentacao.Width = 105;
+            // 
+            // TECNICO_SOLICITANTE
+            // 
+            this.TECNICO_SOLICITANTE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.TECNICO_SOLICITANTE.DataPropertyName = "TECNICO_SOLICITANTE";
+            this.TECNICO_SOLICITANTE.HeaderText = "Técnico Solicitante:";
+            this.TECNICO_SOLICITANTE.Name = "TECNICO_SOLICITANTE";
+            this.TECNICO_SOLICITANTE.ReadOnly = true;
+            this.TECNICO_SOLICITANTE.Width = 134;
+            // 
+            // NUMERO_OS
+            // 
+            this.NUMERO_OS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.NUMERO_OS.DataPropertyName = "NUMERO_OS";
+            this.NUMERO_OS.HeaderText = "Número O.S.:";
+            this.NUMERO_OS.Name = "NUMERO_OS";
+            this.NUMERO_OS.ReadOnly = true;
+            this.NUMERO_OS.Width = 104;
+            // 
+            // MODALIDADE
+            // 
+            this.MODALIDADE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.MODALIDADE.DataPropertyName = "MODALIDADE";
+            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.MODALIDADE.DefaultCellStyle = dataGridViewCellStyle56;
+            this.MODALIDADE.HeaderText = "Modalidade:";
+            this.MODALIDADE.Name = "MODALIDADE";
+            this.MODALIDADE.ReadOnly = true;
+            this.MODALIDADE.Width = 98;
+            // 
+            // SITUACAO
+            // 
+            this.SITUACAO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.SITUACAO.DataPropertyName = "SITUACAO";
+            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SITUACAO.DefaultCellStyle = dataGridViewCellStyle57;
+            this.SITUACAO.HeaderText = "Situação:";
+            this.SITUACAO.Name = "SITUACAO";
+            this.SITUACAO.ReadOnly = true;
+            this.SITUACAO.Width = 85;
+            // 
+            // PATRIMONIO
+            // 
+            this.PATRIMONIO.DataPropertyName = "PATRIMONIO";
+            this.PATRIMONIO.HeaderText = "Patrimonio:";
+            this.PATRIMONIO.Name = "PATRIMONIO";
+            this.PATRIMONIO.ReadOnly = true;
+            // 
+            // SAI
+            // 
+            this.SAI.DataPropertyName = "SAI";
+            this.SAI.HeaderText = "SAI.:";
+            this.SAI.Name = "SAI";
+            this.SAI.ReadOnly = true;
+            // 
+            // DATA_PREVISTA
+            // 
+            this.DATA_PREVISTA.DataPropertyName = "DATA_PREVISTA";
+            this.DATA_PREVISTA.HeaderText = "Data Prevista:";
+            this.DATA_PREVISTA.Name = "DATA_PREVISTA";
+            this.DATA_PREVISTA.ReadOnly = true;
+            // 
+            // HORA_PREVISTA
+            // 
+            this.HORA_PREVISTA.DataPropertyName = "HORA_PREVISTA";
+            this.HORA_PREVISTA.HeaderText = "Hora Prevista:";
+            this.HORA_PREVISTA.Name = "HORA_PREVISTA";
+            this.HORA_PREVISTA.ReadOnly = true;
+            // 
+            // DATA_RETIRADA
+            // 
+            this.DATA_RETIRADA.DataPropertyName = "DATA_RETIRADA";
+            this.DATA_RETIRADA.HeaderText = "Data da Retirada:";
+            this.DATA_RETIRADA.Name = "DATA_RETIRADA";
+            this.DATA_RETIRADA.ReadOnly = true;
+            // 
+            // HORA_RETIRADA
+            // 
+            this.HORA_RETIRADA.DataPropertyName = "HORA_RETIRADA";
+            this.HORA_RETIRADA.HeaderText = "Hora da Retirada:";
+            this.HORA_RETIRADA.Name = "HORA_RETIRADA";
+            this.HORA_RETIRADA.ReadOnly = true;
+            // 
+            // TECNICO_ATUANTE
+            // 
+            this.TECNICO_ATUANTE.DataPropertyName = "TECNICO_ATUANTE";
+            this.TECNICO_ATUANTE.HeaderText = "Técnico Atuante:";
+            this.TECNICO_ATUANTE.Name = "TECNICO_ATUANTE";
+            this.TECNICO_ATUANTE.ReadOnly = true;
+            // 
+            // ORIGEM
+            // 
+            this.ORIGEM.DataPropertyName = "ORIGEM";
+            this.ORIGEM.HeaderText = "Origem";
+            this.ORIGEM.Name = "ORIGEM";
+            this.ORIGEM.ReadOnly = true;
+            // 
+            // mOVI_RETIRADABindingSource
+            // 
+            this.mOVI_RETIRADABindingSource.DataMember = "MOVI_RETIRADA";
+            this.mOVI_RETIRADABindingSource.DataSource = this.helpdesk01DataSet;
+            // 
+            // helpdesk01DataSet
+            // 
+            this.helpdesk01DataSet.DataSetName = "helpdesk01DataSet";
+            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID:";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // dATADataGridViewTextBoxColumn
+            // 
+            this.dATADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dATADataGridViewTextBoxColumn.DataPropertyName = "DATA";
+            this.dATADataGridViewTextBoxColumn.HeaderText = "Data:";
+            this.dATADataGridViewTextBoxColumn.Name = "dATADataGridViewTextBoxColumn";
+            this.dATADataGridViewTextBoxColumn.ReadOnly = true;
+            this.dATADataGridViewTextBoxColumn.Width = 66;
+            // 
+            // hORADataGridViewTextBoxColumn
+            // 
+            this.hORADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.hORADataGridViewTextBoxColumn.DataPropertyName = "HORA";
+            this.hORADataGridViewTextBoxColumn.HeaderText = "Hora:";
+            this.hORADataGridViewTextBoxColumn.Name = "hORADataGridViewTextBoxColumn";
+            this.hORADataGridViewTextBoxColumn.ReadOnly = true;
+            this.hORADataGridViewTextBoxColumn.Width = 66;
+            // 
+            // rAMALTELDataGridViewTextBoxColumn
+            // 
+            this.rAMALTELDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.rAMALTELDataGridViewTextBoxColumn.DataPropertyName = "RAMAL_TEL";
+            this.rAMALTELDataGridViewTextBoxColumn.HeaderText = "Ramal / Tel.:";
+            this.rAMALTELDataGridViewTextBoxColumn.Name = "rAMALTELDataGridViewTextBoxColumn";
+            this.rAMALTELDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rAMALTELDataGridViewTextBoxColumn.Width = 102;
+            // 
+            // nOMEUSUARIODataGridViewTextBoxColumn
+            // 
+            this.nOMEUSUARIODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.nOMEUSUARIODataGridViewTextBoxColumn.DataPropertyName = "NOME_USUARIO";
+            this.nOMEUSUARIODataGridViewTextBoxColumn.HeaderText = "Usuário:";
+            this.nOMEUSUARIODataGridViewTextBoxColumn.Name = "nOMEUSUARIODataGridViewTextBoxColumn";
+            this.nOMEUSUARIODataGridViewTextBoxColumn.ReadOnly = true;
+            this.nOMEUSUARIODataGridViewTextBoxColumn.Width = 79;
+            // 
+            // pREDIOSETORDataGridViewTextBoxColumn
+            // 
+            this.pREDIOSETORDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.pREDIOSETORDataGridViewTextBoxColumn.DataPropertyName = "PREDIO_SETOR";
+            this.pREDIOSETORDataGridViewTextBoxColumn.HeaderText = "Prédio / Setor:";
+            this.pREDIOSETORDataGridViewTextBoxColumn.Name = "pREDIOSETORDataGridViewTextBoxColumn";
+            this.pREDIOSETORDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pREDIOSETORDataGridViewTextBoxColumn.Width = 109;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID:";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 54;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "DATA";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Data:";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 66;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "HORA";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Hora:";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 66;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "RAMAL_TEL";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Ramal / Tel.:";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 102;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "NOME_USUARIO";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Usuário:";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 79;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "PREDIO_SETOR";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Prédio / Setor:";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 109;
+            // 
+            // tAREFA_BANCADABindingSource
+            // 
+            this.tAREFA_BANCADABindingSource.DataMember = "TAREFA_BANCADA";
+            this.tAREFA_BANCADABindingSource.DataSource = this.helpdesk01DataSet;
+            // 
+            // mOVI_RETIRADATableAdapter
+            // 
+            this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
+            // 
+            // tAREFA_BANCADATableAdapter
+            // 
+            this.tAREFA_BANCADATableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
+            this.tableAdapterManager.MOVI_RETIRADATableAdapter = this.mOVI_RETIRADATableAdapter;
+            this.tableAdapterManager.MOVITableAdapter = null;
+            this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
+            this.tableAdapterManager.SERVICOSTableAdapter = null;
+            this.tableAdapterManager.TAREFA_BANCADATableAdapter = this.tAREFA_BANCADATableAdapter;
+            this.tableAdapterManager.TECNICOSTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.USUARIOSTableAdapter = null;
+            // 
+            // lblModalidade
+            // 
+            this.lblModalidade.BackColor = System.Drawing.Color.Transparent;
+            this.lblModalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModalidade.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblModalidade.Location = new System.Drawing.Point(1477, 11);
+            this.lblModalidade.Name = "lblModalidade";
+            this.lblModalidade.Size = new System.Drawing.Size(138, 15);
+            this.lblModalidade.TabIndex = 1;
+            this.lblModalidade.TabStop = false;
+            this.lblModalidade.Text = "Modalidade: PESQUISA";
+            this.lblModalidade.TextChanged += new System.EventHandler(this.lblModalidade_TextChanged);
             // 
             // FrmMoviList
             // 
@@ -1292,17 +1310,17 @@ namespace HELP_Princ
             this.Load += new System.EventHandler(this.FrmMoviList_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tAREFA_BANCADABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbgRetirada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbgTarefa)).EndInit();
             this.pnlGrid.ResumeLayout(false);
             this.tbcEstagios.ResumeLayout(false);
             this.tabRetirada.ResumeLayout(false);
             this.tabRetirada.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbgRetirada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mOVIBindingNavigator)).EndInit();
+            this.mOVIBindingNavigator.ResumeLayout(false);
+            this.mOVIBindingNavigator.PerformLayout();
             this.tabTarefa.ResumeLayout(false);
             this.tabTarefa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbgTarefa)).EndInit();
             this.pnlFooterTarefa.ResumeLayout(false);
             this.pnlFooterTarefa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
@@ -1312,10 +1330,10 @@ namespace HELP_Princ
             this.tabEntrega.ResumeLayout(false);
             this.tabEntrega.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mOVIBindingNavigator)).EndInit();
-            this.mOVIBindingNavigator.ResumeLayout(false);
-            this.mOVIBindingNavigator.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tAREFA_BANCADABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1338,30 +1356,6 @@ namespace HELP_Princ
         private Guna.UI2.WinForms.Guna2TabControl tbcEstagios;
         private TabPage tabRetirada;
         private Guna.UI2.WinForms.Guna2DataGridView dbgRetirada;
-        private DataGridViewImageColumn btnRetiradaEdicao;
-        private DataGridViewImageColumn btnRegistrarRegistrar;
-        private DataGridViewImageColumn btnFreeze;
-        private DataGridViewImageColumn btnRetiradaExcluir;
-        private DataGridViewImageColumn btnImpressao;
-        private DataGridViewImageColumn btnMovimentacao;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn dATADataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn hORADataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn TECNICO_SOLICITANTE;
-        private DataGridViewTextBoxColumn NUMERO_OS;
-        private DataGridViewTextBoxColumn rAMALTELDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nOMEUSUARIODataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn pREDIOSETORDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn MODALIDADE;
-        private DataGridViewTextBoxColumn SITUACAO;
-        private DataGridViewTextBoxColumn PATRIMONIO;
-        private DataGridViewTextBoxColumn SAI;
-        private DataGridViewTextBoxColumn DATA_PREVISTA;
-        private DataGridViewTextBoxColumn HORA_PREVISTA;
-        private DataGridViewTextBoxColumn DATA_RETIRADA;
-        private DataGridViewTextBoxColumn HORA_RETIRADA;
-        private DataGridViewTextBoxColumn TECNICO_ATUANTE;
-        private DataGridViewTextBoxColumn ORIGEM;
         private TabPage tabTarefa;
         private Guna.UI2.WinForms.Guna2DataGridView dbgTarefa;
         private DataGridViewImageColumn dataGridViewImageColumn1;
@@ -1420,5 +1414,30 @@ namespace HELP_Princ
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnPesquisar;
         private Guna.UI2.WinForms.Guna2Elipse elpPesquisar;
+        private DataGridViewImageColumn btnRetiradaEdicao;
+        private DataGridViewImageColumn btnRegistrarRegistrar;
+        private DataGridViewCheckBoxColumn btnFreeze;
+        private DataGridViewImageColumn btnRetiradaExcluir;
+        private DataGridViewImageColumn btnImpressao;
+        private DataGridViewImageColumn btnMovimentacao;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dATADataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn hORADataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn TECNICO_SOLICITANTE;
+        private DataGridViewTextBoxColumn NUMERO_OS;
+        private DataGridViewTextBoxColumn rAMALTELDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nOMEUSUARIODataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn pREDIOSETORDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn MODALIDADE;
+        private DataGridViewTextBoxColumn SITUACAO;
+        private DataGridViewTextBoxColumn PATRIMONIO;
+        private DataGridViewTextBoxColumn SAI;
+        private DataGridViewTextBoxColumn DATA_PREVISTA;
+        private DataGridViewTextBoxColumn HORA_PREVISTA;
+        private DataGridViewTextBoxColumn DATA_RETIRADA;
+        private DataGridViewTextBoxColumn HORA_RETIRADA;
+        private DataGridViewTextBoxColumn TECNICO_ATUANTE;
+        private DataGridViewTextBoxColumn ORIGEM;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblModalidade;
     }
 }
