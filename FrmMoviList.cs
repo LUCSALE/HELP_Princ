@@ -21,6 +21,8 @@ namespace HELP_Princ
 
         private void FrmMoviList_Load(object sender, EventArgs e)
         {
+            tmiEfeitos.Start();
+
             // Ajuste do GRID: dbgRetirada - Espaçamento , cores e estilo das células
                 dbgRetirada.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
                 dbgRetirada.GridColor = Color.White;      // Remove borda padrão     
@@ -106,12 +108,6 @@ namespace HELP_Princ
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnIncluirRETIRADA_Click(object sender, EventArgs e)
-        {
-
-
         }
 
         private void btnIncluirRETIRADA_Click_1(object sender, EventArgs e)
@@ -408,6 +404,204 @@ namespace HELP_Princ
         private void lblModalidade_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tmiEfeitos_Tick(object sender, EventArgs e)
+        {
+            // Alterna entre Vermelho e a cor SlateGray
+            //lblTitulo.ForeColor = (lblTitulo.ForeColor == Color.SlateGray) ? Color.Red : Color.SlateGray;
+
+
+            // Atualiza: lblModalidade
+            lblModalidade.Text = "Modalidade: " + InfoPesq.FREEZE;
+            lblModalidade.Visible = !lblModalidade.Visible;
+        }
+
+        private void dbgTarefa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //if (e.ColumnIndex == 0)
+            //{
+
+
+            //    if (dbgRetirada.CurrentRow.Cells[15].Value.ToString().Trim() == "CONCLUÍDO")
+            //    {
+            //        MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível EDITAR !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        // Editar o registro
+            //        // 
+            //        InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa   
+            //        InfoApp.opcao = "Editar RETIRADA DE EQUIPAMENTO";
+            //        FrmMoviRetirada MoviRetirada = new FrmMoviRetirada();
+            //        MoviRetirada.ShowDialog();
+            //    }
+            //}
+
+            //if (e.ColumnIndex == 1)
+            //{
+            //    if (dbgRetirada.CurrentRow.Cells[15].Value.ToString().Trim() == "CONCLUÍDO")
+            //    {
+            //        MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível BAIXAR !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        // BAIXA do registro
+            //        // 
+            //        InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa   
+            //        InfoApp.opcao = "Baixa RETIRADA DE EQUIPAMENTO";
+            //        FrmMoviRetiradaBaixa MoviRetiradaBaixa = new FrmMoviRetiradaBaixa();
+            //        MoviRetiradaBaixa.ShowDialog();
+
+
+
+            //    }
+            //}
+
+            if (e.ColumnIndex == 2)
+            {
+                if (InfoPesq.FREEZE == "FREEZE")
+                {
+                    InfoPesq.FREEZE = "PESQUISA";
+                    fcnAtuRetirada();
+                    fcnAtuTarefa();
+
+                }
+                else
+                {
+                    InfoPesq.ID = ((int)dbgRetirada.CurrentRow.Cells[6].Value); // Pega o ID da pesquisa   
+                    InfoPesq.FREEZE = "FREEZE";
+                    fcnAtuRetirada();
+                    fcnAtuTarefa();
+
+                }
+                lblModalidade.Text = "Modalidade: " + InfoPesq.FREEZE;
+
+                return;
+            }
+
+            //if (e.ColumnIndex == 3)
+            //{
+            //    if (dbgRetirada.CurrentRow.Cells[15].Value.ToString().Trim() == "CONCLUÍDO")
+            //    {
+            //        MessageBox.Show("Registro CONCLUÍDO, não é possível EXCLUÍR !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        // EXCLUSÃO DE REGISTRO (movi)
+            //        // Initializes the variables to pass to the MessageBox.Show method.
+            //        string message = "Tem CERTEZA da Exclusão?";
+            //        string caption = "Exclusão da RETIRADA DO EQUIPAMENTO";
+            //        MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            //        DialogResult result;
+
+            //        // Displays the MessageBox.
+            //        result = MessageBox.Show(message, caption, buttons);
+            //        if (result == System.Windows.Forms.DialogResult.Yes)
+            //        {
+
+            //            //define a string de conexao com provedor caminho e nome do banco de dados
+            //            string strProvider = "Data Source=SQL1003.site4now.net;Initial Catalog=db_ab2460_helpdesk02;Persist Security Info=True;User ID=db_ab2460_helpdesk02_admin;PassWord=Mag160163@";
+
+            //            //define a instrução SQL
+            //            string strSql = "DELETE FROM MOVI_RETIRADA WHERE ID = @ID";
+
+            //            try
+            //            {
+            //                // Estabelecer a conexão com o banco de dados
+            //                using (SqlConnection connection = new SqlConnection(strProvider))
+            //                {
+            //                    connection.Open();
+
+            //                    // Criar o comando SQL
+            //                    using (SqlCommand command = new SqlCommand(strSql, connection))
+            //                    {
+            //                        command.Parameters.AddWithValue("@ID", (int)dbgRetirada.CurrentRow.Cells[6].Value); // Pega o ID da pesquisa   
+
+            //                        // Executar o comando SQL
+            //                        int rowsAffected = command.ExecuteNonQuery();
+
+            //                        if (rowsAffected > 0)
+            //                        {
+            //                            MessageBox.Show("Exclusão Bem Sucedida !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //                        }
+            //                        else
+            //                        {
+            //                            MessageBox.Show("Nenhum registro encontrado para exclusão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //                        }
+            //                    }
+            //                }
+            //            }
+            //            catch (Exception ex)
+            //            {
+            //                MessageBox.Show("Erro: " + ex.Message);
+            //            }
+            //        }
+            //    }
+            //}
+
+            //if (e.ColumnIndex == 2)
+            //{
+            //    if (dbgRetirada.CurrentRow.Cells[14].Value.ToString().Trim() == "CONCLUÍDO")
+            //    {
+            //        MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível IMPRIMIR !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        // IMPRESSÃO do registro
+            //        //
+            //        InfoWork.strWork = "MOVIRETIRADA_LIST";
+            //        InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa
+            //        FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
+            //        MoviRetiradaImpressao.ShowDialog();
+            //    }
+            //}
+
+            //if (e.ColumnIndex == 3)
+            //{
+            //    // MOVIMENTAÇÃO do registro
+            //    //
+
+            //    InfoWork.strWork_b = "ATUALIZA TAREFA BANCADA"; 
+            //    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa
+            //    FrmMoviRetiradaMovimentacao MoviRetiradaMovimentacao = new FrmMoviRetiradaMovimentacao();
+            //    MoviRetiradaMovimentacao.ShowDialog();
+
+
+
+            //    //if (dbgRetirada.CurrentRow.Cells[14].Value.ToString().Trim() == "CONCLUÍDO")
+            //    //{
+            //    //    MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível MOVIMENTAR PARA TAREFA BANCADA !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    //    return;
+            //    //}
+            //    //else
+            //    //{
+            //    //    // MOVIMENTAÇÃO do registro
+            //    //    //
+            //    //    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa
+            //    //    FrmMoviRetiradaMovimentacao MoviRetiradaMovimentacao = new FrmMoviRetiradaMovimentacao();
+            //    //    MoviRetiradaMovimentacao.ShowDialog();
+            //    //}
+            //}
+
+
+
+
+            //Atualiza o GRID
+            //
+            try
+            {
+                this.mOVI_RETIRADATableAdapter.Fill(this.helpdesk01DataSet.MOVI_RETIRADA);
+
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
     }
 }
