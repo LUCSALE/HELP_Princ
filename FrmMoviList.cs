@@ -471,7 +471,7 @@ namespace HELP_Princ
                 }
                 else
                 {
-                    InfoPesq.ID = ((int)dbgRetirada.CurrentRow.Cells[6].Value); // Pega o ID da pesquisa   
+                    InfoPesq.ID = ((int)dbgTarefa.CurrentRow.Cells[6].Value); // Pega o ID da pesquisa   
                     InfoPesq.FREEZE = "FREEZE";
                     fcnAtuRetirada();
                     fcnAtuTarefa();
