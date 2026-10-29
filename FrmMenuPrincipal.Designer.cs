@@ -58,13 +58,14 @@ namespace HELP_Princ
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlHeader = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblSistema = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblSistema = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnlForm = new Guna.UI2.WinForms.Guna2Panel();
+            this.elpTexto = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlLateral.SuspendLayout();
             this.pnlLateralHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -521,10 +522,10 @@ namespace HELP_Princ
             // 
             // pnlHeader
             // 
+            this.pnlHeader.Controls.Add(this.lblSistema);
             this.pnlHeader.Controls.Add(this.guna2ControlBox2);
             this.pnlHeader.Controls.Add(this.guna2HtmlLabel4);
             this.pnlHeader.Controls.Add(this.guna2HtmlLabel3);
-            this.pnlHeader.Controls.Add(this.lblSistema);
             this.pnlHeader.Controls.Add(this.guna2ControlBox3);
             this.pnlHeader.Controls.Add(this.guna2ControlBox1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -534,6 +535,16 @@ namespace HELP_Princ
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1677, 87);
             this.pnlHeader.TabIndex = 2;
+            // 
+            // lblSistema
+            // 
+            this.lblSistema.BackColor = System.Drawing.Color.Transparent;
+            this.lblSistema.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSistema.Location = new System.Drawing.Point(19, 58);
+            this.lblSistema.Name = "lblSistema";
+            this.lblSistema.Size = new System.Drawing.Size(50, 17);
+            this.lblSistema.TabIndex = 8;
+            this.lblSistema.Text = "Sistema:";
             // 
             // guna2ControlBox2
             // 
@@ -556,7 +567,7 @@ namespace HELP_Princ
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(704, 53);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(670, 53);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(255, 23);
             this.guna2HtmlLabel4.TabIndex = 6;
@@ -569,24 +580,13 @@ namespace HELP_Princ
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Bauhaus 93", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(73, 6);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(6, 6);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(1516, 75);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(1583, 75);
             this.guna2HtmlLabel3.TabIndex = 5;
             this.guna2HtmlLabel3.TabStop = false;
             this.guna2HtmlLabel3.Text = "HELP-DESK \r\n";
             this.guna2HtmlLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblSistema
-            // 
-            this.lblSistema.BackColor = System.Drawing.Color.Transparent;
-            this.lblSistema.Font = new System.Drawing.Font("Arial", 6F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSistema.Location = new System.Drawing.Point(2, 27);
-            this.lblSistema.Name = "lblSistema";
-            this.lblSistema.Padding = new System.Windows.Forms.Padding(10);
-            this.lblSistema.Size = new System.Drawing.Size(67, 32);
-            this.lblSistema.TabIndex = 4;
-            this.lblSistema.Text = "HELP_Princ";
             // 
             // guna2ControlBox3
             // 
@@ -628,6 +628,11 @@ namespace HELP_Princ
             this.pnlForm.Name = "pnlForm";
             this.pnlForm.Size = new System.Drawing.Size(1677, 1070);
             this.pnlForm.TabIndex = 14;
+            // 
+            // elpTexto
+            // 
+            this.elpTexto.BorderRadius = 10;
+            this.elpTexto.TargetControl = this.guna2HtmlLabel3;
             // 
             // FrmMenuPrincipal
             // 
@@ -684,7 +689,6 @@ namespace HELP_Princ
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2GradientButton btnServicos;
         private Guna.UI2.WinForms.Guna2GradientButton btnUsuarios;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblSistema;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2GradientButton btnQUICKMOVI;
@@ -696,5 +700,7 @@ namespace HELP_Princ
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2Elipse elpTexto;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblSistema;
     }
 }

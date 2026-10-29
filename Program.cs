@@ -16,8 +16,10 @@ namespace HELP_Princ
         [STAThread]
         static void Main()
         {
-            InfoApp.versao = "1.00.178";
+            InfoApp.versao = "1.00.180";
             InfoApp.sistema = "HELP_Princ";
+            InfoApp.UsuarioAD = Environment.UserName;
+            InfoApp.NomeComputador = Environment.MachineName;   
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

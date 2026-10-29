@@ -47,6 +47,21 @@ namespace HELP_Princ
             get { return m_nome_entidade; }
             set { m_nome_entidade = value; }
         }
+
+
+        private static string m_UsuarioAD = "";
+        public static string UsuarioAD
+        {
+            get { return m_UsuarioAD; }
+            set { m_UsuarioAD = value; }
+        }
+
+        private static string m_NomeComputador = "";
+        public static string NomeComputador
+        {
+            get { return m_NomeComputador; }
+            set { m_NomeComputador = value; }
+        }
     }
 
     public static class InfoSenha
