@@ -364,6 +364,7 @@ namespace HELP_Princ
         }
 
         private void fcnAtuRetirada()
+
         {
             if (InfoPesq.FREEZE == "FREEZE")
             {

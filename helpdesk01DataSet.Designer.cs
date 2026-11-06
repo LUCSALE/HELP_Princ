@@ -8793,7 +8793,7 @@ SELECT ID, DATA, HORA, DESCRICAO_SERVICO, ATIVO, DATA_DES, HORA_DES, ATIVO2 FROM
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HORA_DES", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_DES", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HORA_DES", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_DES", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AREA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AREA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AREA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AREA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AREA", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AREA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [USUARIOS] ([DATA], [HORA], [RAMAL_TEL], [NOME_USUARIO], [PREDIO_SETOR], [ATIVO], [DATA_DES], [HORA_DES], [OBS_GERAL], [AREA]) VALUES (@DATA, @HORA, @RAMAL_TEL, @NOME_USUARIO, @PREDIO_SETOR, @ATIVO, @DATA_DES, @HORA_DES, @OBS_GERAL, @AREA);
@@ -8808,7 +8808,7 @@ SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, H
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA_DES", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_DES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA_DES", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_DES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OBS_GERAL", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OBS_GERAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AREA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AREA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AREA", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AREA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [USUARIOS] SET [DATA] = @DATA, [HORA] = @HORA, [RAMAL_TEL] = @RAMAL_TEL, [NOME_USUARIO] = @NOME_USUARIO, [PREDIO_SETOR] = @PREDIO_SETOR, [ATIVO] = @ATIVO, [DATA_DES] = @DATA_DES, [HORA_DES] = @HORA_DES, [OBS_GERAL] = @OBS_GERAL, [AREA] = @AREA WHERE (([ID] = @Original_ID) AND ([DATA] = @Original_DATA) AND ([HORA] = @Original_HORA) AND ((@IsNull_RAMAL_TEL = 1 AND [RAMAL_TEL] IS NULL) OR ([RAMAL_TEL] = @Original_RAMAL_TEL)) AND ((@IsNull_NOME_USUARIO = 1 AND [NOME_USUARIO] IS NULL) OR ([NOME_USUARIO] = @Original_NOME_USUARIO)) AND ((@IsNull_PREDIO_SETOR = 1 AND [PREDIO_SETOR] IS NULL) OR ([PREDIO_SETOR] = @Original_PREDIO_SETOR)) AND ((@IsNull_ATIVO = 1 AND [ATIVO] IS NULL) OR ([ATIVO] = @Original_ATIVO)) AND ((@IsNull_DATA_DES = 1 AND [DATA_DES] IS NULL) OR ([DATA_DES] = @Original_DATA_DES)) AND ((@IsNull_HORA_DES = 1 AND [HORA_DES] IS NULL) OR ([HORA_DES] = @Original_HORA_DES)) AND ((@IsNull_AREA = 1 AND [AREA] IS NULL) OR ([AREA] = @Original_AREA)));
@@ -8823,7 +8823,7 @@ SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, H
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA_DES", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_DES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA_DES", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_DES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OBS_GERAL", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OBS_GERAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AREA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AREA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AREA", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AREA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HORA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -8840,7 +8840,7 @@ SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, H
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HORA_DES", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_DES", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HORA_DES", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_DES", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AREA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AREA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AREA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AREA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AREA", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AREA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -8848,7 +8848,7 @@ SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, H
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::HELP_Princ.Properties.Settings.Default.helpdesk01;
+            this._connection.ConnectionString = global::HELP_Princ.Properties.Settings.Default.ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8857,24 +8857,24 @@ SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, H
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[7];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, HO" +
-                "RA_DES, OBS_GERAL, AREA FROM USUARIOS";
+            this._commandCollection[0].CommandText = "SELECT        ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_" +
+                "DES, HORA_DES, OBS_GERAL, AREA\r\nFROM            USUARIOS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::HELP_Princ.Properties.Settings.Default.helpdesk01);
             this._commandCollection[1].CommandText = "SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, HO" +
                 "RA_DES, OBS_GERAL, AREA FROM USUARIOS WHERE (ID = @ID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].Connection = new global::System.Data.SqlClient.SqlConnection(global::HELP_Princ.Properties.Settings.Default.helpdesk01);
             this._commandCollection[2].CommandText = "SELECT        ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_" +
                 "DES, HORA_DES, OBS_GERAL, AREA\r\nFROM            USUARIOS\r\nWHERE        (RAMAL_TE" +
                 "L = @RAMAL_TEL)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RAMAL_TEL", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "RAMAL_TEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].Connection = new global::System.Data.SqlClient.SqlConnection(global::HELP_Princ.Properties.Settings.Default.helpdesk01);
             this._commandCollection[3].CommandText = "UPDATE [USUARIOS] SET  [NOME_USUARIO] = @NOME_USUARIO, [PREDIO_SETOR] = @PREDIO_S" +
                 "ETOR ,[AREA] = @AREA WHERE [RAMAL_TEL] = @RAMAL_TEL";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
@@ -8883,12 +8883,12 @@ SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, H
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AREA", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "AREA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RAMAL_TEL", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "RAMAL_TEL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].Connection = new global::System.Data.SqlClient.SqlConnection(global::HELP_Princ.Properties.Settings.Default.helpdesk01);
             this._commandCollection[4].CommandText = "DELETE FROM USUARIOS\r\nWHERE        (ID = @Original_ID)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].Connection = new global::System.Data.SqlClient.SqlConnection(global::HELP_Princ.Properties.Settings.Default.helpdesk01);
             this._commandCollection[5].CommandText = "INSERT INTO [dbo].[USUARIOS] ([DATA], [HORA], [RAMAL_TEL], [NOME_USUARIO], [PREDI" +
                 "O_SETOR], [ATIVO],  [OBS_GERAL]) VALUES (@DATA, @HORA, @RAMAL_TEL, @NOME_USUARIO" +
                 ", @PREDIO_SETOR, @ATIVO,  @OBS_GERAL);\r\n";
@@ -8901,7 +8901,7 @@ SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, H
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ATIVO", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "ATIVO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OBS_GERAL", global::System.Data.SqlDbType.NText, 1073741823, global::System.Data.ParameterDirection.Input, 0, 0, "OBS_GERAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].Connection = new global::System.Data.SqlClient.SqlConnection(global::HELP_Princ.Properties.Settings.Default.helpdesk01);
             this._commandCollection[6].CommandText = "UPDATE       USUARIOS\r\nSET                NOME_USUARIO = @NOME_USUARIO\r\nWHERE    " +
                 "    (ID = @ID)";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
@@ -8920,17 +8920,6 @@ SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, H
             }
             int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual helpdesk01DataSet.USUARIOSDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            helpdesk01DataSet.USUARIOSDataTable dataTable = new helpdesk01DataSet.USUARIOSDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9005,337 +8994,6 @@ SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, H
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, System.DateTime Original_DATA, System.TimeSpan Original_HORA, string Original_RAMAL_TEL, string Original_NOME_USUARIO, string Original_PREDIO_SETOR, string Original_ATIVO, global::System.Nullable<global::System.DateTime> Original_DATA_DES, global::System.Nullable<global::System.TimeSpan> Original_HORA_DES, string Original_AREA) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_DATA));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.TimeSpan)(Original_HORA));
-            if ((Original_RAMAL_TEL == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_RAMAL_TEL));
-            }
-            if ((Original_NOME_USUARIO == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_NOME_USUARIO));
-            }
-            if ((Original_PREDIO_SETOR == null)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_PREDIO_SETOR));
-            }
-            if ((Original_ATIVO == null)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_ATIVO));
-            }
-            if ((Original_DATA_DES.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((System.DateTime)(Original_DATA_DES.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_HORA_DES.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((System.TimeSpan)(Original_HORA_DES.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((Original_AREA == null)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_AREA));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime DATA, System.TimeSpan HORA, string RAMAL_TEL, string NOME_USUARIO, string PREDIO_SETOR, string ATIVO, global::System.Nullable<global::System.DateTime> DATA_DES, global::System.Nullable<global::System.TimeSpan> HORA_DES, string OBS_GERAL, string AREA) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(DATA));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((System.TimeSpan)(HORA));
-            if ((RAMAL_TEL == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(RAMAL_TEL));
-            }
-            if ((NOME_USUARIO == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(NOME_USUARIO));
-            }
-            if ((PREDIO_SETOR == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(PREDIO_SETOR));
-            }
-            if ((ATIVO == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(ATIVO));
-            }
-            if ((DATA_DES.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(DATA_DES.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((HORA_DES.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((System.TimeSpan)(HORA_DES.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((OBS_GERAL == null)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(OBS_GERAL));
-            }
-            if ((AREA == null)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(AREA));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    System.DateTime DATA, 
-                    System.TimeSpan HORA, 
-                    string RAMAL_TEL, 
-                    string NOME_USUARIO, 
-                    string PREDIO_SETOR, 
-                    string ATIVO, 
-                    global::System.Nullable<global::System.DateTime> DATA_DES, 
-                    global::System.Nullable<global::System.TimeSpan> HORA_DES, 
-                    string OBS_GERAL, 
-                    string AREA, 
-                    int Original_ID, 
-                    System.DateTime Original_DATA, 
-                    System.TimeSpan Original_HORA, 
-                    string Original_RAMAL_TEL, 
-                    string Original_NOME_USUARIO, 
-                    string Original_PREDIO_SETOR, 
-                    string Original_ATIVO, 
-                    global::System.Nullable<global::System.DateTime> Original_DATA_DES, 
-                    global::System.Nullable<global::System.TimeSpan> Original_HORA_DES, 
-                    string Original_AREA, 
-                    int ID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(DATA));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.TimeSpan)(HORA));
-            if ((RAMAL_TEL == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(RAMAL_TEL));
-            }
-            if ((NOME_USUARIO == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(NOME_USUARIO));
-            }
-            if ((PREDIO_SETOR == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(PREDIO_SETOR));
-            }
-            if ((ATIVO == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(ATIVO));
-            }
-            if ((DATA_DES.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(DATA_DES.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((HORA_DES.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.TimeSpan)(HORA_DES.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((OBS_GERAL == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(OBS_GERAL));
-            }
-            if ((AREA == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(AREA));
-            }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_DATA));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.TimeSpan)(Original_HORA));
-            if ((Original_RAMAL_TEL == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_RAMAL_TEL));
-            }
-            if ((Original_NOME_USUARIO == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_NOME_USUARIO));
-            }
-            if ((Original_PREDIO_SETOR == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_PREDIO_SETOR));
-            }
-            if ((Original_ATIVO == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_ATIVO));
-            }
-            if ((Original_DATA_DES.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_DATA_DES.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            if ((Original_HORA_DES.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((System.TimeSpan)(Original_HORA_DES.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            if ((Original_AREA == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_AREA));
-            }
-            this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(ID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    System.DateTime DATA, 
-                    System.TimeSpan HORA, 
-                    string RAMAL_TEL, 
-                    string NOME_USUARIO, 
-                    string PREDIO_SETOR, 
-                    string ATIVO, 
-                    global::System.Nullable<global::System.DateTime> DATA_DES, 
-                    global::System.Nullable<global::System.TimeSpan> HORA_DES, 
-                    string OBS_GERAL, 
-                    string AREA, 
-                    int Original_ID, 
-                    System.DateTime Original_DATA, 
-                    System.TimeSpan Original_HORA, 
-                    string Original_RAMAL_TEL, 
-                    string Original_NOME_USUARIO, 
-                    string Original_PREDIO_SETOR, 
-                    string Original_ATIVO, 
-                    global::System.Nullable<global::System.DateTime> Original_DATA_DES, 
-                    global::System.Nullable<global::System.TimeSpan> Original_HORA_DES, 
-                    string Original_AREA) {
-            return this.Update(DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, HORA_DES, OBS_GERAL, AREA, Original_ID, Original_DATA, Original_HORA, Original_RAMAL_TEL, Original_NOME_USUARIO, Original_PREDIO_SETOR, Original_ATIVO, Original_DATA_DES, Original_HORA_DES, Original_AREA, Original_ID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

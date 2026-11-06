@@ -27,7 +27,18 @@ namespace HELP_Princ.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SQL1003.site4now.net;Initial Catalog=db_ab2460_helpdesk02;Persist Sec" +
-            "urity Info=True;User ID=db_ab2460_helpdesk02_admin;Password=Mag160163@")]
+            "urity Info=True;User ID=db_ab2460_helpdesk02_admin")]
+        public string db_ab2460_helpdesk02ConnectionString {
+            get {
+                return ((string)(this["db_ab2460_helpdesk02ConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=pleskfsn.nspmanaged.com,14352;Initial Catalog=Helpdesk;Persist Securi" +
+            "ty Info=True;User ID=Helpdesk;Password=Mag160163@")]
         public string helpdesk01 {
             get {
                 return ((string)(this["helpdesk01"]));
@@ -37,11 +48,11 @@ namespace HELP_Princ.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SQL1003.site4now.net;Initial Catalog=db_ab2460_helpdesk02;Persist Sec" +
-            "urity Info=True;User ID=db_ab2460_helpdesk02_admin;Password=Mag160163@")]
-        public string db_ab2460_helpdesk02ConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=pleskfsn.nspmanaged.com,1435;Initial Catalog=Helpdesk;Persist Securit" +
+            "y Info=True;User ID=Helpdesk;Password=Mag160163@;TrustServerCertificate=True")]
+        public string ConnectionString {
             get {
-                return ((string)(this["db_ab2460_helpdesk02ConnectionString"]));
+                return ((string)(this["ConnectionString"]));
             }
         }
     }

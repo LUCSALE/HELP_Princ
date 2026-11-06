@@ -66,6 +66,8 @@ namespace HELP_Princ
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnlForm = new Guna.UI2.WinForms.Guna2Panel();
             this.elpTexto = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.lblMaquina = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblUsuario = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlLateral.SuspendLayout();
             this.pnlLateralHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -522,6 +524,8 @@ namespace HELP_Princ
             // 
             // pnlHeader
             // 
+            this.pnlHeader.Controls.Add(this.lblUsuario);
+            this.pnlHeader.Controls.Add(this.lblMaquina);
             this.pnlHeader.Controls.Add(this.lblSistema);
             this.pnlHeader.Controls.Add(this.guna2ControlBox2);
             this.pnlHeader.Controls.Add(this.guna2HtmlLabel4);
@@ -634,6 +638,26 @@ namespace HELP_Princ
             this.elpTexto.BorderRadius = 10;
             this.elpTexto.TargetControl = this.guna2HtmlLabel3;
             // 
+            // lblMaquina
+            // 
+            this.lblMaquina.BackColor = System.Drawing.Color.Transparent;
+            this.lblMaquina.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaquina.Location = new System.Drawing.Point(19, 35);
+            this.lblMaquina.Name = "lblMaquina";
+            this.lblMaquina.Size = new System.Drawing.Size(53, 17);
+            this.lblMaquina.TabIndex = 9;
+            this.lblMaquina.Text = "Máquina:";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(19, 12);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(48, 17);
+            this.lblUsuario.TabIndex = 10;
+            this.lblUsuario.Text = "Usuário:";
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -702,5 +726,7 @@ namespace HELP_Princ
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2Elipse elpTexto;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSistema;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMaquina;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUsuario;
     }
 }

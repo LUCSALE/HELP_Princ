@@ -44,12 +44,6 @@ namespace HELP_Princ
 
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(FrmMenuPrincipal.ActiveForm.Size.ToString(), "Teste", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            // Atualiza DADOS da aplicação
-            lblSistema.Text = InfoApp.sistema;
-            AtualizaVersao();
-
 
         }
 
@@ -118,8 +112,14 @@ namespace HELP_Princ
 
         private void FrmMenuPrincipal_Shown(object sender, EventArgs e)
         {
-            //MessageBox.Show(FrmMenuPrincipal.ActiveForm.Size.ToString(), "Teste", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            FormShow(new FrmMoviList());
+            // Atualiza DADOS da aplicação
+            lblSistema.Text = "Sistema: " + InfoApp.sistema;
+            lblUsuario.Text = "Usuário: " + InfoApp.UsuarioAD;
+            lblMaquina.Text = "Computador: " + InfoApp.NomeComputador;
+
+            AtualizaVersao();
+
+            //FormShow(new FrmMoviList());
         }
     }
 }
