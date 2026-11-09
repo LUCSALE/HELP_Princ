@@ -42,24 +42,24 @@
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.pnlForm = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblMensagem = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtArquivo = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnPèsquisar = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.uSUARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
-            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
-            this.uSUARIOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.USUARIOSTableAdapter();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.helpdeskDataSet = new HELP_Princ.HelpdeskDataSet();
+            this.uSUARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uSUARIOSTableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.USUARIOSTableAdapter();
+            this.tableAdapterManager = new HELP_Princ.HelpdeskDataSetTableAdapters.TableAdapterManager();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lblLogo)).BeginInit();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.pnlForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdeskDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -85,7 +85,7 @@
             this.pnlHeader.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(591, 87);
+            this.pnlHeader.Size = new System.Drawing.Size(607, 87);
             this.pnlHeader.TabIndex = 3;
             // 
             // lblTitulo
@@ -126,7 +126,7 @@
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.LightGray;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(533, 3);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(549, 3);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(23, 25);
             this.guna2ControlBox3.TabIndex = 3;
@@ -141,7 +141,7 @@
             this.guna2ControlBox1.BorderThickness = 1;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.LightGray;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(562, 4);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(578, 4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(23, 25);
             this.guna2ControlBox1.TabIndex = 0;
@@ -156,7 +156,7 @@
             this.pnlFooter.FillColor2 = System.Drawing.Color.LightGray;
             this.pnlFooter.Location = new System.Drawing.Point(0, 306);
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(591, 26);
+            this.pnlFooter.Size = new System.Drawing.Size(607, 26);
             this.pnlFooter.TabIndex = 4;
             // 
             // bindingNavigator1
@@ -175,7 +175,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(591, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(607, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -216,8 +216,16 @@
             this.pnlForm.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.pnlForm.Location = new System.Drawing.Point(0, 87);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(591, 219);
+            this.pnlForm.Size = new System.Drawing.Size(607, 219);
             this.pnlForm.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(5, 93);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(580, 20);
+            this.textBox1.TabIndex = 27;
             // 
             // lblMensagem
             // 
@@ -228,7 +236,7 @@
             this.lblMensagem.ForeColor = System.Drawing.Color.Red;
             this.lblMensagem.Location = new System.Drawing.Point(0, 191);
             this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(591, 28);
+            this.lblMensagem.Size = new System.Drawing.Size(607, 28);
             this.lblMensagem.TabIndex = 26;
             this.lblMensagem.Text = "Importando PLANILHA - Por Favor AGUARDE ...";
             this.lblMensagem.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -296,48 +304,36 @@
             this.guna2HtmlLabel4.TabStop = false;
             this.guna2HtmlLabel4.Text = "Arquivo:";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // helpdeskDataSet
+            // 
+            this.helpdeskDataSet.DataSetName = "HelpdeskDataSet";
+            this.helpdeskDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // uSUARIOSBindingSource
             // 
             this.uSUARIOSBindingSource.DataMember = "USUARIOS";
-            this.uSUARIOSBindingSource.DataSource = this.helpdesk01DataSet;
-            this.uSUARIOSBindingSource.CurrentChanged += new System.EventHandler(this.sERVICOSBindingSource_CurrentChanged);
-            // 
-            // helpdesk01DataSet
-            // 
-            this.helpdesk01DataSet.DataSetName = "helpdesk01DataSet";
-            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.SERVICOSTableAdapter = null;
-            this.tableAdapterManager.TECNICOSTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USUARIOSTableAdapter = this.uSUARIOSTableAdapter;
+            this.uSUARIOSBindingSource.DataSource = this.helpdeskDataSet;
             // 
             // uSUARIOSTableAdapter
             // 
             this.uSUARIOSTableAdapter.ClearBeforeFill = true;
             // 
-            // openFileDialog1
+            // tableAdapterManager
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // textBox1
-            // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uSUARIOSBindingSource, "NOME_USUARIO", true));
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(5, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(580, 20);
-            this.textBox1.TabIndex = 27;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = HELP_Princ.HelpdeskDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.USUARIOSTableAdapter = this.uSUARIOSTableAdapter;
             // 
             // FrmUsuariosExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(591, 332);
+            this.ClientSize = new System.Drawing.Size(607, 332);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.pnlHeader);
@@ -356,8 +352,8 @@
             this.bindingNavigator1.PerformLayout();
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdeskDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -375,16 +371,16 @@
         private System.Windows.Forms.ToolStripButton salvarToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private helpdesk01DataSet helpdesk01DataSet;
-        private System.Windows.Forms.BindingSource uSUARIOSBindingSource;
-        private helpdesk01DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2GradientButton btnPèsquisar;
         private Guna.UI2.WinForms.Guna2TextBox txtArquivo;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTitulo;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMensagem;
-        private helpdesk01DataSetTableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter;
         private System.Windows.Forms.TextBox textBox1;
+        private HelpdeskDataSet helpdeskDataSet;
+        private System.Windows.Forms.BindingSource uSUARIOSBindingSource;
+        private HelpdeskDataSetTableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter;
+        private HelpdeskDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

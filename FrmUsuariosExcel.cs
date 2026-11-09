@@ -24,6 +24,8 @@ namespace HELP_Princ
 
         private void FrmUsuariosExcel_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.USUARIOS'. Você pode movê-la ou removê-la conforme necessário.
+            this.uSUARIOSTableAdapter.Fill(this.helpdeskDataSet.USUARIOS);
             // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.USUARIOS'. Você pode movê-la ou removê-la conforme necessário.
             //this.uSUARIOSTableAdapter.Fill(this.helpdesk01DataSet.USUARIOS);
             //this.uSUARIOSTableAdapter.FillByID(this.helpdesk01DataSet.USUARIOS,1);
@@ -31,7 +33,7 @@ namespace HELP_Princ
             //this.uSUARIOSTableAdapter.USUARIOSDelete(4);
             //this.uSUARIOSTableAdapter.USUARIOSDelete(5);
             //this.uSUARIOSTableAdapter.USUARIOSUpdate("Roberto", 3);        
-            
+
             lblMensagem.Visible = false;
         }
 

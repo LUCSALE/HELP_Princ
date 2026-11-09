@@ -1206,12 +1206,25 @@ SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, H
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, HO" +
                 "RA_DES, OBS_GERAL, AREA FROM Helpdesk.USUARIOS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "INSERT INTO [Helpdesk].[USUARIOS] ([DATA], [HORA], [RAMAL_TEL], [NOME_USUARIO], [" +
+                "PREDIO_SETOR], [ATIVO],  [OBS_GERAL]) VALUES (@DATA, @HORA, @RAMAL_TEL, @NOME_US" +
+                "UARIO, @PREDIO_SETOR, @ATIVO,  @OBS_GERAL);\r\n";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "HORA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RAMAL_TEL", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "RAMAL_TEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_USUARIO", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_USUARIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PREDIO_SETOR", global::System.Data.SqlDbType.VarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, "PREDIO_SETOR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ATIVO", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "ATIVO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OBS_GERAL", global::System.Data.SqlDbType.NText, 1073741823, global::System.Data.ParameterDirection.Input, 0, 0, "OBS_GERAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1596,6 +1609,71 @@ SELECT ID, DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, H
                     global::System.Nullable<global::System.TimeSpan> Original_HORA_DES, 
                     string Original_AREA) {
             return this.Update(DATA, HORA, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, ATIVO, DATA_DES, HORA_DES, OBS_GERAL, AREA, Original_ID, Original_DATA, Original_HORA, Original_RAMAL_TEL, Original_NOME_USUARIO, Original_PREDIO_SETOR, Original_ATIVO, Original_DATA_DES, Original_HORA_DES, Original_AREA, Original_ID);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int USUARIOSInsert(string DATA, string HORA, string RAMAL_TEL, string NOME_USUARIO, string PREDIO_SETOR, string ATIVO, string OBS_GERAL) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((DATA == null)) {
+                throw new global::System.ArgumentNullException("DATA");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(DATA));
+            }
+            if ((HORA == null)) {
+                throw new global::System.ArgumentNullException("HORA");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(HORA));
+            }
+            if ((RAMAL_TEL == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(RAMAL_TEL));
+            }
+            if ((NOME_USUARIO == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(NOME_USUARIO));
+            }
+            if ((PREDIO_SETOR == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(PREDIO_SETOR));
+            }
+            if ((ATIVO == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(ATIVO));
+            }
+            if ((OBS_GERAL == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(OBS_GERAL));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
