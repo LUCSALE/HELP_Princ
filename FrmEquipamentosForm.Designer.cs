@@ -39,7 +39,6 @@
             this.pnlFooter = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.eQUIPAMENTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
             this.salvarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -58,16 +57,17 @@
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
-            this.eQUIPAMENTOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.EQUIPAMENTOSTableAdapter();
+            this.helpdesk01DataSet = new HELP_Princ.HelpdeskDataSet();
+            this.eQUIPAMENTOSTableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.EQUIPAMENTOSTableAdapter();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lblLogo)).BeginInit();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eQUIPAMENTOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
             this.pnlForm.SuspendLayout();
             this.gbxAtivacao.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -194,11 +194,6 @@
             // 
             this.eQUIPAMENTOSBindingSource.DataMember = "EQUIPAMENTOS";
             this.eQUIPAMENTOSBindingSource.DataSource = this.helpdesk01DataSet;
-            // 
-            // helpdesk01DataSet
-            // 
-            this.helpdesk01DataSet.DataSetName = "helpdesk01DataSet";
-            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // salvarToolStripButton
             // 
@@ -417,10 +412,17 @@
             this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
             this.tableAdapterManager.MOVI_RETIRADATableAdapter = null;
             this.tableAdapterManager.MOVITableAdapter = null;
+            this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
             this.tableAdapterManager.SERVICOSTableAdapter = null;
+            this.tableAdapterManager.TAREFA_BANCADATableAdapter = null;
             this.tableAdapterManager.TECNICOSTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.USUARIOSTableAdapter = null;
+            // 
+            // helpdesk01DataSet
+            // 
+            this.helpdesk01DataSet.DataSetName = "HelpdeskDataSet";
+            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // eQUIPAMENTOSTableAdapter
             // 
@@ -449,11 +451,11 @@
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eQUIPAMENTOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();
             this.gbxAtivacao.ResumeLayout(false);
             this.gbxAtivacao.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,7 +474,6 @@
         private System.Windows.Forms.ToolStripButton salvarToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private helpdesk01DataSet helpdesk01DataSet;
         private System.Windows.Forms.TextBox txtID;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private System.Windows.Forms.TextBox txtHora;
@@ -488,6 +489,7 @@
         private System.Windows.Forms.DateTimePicker txtDATA_DES;
         private helpdesk01DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource eQUIPAMENTOSBindingSource;
-        private helpdesk01DataSetTableAdapters.EQUIPAMENTOSTableAdapter eQUIPAMENTOSTableAdapter;
+        private HelpdeskDataSet helpdesk01DataSet;
+        private HelpdeskDataSetTableAdapters.EQUIPAMENTOSTableAdapter eQUIPAMENTOSTableAdapter;
     }
 }

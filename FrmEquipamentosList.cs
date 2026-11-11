@@ -21,9 +21,12 @@ namespace HELP_Princ
 
         private void FrmEquipamentosList_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.EQUIPAMENTOS'. Você pode movê-la ou removê-la conforme necessário.
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.EQUIPAMENTOS'. Você pode movê-la ou removê-la conforme necessário.
             this.eQUIPAMENTOSTableAdapter.Fill(this.helpdesk01DataSet.EQUIPAMENTOS);
-            
+
+            FcnAjustaGRID();   
+
+
         }
 
         private void pnlFooter_Paint(object sender, PaintEventArgs e)
@@ -184,6 +187,27 @@ namespace HELP_Princ
             }
 
         }
+
+        private void FcnAjustaGRID()
+        {
+            //MessageBox.Show("Ajustando GRID");  
+
+            // Ajuste do GRID: dbgRetirada - Espaçamento , cores e estilo das células
+            dbgEquipamentos.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
+            dbgEquipamentos.GridColor = Color.White;      // Remove borda padrão     
+            dbgEquipamentos.CellBorderStyle = DataGridViewCellBorderStyle.Single;      // Espaçamento visual
+            dbgEquipamentos.RowTemplate.Height = 45;      // Estilo das células     
+            dbgEquipamentos.DefaultCellStyle.BackColor = Color.LightBlue;
+            dbgEquipamentos.DefaultCellStyle.SelectionBackColor = Color.RoyalBlue;      // Margem interna do texto
+            dbgEquipamentos.DefaultCellStyle.BackColor = Color.LightBlue;
+            dbgEquipamentos.DefaultCellStyle.Padding = new Padding(5);
+
+            // Ajuste do GRID: dbgRetirada - Ativa SCROLL horizontal
+            dbgEquipamentos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
+
+        }
+
     }
 }
 

@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "E:\\DESENVOL_WEB\\HELP_Princ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\frmusuarioslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmusuarioslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\frmusuarioslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmusuarioslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|E:\\DESENVOL_WEB\\HELP_Princ\\frmservicoslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmservicoslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\frmservicoslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmservicoslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\frmequipamentoslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmequipamentoslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|e:\\desenvol_web\\help_princ\\frmequipamentoslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCE66AD8-A1C2-4EAA-9E26-EF702C758DE0}|HELP_Princ.csproj|solutionrelative:frmequipamentoslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +30,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T17:44:48.973Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
@@ -50,28 +75,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmUsuariosList.cs",
-              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmUsuariosList.cs",
-              "RelativeDocumentMoniker": "FrmUsuariosList.cs",
-              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmUsuariosList.cs",
-              "RelativeToolTip": "FrmUsuariosList.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "FrmEquipamentosList.cs",
+              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmEquipamentosList.cs",
+              "RelativeDocumentMoniker": "FrmEquipamentosList.cs",
+              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmEquipamentosList.cs",
+              "RelativeToolTip": "FrmEquipamentosList.cs",
+              "ViewState": "AgIAALMAAAAAAAAAAAAAANAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T18:04:50.799Z",
+              "WhenOpened": "2026-11-11T14:50:29.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmUsuariosList.cs [Design]",
-              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmUsuariosList.cs",
-              "RelativeDocumentMoniker": "FrmUsuariosList.cs",
-              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmUsuariosList.cs [Design]",
-              "RelativeToolTip": "FrmUsuariosList.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "FrmEquipamentosList.cs [Design]",
+              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmEquipamentosList.cs",
+              "RelativeDocumentMoniker": "FrmEquipamentosList.cs",
+              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmEquipamentosList.cs [Design]",
+              "RelativeToolTip": "FrmEquipamentosList.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T18:04:30.151Z",
+              "WhenOpened": "2026-11-11T14:50:23.625Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmServicosList.cs [Design]",
+              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmServicosList.cs",
+              "RelativeDocumentMoniker": "FrmServicosList.cs",
+              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmServicosList.cs [Design]",
+              "RelativeToolTip": "FrmServicosList.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T14:22:30.752Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmServicosList.cs",
+              "DocumentMoniker": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmServicosList.cs",
+              "RelativeDocumentMoniker": "FrmServicosList.cs",
+              "ToolTip": "E:\\DESENVOL_WEB\\HELP_Princ\\FrmServicosList.cs",
+              "RelativeToolTip": "FrmServicosList.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAkwDQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T13:58:46.111Z",
+              "EditorCaption": ""
             }
           ]
         }

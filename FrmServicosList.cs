@@ -21,10 +21,12 @@ namespace HELP_Princ
 
         private void FrmServicosList_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.SERVICOS'. Você pode movê-la ou removê-la conforme necessário.
+            this.sERVICOSTableAdapter.Fill(this.helpdesk01DataSet.SERVICOS);
             // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.TECNICOS'. Você pode movê-la ou removê-la conforme necessário.
             this.sERVICOSTableAdapter.Fill(this.helpdesk01DataSet.SERVICOS);
 
-
+            FcnAjustaGRID();
         }
 
         private void pnlFooter_Paint(object sender, PaintEventArgs e)
@@ -48,7 +50,7 @@ namespace HELP_Princ
             try
             {
                 this.sERVICOSTableAdapter.Fill(this.helpdesk01DataSet.SERVICOS);
-            }
+            }-+.
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
@@ -183,6 +185,26 @@ namespace HELP_Princ
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void FcnAjustaGRID()
+        {
+            //MessageBox.Show("Ajustando GRID");  
+
+            // Ajuste do GRID: dbgRetirada - Espaçamento , cores e estilo das células
+            dbgServicos.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
+            dbgServicos.GridColor = Color.White;      // Remove borda padrão     
+            dbgServicos.CellBorderStyle = DataGridViewCellBorderStyle.Single;      // Espaçamento visual
+            dbgServicos.RowTemplate.Height = 45;      // Estilo das células     
+            dbgServicos.DefaultCellStyle.BackColor = Color.LightBlue;
+            dbgServicos.DefaultCellStyle.SelectionBackColor = Color.RoyalBlue;      // Margem interna do texto
+            dbgServicos.DefaultCellStyle.BackColor = Color.LightBlue;
+            dbgServicos.DefaultCellStyle.Padding = new Padding(5);
+
+            // Ajuste do GRID: dbgRetirada - Ativa SCROLL horizontal
+            dbgServicos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
 
         }
     }

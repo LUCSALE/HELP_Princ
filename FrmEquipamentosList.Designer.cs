@@ -40,7 +40,7 @@ namespace HELP_Princ
             this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.eQUIPAMENTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
+            this.helpdesk01DataSet = new HELP_Princ.HelpdeskDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -56,6 +56,9 @@ namespace HELP_Princ
             this.sERVICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
             this.dbgEquipamentos = new System.Windows.Forms.DataGridView();
+            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
+            this.sERVICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.SERVICOSTableAdapter();
+            this.eQUIPAMENTOSTableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.EQUIPAMENTOSTableAdapter();
             this.btnEdicao = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnExclusao = new System.Windows.Forms.DataGridViewImageColumn();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,9 +67,6 @@ namespace HELP_Princ
             this.DESCRICAO_EQUIPAMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ATIVO2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATADESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
-            this.sERVICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.SERVICOSTableAdapter();
-            this.eQUIPAMENTOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.EQUIPAMENTOSTableAdapter();
             this.pnlHeader.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -96,7 +96,7 @@ namespace HELP_Princ
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblTitulo.Location = new System.Drawing.Point(493, 3);
+            this.lblTitulo.Location = new System.Drawing.Point(752, 3);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(170, 31);
             this.lblTitulo.TabIndex = 0;
@@ -150,7 +150,7 @@ namespace HELP_Princ
             // 
             // helpdesk01DataSet
             // 
-            this.helpdesk01DataSet.DataSetName = "helpdesk01DataSet";
+            this.helpdesk01DataSet.DataSetName = "HelpdeskDataSet";
             this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
@@ -246,11 +246,6 @@ namespace HELP_Princ
             this.toolStripButton2.ToolTipText = "Voltar...";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
-            // sERVICOSBindingSource
-            // 
-            this.sERVICOSBindingSource.DataMember = "SERVICOS";
-            this.sERVICOSBindingSource.DataSource = this.helpdesk01DataSet;
-            // 
             // pnlGrid
             // 
             this.pnlGrid.Controls.Add(this.dbgEquipamentos);
@@ -302,6 +297,27 @@ namespace HELP_Princ
             this.dbgEquipamentos.Size = new System.Drawing.Size(1675, 877);
             this.dbgEquipamentos.TabIndex = 0;
             this.dbgEquipamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgTecnicos_CellContentClick);
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
+            this.tableAdapterManager.MOVI_RETIRADATableAdapter = null;
+            this.tableAdapterManager.MOVITableAdapter = null;
+            this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
+            this.tableAdapterManager.SERVICOSTableAdapter = this.sERVICOSTableAdapter;
+            this.tableAdapterManager.TAREFA_BANCADATableAdapter = null;
+            this.tableAdapterManager.TECNICOSTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.USUARIOSTableAdapter = null;
+            // 
+            // sERVICOSTableAdapter
+            // 
+            this.sERVICOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // eQUIPAMENTOSTableAdapter
+            // 
+            this.eQUIPAMENTOSTableAdapter.ClearBeforeFill = true;
             // 
             // btnEdicao
             // 
@@ -374,27 +390,6 @@ namespace HELP_Princ
             this.dATADESDataGridViewTextBoxColumn.ReadOnly = true;
             this.dATADESDataGridViewTextBoxColumn.Width = 150;
             // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
-            this.tableAdapterManager.MOVI_RETIRADATableAdapter = null;
-            this.tableAdapterManager.MOVITableAdapter = null;
-            this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
-            this.tableAdapterManager.SERVICOSTableAdapter = this.sERVICOSTableAdapter;
-            this.tableAdapterManager.TAREFA_BANCADATableAdapter = null;
-            this.tableAdapterManager.TECNICOSTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USUARIOSTableAdapter = null;
-            // 
-            // sERVICOSTableAdapter
-            // 
-            this.sERVICOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // eQUIPAMENTOSTableAdapter
-            // 
-            this.eQUIPAMENTOSTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmEquipamentosList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -441,7 +436,6 @@ namespace HELP_Princ
         private ToolStripButton bindingNavigatorMoveNextItem;
         private ToolStripButton bindingNavigatorMoveLastItem;
         private ToolStripSeparator bindingNavigatorSeparator2;
-        private helpdesk01DataSet helpdesk01DataSet;
         private BindingSource sERVICOSBindingSource;
         private helpdesk01DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private DataGridView dbgEquipamentos;
@@ -450,7 +444,8 @@ namespace HELP_Princ
         private ToolStripButton toolStripButton2;
         private helpdesk01DataSetTableAdapters.SERVICOSTableAdapter sERVICOSTableAdapter;
         private BindingSource eQUIPAMENTOSBindingSource;
-        private helpdesk01DataSetTableAdapters.EQUIPAMENTOSTableAdapter eQUIPAMENTOSTableAdapter;
+        private HelpdeskDataSet helpdesk01DataSet;
+        private HelpdeskDataSetTableAdapters.EQUIPAMENTOSTableAdapter eQUIPAMENTOSTableAdapter;
         private DataGridViewImageColumn btnEdicao;
         private DataGridViewImageColumn btnExclusao;
         private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;

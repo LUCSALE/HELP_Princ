@@ -23,8 +23,19 @@ namespace HELP_Princ
         {
             // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.USUARIOS'. Você pode movê-la ou removê-la conforme necessário.
             this.uSUARIOSTableAdapter.Fill(this.helpdesk01DataSet.USUARIOS);
+
+            // Ajuste do GRID: dbgRetirada - Espaçamento , cores e estilo das células
+            dbgUsuarios.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
+            dbgUsuarios.GridColor = Color.White;      // Remove borda padrão     
+            dbgUsuarios.CellBorderStyle = DataGridViewCellBorderStyle.Single;      // Espaçamento visual
+            dbgUsuarios.RowTemplate.Height = 45;      // Estilo das células     
+            dbgUsuarios.DefaultCellStyle.BackColor = Color.LightBlue;
+            dbgUsuarios.DefaultCellStyle.SelectionBackColor = Color.RoyalBlue;      // Margem interna do texto
+            dbgUsuarios.DefaultCellStyle.Padding = new Padding(5);
             
 
+            // Ajuste do GRID: dbgRetirada - Ativa SCROLL horizontal
+            dbgUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
 
         }
 
@@ -84,7 +95,8 @@ namespace HELP_Princ
                 {
 
                     //define a string de conexao com provedor caminho e nome do banco de dados
-                    string strProvider = "Data Source=SQL1003.site4now.net;Initial Catalog=db_ab2460_helpdesk02;Persist Security Info=True;User ID=db_ab2460_helpdesk02_admin;PassWord=Mag160163@";
+                    //string strProvider = "Data Source=SQL1003.site4now.net;Initial Catalog=db_ab2460_helpdesk02;Persist Security Info=True;User ID=db_ab2460_helpdesk02_admin;PassWord=Mag160163@";
+                    string strProvider = "Data Source=pleskfsn.nspmanaged.com,1435;Initial Catalog=Helpdesk;Persist Security Info=True;User ID=Helpdesk;PassWord=Mag160163@";
 
                     //define a instrução SQL
                     string strSql = "DELETE FROM USUARIOS WHERE ID = @ID";

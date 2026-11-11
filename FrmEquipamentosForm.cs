@@ -20,6 +20,8 @@ namespace HELP_Princ
 
         private void FrmEquipamentosForm_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.EQUIPAMENTOS'. Você pode movê-la ou removê-la conforme necessário.
+            this.eQUIPAMENTOSTableAdapter.Fill(this.helpdesk01DataSet.EQUIPAMENTOS);
             if (InfoApp.opcao == "Editar DADOS DO EQUIPAMENTO")
             {
                 try
