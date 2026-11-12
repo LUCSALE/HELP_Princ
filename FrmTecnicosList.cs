@@ -21,6 +21,10 @@ namespace HELP_Princ
 
         private void FrmTecnicosList_Load(object sender, EventArgs e)
         {
+            
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.TECNICOS'. Você pode movê-la ou removê-la conforme necessário.
+            this.tECNICOSTableAdapter.Fill(this.Helpdesk01DataSet.TECNICOS);
+            
             // Ajuste do GRID - Espaçamento , cores e estilo das células
             dbgTecnicos.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
             dbgTecnicos.GridColor = Color.White;      // Remove borda padrão     
@@ -33,8 +37,7 @@ namespace HELP_Princ
             // Ajuste do GRID - Ativa SCROLL horizontal
             dbgTecnicos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
 
-            // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.TECNICOS'. Você pode movê-la ou removê-la conforme necessário.
-            this.tECNICOSTableAdapter.Fill(this.helpdesk01DataSet.TECNICOS);
+            ;
 
 
         }
@@ -59,7 +62,7 @@ namespace HELP_Princ
             //
             try
             {
-                this.tECNICOSTableAdapter.Fill(this.helpdesk01DataSet.TECNICOS);
+                this.tECNICOSTableAdapter.Fill(this.Helpdesk01DataSet.TECNICOS);
             }
             catch (System.Exception ex)
             {
@@ -137,7 +140,7 @@ namespace HELP_Princ
             //
             try
             {
-                this.tECNICOSTableAdapter.Fill(this.helpdesk01DataSet.TECNICOS);
+                this.tECNICOSTableAdapter.Fill(this.Helpdesk01DataSet.TECNICOS);
             }
             catch (System.Exception ex)
             {

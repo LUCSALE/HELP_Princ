@@ -21,6 +21,8 @@ namespace HELP_Princ
 
         private void FrmServicosForm_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.SERVICOS'. Você pode movê-la ou removê-la conforme necessário.
+            this.sERVICOSTableAdapter.Fill(this.helpdesk01DataSet.SERVICOS);
             lblTitulo.Text = InfoApp.opcao;
 
             if (InfoApp.opcao == "Editar DADOS SERVIÇO")
@@ -41,11 +43,16 @@ namespace HELP_Princ
             {
                 try
                 {
-                    this.sERVICOSBindingSource.AddNew();
-
                     DateTime DataAtual = DateTime.Now;
                     string DataFormat = DataAtual.ToString("dd/MM/yyyy");
                     string HoraFormat = DataAtual.ToString("HH:mm:ss");
+
+                    // Atualiza TABELA: SERVIÇOS
+                    this.sERVICOSBindingSource.AddNew();
+                    DataRowView row = (DataRowView)sERVICOSBindingSource.Current;
+                    row["DATA"] = DataFormat;
+                    row["HORA"] = HoraFormat;
+                    row["HORA_DES"] = HoraFormat;
 
                     // Atualiza DADOS da aplicação
                     txtData.Text = DataFormat;

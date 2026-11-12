@@ -39,6 +39,8 @@ namespace HELP_Princ
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.sERVICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.helpdesk01DataSet = new HELP_Princ.HelpdeskDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -53,28 +55,24 @@ namespace HELP_Princ
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
             this.dbgServicos = new System.Windows.Forms.DataGridView();
-            this.btnEdicao = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnExclusao = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ATIVO2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.helpdesk01DataSet = new HELP_Princ.HelpdeskDataSet();
-            this.sERVICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sERVICOSTableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.SERVICOSTableAdapter();
             this.tableAdapterManager = new HELP_Princ.HelpdeskDataSetTableAdapters.TableAdapterManager();
+            this.btnEdicao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnExclusao = new System.Windows.Forms.DataGridViewImageColumn();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hORADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dESCRICAOSERVICODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aTIVODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ATIVO2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATADESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hORADESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlHeader.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sERVICOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgServicos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sERVICOSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -95,12 +93,12 @@ namespace HELP_Princ
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblTitulo.Location = new System.Drawing.Point(785, 6);
+            this.lblTitulo.Location = new System.Drawing.Point(717, 15);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(104, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(240, 31);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.TabStop = false;
-            this.lblTitulo.Text = "Serviços";
+            this.lblTitulo.Text = "PEÇAS / SERVIÇOS";
             // 
             // pnlFooter
             // 
@@ -141,6 +139,16 @@ namespace HELP_Princ
             this.bindingNavigator1.Size = new System.Drawing.Size(1675, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // sERVICOSBindingSource
+            // 
+            this.sERVICOSBindingSource.DataMember = "SERVICOS";
+            this.sERVICOSBindingSource.DataSource = this.helpdesk01DataSet;
+            // 
+            // helpdesk01DataSet
+            // 
+            this.helpdesk01DataSet.DataSetName = "HelpdeskDataSet";
+            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -263,14 +271,12 @@ namespace HELP_Princ
             this.dbgServicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnEdicao,
             this.btnExclusao,
-            this.ATIVO2,
             this.iDDataGridViewTextBoxColumn,
             this.dATADataGridViewTextBoxColumn,
             this.hORADataGridViewTextBoxColumn,
             this.dESCRICAOSERVICODataGridViewTextBoxColumn,
-            this.aTIVODataGridViewTextBoxColumn,
-            this.dATADESDataGridViewTextBoxColumn,
-            this.hORADESDataGridViewTextBoxColumn});
+            this.ATIVO2,
+            this.dATADESDataGridViewTextBoxColumn});
             this.dbgServicos.DataSource = this.sERVICOSBindingSource;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
@@ -287,6 +293,18 @@ namespace HELP_Princ
             this.dbgServicos.Size = new System.Drawing.Size(1675, 858);
             this.dbgServicos.TabIndex = 0;
             this.dbgServicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgTecnicos_CellContentClick);
+            // 
+            // sERVICOSTableAdapter
+            // 
+            this.sERVICOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
+            this.tableAdapterManager.SERVICOSTableAdapter = this.sERVICOSTableAdapter;
+            this.tableAdapterManager.UpdateOrder = HELP_Princ.HelpdeskDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.USUARIOSTableAdapter = null;
             // 
             // btnEdicao
             // 
@@ -308,84 +326,58 @@ namespace HELP_Princ
             this.btnExclusao.ReadOnly = true;
             this.btnExclusao.Width = 5;
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID:";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 46;
+            // 
+            // dATADataGridViewTextBoxColumn
+            // 
+            this.dATADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dATADataGridViewTextBoxColumn.DataPropertyName = "DATA";
+            this.dATADataGridViewTextBoxColumn.HeaderText = "Data:";
+            this.dATADataGridViewTextBoxColumn.Name = "dATADataGridViewTextBoxColumn";
+            this.dATADataGridViewTextBoxColumn.ReadOnly = true;
+            this.dATADataGridViewTextBoxColumn.Width = 58;
+            // 
+            // hORADataGridViewTextBoxColumn
+            // 
+            this.hORADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.hORADataGridViewTextBoxColumn.DataPropertyName = "HORA";
+            this.hORADataGridViewTextBoxColumn.HeaderText = "Hora:";
+            this.hORADataGridViewTextBoxColumn.Name = "hORADataGridViewTextBoxColumn";
+            this.hORADataGridViewTextBoxColumn.ReadOnly = true;
+            this.hORADataGridViewTextBoxColumn.Width = 58;
+            // 
+            // dESCRICAOSERVICODataGridViewTextBoxColumn
+            // 
+            this.dESCRICAOSERVICODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dESCRICAOSERVICODataGridViewTextBoxColumn.DataPropertyName = "DESCRICAO_SERVICO";
+            this.dESCRICAOSERVICODataGridViewTextBoxColumn.HeaderText = "Descrição PEÇAS/SERVIÇOS";
+            this.dESCRICAOSERVICODataGridViewTextBoxColumn.Name = "dESCRICAOSERVICODataGridViewTextBoxColumn";
+            this.dESCRICAOSERVICODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // ATIVO2
             // 
+            this.ATIVO2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ATIVO2.DataPropertyName = "ATIVO2";
             this.ATIVO2.HeaderText = "Ativo:";
             this.ATIVO2.Name = "ATIVO2";
             this.ATIVO2.ReadOnly = true;
-            this.ATIVO2.Width = 50;
-            // 
-            // helpdesk01DataSet
-            // 
-            this.helpdesk01DataSet.DataSetName = "HelpdeskDataSet";
-            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sERVICOSBindingSource
-            // 
-            this.sERVICOSBindingSource.DataMember = "SERVICOS";
-            this.sERVICOSBindingSource.DataSource = this.helpdesk01DataSet;
-            // 
-            // sERVICOSTableAdapter
-            // 
-            this.sERVICOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
-            this.tableAdapterManager.SERVICOSTableAdapter = this.sERVICOSTableAdapter;
-            this.tableAdapterManager.UpdateOrder = HELP_Princ.HelpdeskDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USUARIOSTableAdapter = null;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dATADataGridViewTextBoxColumn
-            // 
-            this.dATADataGridViewTextBoxColumn.DataPropertyName = "DATA";
-            this.dATADataGridViewTextBoxColumn.HeaderText = "DATA";
-            this.dATADataGridViewTextBoxColumn.Name = "dATADataGridViewTextBoxColumn";
-            this.dATADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hORADataGridViewTextBoxColumn
-            // 
-            this.hORADataGridViewTextBoxColumn.DataPropertyName = "HORA";
-            this.hORADataGridViewTextBoxColumn.HeaderText = "HORA";
-            this.hORADataGridViewTextBoxColumn.Name = "hORADataGridViewTextBoxColumn";
-            this.hORADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dESCRICAOSERVICODataGridViewTextBoxColumn
-            // 
-            this.dESCRICAOSERVICODataGridViewTextBoxColumn.DataPropertyName = "DESCRICAO_SERVICO";
-            this.dESCRICAOSERVICODataGridViewTextBoxColumn.HeaderText = "DESCRICAO_SERVICO";
-            this.dESCRICAOSERVICODataGridViewTextBoxColumn.Name = "dESCRICAOSERVICODataGridViewTextBoxColumn";
-            this.dESCRICAOSERVICODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aTIVODataGridViewTextBoxColumn
-            // 
-            this.aTIVODataGridViewTextBoxColumn.DataPropertyName = "ATIVO";
-            this.aTIVODataGridViewTextBoxColumn.HeaderText = "ATIVO";
-            this.aTIVODataGridViewTextBoxColumn.Name = "aTIVODataGridViewTextBoxColumn";
-            this.aTIVODataGridViewTextBoxColumn.ReadOnly = true;
+            this.ATIVO2.Width = 59;
             // 
             // dATADESDataGridViewTextBoxColumn
             // 
+            this.dATADESDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dATADESDataGridViewTextBoxColumn.DataPropertyName = "DATA_DES";
-            this.dATADESDataGridViewTextBoxColumn.HeaderText = "DATA_DES";
+            this.dATADESDataGridViewTextBoxColumn.HeaderText = "Data Desativação";
             this.dATADESDataGridViewTextBoxColumn.Name = "dATADESDataGridViewTextBoxColumn";
             this.dATADESDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hORADESDataGridViewTextBoxColumn
-            // 
-            this.hORADESDataGridViewTextBoxColumn.DataPropertyName = "HORA_DES";
-            this.hORADESDataGridViewTextBoxColumn.HeaderText = "HORA_DES";
-            this.hORADESDataGridViewTextBoxColumn.Name = "hORADESDataGridViewTextBoxColumn";
-            this.hORADESDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dATADESDataGridViewTextBoxColumn.Width = 118;
             // 
             // FrmServicosList
             // 
@@ -408,10 +400,10 @@ namespace HELP_Princ
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sERVICOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
             this.pnlGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dbgServicos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sERVICOSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -436,19 +428,17 @@ namespace HELP_Princ
         private ToolStripButton bindingNavigatorAddNewItem;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton toolStripButton2;
-        private DataGridViewImageColumn btnEdicao;
-        private DataGridViewImageColumn btnExclusao;
-        private DataGridViewTextBoxColumn ATIVO2;
         private HelpdeskDataSet helpdesk01DataSet;
         private BindingSource sERVICOSBindingSource;
         private HelpdeskDataSetTableAdapters.SERVICOSTableAdapter sERVICOSTableAdapter;
         private HelpdeskDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private DataGridViewImageColumn btnEdicao;
+        private DataGridViewImageColumn btnExclusao;
         private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dATADataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn hORADataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dESCRICAOSERVICODataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn aTIVODataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn ATIVO2;
         private DataGridViewTextBoxColumn dATADESDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn hORADESDataGridViewTextBoxColumn;
     }
 }

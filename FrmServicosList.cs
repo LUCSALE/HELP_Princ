@@ -50,7 +50,7 @@ namespace HELP_Princ
             try
             {
                 this.sERVICOSTableAdapter.Fill(this.helpdesk01DataSet.SERVICOS);
-            }-+.
+            }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
@@ -64,7 +64,7 @@ namespace HELP_Princ
                 // Editar o registro
                 // 
                 InfoPesq.ID = (int)dbgServicos.CurrentRow.Cells[2].Value; // Pega o ID da pesquisa   
-                InfoApp.opcao = "Editar DADOS SERVIÇO";
+                InfoApp.opcao = "Editar DADOS PEÇAS / SERVIÇOS";
                 FrmServicosForm ServicosForm = new FrmServicosForm();
                 ServicosForm.ShowDialog();
             }
@@ -75,7 +75,7 @@ namespace HELP_Princ
                 // EXCLUSÃO DE REGISTRO
                 // Initializes the variables to pass to the MessageBox.Show method.
                 string message = "Tem CERTEZA da Exclusão?";
-                string caption = "Exclusão do SERVIÇO";
+                string caption = "Exclusão das PEÇAS / SERVIÇOS";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result;
 
@@ -85,7 +85,8 @@ namespace HELP_Princ
                 {
 
                     //define a string de conexao com provedor caminho e nome do banco de dados
-                    string strProvider = "Data Source=SQL1003.site4now.net;Initial Catalog=db_ab2460_helpdesk02;Persist Security Info=True;User ID=db_ab2460_helpdesk02_admin;PassWord=Mag160163@";
+                    //string strProvider = "Data Source=SQL1003.site4now.net;Initial Catalog=db_ab2460_helpdesk02;Persist Security Info=True;User ID=db_ab2460_helpdesk02_admin;PassWord=Mag160163@";
+                    string strProvider = "Data Source=pleskfsn.nspmanaged.com,1435;Initial Catalog=Helpdesk;Persist Security Info=True;User ID=Helpdesk;PassWord=Mag160163@";
 
                     //define a instrução SQL
                     string strSql = "DELETE FROM SERVICOS WHERE ID = @ID";

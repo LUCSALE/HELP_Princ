@@ -44,8 +44,6 @@
             this.pnlForm = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.gbxAtivacao = new Guna.UI2.WinForms.Guna2GroupBox();
             this.aTIVO2ComboBox = new System.Windows.Forms.ComboBox();
-            this.sERVICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
             this.txtDATA_DES = new System.Windows.Forms.TextBox();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -57,8 +55,10 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.sERVICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.SERVICOSTableAdapter();
             this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
+            this.helpdesk01DataSet = new HELP_Princ.HelpdeskDataSet();
+            this.sERVICOSTableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.SERVICOSTableAdapter();
+            this.sERVICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lblLogo)).BeginInit();
             this.pnlFooter.SuspendLayout();
@@ -66,8 +66,8 @@
             this.bindingNavigator1.SuspendLayout();
             this.pnlForm.SuspendLayout();
             this.gbxAtivacao.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sERVICOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sERVICOSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -256,7 +256,7 @@
             // 
             // aTIVO2ComboBox
             // 
-            this.aTIVO2ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sERVICOSBindingSource, "ATIVO2", true));
+            this.aTIVO2ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sERVICOSBindingSource, "ATIVO", true));
             this.aTIVO2ComboBox.FormattingEnabled = true;
             this.aTIVO2ComboBox.Items.AddRange(new object[] {
             "SIM",
@@ -267,17 +267,6 @@
             this.aTIVO2ComboBox.TabIndex = 0;
             this.aTIVO2ComboBox.TabStop = false;
             this.aTIVO2ComboBox.SelectedIndexChanged += new System.EventHandler(this.aTIVO2ComboBox_SelectedIndexChanged);
-            // 
-            // sERVICOSBindingSource
-            // 
-            this.sERVICOSBindingSource.DataMember = "SERVICOS";
-            this.sERVICOSBindingSource.DataSource = this.helpdesk01DataSet;
-            this.sERVICOSBindingSource.CurrentChanged += new System.EventHandler(this.sERVICOSBindingSource_CurrentChanged);
-            // 
-            // helpdesk01DataSet
-            // 
-            this.helpdesk01DataSet.DataSetName = "helpdesk01DataSet";
-            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtDATA_DES
             // 
@@ -408,20 +397,34 @@
             this.guna2HtmlLabel5.TabStop = false;
             this.guna2HtmlLabel5.Text = "Data:";
             // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
+            this.tableAdapterManager.MOVI_RETIRADATableAdapter = null;
+            this.tableAdapterManager.MOVITableAdapter = null;
+            this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
+            this.tableAdapterManager.SERVICOSTableAdapter = null;
+            this.tableAdapterManager.TAREFA_BANCADATableAdapter = null;
+            this.tableAdapterManager.TECNICOSTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.USUARIOSTableAdapter = null;
+            // 
+            // helpdesk01DataSet
+            // 
+            this.helpdesk01DataSet.DataSetName = "HelpdeskDataSet";
+            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // sERVICOSTableAdapter
             // 
             this.sERVICOSTableAdapter.ClearBeforeFill = true;
             // 
-            // tableAdapterManager
+            // sERVICOSBindingSource
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
-            this.tableAdapterManager.MOVI_RETIRADATableAdapter = null;
-            this.tableAdapterManager.MOVITableAdapter = null;
-            this.tableAdapterManager.SERVICOSTableAdapter = this.sERVICOSTableAdapter;
-            this.tableAdapterManager.TECNICOSTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USUARIOSTableAdapter = null;
+            this.sERVICOSBindingSource.DataMember = "SERVICOS";
+            this.sERVICOSBindingSource.DataSource = this.helpdesk01DataSet;
+            this.sERVICOSBindingSource.CurrentChanged += new System.EventHandler(this.sERVICOSBindingSource_CurrentChanged);
             // 
             // FrmServicosForm
             // 
@@ -449,8 +452,8 @@
             this.pnlForm.PerformLayout();
             this.gbxAtivacao.ResumeLayout(false);
             this.gbxAtivacao.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sERVICOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sERVICOSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -481,10 +484,10 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private System.Windows.Forms.TextBox txtDATA_DES;
-        private helpdesk01DataSet helpdesk01DataSet;
-        private System.Windows.Forms.BindingSource sERVICOSBindingSource;
-        private helpdesk01DataSetTableAdapters.SERVICOSTableAdapter sERVICOSTableAdapter;
         private helpdesk01DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.ComboBox aTIVO2ComboBox;
+        private HelpdeskDataSet helpdesk01DataSet;
+        private HelpdeskDataSetTableAdapters.SERVICOSTableAdapter sERVICOSTableAdapter;
+        private System.Windows.Forms.BindingSource sERVICOSBindingSource;
     }
 }
