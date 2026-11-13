@@ -33,14 +33,15 @@ namespace HELP_Princ
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTecnicosList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -55,26 +56,29 @@ namespace HELP_Princ
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
             this.dbgTecnicos = new System.Windows.Forms.DataGridView();
+            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
+            this.Helpdesk01DataSet = new HELP_Princ.HelpdeskDataSet();
+            this.tECNICOSTableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.TECNICOSTableAdapter();
             this.btnEdicao = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnExclusao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hORADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOMECOMPLETODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dRTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AREA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ATIVO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATA_DES = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ARQ_ASSINATURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ASSINATURA = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
-            this.Helpdesk01DataSet = new HELP_Princ.HelpdeskDataSet();
-            this.tECNICOSTableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.TECNICOSTableAdapter();
-            this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlHeader.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).BeginInit();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgTecnicos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Helpdesk01DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -95,7 +99,7 @@ namespace HELP_Princ
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblTitulo.Location = new System.Drawing.Point(523, 3);
+            this.lblTitulo.Location = new System.Drawing.Point(782, 3);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(110, 31);
             this.lblTitulo.TabIndex = 0;
@@ -141,6 +145,11 @@ namespace HELP_Princ
             this.bindingNavigator1.Size = new System.Drawing.Size(1675, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // tECNICOSBindingSource
+            // 
+            this.tECNICOSBindingSource.DataMember = "TECNICOS";
+            this.tECNICOSBindingSource.DataSource = this.Helpdesk01DataSet;
             // 
             // bindingNavigatorCountItem
             // 
@@ -249,33 +258,39 @@ namespace HELP_Princ
             this.dbgTecnicos.AllowUserToAddRows = false;
             this.dbgTecnicos.AllowUserToDeleteRows = false;
             this.dbgTecnicos.AllowUserToOrderColumns = true;
+            this.dbgTecnicos.AutoGenerateColumns = false;
             this.dbgTecnicos.BackgroundColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgTecnicos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgTecnicos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dbgTecnicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dbgTecnicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnEdicao,
             this.btnExclusao,
+            this.iDDataGridViewTextBoxColumn,
+            this.dATADataGridViewTextBoxColumn,
+            this.hORADataGridViewTextBoxColumn,
+            this.nOMECOMPLETODataGridViewTextBoxColumn,
+            this.dRTIDDataGridViewTextBoxColumn,
             this.AREA,
             this.EMAIL,
             this.ATIVO,
             this.DATA_DES,
-            this.ARQ_ASSINATURA,
             this.ASSINATURA});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dbgTecnicos.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dbgTecnicos.DataSource = this.tECNICOSBindingSource;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dbgTecnicos.DefaultCellStyle = dataGridViewCellStyle8;
             this.dbgTecnicos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbgTecnicos.Location = new System.Drawing.Point(0, 0);
             this.dbgTecnicos.Name = "dbgTecnicos";
@@ -284,6 +299,29 @@ namespace HELP_Princ
             this.dbgTecnicos.TabIndex = 0;
             this.dbgTecnicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgTecnicos_CellContentClick);
             this.dbgTecnicos.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dbgTecnicos_RowPrePaint);
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
+            this.tableAdapterManager.MOVI_RETIRADATableAdapter = null;
+            this.tableAdapterManager.MOVITableAdapter = null;
+            this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
+            this.tableAdapterManager.SERVICOSTableAdapter = null;
+            this.tableAdapterManager.TAREFA_BANCADATableAdapter = null;
+            this.tableAdapterManager.TECNICOSTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.USUARIOSTableAdapter = null;
+            // 
+            // Helpdesk01DataSet
+            // 
+            this.Helpdesk01DataSet.DataSetName = "HelpdeskDataSet";
+            this.Helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tECNICOSTableAdapter
+            // 
+            this.tECNICOSTableAdapter.ClearBeforeFill = true;
             // 
             // btnEdicao
             // 
@@ -305,11 +343,53 @@ namespace HELP_Princ
             this.btnExclusao.ReadOnly = true;
             this.btnExclusao.Width = 5;
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dATADataGridViewTextBoxColumn
+            // 
+            this.dATADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dATADataGridViewTextBoxColumn.DataPropertyName = "DATA";
+            this.dATADataGridViewTextBoxColumn.HeaderText = "Data:";
+            this.dATADataGridViewTextBoxColumn.Name = "dATADataGridViewTextBoxColumn";
+            this.dATADataGridViewTextBoxColumn.ReadOnly = true;
+            this.dATADataGridViewTextBoxColumn.Width = 58;
+            // 
+            // hORADataGridViewTextBoxColumn
+            // 
+            this.hORADataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.hORADataGridViewTextBoxColumn.DataPropertyName = "HORA";
+            this.hORADataGridViewTextBoxColumn.HeaderText = "Hora:";
+            this.hORADataGridViewTextBoxColumn.Name = "hORADataGridViewTextBoxColumn";
+            this.hORADataGridViewTextBoxColumn.ReadOnly = true;
+            this.hORADataGridViewTextBoxColumn.Width = 58;
+            // 
+            // nOMECOMPLETODataGridViewTextBoxColumn
+            // 
+            this.nOMECOMPLETODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nOMECOMPLETODataGridViewTextBoxColumn.DataPropertyName = "NOME_COMPLETO";
+            this.nOMECOMPLETODataGridViewTextBoxColumn.HeaderText = "Nome Completo:";
+            this.nOMECOMPLETODataGridViewTextBoxColumn.Name = "nOMECOMPLETODataGridViewTextBoxColumn";
+            this.nOMECOMPLETODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dRTIDDataGridViewTextBoxColumn
+            // 
+            this.dRTIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dRTIDDataGridViewTextBoxColumn.DataPropertyName = "DRT_ID";
+            this.dRTIDDataGridViewTextBoxColumn.HeaderText = "DRT / ID:";
+            this.dRTIDDataGridViewTextBoxColumn.Name = "dRTIDDataGridViewTextBoxColumn";
+            this.dRTIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dRTIDDataGridViewTextBoxColumn.Width = 80;
+            // 
             // AREA
             // 
             this.AREA.DataPropertyName = "AREA";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.AREA.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.AREA.DefaultCellStyle = dataGridViewCellStyle6;
             this.AREA.HeaderText = "Área de Atuação:";
             this.AREA.Name = "AREA";
             this.AREA.ReadOnly = true;
@@ -325,9 +405,9 @@ namespace HELP_Princ
             // ATIVO
             // 
             this.ATIVO.DataPropertyName = "ATIVO";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ATIVO.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ATIVO.DefaultCellStyle = dataGridViewCellStyle7;
             this.ATIVO.HeaderText = "Ativo:";
             this.ATIVO.Name = "ATIVO";
             this.ATIVO.ReadOnly = true;
@@ -340,42 +420,12 @@ namespace HELP_Princ
             this.DATA_DES.Name = "DATA_DES";
             this.DATA_DES.ReadOnly = true;
             // 
-            // ARQ_ASSINATURA
-            // 
-            this.ARQ_ASSINATURA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ARQ_ASSINATURA.DataPropertyName = "ARQ_ASSINATURA";
-            this.ARQ_ASSINATURA.HeaderText = "Arq. Assinatura: ";
-            this.ARQ_ASSINATURA.Name = "ARQ_ASSINATURA";
-            this.ARQ_ASSINATURA.ReadOnly = true;
-            this.ARQ_ASSINATURA.Visible = false;
-            // 
             // ASSINATURA
             // 
             this.ASSINATURA.DataPropertyName = "ASSINATURA";
             this.ASSINATURA.HeaderText = "Assinatura:";
             this.ASSINATURA.Name = "ASSINATURA";
             this.ASSINATURA.ReadOnly = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
-            this.tableAdapterManager.MOVI_RETIRADATableAdapter = null;
-            this.tableAdapterManager.MOVITableAdapter = null;
-            this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
-            this.tableAdapterManager.SERVICOSTableAdapter = null;
-            this.tableAdapterManager.TAREFA_BANCADATableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USUARIOSTableAdapter = null;
-            // 
-            // Helpdesk01DataSet
-            // 
-            this.Helpdesk01DataSet.DataSetName = "HelpdeskDataSet";
-            this.Helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tECNICOSTableAdapter
-            // 
-            this.tECNICOSTableAdapter.ClearBeforeFill = true;
             // 
             // FrmTecnicosList
             // 
@@ -398,10 +448,10 @@ namespace HELP_Princ
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).EndInit();
             this.pnlGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dbgTecnicos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Helpdesk01DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -427,16 +477,20 @@ namespace HELP_Princ
         private ToolStripButton bindingNavigatorAddNewItem;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton toolStripButton2;
+        private HelpdeskDataSet Helpdesk01DataSet;
+        private HelpdeskDataSetTableAdapters.TECNICOSTableAdapter tECNICOSTableAdapter;
+        private BindingSource tECNICOSBindingSource;
         private DataGridViewImageColumn btnEdicao;
         private DataGridViewImageColumn btnExclusao;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dATADataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn hORADataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nOMECOMPLETODataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dRTIDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn AREA;
         private DataGridViewTextBoxColumn EMAIL;
         private DataGridViewTextBoxColumn ATIVO;
         private DataGridViewTextBoxColumn DATA_DES;
-        private DataGridViewTextBoxColumn ARQ_ASSINATURA;
         private DataGridViewImageColumn ASSINATURA;
-        private HelpdeskDataSet Helpdesk01DataSet;
-        private HelpdeskDataSetTableAdapters.TECNICOSTableAdapter tECNICOSTableAdapter;
-        private BindingSource tECNICOSBindingSource;
     }
 }

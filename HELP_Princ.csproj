@@ -246,6 +246,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>helpdesk01DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HelpdeskDataSet.cs">
+      <DependentUpon>HelpdeskDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HelpdeskDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
