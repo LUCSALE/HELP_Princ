@@ -26,6 +26,9 @@ namespace HELP_Princ
 
         private void FrmTecnicosForm_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.TECNICOS'. Você pode movê-la ou removê-la conforme necessário.
+            this.tECNICOSTableAdapter.Fill(this.helpdeskDataSet.TECNICOS);
+            
             pbxAssinatura.Image = null;
 
             if (InfoApp.opcao == "Editar DADOS DO TÉCNICO")
@@ -33,7 +36,7 @@ namespace HELP_Princ
                 try
                 {
                     // TODO: esta linha de código carrega dados na tabela 'db_ab2460_SALDOS_LCTO_DataSet.SALDOS'. Você pode movê-la ou removê-la conforme necessário.
-                    this.tECNICOSTableAdapter.FillByID(this.helpdesk01DataSet.TECNICOS, InfoPesq.ID);
+                    this.tECNICOSTableAdapter.FillByID(this.helpdeskDataSet.TECNICOS, InfoPesq.ID);
 
                 }
                 catch (Exception ex)
@@ -94,6 +97,22 @@ namespace HELP_Princ
 
             // Atualiza TABELA: TECNICOS com a imagem da assinatura 
             DataRowView row = (DataRowView)tECNICOSBindingSource.Current;
+
+
+            row["HORA_DES"] = "00:00:00";
+            if (comboBox1.SelectedIndex == 0)
+            {
+                row["DATA_DES"] = DateTime.Parse("01 /01/1900");
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+
+                // Atualiza DADOS da aplicação
+                row["DATA_DES"] = DateTime.Now;
+
+            }
+
+
             if (File.Exists(txtArq_Assinatura.Text.Trim()))
             {
                 row["ASSINATURA"] = File.ReadAllBytes(txtArq_Assinatura.Text.Trim());
@@ -103,7 +122,7 @@ namespace HELP_Princ
             {
                 this.Validate();
                 this.tECNICOSBindingSource.EndEdit();
-                this.tECNICOSTableAdapter.Update(this.helpdesk01DataSet);
+                this.tECNICOSTableAdapter.Update(this.helpdeskDataSet.TECNICOS);
                 MessageBox.Show("Dados salvos com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -194,6 +213,25 @@ namespace HELP_Princ
                 pbxAssinatura.SizeMode = PictureBoxSizeMode.Zoom;
                 txtArq_Assinatura.Text = ofd.FileName;
             }
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                txtDATA_DES.Value = DateTime.Parse("01/01/1900");
+            }
+
+            if (comboBox1.SelectedIndex == 1)
+            {
+
+                // Atualiza DADOS da aplicação
+                txtDATA_DES.Value = DateTime.Now;
+
+            }
+
+
 
         }
     }

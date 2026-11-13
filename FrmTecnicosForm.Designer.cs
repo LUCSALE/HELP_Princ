@@ -45,8 +45,6 @@
             this.btnArq_Assinatura = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtArq_Assinatura = new System.Windows.Forms.TextBox();
-            this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
             this.pbxAssinatura = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gbxDados = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtAREA = new System.Windows.Forms.TextBox();
@@ -68,10 +66,10 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.tECNICOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.helpdesk01DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tECNICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TECNICOSTableAdapter();
-            this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
+            this.helpdeskDataSet = new HELP_Princ.HelpdeskDataSet();
+            this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tECNICOSTableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.TECNICOSTableAdapter();
+            this.tableAdapterManager = new HELP_Princ.HelpdeskDataSetTableAdapters.TableAdapterManager();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lblLogo)).BeginInit();
             this.pnlFooter.SuspendLayout();
@@ -79,13 +77,11 @@
             this.bindingNavigator1.SuspendLayout();
             this.pnlForm.SuspendLayout();
             this.btnArq_Assinatura.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAssinatura)).BeginInit();
             this.gbxDados.SuspendLayout();
             this.gbxAtivacao.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdeskDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -111,7 +107,7 @@
             this.pnlHeader.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1156, 87);
+            this.pnlHeader.Size = new System.Drawing.Size(1170, 96);
             this.pnlHeader.TabIndex = 3;
             // 
             // lblLogo
@@ -154,7 +150,7 @@
             this.guna2ControlBox3.Enabled = false;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.LightGray;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1098, 3);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1112, 3);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(23, 25);
             this.guna2ControlBox3.TabIndex = 3;
@@ -169,7 +165,7 @@
             this.guna2ControlBox1.BorderThickness = 1;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.LightGray;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1127, 4);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1141, 4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(23, 25);
             this.guna2ControlBox1.TabIndex = 0;
@@ -186,7 +182,7 @@
             this.pnlFooter.FillColor2 = System.Drawing.Color.LightGray;
             this.pnlFooter.Location = new System.Drawing.Point(0, 486);
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(1156, 26);
+            this.pnlFooter.Size = new System.Drawing.Size(1170, 26);
             this.pnlFooter.TabIndex = 4;
             // 
             // bindingNavigator1
@@ -205,7 +201,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1156, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1170, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -242,9 +238,9 @@
             this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlForm.FillColor = System.Drawing.Color.LightGray;
             this.pnlForm.FillColor2 = System.Drawing.Color.WhiteSmoke;
-            this.pnlForm.Location = new System.Drawing.Point(0, 87);
+            this.pnlForm.Location = new System.Drawing.Point(0, 96);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(1156, 399);
+            this.pnlForm.Size = new System.Drawing.Size(1170, 390);
             this.pnlForm.TabIndex = 5;
             // 
             // btnArq_Assinatura
@@ -296,16 +292,6 @@
             this.txtArq_Assinatura.Size = new System.Drawing.Size(580, 23);
             this.txtArq_Assinatura.TabIndex = 40;
             this.txtArq_Assinatura.TabStop = false;
-            // 
-            // tECNICOSBindingSource
-            // 
-            this.tECNICOSBindingSource.DataMember = "TECNICOS";
-            this.tECNICOSBindingSource.DataSource = this.helpdesk01DataSet;
-            // 
-            // helpdesk01DataSet
-            // 
-            this.helpdesk01DataSet.DataSetName = "helpdesk01DataSet";
-            this.helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pbxAssinatura
             // 
@@ -397,7 +383,6 @@
             // 
             // txtDATA_DES
             // 
-            this.txtDATA_DES.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tECNICOSBindingSource, "DATA_DES", true));
             this.txtDATA_DES.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtDATA_DES.Location = new System.Drawing.Point(143, 51);
             this.txtDATA_DES.Name = "txtDATA_DES";
@@ -430,8 +415,6 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tECNICOSBindingSource, "ATIVO", true));
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.tECNICOSBindingSource, "ATIVO", true));
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -442,6 +425,7 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 25);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.TabStop = false;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // txtEMAIL
             // 
@@ -579,15 +563,15 @@
             this.guna2HtmlLabel5.TabStop = false;
             this.guna2HtmlLabel5.Text = "Data:";
             // 
-            // tECNICOSBindingSource1
+            // helpdeskDataSet
             // 
-            this.tECNICOSBindingSource1.DataMember = "TECNICOS";
-            this.tECNICOSBindingSource1.DataSource = this.helpdesk01DataSetBindingSource;
+            this.helpdeskDataSet.DataSetName = "HelpdeskDataSet";
+            this.helpdeskDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // helpdesk01DataSetBindingSource
+            // tECNICOSBindingSource
             // 
-            this.helpdesk01DataSetBindingSource.DataSource = this.helpdesk01DataSet;
-            this.helpdesk01DataSetBindingSource.Position = 0;
+            this.tECNICOSBindingSource.DataMember = "TECNICOS";
+            this.tECNICOSBindingSource.DataSource = this.helpdeskDataSet;
             // 
             // tECNICOSTableAdapter
             // 
@@ -597,11 +581,9 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
-            this.tableAdapterManager.MOVI_RETIRADATableAdapter = null;
-            this.tableAdapterManager.MOVITableAdapter = null;
             this.tableAdapterManager.SERVICOSTableAdapter = null;
             this.tableAdapterManager.TECNICOSTableAdapter = this.tECNICOSTableAdapter;
-            this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = HELP_Princ.HelpdeskDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.USUARIOSTableAdapter = null;
             // 
             // FrmTecnicosForm
@@ -609,7 +591,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1156, 512);
+            this.ClientSize = new System.Drawing.Size(1170, 512);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.pnlHeader);
@@ -630,15 +612,13 @@
             this.pnlForm.ResumeLayout(false);
             this.btnArq_Assinatura.ResumeLayout(false);
             this.btnArq_Assinatura.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAssinatura)).EndInit();
             this.gbxDados.ResumeLayout(false);
             this.gbxDados.PerformLayout();
             this.gbxAtivacao.ResumeLayout(false);
             this.gbxAtivacao.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdeskDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -657,12 +637,6 @@
         private System.Windows.Forms.ToolStripButton salvarToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private helpdesk01DataSet helpdesk01DataSet;
-        private System.Windows.Forms.BindingSource helpdesk01DataSetBindingSource;
-        private System.Windows.Forms.BindingSource tECNICOSBindingSource;
-        private helpdesk01DataSetTableAdapters.TECNICOSTableAdapter tECNICOSTableAdapter;
-        private System.Windows.Forms.BindingSource tECNICOSBindingSource1;
-        private helpdesk01DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private Guna.UI2.WinForms.Guna2GroupBox gbxDados;
         private System.Windows.Forms.TextBox txtAREA;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
@@ -687,5 +661,9 @@
         private Guna.UI2.WinForms.Guna2PictureBox pbxAssinatura;
         private System.Windows.Forms.TextBox txtArq_Assinatura;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private HelpdeskDataSet helpdeskDataSet;
+        private System.Windows.Forms.BindingSource tECNICOSBindingSource;
+        private HelpdeskDataSetTableAdapters.TECNICOSTableAdapter tECNICOSTableAdapter;
+        private HelpdeskDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
