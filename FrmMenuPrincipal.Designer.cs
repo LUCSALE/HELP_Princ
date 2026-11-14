@@ -58,6 +58,9 @@ namespace HELP_Princ
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlHeader = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblUsuario = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblMaquina = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblSistema = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -65,9 +68,6 @@ namespace HELP_Princ
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlForm = new Guna.UI2.WinForms.Guna2Panel();
             this.elpTexto = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnlLateral.SuspendLayout();
             this.pnlLateralHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -540,6 +540,53 @@ namespace HELP_Princ
             this.pnlHeader.Size = new System.Drawing.Size(1677, 87);
             this.pnlHeader.TabIndex = 2;
             // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.Animated = true;
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2ControlBox2.BorderColor = System.Drawing.Color.Silver;
+            this.guna2ControlBox2.BorderRadius = 10;
+            this.guna2ControlBox2.BorderThickness = 1;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.DarkGray;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1619, 12);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(23, 25);
+            this.guna2ControlBox2.TabIndex = 13;
+            // 
+            // guna2ControlBox3
+            // 
+            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox3.Animated = true;
+            this.guna2ControlBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2ControlBox3.BorderColor = System.Drawing.Color.Silver;
+            this.guna2ControlBox3.BorderRadius = 10;
+            this.guna2ControlBox3.BorderThickness = 1;
+            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox3.FillColor = System.Drawing.Color.DarkGray;
+            this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1592, 12);
+            this.guna2ControlBox3.Name = "guna2ControlBox3";
+            this.guna2ControlBox3.Size = new System.Drawing.Size(23, 25);
+            this.guna2ControlBox3.TabIndex = 12;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.Animated = true;
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2ControlBox1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2ControlBox1.BorderRadius = 10;
+            this.guna2ControlBox1.BorderThickness = 1;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.DarkGray;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1645, 13);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(23, 25);
+            this.guna2ControlBox1.TabIndex = 11;
+            // 
             // lblUsuario
             // 
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
@@ -609,53 +656,6 @@ namespace HELP_Princ
             // 
             this.elpTexto.BorderRadius = 10;
             this.elpTexto.TargetControl = this.guna2HtmlLabel3;
-            // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.Animated = true;
-            this.guna2ControlBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2ControlBox2.BorderColor = System.Drawing.Color.Silver;
-            this.guna2ControlBox2.BorderRadius = 10;
-            this.guna2ControlBox2.BorderThickness = 1;
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1619, 12);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(23, 25);
-            this.guna2ControlBox2.TabIndex = 13;
-            // 
-            // guna2ControlBox3
-            // 
-            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox3.Animated = true;
-            this.guna2ControlBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2ControlBox3.BorderColor = System.Drawing.Color.Silver;
-            this.guna2ControlBox3.BorderRadius = 10;
-            this.guna2ControlBox3.BorderThickness = 1;
-            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox3.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1592, 12);
-            this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(23, 25);
-            this.guna2ControlBox3.TabIndex = 12;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.Animated = true;
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2ControlBox1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2ControlBox1.BorderRadius = 10;
-            this.guna2ControlBox1.BorderThickness = 1;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1645, 13);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(23, 25);
-            this.guna2ControlBox1.TabIndex = 11;
             // 
             // FrmMenuPrincipal
             // 

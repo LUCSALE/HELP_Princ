@@ -22,10 +22,9 @@ namespace HELP_Princ
 
         private void FormShow(Form frm)
         {
-           
 
 
-
+            
             frm.TopLevel = false;
             pnlForm.Controls.Add(frm);
             frm.BringToFront();
@@ -44,7 +43,7 @@ namespace HELP_Princ
 
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btnSair_Click(object sender, EventArgs e)
