@@ -33,15 +33,16 @@ namespace HELP_Princ
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTecnicosList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Helpdesk01DataSet = new HELP_Princ.HelpdeskDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -57,7 +58,6 @@ namespace HELP_Princ
             this.pnlGrid = new Guna.UI2.WinForms.Guna2Panel();
             this.dbgTecnicos = new System.Windows.Forms.DataGridView();
             this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
-            this.Helpdesk01DataSet = new HELP_Princ.HelpdeskDataSet();
             this.tECNICOSTableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.TECNICOSTableAdapter();
             this.btnEdicao = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnExclusao = new System.Windows.Forms.DataGridViewImageColumn();
@@ -66,19 +66,19 @@ namespace HELP_Princ
             this.hORADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOMECOMPLETODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dRTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ASSINATURA = new System.Windows.Forms.DataGridViewImageColumn();
             this.AREA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ATIVO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATA_DES = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ASSINATURA = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlHeader.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Helpdesk01DataSet)).BeginInit();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgTecnicos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Helpdesk01DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -150,6 +150,11 @@ namespace HELP_Princ
             // 
             this.tECNICOSBindingSource.DataMember = "TECNICOS";
             this.tECNICOSBindingSource.DataSource = this.Helpdesk01DataSet;
+            // 
+            // Helpdesk01DataSet
+            // 
+            this.Helpdesk01DataSet.DataSetName = "HelpdeskDataSet";
+            this.Helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -260,14 +265,14 @@ namespace HELP_Princ
             this.dbgTecnicos.AllowUserToOrderColumns = true;
             this.dbgTecnicos.AutoGenerateColumns = false;
             this.dbgTecnicos.BackgroundColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbgTecnicos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbgTecnicos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dbgTecnicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dbgTecnicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnEdicao,
@@ -277,20 +282,20 @@ namespace HELP_Princ
             this.hORADataGridViewTextBoxColumn,
             this.nOMECOMPLETODataGridViewTextBoxColumn,
             this.dRTIDDataGridViewTextBoxColumn,
+            this.ASSINATURA,
             this.AREA,
             this.EMAIL,
             this.ATIVO,
-            this.DATA_DES,
-            this.ASSINATURA});
+            this.DATA_DES});
             this.dbgTecnicos.DataSource = this.tECNICOSBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dbgTecnicos.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dbgTecnicos.DefaultCellStyle = dataGridViewCellStyle4;
             this.dbgTecnicos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbgTecnicos.Location = new System.Drawing.Point(0, 0);
             this.dbgTecnicos.Name = "dbgTecnicos";
@@ -313,11 +318,6 @@ namespace HELP_Princ
             this.tableAdapterManager.TECNICOSTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.USUARIOSTableAdapter = null;
-            // 
-            // Helpdesk01DataSet
-            // 
-            this.Helpdesk01DataSet.DataSetName = "HelpdeskDataSet";
-            this.Helpdesk01DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tECNICOSTableAdapter
             // 
@@ -370,11 +370,11 @@ namespace HELP_Princ
             // 
             // nOMECOMPLETODataGridViewTextBoxColumn
             // 
-            this.nOMECOMPLETODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nOMECOMPLETODataGridViewTextBoxColumn.DataPropertyName = "NOME_COMPLETO";
             this.nOMECOMPLETODataGridViewTextBoxColumn.HeaderText = "Nome Completo:";
             this.nOMECOMPLETODataGridViewTextBoxColumn.Name = "nOMECOMPLETODataGridViewTextBoxColumn";
             this.nOMECOMPLETODataGridViewTextBoxColumn.ReadOnly = true;
+            this.nOMECOMPLETODataGridViewTextBoxColumn.Width = 750;
             // 
             // dRTIDDataGridViewTextBoxColumn
             // 
@@ -385,11 +385,18 @@ namespace HELP_Princ
             this.dRTIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.dRTIDDataGridViewTextBoxColumn.Width = 80;
             // 
+            // ASSINATURA
+            // 
+            this.ASSINATURA.DataPropertyName = "ASSINATURA";
+            this.ASSINATURA.HeaderText = "Assinatura:";
+            this.ASSINATURA.Name = "ASSINATURA";
+            this.ASSINATURA.ReadOnly = true;
+            // 
             // AREA
             // 
             this.AREA.DataPropertyName = "AREA";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.AREA.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.AREA.DefaultCellStyle = dataGridViewCellStyle2;
             this.AREA.HeaderText = "Área de Atuação:";
             this.AREA.Name = "AREA";
             this.AREA.ReadOnly = true;
@@ -405,9 +412,9 @@ namespace HELP_Princ
             // ATIVO
             // 
             this.ATIVO.DataPropertyName = "ATIVO";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ATIVO.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ATIVO.DefaultCellStyle = dataGridViewCellStyle3;
             this.ATIVO.HeaderText = "Ativo:";
             this.ATIVO.Name = "ATIVO";
             this.ATIVO.ReadOnly = true;
@@ -419,13 +426,6 @@ namespace HELP_Princ
             this.DATA_DES.HeaderText = "Data (Desativação):";
             this.DATA_DES.Name = "DATA_DES";
             this.DATA_DES.ReadOnly = true;
-            // 
-            // ASSINATURA
-            // 
-            this.ASSINATURA.DataPropertyName = "ASSINATURA";
-            this.ASSINATURA.HeaderText = "Assinatura:";
-            this.ASSINATURA.Name = "ASSINATURA";
-            this.ASSINATURA.ReadOnly = true;
             // 
             // FrmTecnicosList
             // 
@@ -449,9 +449,9 @@ namespace HELP_Princ
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Helpdesk01DataSet)).EndInit();
             this.pnlGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dbgTecnicos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Helpdesk01DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,10 +487,10 @@ namespace HELP_Princ
         private DataGridViewTextBoxColumn hORADataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nOMECOMPLETODataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dRTIDDataGridViewTextBoxColumn;
+        private DataGridViewImageColumn ASSINATURA;
         private DataGridViewTextBoxColumn AREA;
         private DataGridViewTextBoxColumn EMAIL;
         private DataGridViewTextBoxColumn ATIVO;
         private DataGridViewTextBoxColumn DATA_DES;
-        private DataGridViewImageColumn ASSINATURA;
     }
 }
