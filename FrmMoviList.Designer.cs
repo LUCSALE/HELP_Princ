@@ -146,10 +146,11 @@ namespace HELP_Princ
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnPesquisar = new Guna.UI2.WinForms.Guna2Button();
             this.elpPesquisar = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.mOVI_RETIRADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter();
             this.tAREFA_BANCADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TAREFA_BANCADATableAdapter();
             this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
             this.tmiEfeitos = new System.Windows.Forms.Timer(this.components);
+            this.helpdeskDataSet = new HELP_Princ.HelpdeskDataSet();
+            this.mOVI_RETIRADATableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.MOVI_RETIRADATableAdapter();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgRetirada)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).BeginInit();
@@ -169,6 +170,7 @@ namespace HELP_Princ
             this.tabEntrega.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdeskDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -529,7 +531,7 @@ namespace HELP_Princ
             // mOVI_RETIRADABindingSource
             // 
             this.mOVI_RETIRADABindingSource.DataMember = "MOVI_RETIRADA";
-            this.mOVI_RETIRADABindingSource.DataSource = this.helpdesk01DataSet;
+            this.mOVI_RETIRADABindingSource.DataSource = this.helpdeskDataSet;
             // 
             // helpdesk01DataSet
             // 
@@ -980,7 +982,6 @@ namespace HELP_Princ
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -1143,7 +1144,6 @@ namespace HELP_Princ
             // 
             this.toolStripTextBox2.AccessibleName = "Posição";
             this.toolStripTextBox2.AutoSize = false;
-            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(50, 23);
             this.toolStripTextBox2.Text = "0";
@@ -1283,10 +1283,6 @@ namespace HELP_Princ
             this.elpPesquisar.BorderRadius = 20;
             this.elpPesquisar.TargetControl = this.btnPesquisar;
             // 
-            // mOVI_RETIRADATableAdapter
-            // 
-            this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
-            // 
             // tAREFA_BANCADATableAdapter
             // 
             this.tAREFA_BANCADATableAdapter.ClearBeforeFill = true;
@@ -1295,7 +1291,6 @@ namespace HELP_Princ
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
-            this.tableAdapterManager.MOVI_RETIRADATableAdapter = this.mOVI_RETIRADATableAdapter;
             this.tableAdapterManager.MOVITableAdapter = null;
             this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
             this.tableAdapterManager.SERVICOSTableAdapter = null;
@@ -1308,6 +1303,15 @@ namespace HELP_Princ
             // 
             this.tmiEfeitos.Interval = 700;
             this.tmiEfeitos.Tick += new System.EventHandler(this.tmiEfeitos_Tick);
+            // 
+            // helpdeskDataSet
+            // 
+            this.helpdeskDataSet.DataSetName = "HelpdeskDataSet";
+            this.helpdeskDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mOVI_RETIRADATableAdapter
+            // 
+            this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
             // 
             // FrmMoviList
             // 
@@ -1349,6 +1353,7 @@ namespace HELP_Princ
             this.tabEntrega.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.helpdeskDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1362,7 +1367,6 @@ namespace HELP_Princ
         private Guna.UI2.WinForms.Guna2Elipse elpGrid;
         private Guna.UI2.WinForms.Guna2Elipse elpTab;
         private BindingSource mOVI_RETIRADABindingSource;
-        private helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter mOVI_RETIRADATableAdapter;
         private Guna.UI2.WinForms.Guna2Elipse elpGridTarefa;
         private BindingSource tAREFA_BANCADABindingSource;
         private helpdesk01DataSetTableAdapters.TAREFA_BANCADATableAdapter tAREFA_BANCADATableAdapter;
@@ -1456,5 +1460,7 @@ namespace HELP_Princ
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private HelpdeskDataSet helpdeskDataSet;
+        private HelpdeskDataSetTableAdapters.MOVI_RETIRADATableAdapter mOVI_RETIRADATableAdapter;
     }
 }

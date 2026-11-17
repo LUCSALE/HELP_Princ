@@ -22,6 +22,8 @@ namespace HELP_Princ
 
         private void FrmMoviList_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.MOVI_RETIRADA'. Você pode movê-la ou removê-la conforme necessário.
+            this.mOVI_RETIRADATableAdapter.Fill(this.helpdeskDataSet.MOVI_RETIRADA);
             tmiEfeitos.Start();
 
             // Ajuste do GRID: dbgRetirada - Espaçamento , cores e estilo das células
@@ -123,7 +125,7 @@ namespace HELP_Princ
             //
             try
             {
-                this.mOVI_RETIRADATableAdapter.Fill(this.helpdesk01DataSet.MOVI_RETIRADA);
+                //this.mOVI_RETIRADATableAdapter.Fill(this.helpdeskDataSet.MOVI_RETIRADA);
 
             }
             catch (System.Exception ex)
@@ -317,7 +319,7 @@ namespace HELP_Princ
             //
             try
             {
-                this.mOVI_RETIRADATableAdapter.Fill(this.helpdesk01DataSet.MOVI_RETIRADA);
+                this.mOVI_RETIRADATableAdapter.Fill(this.helpdeskDataSet.MOVI_RETIRADA);
 
             }
             catch (System.Exception ex)
@@ -370,13 +372,13 @@ namespace HELP_Princ
             {
 
                 // Pesquisa de RETIRADA DE EQUIPAMENTO - MODO FREEZE
-                this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
+                this.mOVI_RETIRADATableAdapter.FillByID(this.helpdeskDataSet.MOVI_RETIRADA, InfoPesq.ID);
 
             }
             else
             {
-                // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.MOVI_RETIRADA'. Você pode movê-la ou removê-la conforme necessário.
-                this.mOVI_RETIRADATableAdapter.Fill(this.helpdesk01DataSet.MOVI_RETIRADA);
+                // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.MOVI_RETIRADA'. Você pode movê-la ou removê-la conforme necessário.
+                this.mOVI_RETIRADATableAdapter.Fill(this.helpdeskDataSet.MOVI_RETIRADA);
 
 
             }
@@ -384,18 +386,18 @@ namespace HELP_Princ
 
         private void fcnAtuTarefa()
         {
-            if (InfoPesq.FREEZE == "FREEZE")
-            {
+            //if (InfoPesq.FREEZE == "FREEZE")
+            //{
 
-                // Pesquisa de TAREFA BANCADA - MODO FREEZE
-                this.tAREFA_BANCADATableAdapter.FillByID(this.helpdesk01DataSet.TAREFA_BANCADA, InfoPesq.ID);
+            //    // Pesquisa de TAREFA BANCADA - MODO FREEZE
+            //    this.tAREFA_BANCADATableAdapter.FillByID(this.helpdeskDataSet.TAREFA_BANCADA, InfoPesq.ID);
 
-            }
-            else
-            {
-                // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.TAREFA_BANCADA'. Você pode movê-la ou removê-la conforme necessário.
-                this.tAREFA_BANCADATableAdapter.Fill(this.helpdesk01DataSet.TAREFA_BANCADA);
-            }
+            //}
+            //else
+            //{
+            //    // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.TAREFA_BANCADA'. Você pode movê-la ou removê-la conforme necessário.
+            //    this.tAREFA_BANCADATableAdapter.Fill(this.helpdeskDataSet.TAREFA_BANCADA);
+            //}
         }
 
         private void lblTitulo_TextChanged(object sender, EventArgs e)
@@ -597,7 +599,7 @@ namespace HELP_Princ
             //
             try
             {
-                this.mOVI_RETIRADATableAdapter.Fill(this.helpdesk01DataSet.MOVI_RETIRADA);
+                this.mOVI_RETIRADATableAdapter.Fill(this.helpdeskDataSet.MOVI_RETIRADA);
 
             }
             catch (System.Exception ex)

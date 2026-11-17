@@ -118,7 +118,7 @@ namespace HELP_Princ
 
             AtualizaVersao();
 
-            //FormShow(new FrmMoviList());
+            FormShow(new FrmMoviList());
         }
     }
 }
