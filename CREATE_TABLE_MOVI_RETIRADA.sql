@@ -1,14 +1,14 @@
-USE [db_ab2460_helpdesk02]
+USE [Helpdesk]
 GO
 
-/****** Object:  Table [dbo].[MOVI_RETIRADA]    Script Date: 05/08/2026 09:29:24 ******/
+/****** Object:  Table [Helpdesk].[MOVI_RETIRADA]    Script Date: 17/11/2026 14:38:07 ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[MOVI_RETIRADA](
+CREATE TABLE [Helpdesk].[MOVI_RETIRADA](
 	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[DATA] [date] NOT NULL,
 	[HORA] [time](7) NOT NULL,

@@ -24,6 +24,14 @@ namespace HELP_Princ
 
         private void FrmMoviRetirada_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.EQUIPAMENTOS'. Você pode movê-la ou removê-la conforme necessário.
+            this.eQUIPAMENTOSTableAdapter.Fill(this.helpdeskDataSet.EQUIPAMENTOS);
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.TECNICOS'. Você pode movê-la ou removê-la conforme necessário.
+            this.tECNICOSTableAdapter.Fill(this.helpdeskDataSet.TECNICOS);
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.USUARIOS'. Você pode movê-la ou removê-la conforme necessário.
+            this.uSUARIOSTableAdapter.Fill(this.helpdeskDataSet.USUARIOS);
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.MOVI_RETIRADA'. Você pode movê-la ou removê-la conforme necessário.
+            this.mOVI_RETIRADATableAdapter.Fill(this.helpdeskDataSet.MOVI_RETIRADA);
             guna2WinProgressIndicator1.AutoStart = false;
             guna2WinProgressIndicator1.Visible = false;
 
@@ -47,7 +55,7 @@ namespace HELP_Princ
 
                     // Atualiza DADOS da aplicação
                     // Define e Atualiza tabela: NUMERACAO_ID
-                    this.nUMERACAO_IDTableAdapter.Fill(this.helpdesk01DataSet.NUMERACAO_ID, "RETIRADA");
+                    this.nUMERACAO_IDTableAdapter.Fill(this.helpdeskDataSet.NUMERACAO_ID, "RETIRADA");
                     DataRowView row_NUMERACAO_ID = (DataRowView)nUMERACAO_IDBindingSource.Current;
                     int intNUMERACAO_ID = Convert.ToInt32(row_NUMERACAO_ID["NUMERACAO_ID"]);
                     ++intNUMERACAO_ID;
@@ -93,14 +101,14 @@ namespace HELP_Princ
                 try
                 {
                     // TODO: esta linha de código carrega dados na tabela 'db_ab2460_SALDOS_LCTO_DataSet.SALDOS'. Você pode movê-la ou removê-la conforme necessário.
-                    this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
+                    this.mOVI_RETIRADATableAdapter.FillByID(this.helpdeskDataSet.MOVI_RETIRADA, InfoPesq.ID);
 
                     // Atualiza os campos de "cbx" com os dados da tabela MOVI_RETIRADA
-                    cbxEquipamento.Text = helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("EQUIPAMENTO");
-                    cbxTecnicos.Text = helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_SOLICITANTE");
+                    cbxEquipamento.Text = helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("EQUIPAMENTO");
+                    cbxTecnicos.Text = helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_SOLICITANTE");
 
                     //Ajusta cbxPrioridade para exibir o valor correto da prioridade, mesmo que haja espaços em branco
-                    int posicao = cbxPrioridade.FindStringExact(helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PRIORIDADE").Trim());
+                    int posicao = cbxPrioridade.FindStringExact(helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("PRIORIDADE").Trim());
                     if (posicao >= 0)
                     {
                         cbxPrioridade.SelectedIndex = posicao;
@@ -120,14 +128,14 @@ namespace HELP_Princ
                 try
                 {
                     // TODO: esta linha de código carrega dados na tabela 'db_ab2460_SALDOS_LCTO_DataSet.SALDOS'. Você pode movê-la ou removê-la conforme necessário.
-                    this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
+                    this.mOVI_RETIRADATableAdapter.FillByID(this.helpdeskDataSet.MOVI_RETIRADA, InfoPesq.ID);
 
                     // Atualiza os campos de "cbx" com os dados da tabela MOVI_RETIRADA
-                    cbxEquipamento.Text = helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("EQUIPAMENTO");
-                    cbxTecnicos.Text = helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_SOLICITANTE");
+                    cbxEquipamento.Text = helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("EQUIPAMENTO");
+                    cbxTecnicos.Text = helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_SOLICITANTE");
 
                     //Ajusta cbxPrioridade para exibir o valor correto da prioridade, mesmo que haja espaços em branco
-                    int posicao = cbxPrioridade.FindStringExact(helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PRIORIDADE").Trim());
+                    int posicao = cbxPrioridade.FindStringExact(helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("PRIORIDADE").Trim());
                     if (posicao >= 0)
                     {
                         cbxPrioridade.SelectedIndex = posicao;
@@ -293,13 +301,13 @@ namespace HELP_Princ
         private void txtRAMAL_TEL_Leave(object sender, EventArgs e)
         {
             // Pesquisa Usuário pelo RAMAL
-            this.uSUARIOSTableAdapter.FillByRAMAL_TEL(this.helpdesk01DataSet.USUARIOS, txtRAMAL_TEL.Text);
+            this.uSUARIOSTableAdapter.FillByRAMAL_TEL(this.helpdeskDataSet.USUARIOS, txtRAMAL_TEL.Text);
 
-            if (this.helpdesk01DataSet.USUARIOS.Count > 0)
+            if (this.helpdeskDataSet.USUARIOS.Count > 0)
             {
-                txtNOME_USUARIO.Text = helpdesk01DataSet.USUARIOS.Rows[0].Field<String>("NOME_USUARIO");
-                txtPREDIO_SETOR.Text = helpdesk01DataSet.USUARIOS.Rows[0].Field<String>("PREDIO_SETOR");
-                txtArea.Text = helpdesk01DataSet.USUARIOS.Rows[0].Field<String>("AREA");
+                txtNOME_USUARIO.Text = helpdeskDataSet.USUARIOS.Rows[0].Field<String>("NOME_USUARIO");
+                txtPREDIO_SETOR.Text = helpdeskDataSet.USUARIOS.Rows[0].Field<String>("PREDIO_SETOR");
+                txtArea.Text = helpdeskDataSet.USUARIOS.Rows[0].Field<String>("AREA");
 
 
 
@@ -476,14 +484,14 @@ namespace HELP_Princ
         private void fncAtualizaTecnicos()
         {
 
-            // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.TECNICOS'. Você pode movê-la ou removê-la conforme necessário.
-            this.tECNICOSTableAdapter.FillByATIVO(this.helpdesk01DataSet.TECNICOS);
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.TECNICOS'. Você pode movê-la ou removê-la conforme necessário.
+            this.tECNICOSTableAdapter.FillByATIVO(this.helpdeskDataSet.TECNICOS);
 
             cbxTecnicos.Items.Clear();
-            for (int i = 0; i < this.helpdesk01DataSet.TECNICOS.Count; i++)
+            for (int i = 0; i < this.helpdeskDataSet.TECNICOS.Count; i++)
             {
-                //string strNOME_ENTIDADE = this.helpdesk01DataSet.TECNICOS.Rows[i].Field<string>("NOME_COMPLETO").Trim();
-                string strNOME_ENTIDADE = this.helpdesk01DataSet.TECNICOS.Rows[i].Field<int>("ID").ToString() + " - " + this.helpdesk01DataSet.TECNICOS.Rows[i].Field<string>("NOME_COMPLETO").Trim();
+                //string strNOME_ENTIDADE = this.helpdeskDataSet.TECNICOS.Rows[i].Field<string>("NOME_COMPLETO").Trim();
+                string strNOME_ENTIDADE = this.helpdeskDataSet.TECNICOS.Rows[i].Field<int>("ID").ToString() + " - " + this.helpdeskDataSet.TECNICOS.Rows[i].Field<string>("NOME_COMPLETO").Trim();
                 cbxTecnicos.Items.Add(strNOME_ENTIDADE);
             }
             cbxTecnicos.SelectedIndex = -1; // Limpa a seleção do ComboBox  
@@ -492,13 +500,13 @@ namespace HELP_Princ
 
         private void fcnAtualizaEquipamentos()
         {
-            // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.EQUIPAMENTOS'. Você pode movê-la ou removê-la conforme necessário.
-            this.eQUIPAMENTOSTableAdapter.FillByATIVO(this.helpdesk01DataSet.EQUIPAMENTOS);
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.EQUIPAMENTOS'. Você pode movê-la ou removê-la conforme necessário.
+            this.eQUIPAMENTOSTableAdapter.FillByATIVO(this.helpdeskDataSet.EQUIPAMENTOS);
 
             cbxEquipamento.Items.Clear();
-            for (int i = 0; i < this.helpdesk01DataSet.EQUIPAMENTOS.Count; i++)
+            for (int i = 0; i < this.helpdeskDataSet.EQUIPAMENTOS.Count; i++)
             {
-                string strNOME_ENTIDADE = this.helpdesk01DataSet.EQUIPAMENTOS.Rows[i].Field<string>("DESCRICAO_EQUIPAMENTO").Trim();
+                string strNOME_ENTIDADE = this.helpdeskDataSet.EQUIPAMENTOS.Rows[i].Field<string>("DESCRICAO_EQUIPAMENTO").Trim();
                 cbxEquipamento.Items.Add(strNOME_ENTIDADE);
             }
 
@@ -1146,9 +1154,9 @@ namespace HELP_Princ
         {
 
             // Atualiza TABELA:Usuário pelo RAMAL
-            this.uSUARIOSTableAdapter.FillByRAMAL_TEL(this.helpdesk01DataSet.USUARIOS, txtRAMAL_TEL.Text);
+            this.uSUARIOSTableAdapter.FillByRAMAL_TEL(this.helpdeskDataSet.USUARIOS, txtRAMAL_TEL.Text);
 
-            if (this.helpdesk01DataSet.USUARIOS.Count > 0)
+            if (this.helpdeskDataSet.USUARIOS.Count > 0)
             {
                 this.uSUARIOSTableAdapter.Update_por_RAMAL_TEL(txtNOME_USUARIO.Text, txtPREDIO_SETOR.Text, txtArea.Text, txtRAMAL_TEL.Text);
             }
@@ -1264,7 +1272,7 @@ namespace HELP_Princ
             {
 
                 this.mOVI_RETIRADABindingSource.EndEdit();
-                this.mOVI_RETIRADATableAdapter.Update(this.helpdesk01DataSet);
+                this.mOVI_RETIRADATableAdapter.Update(this.helpdeskDataSet);
             }
             catch (Exception ex)
             {

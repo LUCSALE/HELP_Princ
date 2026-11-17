@@ -1,15 +1,15 @@
-USE [db_ab2460_helpdesk02]
+USE [Helpdesk]
 GO
 
-/****** Object:  Table [dbo].[TAREFA_BANCADA]    Script Date: 24/08/2026 15:01:58 ******/
+/****** Object:  Table [Helpdesk].[TAREFA_BANCADA]    Script Date: 17/11/2026 14:38:07 ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[TAREFA_BANCADA](
-	[ID] [int] NOT NULL,
+CREATE TABLE [Helpdesk].[TAREFA_BANCADA](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[DATA] [date] NOT NULL,
 	[HORA] [time](7) NOT NULL,
 	[ESTAGIO] [char](200) NULL,

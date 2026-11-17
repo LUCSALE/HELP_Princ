@@ -1,0 +1,16 @@
+USE [Helpdesk]
+GO
+
+/****** Object:  Table [Helpdesk].[NUMERACAO_ID]    Script Date: 17/11/2026 14:39:44 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [Helpdesk].[NUMERACAO_ID](
+	[CHAVE_NUMERACAO] [nchar](50) NULL,
+	[NUMERACAO_ID] [int] NULL
+) ON [PRIMARY]
+GO
+

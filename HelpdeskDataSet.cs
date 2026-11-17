@@ -13,3 +13,10 @@ namespace HELP_Princ
     {
     }
 }
+
+namespace HELP_Princ.HelpdeskDataSetTableAdapters {
+    
+    
+    public partial class USUARIOSTableAdapter {
+    }
+}
