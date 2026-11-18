@@ -461,7 +461,7 @@ SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HOR
               <Mapping SourceColumn="ASSINATURA" DataSetColumn="ASSINATURA" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="Helpdesk.Helpdesk.TECNICOS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByATIVO" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByATIVO" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByATIVO">
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="Helpdesk.Helpdesk.TECNICOS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByATIVO" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByATIVO" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByATIVO">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HORA_DES, AREA, ARQ_ASSINATURA, ASSINATURA FROM Helpdesk.TECNICOS WHERE (TRIM(ATIVO) = 'SIM') ORDER BY NOME_COMPLETO</CommandText>
@@ -469,7 +469,7 @@ SELECT ID, DATA, HORA, NOME_COMPLETO, DRT_ID, EMAIL, SENHA, ATIVO, DATA_DES, HOR
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="Helpdesk.Helpdesk.TECNICOS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByID" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByID">
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="Helpdesk.Helpdesk.TECNICOS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByID" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT AREA, ARQ_ASSINATURA, ASSINATURA, ATIVO, DATA, DATA_DES, DRT_ID, EMAIL, HORA, HORA_DES, ID, NOME_COMPLETO, SENHA FROM TECNICOS WHERE (ID = @ID)</CommandText>
@@ -731,7 +731,7 @@ WHERE        (ID = @ID)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NUMERACAO_IDTableAdapter" GeneratorDataComponentClassName="NUMERACAO_IDTableAdapter" Name="NUMERACAO_ID" UserDataComponentName="NUMERACAO_IDTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="Helpdesk.Helpdesk.NUMERACAO_ID" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="Helpdesk.Helpdesk.NUMERACAO_ID" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [Helpdesk].[NUMERACAO_ID] ([CHAVE_NUMERACAO], [NUMERACAO_ID]) VALUES (@CHAVE_NUMERACAO, @NUMERACAO_ID)</CommandText>
@@ -742,9 +742,13 @@ WHERE        (ID = @ID)</CommandText>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT CHAVE_NUMERACAO, NUMERACAO_ID FROM Helpdesk.NUMERACAO_ID</CommandText>
-                    <Parameters />
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CHAVE_NUMERACAO, NUMERACAO_ID
+FROM            Helpdesk.NUMERACAO_ID
+WHERE        (CHAVE_NUMERACAO = @CHAVE_NUMERACAO)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="CHAVE_NUMERACAO" ColumnName="CHAVE_NUMERACAO" DataSourceName="Helpdesk.Helpdesk.NUMERACAO_ID" DataTypeServer="nchar(50)" DbType="String" Direction="Input" ParameterName="@CHAVE_NUMERACAO" Precision="0" ProviderType="NChar" Scale="0" Size="50" SourceColumn="CHAVE_NUMERACAO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
@@ -753,7 +757,20 @@ WHERE        (ID = @ID)</CommandText>
               <Mapping SourceColumn="CHAVE_NUMERACAO" DataSetColumn="CHAVE_NUMERACAO" />
               <Mapping SourceColumn="NUMERACAO_ID" DataSetColumn="NUMERACAO_ID" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="FillUpdate" Modifier="Public" Name="FillUpdate" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillUpdate">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE Helpdesk.NUMERACAO_ID SET NUMERACAO_ID = @NUMERACAO_ID
+WHERE CHAVE_NUMERACAO = @CHAVE_NUMERACAO</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="NUMERACAO_ID" ColumnName="NUMERACAO_ID" DataSourceName="Helpdesk.Helpdesk.NUMERACAO_ID" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@NUMERACAO_ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="NUMERACAO_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CHAVE_NUMERACAO" ColumnName="CHAVE_NUMERACAO" DataSourceName="Helpdesk.Helpdesk.NUMERACAO_ID" DataTypeServer="nchar(50)" DbType="String" Direction="Input" ParameterName="@CHAVE_NUMERACAO" Precision="0" ProviderType="NChar" Scale="0" Size="50" SourceColumn="CHAVE_NUMERACAO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TAREFA_BANCADATableAdapter" GeneratorDataComponentClassName="TAREFA_BANCADATableAdapter" Name="TAREFA_BANCADA" UserDataComponentName="TAREFA_BANCADATableAdapter">
             <MainSource>
