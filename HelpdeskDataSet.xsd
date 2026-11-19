@@ -1358,7 +1358,7 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
               <xs:element name="DATA_PREVISTA" msprop:Generator_ColumnPropNameInTable="DATA_PREVISTAColumn" msprop:Generator_ColumnPropNameInRow="DATA_PREVISTA" msprop:Generator_UserColumnName="DATA_PREVISTA" msprop:Generator_ColumnVarNameInTable="columnDATA_PREVISTA" type="xs:dateTime" minOccurs="0" />
               <xs:element name="HORA_PREVISTA" msprop:Generator_ColumnPropNameInTable="HORA_PREVISTAColumn" msprop:Generator_ColumnPropNameInRow="HORA_PREVISTA" msprop:Generator_UserColumnName="HORA_PREVISTA" msprop:Generator_ColumnVarNameInTable="columnHORA_PREVISTA" type="xs:duration" minOccurs="0" />
               <xs:element name="ID_TECNICO_SOLICITANTE" msprop:Generator_ColumnPropNameInTable="ID_TECNICO_SOLICITANTEColumn" msprop:Generator_ColumnPropNameInRow="ID_TECNICO_SOLICITANTE" msprop:Generator_UserColumnName="ID_TECNICO_SOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnID_TECNICO_SOLICITANTE" type="xs:int" minOccurs="0" />
-              <xs:element name="ORIGEM" msprop:Generator_ColumnPropNameInRow="ORIGEM" msprop:Generator_ColumnPropNameInTable="ORIGEMColumn" msprop:Generator_ColumnVarNameInTable="columnORIGEM" msprop:Generator_UserColumnName="ORIGEM" minOccurs="0">
+              <xs:element name="ORIGEM" msprop:Generator_UserColumnName="ORIGEM" msprop:Generator_ColumnPropNameInTable="ORIGEMColumn" msprop:Generator_ColumnPropNameInRow="ORIGEM" msprop:Generator_ColumnVarNameInTable="columnORIGEM" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -1547,7 +1547,7 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
               <xs:element name="DATA_PREVISTA" msprop:Generator_ColumnPropNameInTable="DATA_PREVISTAColumn" msprop:Generator_ColumnPropNameInRow="DATA_PREVISTA" msprop:Generator_UserColumnName="DATA_PREVISTA" msprop:Generator_ColumnVarNameInTable="columnDATA_PREVISTA" type="xs:dateTime" minOccurs="0" />
               <xs:element name="HORA_PREVISTA" msprop:Generator_ColumnPropNameInTable="HORA_PREVISTAColumn" msprop:Generator_ColumnPropNameInRow="HORA_PREVISTA" msprop:Generator_UserColumnName="HORA_PREVISTA" msprop:Generator_ColumnVarNameInTable="columnHORA_PREVISTA" type="xs:duration" minOccurs="0" />
               <xs:element name="ID_TECNICO_SOLICITANTE" msprop:Generator_ColumnPropNameInTable="ID_TECNICO_SOLICITANTEColumn" msprop:Generator_ColumnPropNameInRow="ID_TECNICO_SOLICITANTE" msprop:Generator_UserColumnName="ID_TECNICO_SOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnID_TECNICO_SOLICITANTE" type="xs:int" minOccurs="0" />
-              <xs:element name="ORIGEM" msprop:Generator_ColumnPropNameInRow="ORIGEM" msprop:Generator_ColumnPropNameInTable="ORIGEMColumn" msprop:Generator_ColumnVarNameInTable="columnORIGEM" msprop:Generator_UserColumnName="ORIGEM" minOccurs="0">
+              <xs:element name="ORIGEM" msprop:Generator_UserColumnName="ORIGEM" msprop:Generator_ColumnPropNameInTable="ORIGEMColumn" msprop:Generator_ColumnPropNameInRow="ORIGEM" msprop:Generator_ColumnVarNameInTable="columnORIGEM" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
