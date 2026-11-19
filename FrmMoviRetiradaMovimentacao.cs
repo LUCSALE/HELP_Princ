@@ -24,8 +24,11 @@ namespace HELP_Princ
 
         private void FrmMoviRetiradaMovimentacao_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'helpdesk01DataSet.TAREFA_BANCADA'. Você pode movê-la ou removê-la conforme necessário.
-            this.tAREFA_BANCADATableAdapter.Fill(this.helpdesk01DataSet.TAREFA_BANCADA);
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.TAREFA_BANCADA'. Você pode movê-la ou removê-la conforme necessário.
+            this.tAREFA_BANCADATableAdapter.Fill(this.helpdeskDataSet.TAREFA_BANCADA);
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.MOVI_RETIRADA'. Você pode movê-la ou removê-la conforme necessário.
+            this.mOVI_RETIRADATableAdapter.Fill(this.helpdeskDataSet.MOVI_RETIRADA);
+            
             tmiEfeitos.Start();
             fcnAtualiza_ASYNC();
             guna2WinProgressIndicator1.Visible = true;
@@ -33,7 +36,7 @@ namespace HELP_Princ
 
 
 
-            //this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
+            //this.mOVI_RETIRADATableAdapter.FillByID(this.helpdeskDataSet.MOVI_RETIRADA, InfoPesq.ID);
 
 
         }
@@ -272,13 +275,13 @@ namespace HELP_Princ
             try
             {
 
-                this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
+                this.mOVI_RETIRADATableAdapter.FillByID(this.helpdeskDataSet.MOVI_RETIRADA, InfoPesq.ID);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao Salvar Consultar: MOVI_RETIRADA: " + ex.Message);
             }
-            if (this.helpdesk01DataSet.MOVI_RETIRADA.Count > 0)
+            if (this.helpdeskDataSet.MOVI_RETIRADA.Count > 0)
             {
                 this.tAREFA_BANCADABindingSource.AddNew();
                 
@@ -324,7 +327,7 @@ namespace HELP_Princ
                 {
 
                     this.tAREFA_BANCADABindingSource.EndEdit();
-                    this.tAREFA_BANCADATableAdapter.Update(this.helpdesk01DataSet);
+                    this.tAREFA_BANCADATableAdapter.Update(this.helpdeskDataSet);
                 }
                 catch (Exception ex)
                 {

@@ -45,16 +45,18 @@ namespace HELP_Princ
             this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.tmiEfeitos = new System.Windows.Forms.Timer(this.components);
-            this.mOVI_RETIRADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter();
             this.tAREFA_BANCADABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tAREFA_BANCADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TAREFA_BANCADATableAdapter();
             this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
+            this.helpdeskDataSet = new HELP_Princ.HelpdeskDataSet();
+            this.mOVI_RETIRADATableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.MOVI_RETIRADATableAdapter();
+            this.tAREFA_BANCADATableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.TAREFA_BANCADATableAdapter();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAREFA_BANCADABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdeskDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -163,7 +165,7 @@ namespace HELP_Princ
             // mOVI_RETIRADABindingSource
             // 
             this.mOVI_RETIRADABindingSource.DataMember = "MOVI_RETIRADA";
-            this.mOVI_RETIRADABindingSource.DataSource = this.helpdesk01DataSet;
+            this.mOVI_RETIRADABindingSource.DataSource = this.helpdeskDataSet;
             // 
             // helpdesk01DataSet
             // 
@@ -184,31 +186,34 @@ namespace HELP_Princ
             this.tmiEfeitos.Interval = 700;
             this.tmiEfeitos.Tick += new System.EventHandler(this.tmiEfeitos_Tick);
             // 
-            // mOVI_RETIRADATableAdapter
-            // 
-            this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
-            // 
             // tAREFA_BANCADABindingSource
             // 
             this.tAREFA_BANCADABindingSource.DataMember = "TAREFA_BANCADA";
-            this.tAREFA_BANCADABindingSource.DataSource = this.helpdesk01DataSet;
-            // 
-            // tAREFA_BANCADATableAdapter
-            // 
-            this.tAREFA_BANCADATableAdapter.ClearBeforeFill = true;
+            this.tAREFA_BANCADABindingSource.DataSource = this.helpdeskDataSet;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.EQUIPAMENTOSTableAdapter = null;
-            this.tableAdapterManager.MOVI_RETIRADATableAdapter = this.mOVI_RETIRADATableAdapter;
             this.tableAdapterManager.MOVITableAdapter = null;
             this.tableAdapterManager.NUMERACAO_IDTableAdapter = null;
             this.tableAdapterManager.SERVICOSTableAdapter = null;
-            this.tableAdapterManager.TAREFA_BANCADATableAdapter = this.tAREFA_BANCADATableAdapter;
             this.tableAdapterManager.TECNICOSTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.USUARIOSTableAdapter = null;
+            // 
+            // helpdeskDataSet
+            // 
+            this.helpdeskDataSet.DataSetName = "HelpdeskDataSet";
+            this.helpdeskDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mOVI_RETIRADATableAdapter
+            // 
+            this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
+            // 
+            // tAREFA_BANCADATableAdapter
+            // 
+            this.tAREFA_BANCADATableAdapter.ClearBeforeFill = true;
             // 
             // FrmMoviRetiradaMovimentacao
             // 
@@ -234,6 +239,7 @@ namespace HELP_Princ
             ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAREFA_BANCADABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdeskDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,13 +254,14 @@ namespace HELP_Princ
         private Timer tmiEfeitos;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private BindingSource mOVI_RETIRADABindingSource;
-        private helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter mOVI_RETIRADATableAdapter;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2WinProgressIndicator guna2WinProgressIndicator1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private BindingSource tAREFA_BANCADABindingSource;
-        private helpdesk01DataSetTableAdapters.TAREFA_BANCADATableAdapter tAREFA_BANCADATableAdapter;
         private helpdesk01DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private HelpdeskDataSet helpdeskDataSet;
+        private HelpdeskDataSetTableAdapters.MOVI_RETIRADATableAdapter mOVI_RETIRADATableAdapter;
+        private HelpdeskDataSetTableAdapters.TAREFA_BANCADATableAdapter tAREFA_BANCADATableAdapter;
     }
 }
