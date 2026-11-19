@@ -22,32 +22,37 @@ namespace HELP_Princ
 
         private void FrmMoviList_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.MOVI_RETIRADA'. Você pode movê-la ou removê-la conforme necessário.
-            this.mOVI_RETIRADATableAdapter.Fill(this.helpdeskDataSet.MOVI_RETIRADA);
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.ASSINATURA_MOVI_RETIRADA'. Você pode movê-la ou removê-la conforme necessário.
+            this.aSSINATURA_MOVI_RETIRADATableAdapter.FillByASSINATURA(this.helpdeskDataSet.ASSINATURA_MOVI_RETIRADA);
+            
+
             tmiEfeitos.Start();
 
             // Ajuste do GRID: dbgRetirada - Espaçamento , cores e estilo das células
                 dbgRetirada.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
                 dbgRetirada.GridColor = Color.White;      // Remove borda padrão     
                 dbgRetirada.CellBorderStyle = DataGridViewCellBorderStyle.Single;      // Espaçamento visual
-                dbgRetirada.RowTemplate.Height = 45;      // Estilo das células     
+                dbgRetirada.RowTemplate.Height = 95;      // Estilo das células     
                 dbgRetirada.DefaultCellStyle.BackColor = Color.LightBlue;
                 dbgRetirada.DefaultCellStyle.SelectionBackColor = Color.RoyalBlue;      // Margem interna do texto
-                dbgRetirada.DefaultCellStyle.Padding = new Padding(5);
+                dbgRetirada.DefaultCellStyle.Padding = new Padding(2);
 
             // Ajuste do GRID: dbgRetirada - Ativa SCROLL horizontal
-                dbgRetirada.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-
+            //dbgRetirada.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dbgRetirada.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dbgRetirada.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
 
             // Ajuste do GRID: dbgTarefa - Espaçamento , cores e estilo das células
-                dbgTarefa.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
+            dbgTarefa.BackgroundColor = Color.White;      // Cor do “espaço” entre células     
                 dbgTarefa.GridColor = Color.White;      // Remove borda padrão     
                 dbgTarefa.CellBorderStyle = DataGridViewCellBorderStyle.Single;      // Espaçamento visual
                 dbgTarefa.RowTemplate.Height = 45;      // Estilo das células     
-                dbgTarefa.DefaultCellStyle.Padding = new Padding(5);
+                dbgTarefa.DefaultCellStyle.Padding = new Padding(2);
 
             // Ajuste do GRID - Ativa SCROLL horizontal
-                dbgTarefa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            //dbgTarefa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dbgTarefa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dbgTarefa.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
 
 
             // Inicializa a variável de controle do modo FREEZE 
@@ -125,7 +130,8 @@ namespace HELP_Princ
             //
             try
             {
-                this.mOVI_RETIRADATableAdapter.Fill(this.helpdeskDataSet.MOVI_RETIRADA);
+                //this.mOVI_RETIRADATableAdapter.FillByASSINATURA(this.helpdeskDataSet.MOVI_RETIRADA);
+                this.aSSINATURA_MOVI_RETIRADATableAdapter.FillByASSINATURA(this.helpdeskDataSet.ASSINATURA_MOVI_RETIRADA);  
 
             }
             catch (System.Exception ex)
@@ -606,6 +612,11 @@ namespace HELP_Princ
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FrmMoviList_Activated(object sender, EventArgs e)
+        {
+            
         }
     }
 }

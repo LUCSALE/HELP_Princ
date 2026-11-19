@@ -2,7 +2,7 @@
 <xs:schema id="HelpdeskDataSet" targetNamespace="http://tempuri.org/HelpdeskDataSet.xsd" xmlns:mstns="http://tempuri.org/HelpdeskDataSet.xsd" xmlns="http://tempuri.org/HelpdeskDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HELP_Princ.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
@@ -723,7 +723,21 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
               <Mapping SourceColumn="ORIGEM" DataSetColumn="ORIGEM" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="Helpdesk.Helpdesk.MOVI_RETIRADA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByID" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByID">
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByASSINATURA" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByASSINATURA" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByASSINATURA">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MOVI_RETIRADA.ID, MOVI_RETIRADA.DATA, MOVI_RETIRADA.HORA, MOVI_RETIRADA.ESTAGIO, MOVI_RETIRADA.RAMAL_TEL, MOVI_RETIRADA.NOME_USUARIO, MOVI_RETIRADA.PREDIO_SETOR, MOVI_RETIRADA.AREA, 
+                         MOVI_RETIRADA.NUMERO_OS, MOVI_RETIRADA.EQUIPAMENTO, MOVI_RETIRADA.SAI, MOVI_RETIRADA.SSD, MOVI_RETIRADA.OFFICE_365, MOVI_RETIRADA.MAINFRAME, MOVI_RETIRADA.CNS, 
+                         MOVI_RETIRADA.BOTAO_EMERGENCIA, MOVI_RETIRADA.OFFICE_365_PLAN, MOVI_RETIRADA.DESCRICA_ATIVIDADE, MOVI_RETIRADA.OBS_IMPORTANTES, MOVI_RETIRADA.PATRIMONIO, 
+                         MOVI_RETIRADA.TECNICO_SOLICITANTE, MOVI_RETIRADA.TECNICO_ATUANTE, MOVI_RETIRADA.DATA_RETIRADA, MOVI_RETIRADA.HORA_RETIRADA, MOVI_RETIRADA.SITUACAO, MOVI_RETIRADA.MODALIDADE, 
+                         MOVI_RETIRADA.PRIORIDADE, MOVI_RETIRADA.DATA_PREVISTA, MOVI_RETIRADA.HORA_PREVISTA, MOVI_RETIRADA.ID_TECNICO_SOLICITANTE, MOVI_RETIRADA.ORIGEM, TECNICOS.ASSINATURA
+FROM            MOVI_RETIRADA INNER JOIN
+                         TECNICOS ON MOVI_RETIRADA.ID_TECNICO_SOLICITANTE = TECNICOS.ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="Helpdesk.Helpdesk.MOVI_RETIRADA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByID" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT AREA, BOTAO_EMERGENCIA, CNS, DATA, DATA_PREVISTA, DATA_RETIRADA, DESCRICA_ATIVIDADE, EQUIPAMENTO, ESTAGIO, HORA, HORA_PREVISTA, HORA_RETIRADA, ID, ID_TECNICO_SOLICITANTE, MAINFRAME, MODALIDADE, NOME_USUARIO, NUMERO_OS, OBS_IMPORTANTES, OFFICE_365, OFFICE_365_PLAN, ORIGEM, PATRIMONIO, PREDIO_SETOR, PRIORIDADE, RAMAL_TEL, SAI, SITUACAO, SSD, TECNICO_ATUANTE, TECNICO_SOLICITANTE FROM MOVI_RETIRADA WHERE (ID = @ID)</CommandText>
@@ -1018,6 +1032,54 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
               <Mapping SourceColumn="HORA_PREVISTA" DataSetColumn="HORA_PREVISTA" />
               <Mapping SourceColumn="ID_TECNICO_SOLICITANTE" DataSetColumn="ID_TECNICO_SOLICITANTE" />
               <Mapping SourceColumn="ORIGEM" DataSetColumn="ORIGEM" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ASSINATURA_MOVI_RETIRADATableAdapter" GeneratorDataComponentClassName="ASSINATURA_MOVI_RETIRADATableAdapter" Name="ASSINATURA_MOVI_RETIRADA" UserDataComponentName="ASSINATURA_MOVI_RETIRADATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="Helpdesk.Helpdesk.ASSINATURA_MOVI_RETIRADA" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByASSINATURA" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="FillByASSINATURA" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="FillByASSINATURA">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ASSINATURA_MOVI_RETIRADA.*
+FROM            ASSINATURA_MOVI_RETIRADA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="DATA" DataSetColumn="DATA" />
+              <Mapping SourceColumn="HORA" DataSetColumn="HORA" />
+              <Mapping SourceColumn="ESTAGIO" DataSetColumn="ESTAGIO" />
+              <Mapping SourceColumn="RAMAL_TEL" DataSetColumn="RAMAL_TEL" />
+              <Mapping SourceColumn="NOME_USUARIO" DataSetColumn="NOME_USUARIO" />
+              <Mapping SourceColumn="PREDIO_SETOR" DataSetColumn="PREDIO_SETOR" />
+              <Mapping SourceColumn="AREA" DataSetColumn="AREA" />
+              <Mapping SourceColumn="NUMERO_OS" DataSetColumn="NUMERO_OS" />
+              <Mapping SourceColumn="EQUIPAMENTO" DataSetColumn="EQUIPAMENTO" />
+              <Mapping SourceColumn="SAI" DataSetColumn="SAI" />
+              <Mapping SourceColumn="SSD" DataSetColumn="SSD" />
+              <Mapping SourceColumn="OFFICE_365" DataSetColumn="OFFICE_365" />
+              <Mapping SourceColumn="MAINFRAME" DataSetColumn="MAINFRAME" />
+              <Mapping SourceColumn="CNS" DataSetColumn="CNS" />
+              <Mapping SourceColumn="BOTAO_EMERGENCIA" DataSetColumn="BOTAO_EMERGENCIA" />
+              <Mapping SourceColumn="OFFICE_365_PLAN" DataSetColumn="OFFICE_365_PLAN" />
+              <Mapping SourceColumn="DESCRICA_ATIVIDADE" DataSetColumn="DESCRICA_ATIVIDADE" />
+              <Mapping SourceColumn="OBS_IMPORTANTES" DataSetColumn="OBS_IMPORTANTES" />
+              <Mapping SourceColumn="PATRIMONIO" DataSetColumn="PATRIMONIO" />
+              <Mapping SourceColumn="TECNICO_SOLICITANTE" DataSetColumn="TECNICO_SOLICITANTE" />
+              <Mapping SourceColumn="TECNICO_ATUANTE" DataSetColumn="TECNICO_ATUANTE" />
+              <Mapping SourceColumn="DATA_RETIRADA" DataSetColumn="DATA_RETIRADA" />
+              <Mapping SourceColumn="HORA_RETIRADA" DataSetColumn="HORA_RETIRADA" />
+              <Mapping SourceColumn="SITUACAO" DataSetColumn="SITUACAO" />
+              <Mapping SourceColumn="MODALIDADE" DataSetColumn="MODALIDADE" />
+              <Mapping SourceColumn="PRIORIDADE" DataSetColumn="PRIORIDADE" />
+              <Mapping SourceColumn="DATA_PREVISTA" DataSetColumn="DATA_PREVISTA" />
+              <Mapping SourceColumn="HORA_PREVISTA" DataSetColumn="HORA_PREVISTA" />
+              <Mapping SourceColumn="ID_TECNICO_SOLICITANTE" DataSetColumn="ID_TECNICO_SOLICITANTE" />
+              <Mapping SourceColumn="ORIGEM" DataSetColumn="ORIGEM" />
+              <Mapping SourceColumn="ASSINATURA" DataSetColumn="ASSINATURA" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1358,7 +1420,7 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
               <xs:element name="DATA_PREVISTA" msprop:Generator_ColumnPropNameInTable="DATA_PREVISTAColumn" msprop:Generator_ColumnPropNameInRow="DATA_PREVISTA" msprop:Generator_UserColumnName="DATA_PREVISTA" msprop:Generator_ColumnVarNameInTable="columnDATA_PREVISTA" type="xs:dateTime" minOccurs="0" />
               <xs:element name="HORA_PREVISTA" msprop:Generator_ColumnPropNameInTable="HORA_PREVISTAColumn" msprop:Generator_ColumnPropNameInRow="HORA_PREVISTA" msprop:Generator_UserColumnName="HORA_PREVISTA" msprop:Generator_ColumnVarNameInTable="columnHORA_PREVISTA" type="xs:duration" minOccurs="0" />
               <xs:element name="ID_TECNICO_SOLICITANTE" msprop:Generator_ColumnPropNameInTable="ID_TECNICO_SOLICITANTEColumn" msprop:Generator_ColumnPropNameInRow="ID_TECNICO_SOLICITANTE" msprop:Generator_UserColumnName="ID_TECNICO_SOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnID_TECNICO_SOLICITANTE" type="xs:int" minOccurs="0" />
-              <xs:element name="ORIGEM" msprop:Generator_UserColumnName="ORIGEM" msprop:Generator_ColumnPropNameInTable="ORIGEMColumn" msprop:Generator_ColumnPropNameInRow="ORIGEM" msprop:Generator_ColumnVarNameInTable="columnORIGEM" minOccurs="0">
+              <xs:element name="ORIGEM" msprop:Generator_ColumnPropNameInTable="ORIGEMColumn" msprop:Generator_ColumnPropNameInRow="ORIGEM" msprop:Generator_UserColumnName="ORIGEM" msprop:Generator_ColumnVarNameInTable="columnORIGEM" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -1547,13 +1609,189 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
               <xs:element name="DATA_PREVISTA" msprop:Generator_ColumnPropNameInTable="DATA_PREVISTAColumn" msprop:Generator_ColumnPropNameInRow="DATA_PREVISTA" msprop:Generator_UserColumnName="DATA_PREVISTA" msprop:Generator_ColumnVarNameInTable="columnDATA_PREVISTA" type="xs:dateTime" minOccurs="0" />
               <xs:element name="HORA_PREVISTA" msprop:Generator_ColumnPropNameInTable="HORA_PREVISTAColumn" msprop:Generator_ColumnPropNameInRow="HORA_PREVISTA" msprop:Generator_UserColumnName="HORA_PREVISTA" msprop:Generator_ColumnVarNameInTable="columnHORA_PREVISTA" type="xs:duration" minOccurs="0" />
               <xs:element name="ID_TECNICO_SOLICITANTE" msprop:Generator_ColumnPropNameInTable="ID_TECNICO_SOLICITANTEColumn" msprop:Generator_ColumnPropNameInRow="ID_TECNICO_SOLICITANTE" msprop:Generator_UserColumnName="ID_TECNICO_SOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnID_TECNICO_SOLICITANTE" type="xs:int" minOccurs="0" />
-              <xs:element name="ORIGEM" msprop:Generator_UserColumnName="ORIGEM" msprop:Generator_ColumnPropNameInTable="ORIGEMColumn" msprop:Generator_ColumnPropNameInRow="ORIGEM" msprop:Generator_ColumnVarNameInTable="columnORIGEM" minOccurs="0">
+              <xs:element name="ORIGEM" msprop:Generator_ColumnPropNameInTable="ORIGEMColumn" msprop:Generator_ColumnPropNameInRow="ORIGEM" msprop:Generator_UserColumnName="ORIGEM" msprop:Generator_ColumnVarNameInTable="columnORIGEM" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ASSINATURA_MOVI_RETIRADA" msprop:Generator_RowEvHandlerName="ASSINATURA_MOVI_RETIRADARowChangeEventHandler" msprop:Generator_RowDeletedName="ASSINATURA_MOVI_RETIRADARowDeleted" msprop:Generator_RowDeletingName="ASSINATURA_MOVI_RETIRADARowDeleting" msprop:Generator_RowEvArgName="ASSINATURA_MOVI_RETIRADARowChangeEvent" msprop:Generator_TablePropName="ASSINATURA_MOVI_RETIRADA" msprop:Generator_RowChangedName="ASSINATURA_MOVI_RETIRADARowChanged" msprop:Generator_RowChangingName="ASSINATURA_MOVI_RETIRADARowChanging" msprop:Generator_TableClassName="ASSINATURA_MOVI_RETIRADADataTable" msprop:Generator_RowClassName="ASSINATURA_MOVI_RETIRADARow" msprop:Generator_TableVarName="tableASSINATURA_MOVI_RETIRADA" msprop:Generator_UserTableName="ASSINATURA_MOVI_RETIRADA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="DATA" msprop:Generator_ColumnPropNameInRow="DATA" msprop:Generator_ColumnPropNameInTable="DATAColumn" msprop:Generator_ColumnVarNameInTable="columnDATA" msprop:Generator_UserColumnName="DATA" type="xs:dateTime" />
+              <xs:element name="HORA" msprop:Generator_ColumnPropNameInRow="HORA" msprop:Generator_ColumnPropNameInTable="HORAColumn" msprop:Generator_ColumnVarNameInTable="columnHORA" msprop:Generator_UserColumnName="HORA" type="xs:duration" />
+              <xs:element name="ESTAGIO" msprop:Generator_ColumnPropNameInRow="ESTAGIO" msprop:Generator_ColumnPropNameInTable="ESTAGIOColumn" msprop:Generator_ColumnVarNameInTable="columnESTAGIO" msprop:Generator_UserColumnName="ESTAGIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RAMAL_TEL" msprop:Generator_ColumnPropNameInRow="RAMAL_TEL" msprop:Generator_ColumnPropNameInTable="RAMAL_TELColumn" msprop:Generator_ColumnVarNameInTable="columnRAMAL_TEL" msprop:Generator_UserColumnName="RAMAL_TEL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOME_USUARIO" msprop:Generator_ColumnPropNameInRow="NOME_USUARIO" msprop:Generator_ColumnPropNameInTable="NOME_USUARIOColumn" msprop:Generator_ColumnVarNameInTable="columnNOME_USUARIO" msprop:Generator_UserColumnName="NOME_USUARIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PREDIO_SETOR" msprop:Generator_ColumnPropNameInRow="PREDIO_SETOR" msprop:Generator_ColumnPropNameInTable="PREDIO_SETORColumn" msprop:Generator_ColumnVarNameInTable="columnPREDIO_SETOR" msprop:Generator_UserColumnName="PREDIO_SETOR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AREA" msprop:Generator_ColumnPropNameInRow="AREA" msprop:Generator_ColumnPropNameInTable="AREAColumn" msprop:Generator_ColumnVarNameInTable="columnAREA" msprop:Generator_UserColumnName="AREA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUMERO_OS" msprop:Generator_ColumnPropNameInRow="NUMERO_OS" msprop:Generator_ColumnPropNameInTable="NUMERO_OSColumn" msprop:Generator_ColumnVarNameInTable="columnNUMERO_OS" msprop:Generator_UserColumnName="NUMERO_OS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EQUIPAMENTO" msprop:Generator_ColumnPropNameInRow="EQUIPAMENTO" msprop:Generator_ColumnPropNameInTable="EQUIPAMENTOColumn" msprop:Generator_ColumnVarNameInTable="columnEQUIPAMENTO" msprop:Generator_UserColumnName="EQUIPAMENTO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SAI" msprop:Generator_ColumnPropNameInRow="SAI" msprop:Generator_ColumnPropNameInTable="SAIColumn" msprop:Generator_ColumnVarNameInTable="columnSAI" msprop:Generator_UserColumnName="SAI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SSD" msprop:Generator_ColumnPropNameInRow="SSD" msprop:Generator_ColumnPropNameInTable="SSDColumn" msprop:Generator_ColumnVarNameInTable="columnSSD" msprop:Generator_UserColumnName="SSD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OFFICE_365" msprop:Generator_ColumnPropNameInRow="OFFICE_365" msprop:Generator_ColumnPropNameInTable="OFFICE_365Column" msprop:Generator_ColumnVarNameInTable="columnOFFICE_365" msprop:Generator_UserColumnName="OFFICE_365" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAINFRAME" msprop:Generator_ColumnPropNameInRow="MAINFRAME" msprop:Generator_ColumnPropNameInTable="MAINFRAMEColumn" msprop:Generator_ColumnVarNameInTable="columnMAINFRAME" msprop:Generator_UserColumnName="MAINFRAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CNS" msprop:Generator_ColumnPropNameInRow="CNS" msprop:Generator_ColumnPropNameInTable="CNSColumn" msprop:Generator_ColumnVarNameInTable="columnCNS" msprop:Generator_UserColumnName="CNS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BOTAO_EMERGENCIA" msprop:Generator_ColumnPropNameInRow="BOTAO_EMERGENCIA" msprop:Generator_ColumnPropNameInTable="BOTAO_EMERGENCIAColumn" msprop:Generator_ColumnVarNameInTable="columnBOTAO_EMERGENCIA" msprop:Generator_UserColumnName="BOTAO_EMERGENCIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OFFICE_365_PLAN" msprop:Generator_ColumnPropNameInRow="OFFICE_365_PLAN" msprop:Generator_ColumnPropNameInTable="OFFICE_365_PLANColumn" msprop:Generator_ColumnVarNameInTable="columnOFFICE_365_PLAN" msprop:Generator_UserColumnName="OFFICE_365_PLAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRICA_ATIVIDADE" msprop:Generator_ColumnPropNameInRow="DESCRICA_ATIVIDADE" msprop:Generator_ColumnPropNameInTable="DESCRICA_ATIVIDADEColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRICA_ATIVIDADE" msprop:Generator_UserColumnName="DESCRICA_ATIVIDADE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OBS_IMPORTANTES" msprop:Generator_ColumnPropNameInRow="OBS_IMPORTANTES" msprop:Generator_ColumnPropNameInTable="OBS_IMPORTANTESColumn" msprop:Generator_ColumnVarNameInTable="columnOBS_IMPORTANTES" msprop:Generator_UserColumnName="OBS_IMPORTANTES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PATRIMONIO" msprop:Generator_ColumnPropNameInRow="PATRIMONIO" msprop:Generator_ColumnPropNameInTable="PATRIMONIOColumn" msprop:Generator_ColumnVarNameInTable="columnPATRIMONIO" msprop:Generator_UserColumnName="PATRIMONIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TECNICO_SOLICITANTE" msprop:Generator_ColumnPropNameInRow="TECNICO_SOLICITANTE" msprop:Generator_ColumnPropNameInTable="TECNICO_SOLICITANTEColumn" msprop:Generator_ColumnVarNameInTable="columnTECNICO_SOLICITANTE" msprop:Generator_UserColumnName="TECNICO_SOLICITANTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TECNICO_ATUANTE" msprop:Generator_ColumnPropNameInRow="TECNICO_ATUANTE" msprop:Generator_ColumnPropNameInTable="TECNICO_ATUANTEColumn" msprop:Generator_ColumnVarNameInTable="columnTECNICO_ATUANTE" msprop:Generator_UserColumnName="TECNICO_ATUANTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATA_RETIRADA" msprop:Generator_ColumnPropNameInRow="DATA_RETIRADA" msprop:Generator_ColumnPropNameInTable="DATA_RETIRADAColumn" msprop:Generator_ColumnVarNameInTable="columnDATA_RETIRADA" msprop:Generator_UserColumnName="DATA_RETIRADA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HORA_RETIRADA" msprop:Generator_ColumnPropNameInRow="HORA_RETIRADA" msprop:Generator_ColumnPropNameInTable="HORA_RETIRADAColumn" msprop:Generator_ColumnVarNameInTable="columnHORA_RETIRADA" msprop:Generator_UserColumnName="HORA_RETIRADA" type="xs:duration" minOccurs="0" />
+              <xs:element name="SITUACAO" msprop:Generator_ColumnPropNameInRow="SITUACAO" msprop:Generator_ColumnPropNameInTable="SITUACAOColumn" msprop:Generator_ColumnVarNameInTable="columnSITUACAO" msprop:Generator_UserColumnName="SITUACAO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODALIDADE" msprop:Generator_ColumnPropNameInRow="MODALIDADE" msprop:Generator_ColumnPropNameInTable="MODALIDADEColumn" msprop:Generator_ColumnVarNameInTable="columnMODALIDADE" msprop:Generator_UserColumnName="MODALIDADE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRIORIDADE" msprop:Generator_ColumnPropNameInRow="PRIORIDADE" msprop:Generator_ColumnPropNameInTable="PRIORIDADEColumn" msprop:Generator_ColumnVarNameInTable="columnPRIORIDADE" msprop:Generator_UserColumnName="PRIORIDADE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATA_PREVISTA" msprop:Generator_ColumnPropNameInRow="DATA_PREVISTA" msprop:Generator_ColumnPropNameInTable="DATA_PREVISTAColumn" msprop:Generator_ColumnVarNameInTable="columnDATA_PREVISTA" msprop:Generator_UserColumnName="DATA_PREVISTA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HORA_PREVISTA" msprop:Generator_ColumnPropNameInRow="HORA_PREVISTA" msprop:Generator_ColumnPropNameInTable="HORA_PREVISTAColumn" msprop:Generator_ColumnVarNameInTable="columnHORA_PREVISTA" msprop:Generator_UserColumnName="HORA_PREVISTA" type="xs:duration" minOccurs="0" />
+              <xs:element name="ID_TECNICO_SOLICITANTE" msprop:Generator_ColumnPropNameInRow="ID_TECNICO_SOLICITANTE" msprop:Generator_ColumnPropNameInTable="ID_TECNICO_SOLICITANTEColumn" msprop:Generator_ColumnVarNameInTable="columnID_TECNICO_SOLICITANTE" msprop:Generator_UserColumnName="ID_TECNICO_SOLICITANTE" type="xs:int" minOccurs="0" />
+              <xs:element name="ORIGEM" msprop:Generator_ColumnPropNameInRow="ORIGEM" msprop:Generator_ColumnPropNameInTable="ORIGEMColumn" msprop:Generator_ColumnVarNameInTable="columnORIGEM" msprop:Generator_UserColumnName="ORIGEM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASSINATURA" msprop:Generator_ColumnPropNameInRow="ASSINATURA" msprop:Generator_ColumnPropNameInTable="ASSINATURAColumn" msprop:Generator_ColumnVarNameInTable="columnASSINATURA" msprop:Generator_UserColumnName="ASSINATURA" type="xs:base64Binary" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1581,6 +1819,10 @@ SELECT ID, DATA, HORA, ESTAGIO, RAMAL_TEL, NOME_USUARIO, PREDIO_SETOR, AREA, NUM
     </xs:unique>
     <xs:unique name="TAREFA_BANCADA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:TAREFA_BANCADA" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="ASSINATURA_MOVI_RETIRADA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ASSINATURA_MOVI_RETIRADA" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>
