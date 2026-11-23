@@ -273,23 +273,23 @@ namespace HELP_Princ
                 }
             }
 
-            //if (e.ColumnIndex == 2)
-            //{
-            //    if (dbgRetirada.CurrentRow.Cells[14].Value.ToString().Trim() == "CONCLUÍDO")
-            //    {
-            //        MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível IMPRIMIR !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //        return;
-            //    }
-            //    else
-            //    {
-            //        // IMPRESSÃO do registro
-            //        //
-            //        InfoWork.strWork = "MOVIRETIRADA_LIST";
-            //        InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa
-            //        FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
-            //        MoviRetiradaImpressao.ShowDialog();
-            //    }
-            //}
+            if (e.ColumnIndex == 4)
+            {
+                //if (dbgRetirada.CurrentRow.Cells[14].Value.ToString().Trim() == "CONCLUÍDO")
+                //{
+                //    MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível IMPRIMIR !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //    return;
+                //}
+                //else
+                //{
+                    // IMPRESSÃO do registro
+                    //
+                    InfoWork.strWork = "MOVIRETIRADA_LIST";
+                    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa
+                    FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
+                    MoviRetiradaImpressao.ShowDialog();
+                //}
+            }
 
             //if (e.ColumnIndex == 3)
             //{

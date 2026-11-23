@@ -39,6 +39,7 @@ namespace HELP_Princ
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnTodos = new System.Windows.Forms.Button();
             this.btnImpressao = new System.Windows.Forms.Button();
             this.btnEMail = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@ namespace HELP_Princ
             this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tECNICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TECNICOSTableAdapter();
             this.tmiProgressBar = new System.Windows.Forms.Timer(this.components);
-            this.btnTodos = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pnlFooter.SuspendLayout();
@@ -171,6 +171,16 @@ namespace HELP_Princ
             this.pnlFooter.Size = new System.Drawing.Size(999, 36);
             this.pnlFooter.TabIndex = 3;
             this.pnlFooter.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlFooter_Paint);
+            // 
+            // btnTodos
+            // 
+            this.btnTodos.Location = new System.Drawing.Point(177, 6);
+            this.btnTodos.Name = "btnTodos";
+            this.btnTodos.Size = new System.Drawing.Size(92, 23);
+            this.btnTodos.TabIndex = 6;
+            this.btnTodos.Text = "Imp. + E-MAIL";
+            this.btnTodos.UseVisualStyleBackColor = true;
+            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
             // 
             // btnImpressao
             // 
@@ -482,16 +492,6 @@ namespace HELP_Princ
             // tECNICOSTableAdapter
             // 
             this.tECNICOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnTodos
-            // 
-            this.btnTodos.Location = new System.Drawing.Point(177, 6);
-            this.btnTodos.Name = "btnTodos";
-            this.btnTodos.Size = new System.Drawing.Size(92, 23);
-            this.btnTodos.TabIndex = 6;
-            this.btnTodos.Text = "Imp. + E-MAIL";
-            this.btnTodos.UseVisualStyleBackColor = true;
-            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
             // 
             // FrmMoviRetiradaImpressao
             // 

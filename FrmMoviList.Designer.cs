@@ -55,8 +55,9 @@ namespace HELP_Princ
             this.lblTitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.elpGrid = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dbgRetirada = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.mOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aSSINATURA_MOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.helpdeskDataSet = new HELP_Princ.HelpdeskDataSet();
+            this.mOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.helpdesk01DataSet = new HELP_Princ.helpdesk01DataSet();
             this.elpTab = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.elpGridTarefa = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -127,7 +128,6 @@ namespace HELP_Princ
             this.tableAdapterManager = new HELP_Princ.helpdesk01DataSetTableAdapters.TableAdapterManager();
             this.tmiEfeitos = new System.Windows.Forms.Timer(this.components);
             this.mOVI_RETIRADATableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.MOVI_RETIRADATableAdapter();
-            this.aSSINATURA_MOVI_RETIRADABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aSSINATURA_MOVI_RETIRADATableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.ASSINATURA_MOVI_RETIRADATableAdapter();
             this.tableAdapterManager1 = new HELP_Princ.HelpdeskDataSetTableAdapters.TableAdapterManager();
             this.btnRetiradaEdicao = new System.Windows.Forms.DataGridViewImageColumn();
@@ -156,8 +156,9 @@ namespace HELP_Princ
             this.ORIGEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgRetirada)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aSSINATURA_MOVI_RETIRADABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdeskDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbgTarefa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAREFA_BANCADABindingSource)).BeginInit();
@@ -174,7 +175,6 @@ namespace HELP_Princ
             this.tabEntrega.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aSSINATURA_MOVI_RETIRADABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -324,15 +324,20 @@ namespace HELP_Princ
             this.dbgRetirada.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dbgRetirada.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgRetirada_CellContentClick);
             // 
-            // mOVI_RETIRADABindingSource
+            // aSSINATURA_MOVI_RETIRADABindingSource
             // 
-            this.mOVI_RETIRADABindingSource.DataMember = "MOVI_RETIRADA";
-            this.mOVI_RETIRADABindingSource.DataSource = this.helpdeskDataSet;
+            this.aSSINATURA_MOVI_RETIRADABindingSource.DataMember = "ASSINATURA_MOVI_RETIRADA";
+            this.aSSINATURA_MOVI_RETIRADABindingSource.DataSource = this.helpdeskDataSet;
             // 
             // helpdeskDataSet
             // 
             this.helpdeskDataSet.DataSetName = "HelpdeskDataSet";
             this.helpdeskDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mOVI_RETIRADABindingSource
+            // 
+            this.mOVI_RETIRADABindingSource.DataMember = "MOVI_RETIRADA";
+            this.mOVI_RETIRADABindingSource.DataSource = this.helpdeskDataSet;
             // 
             // helpdesk01DataSet
             // 
@@ -1112,11 +1117,6 @@ namespace HELP_Princ
             // 
             this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
             // 
-            // aSSINATURA_MOVI_RETIRADABindingSource
-            // 
-            this.aSSINATURA_MOVI_RETIRADABindingSource.DataMember = "ASSINATURA_MOVI_RETIRADA";
-            this.aSSINATURA_MOVI_RETIRADABindingSource.DataSource = this.helpdeskDataSet;
-            // 
             // aSSINATURA_MOVI_RETIRADATableAdapter
             // 
             this.aSSINATURA_MOVI_RETIRADATableAdapter.ClearBeforeFill = true;
@@ -1181,7 +1181,6 @@ namespace HELP_Princ
             this.btnImpressao.Image = ((System.Drawing.Image)(resources.GetObject("btnImpressao.Image")));
             this.btnImpressao.Name = "btnImpressao";
             this.btnImpressao.ReadOnly = true;
-            this.btnImpressao.Visible = false;
             this.btnImpressao.Width = 72;
             // 
             // btnMovimentacao
@@ -1225,8 +1224,10 @@ namespace HELP_Princ
             // 
             // ASSINATURA
             // 
+            this.ASSINATURA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ASSINATURA.DataPropertyName = "ASSINATURA";
             this.ASSINATURA.HeaderText = "Técnico Solicitante:";
+            this.ASSINATURA.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.ASSINATURA.Name = "ASSINATURA";
             this.ASSINATURA.ReadOnly = true;
             this.ASSINATURA.Width = 115;
@@ -1371,8 +1372,9 @@ namespace HELP_Princ
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgRetirada)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aSSINATURA_MOVI_RETIRADABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdeskDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mOVI_RETIRADABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.helpdesk01DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbgTarefa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAREFA_BANCADABindingSource)).EndInit();
@@ -1395,7 +1397,6 @@ namespace HELP_Princ
             this.tabEntrega.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.aSSINATURA_MOVI_RETIRADABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
