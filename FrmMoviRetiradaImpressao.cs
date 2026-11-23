@@ -37,12 +37,16 @@ namespace HELP_Princ
 
         private void FrmMoviRetiradaImpressao_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.TECNICOS'. Você pode movê-la ou removê-la conforme necessário.
+            this.tECNICOSTableAdapter.Fill(this.helpdeskDataSet.TECNICOS);
+            // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.MOVI_RETIRADA'. Você pode movê-la ou removê-la conforme necessário.
+            this.mOVI_RETIRADATableAdapter.Fill(this.helpdeskDataSet.MOVI_RETIRADA);
             tmiEfeitos.Start();
 
             // Execute a consulta: MOVI_RETIRADA
             try
             {
-                this.mOVI_RETIRADATableAdapter.FillByID(this.helpdesk01DataSet.MOVI_RETIRADA, InfoPesq.ID);
+                this.mOVI_RETIRADATableAdapter.FillByID(this.helpdeskDataSet.MOVI_RETIRADA, InfoPesq.ID);
             }
             catch (Exception ex)
             {
@@ -345,44 +349,44 @@ namespace HELP_Princ
                 PdfTextReplacer replacer = new PdfTextReplacer(page);
 
                 // Substitui todo o texto correspondente - Cabeçalho
-                replacer.ReplaceAllText("{numero_os}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim());
+                replacer.ReplaceAllText("{numero_os}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim());
                 replacer.ReplaceAllText("{SITUACAO}", "PENDENTE");
 
 
                 // Primeira Linha: substitui os campos 
-                replacer.ReplaceAllText("{ID}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<int>("ID").ToString());
-                replacer.ReplaceAllText("{DATA}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<DateTime>("DATA").ToString("dd/MM/yyyy"));
-                replacer.ReplaceAllText("{HORA}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<TimeSpan>("HORA").ToString(@"hh\:mm"));
-                replacer.ReplaceAllText("{DATA_P}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<DateTime>("DATA_PREVISTA").ToString("dd/MM/yyyy"));
-                replacer.ReplaceAllText("{HORA_P}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<TimeSpan>("HORA_PREVISTA").ToString(@"hh\:mm"));
-                replacer.ReplaceAllText("{TECNICO_SOLICITANTE}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_SOLICITANTE").Trim());
+                replacer.ReplaceAllText("{ID}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<int>("ID").ToString());
+                replacer.ReplaceAllText("{DATA}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<DateTime>("DATA").ToString("dd/MM/yyyy"));
+                replacer.ReplaceAllText("{HORA}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<TimeSpan>("HORA").ToString(@"hh\:mm"));
+                replacer.ReplaceAllText("{DATA_P}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<DateTime>("DATA_PREVISTA").ToString("dd/MM/yyyy"));
+                replacer.ReplaceAllText("{HORA_P}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<TimeSpan>("HORA_PREVISTA").ToString(@"hh\:mm"));
+                replacer.ReplaceAllText("{TECNICO_SOLICITANTE}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_SOLICITANTE").Trim());
 
                 // Segunda Linha: substitui os campos 
-                replacer.ReplaceAllText("{RAMAL}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("RAMAL_TEL").Trim());
-                replacer.ReplaceAllText("{NOME_USUARIO}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NOME_USUARIO").Trim());
-                replacer.ReplaceAllText("{PREDIO_SETOR}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PREDIO_SETOR").Trim());
-                replacer.ReplaceAllText("{AREA}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("AREA").Trim());
+                replacer.ReplaceAllText("{RAMAL}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("RAMAL_TEL").Trim());
+                replacer.ReplaceAllText("{NOME_USUARIO}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("NOME_USUARIO").Trim());
+                replacer.ReplaceAllText("{PREDIO_SETOR}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("PREDIO_SETOR").Trim());
+                replacer.ReplaceAllText("{AREA}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("AREA").Trim());
 
 
                 // Terceira Linha: substitui os campos 
-                replacer.ReplaceAllText("{PATRIMONIO}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PATRIMONIO").Trim());
-                replacer.ReplaceAllText("{SAI}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SAI").Trim());
-                replacer.ReplaceAllText("{PRIORIDADE}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PRIORIDADE").Trim());
-                replacer.ReplaceAllText("{EQUIPAMENTO}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("EQUIPAMENTO").Trim());
+                replacer.ReplaceAllText("{PATRIMONIO}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("PATRIMONIO").Trim());
+                replacer.ReplaceAllText("{SAI}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("SAI").Trim());
+                replacer.ReplaceAllText("{PRIORIDADE}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("PRIORIDADE").Trim());
+                replacer.ReplaceAllText("{EQUIPAMENTO}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("EQUIPAMENTO").Trim());
 
-                replacer.ReplaceAllText("{SSD}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("SSD").Trim());
-                replacer.ReplaceAllText("{OFFI}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("OFFICE_365").Trim());
-                replacer.ReplaceAllText("{MAIN}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("MAINFRAME").Trim());
+                replacer.ReplaceAllText("{SSD}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("SSD").Trim());
+                replacer.ReplaceAllText("{OFFI}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("OFFICE_365").Trim());
+                replacer.ReplaceAllText("{MAIN}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("MAINFRAME").Trim());
 
 
-                replacer.ReplaceAllText("{CNS}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("CNS").Trim());
-                replacer.ReplaceAllText("{BOT}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("BOTAO_EMERGENCIA").Trim());
-                replacer.ReplaceAllText("{PLA}", helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("OFFICE_365_PLAN").Trim());
+                replacer.ReplaceAllText("{CNS}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("CNS").Trim());
+                replacer.ReplaceAllText("{BOT}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("BOTAO_EMERGENCIA").Trim());
+                replacer.ReplaceAllText("{PLA}", helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("OFFICE_365_PLAN").Trim());
 
 
                 //Impressão MANUAL dos campos MEMO´S
-                string obsImportantes = helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("OBS_IMPORTANTES") ?? "";
-                string Descrica_Atividade = helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("DESCRICA_ATIVIDADE") ?? "";
+                string obsImportantes = helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("OBS_IMPORTANTES") ?? "";
+                string Descrica_Atividade = helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("DESCRICA_ATIVIDADE") ?? "";
                 PdfFont cabecalho = new PdfFont(PdfFontFamily.Helvetica, 10, PdfFontStyle.Bold);
                 page.Canvas.DrawString(Descrica_Atividade, cabecalho, PdfBrushes.Black, new RectangleF(38, 540, 520, 710));
                 page.Canvas.DrawString(obsImportantes, cabecalho, PdfBrushes.Black, new RectangleF(38, 660, 520, 820));
@@ -391,7 +395,7 @@ namespace HELP_Princ
                 // Execute a consulta: TECNICOS
                 try
                 {
-                    this.tECNICOSTableAdapter.FillByID(this.helpdesk01DataSet.TECNICOS, helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<int>("ID_TECNICO_SOLICITANTE"));
+                    this.tECNICOSTableAdapter.FillByID(this.helpdeskDataSet.TECNICOS, helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<int>("ID_TECNICO_SOLICITANTE"));
                 }
                 catch (Exception ex)
                 {
@@ -487,12 +491,12 @@ namespace HELP_Princ
                 //email.From = new MailAddress((string)row["EMAIL"]);
                 email.From = new MailAddress("luciano.ale@santacasasp.org.br");
                 email.To.Add("luciano.ale@santacasasp.org.br");
-                email.Subject = "TAREFA BANCADA - Ordem de Serviço: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim();
+                email.Subject = "TAREFA BANCADA - Ordem de Serviço: " + helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim();
 
                 //email.Body = @" T A R E F A  B A N C A D A: 
-                // -> ORDEM DE SERVIÇO: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim() + "\n\n -> TÉCNICO SOLICITANTE: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_SOLICITANTE").Trim() + "\n\n -> NOME USUÁRIO(A): " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NOME_USUARIO").Trim() + " RAMAL: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("RAMAL_TEL").Trim() + " PREDIO/SETOR: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PREDIO_SETOR").Trim() + "\n\n Para mais detalhes , queira por gentileza VISUALIZAR o arquivo ANEXO. \n\n Obrigado.";
+                // -> ORDEM DE SERVIÇO: " + helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim() + "\n\n -> TÉCNICO SOLICITANTE: " + helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_SOLICITANTE").Trim() + "\n\n -> NOME USUÁRIO(A): " + helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("NOME_USUARIO").Trim() + " RAMAL: " + helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("RAMAL_TEL").Trim() + " PREDIO/SETOR: " + helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("PREDIO_SETOR").Trim() + "\n\n Para mais detalhes , queira por gentileza VISUALIZAR o arquivo ANEXO. \n\n Obrigado.";
 
-                email.Body = @" T A R E F A  B A N C A D A: ORDEM DE SERVIÇO: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim() + "\n\n -> TÉCNICO SOLICITANTE: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_SOLICITANTE").Trim() + "\n\n -> NOME USUÁRIO(A): " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NOME_USUARIO").Trim() + " RAMAL: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("RAMAL_TEL").Trim() + " PREDIO/SETOR: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("PREDIO_SETOR").Trim() + "\n\n Para mais detalhes , queira por gentileza VISUALIZAR o arquivo ANEXO. \n\n Obrigado.";
+                email.Body = @" T A R E F A  B A N C A D A: ORDEM DE SERVIÇO: " + helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim() + "\n\n -> TÉCNICO SOLICITANTE: " + helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("TECNICO_SOLICITANTE").Trim() + "\n\n -> NOME USUÁRIO(A): " + helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("NOME_USUARIO").Trim() + " RAMAL: " + helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("RAMAL_TEL").Trim() + " PREDIO/SETOR: " + helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("PREDIO_SETOR").Trim() + "\n\n Para mais detalhes , queira por gentileza VISUALIZAR o arquivo ANEXO. \n\n Obrigado.";
                 email.IsBodyHtml = false;
 
                 // Anexo (opcional)
@@ -538,7 +542,7 @@ namespace HELP_Princ
                 string caminhoPdf = Path.Combine(Application.StartupPath, "TAREFA_BANCADA_HTML.html");
                 email.From = new MailAddress("luciano.ale@santacasasp.org.br");
                 email.To.Add("luciano.ale@santacasasp.org.br");
-                email.Subject = "TAREFA BANCADA - Ordem de Serviço: " + helpdesk01DataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim();
+                email.Subject = "TAREFA BANCADA - Ordem de Serviço: " + helpdeskDataSet.MOVI_RETIRADA.Rows[0].Field<string>("NUMERO_OS").Trim();
 
 
                 if (File.Exists(caminhoPdf))

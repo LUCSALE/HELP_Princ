@@ -66,10 +66,11 @@ namespace HELP_Princ
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.tmiEfeitos = new System.Windows.Forms.Timer(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.mOVI_RETIRADATableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter();
             this.tECNICOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tECNICOSTableAdapter = new HELP_Princ.helpdesk01DataSetTableAdapters.TECNICOSTableAdapter();
             this.tmiProgressBar = new System.Windows.Forms.Timer(this.components);
+            this.helpdeskDataSet = new HELP_Princ.HelpdeskDataSet();
+            this.mOVI_RETIRADATableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.MOVI_RETIRADATableAdapter();
+            this.tECNICOSTableAdapter = new HELP_Princ.HelpdeskDataSetTableAdapters.TECNICOSTableAdapter();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pnlFooter.SuspendLayout();
@@ -79,6 +80,7 @@ namespace HELP_Princ
             this.gbxIdentificacao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdeskDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -215,7 +217,7 @@ namespace HELP_Princ
             // mOVI_RETIRADABindingSource
             // 
             this.mOVI_RETIRADABindingSource.DataMember = "MOVI_RETIRADA";
-            this.mOVI_RETIRADABindingSource.DataSource = this.helpdesk01DataSet;
+            this.mOVI_RETIRADABindingSource.DataSource = this.helpdeskDataSet;
             // 
             // helpdesk01DataSet
             // 
@@ -480,14 +482,19 @@ namespace HELP_Princ
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // mOVI_RETIRADATableAdapter
-            // 
-            this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
-            // 
             // tECNICOSBindingSource
             // 
             this.tECNICOSBindingSource.DataMember = "TECNICOS";
-            this.tECNICOSBindingSource.DataSource = this.helpdesk01DataSet;
+            this.tECNICOSBindingSource.DataSource = this.helpdeskDataSet;
+            // 
+            // helpdeskDataSet
+            // 
+            this.helpdeskDataSet.DataSetName = "HelpdeskDataSet";
+            this.helpdeskDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mOVI_RETIRADATableAdapter
+            // 
+            this.mOVI_RETIRADATableAdapter.ClearBeforeFill = true;
             // 
             // tECNICOSTableAdapter
             // 
@@ -521,6 +528,7 @@ namespace HELP_Princ
             this.gbxIdentificacao.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tECNICOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpdeskDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -536,12 +544,10 @@ namespace HELP_Princ
         private Timer tmiEfeitos;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private BindingSource mOVI_RETIRADABindingSource;
-        private helpdesk01DataSetTableAdapters.MOVI_RETIRADATableAdapter mOVI_RETIRADATableAdapter;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private ErrorProvider errorProvider1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private BindingSource tECNICOSBindingSource;
-        private helpdesk01DataSetTableAdapters.TECNICOSTableAdapter tECNICOSTableAdapter;
         private Button btnVoltar;
         private Guna.UI2.WinForms.Guna2GroupBox gbxIdentificacao;
         private TextBox textBox1;
@@ -564,5 +570,8 @@ namespace HELP_Princ
         private Spire.PdfViewer.Forms.PdfViewer pdfViewer1;
         private Guna.UI2.WinForms.Guna2WinProgressIndicator guna2WinProgressIndicator1;
         private Button btnTodos;
+        private HelpdeskDataSet helpdeskDataSet;
+        private HelpdeskDataSetTableAdapters.MOVI_RETIRADATableAdapter mOVI_RETIRADATableAdapter;
+        private HelpdeskDataSetTableAdapters.TECNICOSTableAdapter tECNICOSTableAdapter;
     }
 }
