@@ -39,8 +39,10 @@ namespace HELP_Princ
         {
             // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.TECNICOS'. Você pode movê-la ou removê-la conforme necessário.
             this.tECNICOSTableAdapter.Fill(this.helpdeskDataSet.TECNICOS);
+            
             // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.MOVI_RETIRADA'. Você pode movê-la ou removê-la conforme necessário.
             this.mOVI_RETIRADATableAdapter.Fill(this.helpdeskDataSet.MOVI_RETIRADA);
+            
             tmiEfeitos.Start();
 
             // Execute a consulta: MOVI_RETIRADA
