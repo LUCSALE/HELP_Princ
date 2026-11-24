@@ -1,5 +1,5 @@
 CREATE TABLE [dbo].[MOVI](
-	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ID] [int] NOT NULL,
 	[DATA] [date] NOT NULL,
 	[HORA] [time](7) NOT NULL,
 	[ESTAGIO] [char](200) NULL,

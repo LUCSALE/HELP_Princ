@@ -2458,6 +2458,7 @@ namespace HELP_Princ {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public MOVI_RETIRADARow AddMOVI_RETIRADARow(
+                        int ID, 
                         System.DateTime DATA, 
                         System.TimeSpan HORA, 
                         string ESTAGIO, 
@@ -2490,7 +2491,7 @@ namespace HELP_Princ {
                         string ORIGEM) {
                 MOVI_RETIRADARow rowMOVI_RETIRADARow = ((MOVI_RETIRADARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        ID,
                         DATA,
                         HORA,
                         ESTAGIO,
@@ -2650,7 +2651,6 @@ namespace HELP_Princ {
                 base.Columns.Add(this.columnORIGEM);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
-                this.columnID.AutoIncrement = true;
                 this.columnID.AutoIncrementSeed = -1;
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;

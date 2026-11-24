@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -58,6 +59,8 @@ namespace HELP_Princ
 
         private void FrmMenuPrincipal_Load_1(object sender, EventArgs e)
         {
+            
+
             // Atualiza DADOS da aplicação
             InfoApp.sistema = "HELP_Princ";
             AtualizaVersao();
