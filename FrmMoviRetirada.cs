@@ -1272,7 +1272,6 @@ namespace HELP_Princ
             {
 
                 this.mOVI_RETIRADABindingSource.EndEdit();
-                MessageBox.Show(txtID.Text, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information); 
                 this.mOVI_RETIRADATableAdapter.Update(this.helpdeskDataSet);
             }
             catch (Exception ex)

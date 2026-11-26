@@ -275,48 +275,25 @@ namespace HELP_Princ
 
             if (e.ColumnIndex == 4)
             {
-                //if (dbgRetirada.CurrentRow.Cells[14].Value.ToString().Trim() == "CONCLUÍDO")
-                //{
-                //    MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível IMPRIMIR !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                //    return;
-                //}
-                //else
-                //{
-                    // IMPRESSÃO do registro
-                    //
-                    InfoWork.strWork = "MOVIRETIRADA_LIST";
-                    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa
-                    FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
-                    MoviRetiradaImpressao.ShowDialog();
-                //}
+                // IMPRESSÃO do registro
+                //
+                InfoWork.strWork = "MOVIRETIRADA_LIST";
+                InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa
+                FrmMoviRetiradaImpressao MoviRetiradaImpressao = new FrmMoviRetiradaImpressao();
+                MoviRetiradaImpressao.ShowDialog();
+                
             }
 
-            //if (e.ColumnIndex == 3)
-            //{
+            if (e.ColumnIndex == 5)
+            {
             //    // MOVIMENTAÇÃO do registro
             //    //
 
-            //    InfoWork.strWork_b = "ATUALIZA TAREFA BANCADA"; 
-            //    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa
-            //    FrmMoviRetiradaMovimentacao MoviRetiradaMovimentacao = new FrmMoviRetiradaMovimentacao();
-            //    MoviRetiradaMovimentacao.ShowDialog();
-
-
-
-            //    //if (dbgRetirada.CurrentRow.Cells[14].Value.ToString().Trim() == "CONCLUÍDO")
-            //    //{
-            //    //    MessageBox.Show("RETIRADA DA MÁQUINA:CONCLUÍDO, não é possível MOVIMENTAR PARA TAREFA BANCADA !", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    //    return;
-            //    //}
-            //    //else
-            //    //{
-            //    //    // MOVIMENTAÇÃO do registro
-            //    //    //
-            //    //    InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa
-            //    //    FrmMoviRetiradaMovimentacao MoviRetiradaMovimentacao = new FrmMoviRetiradaMovimentacao();
-            //    //    MoviRetiradaMovimentacao.ShowDialog();
-            //    //}
-            //}
+                InfoWork.strWork_b = "ATUALIZA TAREFA BANCADA"; 
+                InfoPesq.ID = (int)dbgRetirada.CurrentRow.Cells[6].Value; // Pega o ID da pesquisa
+                FrmMoviRetiradaMovimentacao MoviRetiradaMovimentacao = new FrmMoviRetiradaMovimentacao();
+                MoviRetiradaMovimentacao.ShowDialog();
+            }
 
 
 
@@ -392,18 +369,18 @@ namespace HELP_Princ
 
         private void fcnAtuTarefa()
         {
-            //if (InfoPesq.FREEZE == "FREEZE")
-            //{
+            if (InfoPesq.FREEZE == "FREEZE")
+            {
 
-            //    // Pesquisa de TAREFA BANCADA - MODO FREEZE
-            //    this.tAREFA_BANCADATableAdapter.FillByID(this.helpdeskDataSet.TAREFA_BANCADA, InfoPesq.ID);
+                // Pesquisa de TAREFA BANCADA - MODO FREEZE
+                //this.tAREFA_BANCADATableAdapter.FillByID(this.helpdeskDataSet.TAREFA_BANCADA, InfoPesq.ID);
 
-            //}
-            //else
-            //{
-            //    // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.TAREFA_BANCADA'. Você pode movê-la ou removê-la conforme necessário.
-            //    this.tAREFA_BANCADATableAdapter.Fill(this.helpdeskDataSet.TAREFA_BANCADA);
-            //}
+            }
+            else
+            {
+                // TODO: esta linha de código carrega dados na tabela 'helpdeskDataSet.TAREFA_BANCADA'. Você pode movê-la ou removê-la conforme necessário.
+                //this.tAREFA_BANCADATableAdapter.Fill(this.helpdeskDataSet.TAREFA_BANCADA);
+            }
         }
 
         private void lblTitulo_TextChanged(object sender, EventArgs e)

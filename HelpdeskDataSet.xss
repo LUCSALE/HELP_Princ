@@ -10,10 +10,10 @@
     <Shape ID="DesignTable:EQUIPAMENTOS" ZOrder="8" X="440" Y="71" Height="248" Width="241" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:SERVICOS" ZOrder="7" X="751" Y="70" Height="229" Width="202" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:TECNICOS" ZOrder="6" X="1023" Y="70" Height="343" Width="204" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
-    <Shape ID="DesignTable:MOVI_RETIRADA" ZOrder="1" X="1297" Y="70" Height="343" Width="243" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:NUMERACAO_ID" ZOrder="5" X="1610" Y="70" Height="134" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:TAREFA_BANCADA" ZOrder="4" X="1922" Y="70" Height="305" Width="256" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
-    <Shape ID="DesignTable:ASSINATURA_MOVI_RETIRADA" ZOrder="2" X="1300" Y="424" Height="381" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
+    <Shape ID="DesignTable:ASSINATURA_MOVI_RETIRADA" ZOrder="2" X="1300" Y="591" Height="210" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
+    <Shape ID="DesignTable:MOVI_RETIRADA" ZOrder="1" X="1284" Y="94" Height="402" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="313" />
   </Shapes>
   <Connectors />
 </DiagramLayout>
